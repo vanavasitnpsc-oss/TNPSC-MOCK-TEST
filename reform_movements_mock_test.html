@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Social and Religious Reform Movements in the 19th Century – Mock Test</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;600;700&family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#162033; --ink2:#4a566d; --paper:#f3f5f9; --card:#fff; --line:#d8deea;
+  --brand:#243b83; --brand-2:#e7ecfa; --ok:#0d7a56; --ok-bg:#e1f4ea; --bad:#b3261e; --bad-bg:#fde9e8;
+  --warn:#8f5f00; --warn-bg:#fff2cf; --skip:#667088; --skip-bg:#eceff5;
+  --font:"Noto Sans Tamil","Noto Sans","Latha","Nirmala UI","Tamil Sangam MN",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.55}
+button,input{font:inherit;color:inherit}
+button{cursor:pointer}
+[hidden]{display:none!important}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+.ta{font-weight:500}
+.en{color:var(--ink2);font-size:.93em;font-family:"Noto Sans",var(--font)}
+.neutral{font-family:"Noto Sans",var(--font);font-weight:500}
+.btn{border:1px solid var(--line);background:#fff;border-radius:8px;padding:9px 16px;font-weight:600;min-height:42px}
+.btn:hover{border-color:var(--brand)}
+.btn:focus-visible,.opt:focus-visible,.tile:focus-visible,input:focus-visible{outline:3px solid #8aa2ff;outline-offset:2px}
+.btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}
+.btn.primary:hover{background:#1b2f6c}
+.btn.danger{color:var(--bad)}
+.btn.ghost{background:transparent}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+
+/* ---------- start ---------- */
+.hero{background:var(--ink);color:#fff;padding:28px 0 26px}
+.hero h1{margin:0 0 2px;font-size:1.55rem;line-height:1.3;font-weight:700}
+.hero .sub{color:#b9c3dc;font-family:"Noto Sans",var(--font);font-size:1rem}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.fact{background:#22304d;border-radius:8px;padding:8px 14px;font-size:.92rem}
+.fact b{display:block;font-size:1.25rem;font-variant-numeric:tabular-nums}
+.start-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;margin:22px 0}
+@media(max-width:820px){.start-grid{grid-template-columns:1fr}}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px}
+.panel h2{margin:0 0 12px;font-size:1.1rem}
+label{display:block;font-weight:600;margin:12px 0 4px}
+input[type=text],input[type=tel]{width:100%;padding:11px 12px;border:1px solid #b9c2d6;border-radius:8px;background:#fff}
+.err{color:var(--bad);font-size:.9rem;min-height:1.3em;margin-top:6px}
+ul.rules{margin:0;padding-left:20px}
+ul.rules li{margin:6px 0}
+.banner{background:var(--warn-bg);border:1px solid #e8c25c;border-radius:10px;padding:14px 16px;margin:18px 0 0;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.banner .grow{flex:1;min-width:220px}
+.hist{width:100%;border-collapse:collapse;font-size:.93rem}
+.hist th,.hist td{padding:9px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}
+.hist th{color:var(--ink2);font-weight:600;font-size:.82rem}
+.hist .acts{display:flex;gap:6px;flex-wrap:wrap}
+.hist .btn{padding:5px 10px;min-height:34px;font-size:.85rem}
+.empty{color:var(--ink2);margin:0}
+.histwrap{overflow-x:auto}
+
+/* ---------- test ---------- */
+.bar{position:sticky;top:0;z-index:20;background:var(--ink);color:#fff;border-bottom:3px solid var(--brand)}
+.bar .wrap{display:flex;align-items:center;gap:14px;padding-top:9px;padding-bottom:9px;flex-wrap:wrap}
+.bar .ttl{font-weight:700;flex:1;min-width:150px;font-size:.98rem;line-height:1.3}
+.clock{background:#22304d;border-radius:8px;padding:5px 12px;text-align:center;min-width:104px}
+.clock small{display:block;color:#b9c3dc;font-size:.72rem;line-height:1.2}
+.clock b{font-size:1.3rem;font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.clock.low b{color:#ffd166}.clock.crit b{color:#ff8a80}
+.clock.qq.over b{color:#ffd166}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:18px;margin:18px 0 90px;align-items:start}
+@media(max-width:900px){.layout{grid-template-columns:1fr}}
+.qcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px}
+.qhead{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:12px;flex-wrap:wrap}
+.qno{font-weight:700;font-size:1.05rem}
+.chip{font-size:.78rem;padding:2px 9px;border-radius:99px;border:1px solid var(--line);background:#fff;color:var(--ink2);font-weight:600}
+.chip.t{background:var(--brand-2);border-color:#c5d0f3;color:var(--brand);font-variant-numeric:tabular-nums}
+.chip.E{background:#e8f6ef;color:#0d6b4b;border-color:#bfe3d1}
+.chip.M{background:#fff4d6;color:#7a5200;border-color:#efd68f}
+.chip.D{background:#fdeaea;color:#9b2118;border-color:#f1c0bc}
+.stem .ta{font-size:1.06rem}
+.stem .en{margin-top:2px}
+ol.stm{margin:12px 0 4px;padding-left:26px}
+ol.stm li{margin:8px 0;padding-left:4px}
+ol.stm li .en{font-size:.9em}
+.match{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:12px 0 4px;border:1px solid var(--line);border-radius:10px;padding:12px;background:#fafbfe}
+@media(max-width:560px){.match{grid-template-columns:1fr}}
+.mh{font-weight:700;margin-bottom:6px;color:var(--brand);font-size:.92rem}
+.mrow{display:flex;gap:8px;margin:6px 0;align-items:flex-start}
+.mk{flex:0 0 26px;height:26px;border-radius:6px;background:var(--brand-2);color:var(--brand);font-weight:700;display:grid;place-items:center;font-size:.85rem;font-family:"Noto Sans",var(--font)}
+.opts{display:grid;gap:10px;margin-top:16px}
+.opt{display:flex;gap:12px;align-items:flex-start;text-align:left;width:100%;background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:11px 14px}
+.opt:hover{border-color:var(--brand)}
+.opt .lt{flex:0 0 30px;height:30px;border-radius:50%;border:1.5px solid #aab4cc;display:grid;place-items:center;font-weight:700;font-size:.9rem;font-family:"Noto Sans",var(--font);color:var(--ink2)}
+.opt .tx{display:block;flex:1}
+.opt .tx .ta,.opt .tx .en{display:block}
+.opt[aria-checked=true]{border-color:var(--brand);background:var(--brand-2)}
+.opt[aria-checked=true] .lt{background:var(--brand);border-color:var(--brand);color:#fff}
+.nav{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);z-index:15}
+.nav .wrap{display:flex;gap:10px;padding-top:10px;padding-bottom:10px;flex-wrap:wrap;align-items:center}
+.nav .sp{flex:1}
+.pal{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;position:sticky;top:78px}
+@media(max-width:900px){.pal{position:static}}
+.pal h3{margin:0 0 4px;font-size:.98rem}
+.pal .note{font-size:.8rem;color:var(--ink2);margin:0 0 10px}
+.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}
+.tile{position:relative;border:1.5px solid var(--line);background:#fff;border-radius:8px;padding:4px 0 3px;text-align:center;line-height:1.15}
+.tile b{display:block;font-size:.95rem;font-family:"Noto Sans",var(--font)}
+.tile i{display:block;font-style:normal;font-size:.66rem;color:var(--ink2);font-variant-numeric:tabular-nums;min-height:.8rem}
+.tile.vis{background:var(--skip-bg)}
+.tile.ans{background:var(--ok-bg);border-color:#8fd0b3}
+.tile.cur{border-color:var(--ink);box-shadow:0 0 0 2px var(--ink)}
+.tile.mk::after{content:"";position:absolute;top:3px;right:3px;width:8px;height:8px;border-radius:50%;background:#e29a00}
+.legend{display:flex;flex-wrap:wrap;gap:6px 12px;margin-top:12px;font-size:.78rem;color:var(--ink2)}
+.legend span::before{content:"";display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px;vertical-align:-1px;border:1.5px solid var(--line)}
+.legend .l1::before{background:var(--ok-bg);border-color:#8fd0b3}
+.legend .l2::before{background:var(--skip-bg)}
+.legend .l3::before{background:#fff}
+.legend .l4::before{background:#e29a00;border-color:#e29a00;border-radius:50%}
+dialog{border:none;border-radius:14px;padding:22px;max-width:440px;width:calc(100% - 32px);box-shadow:0 20px 60px rgba(10,20,40,.35)}
+dialog::backdrop{background:rgba(15,25,45,.55)}
+dialog h3{margin:0 0 8px}
+dialog .row{display:flex;gap:10px;justify-content:flex-end;margin-top:18px;flex-wrap:wrap}
+.sumlist{margin:10px 0 0;padding:0;list-style:none}
+.sumlist li{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px dashed var(--line)}
+
+/* ---------- result ---------- */
+.score{background:var(--ink);color:#fff;border-radius:14px;padding:22px;margin:18px 0}
+.score .who{color:#b9c3dc;font-size:.92rem}
+.score .big{font-size:2.7rem;font-weight:700;line-height:1.1;font-variant-numeric:tabular-nums}
+.score .big small{font-size:1.2rem;color:#b9c3dc;font-weight:500}
+.seg{display:flex;height:12px;border-radius:99px;overflow:hidden;background:#33415f;margin:14px 0 4px}
+.seg i{display:block;height:100%}
+.seg .r{background:#38c493}.seg .w{background:#ff7a70}.seg .s{background:#8d98b3}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:16px}
+.stat{background:#22304d;border-radius:10px;padding:10px 12px}
+.stat small{color:#b9c3dc;display:block;font-size:.78rem}
+.stat b{font-size:1.25rem;font-variant-numeric:tabular-nums}
+.stat.r b{color:#6fe0b4}.stat.w b{color:#ff9a92}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 18px}
+.tchart{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:18px}
+.tchart h3{margin:0 0 2px;font-size:1rem}
+.tchart .note{margin:0 0 10px;font-size:.82rem;color:var(--ink2)}
+.bars{display:flex;align-items:flex-end;gap:3px;height:96px;border-bottom:1px solid var(--line)}
+.bars button{flex:1;min-width:4px;border:0;border-radius:3px 3px 0 0;padding:0}
+.bars .r{background:#38c493}.bars .w{background:#ff7a70}.bars .s{background:#b7bfd1}
+.bars button:hover{filter:brightness(.9)}
+.axis{display:flex;justify-content:space-between;font-size:.74rem;color:var(--ink2);margin-top:4px}
+.lvl{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px}
+.lvl div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.lvl b{display:block;font-size:1.1rem;font-variant-numeric:tabular-nums}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;position:sticky;top:0;background:var(--paper);padding:8px 0;z-index:10}
+.tabs button{border:1.5px solid var(--line);background:#fff;border-radius:99px;padding:7px 16px;font-weight:600}
+.tabs button[aria-selected=true]{background:var(--ink);border-color:var(--ink);color:#fff}
+.tabs .c{opacity:.75;font-weight:500;margin-left:4px}
+.rv{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--skip);border-radius:12px;padding:18px;margin-bottom:14px;scroll-margin-top:70px}
+.rv.right{border-left-color:var(--ok)}.rv.wrong{border-left-color:var(--bad)}
+.badge{font-size:.78rem;font-weight:700;padding:2px 10px;border-radius:99px}
+.badge.right{background:var(--ok-bg);color:var(--ok)}
+.badge.wrong{background:var(--bad-bg);color:var(--bad)}
+.badge.skip{background:var(--skip-bg);color:var(--skip)}
+.rv .rhead{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
+.rv .rhead .sp{flex:1}
+.ropts{display:grid;gap:8px;margin-top:14px}
+.ro{display:flex;gap:10px;align-items:flex-start;border:1.5px solid var(--line);border-radius:10px;padding:8px 12px;background:#fff}
+.ro .lt{flex:0 0 26px;height:26px;border-radius:50%;border:1.5px solid #aab4cc;display:grid;place-items:center;font-weight:700;font-size:.82rem;font-family:"Noto Sans",var(--font)}
+.ro .tx{flex:1}.ro .tx .ta,.ro .tx .en{display:block}
+.ro .tag{font-size:.75rem;font-weight:700;white-space:nowrap}
+.ro.ok{border-color:#78c6a4;background:var(--ok-bg)}.ro.ok .lt{background:var(--ok);border-color:var(--ok);color:#fff}.ro.ok .tag{color:var(--ok)}
+.ro.bad{border-color:#e9a29d;background:var(--bad-bg)}.ro.bad .lt{background:var(--bad);border-color:var(--bad);color:#fff}.ro.bad .tag{color:var(--bad)}
+.exp{margin-top:12px;background:#f6f8fc;border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:.93rem}
+.exp b{color:var(--brand)}
+.none{background:var(--card);border:1px dashed var(--line);border-radius:12px;padding:22px;text-align:center;color:var(--ink2)}
+.foot{color:var(--ink2);font-size:.82rem;margin:26px 0 40px}
+.toast{position:fixed;left:50%;bottom:84px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 18px;border-radius:99px;z-index:50;font-size:.92rem}
+
+/* ---------- print (Download PDF) ---------- */
+#printRoot{display:none}
+@media print{
+  @page{size:A4;margin:12mm}
+  html,body{background:#fff!important}
+  body.printing > *:not(#printRoot){display:none!important}
+  body.printing #printRoot{display:block}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  #printRoot{font-size:10.5pt;color:#000}
+  #printRoot h1{font-size:15pt;margin:0 0 2pt}
+  #printRoot .meta{margin:0 0 6pt;color:#333;font-size:9.5pt}
+  #printRoot .sumline{display:flex;flex-wrap:wrap;gap:6pt 14pt;border:1px solid #999;padding:6pt 9pt;margin:6pt 0;font-size:10pt}
+  #printRoot .tg{display:grid;grid-template-columns:repeat(7,1fr);gap:3pt;margin:6pt 0 10pt}
+  #printRoot .tg div{border:1px solid #999;padding:2pt 3pt;font-size:8.5pt;text-align:center}
+  #printRoot .tg .r{background:#d9f2e6}#printRoot .tg .w{background:#fadbd8}#printRoot .tg .s{background:#e8e8e8}
+  #printRoot .lists p{margin:2pt 0;font-size:9.5pt}
+  #printRoot .rv{break-inside:avoid;page-break-inside:avoid;border:1px solid #aaa;border-left:5px solid #888;border-radius:0;padding:7pt 9pt;margin:0 0 7pt}
+  #printRoot .rv.right{border-left-color:#0d7a56}#printRoot .rv.wrong{border-left-color:#b3261e}
+  #printRoot .stem .ta{font-size:10.5pt}
+  #printRoot .ro{padding:3pt 7pt;border-radius:0}
+  #printRoot .exp{padding:4pt 7pt;font-size:9pt}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<!-- =============== START =============== -->
+<section id="vStart">
+  <div class="hero"><div class="wrap">
+    <h1>19ஆம் நூற்றாண்டில் சமூக, சமய சீர்திருத்த இயக்கங்கள்</h1>
+    <div class="sub">Social and Religious Reform Movements in the 19th Century · வரலாறு – அலகு 5 / History – Unit 5</div>
+    <div class="facts">
+      <div class="fact"><b id="fN">35</b>வினாக்கள் · Questions</div>
+      <div class="fact"><b id="fT">35 min</b>நேரம் · Time (1 min / Q)</div>
+      <div class="fact"><b>1</b>ஒரு சரிக்கு · Mark per right answer</div>
+    </div>
+  </div></div>
+  <div class="wrap">
+    <div id="resumeBox" class="banner" hidden>
+      <div class="grow"><b>முடிக்காத தேர்வு உள்ளது · You have an unfinished test.</b><br><span id="resumeInfo"></span></div>
+      <button class="btn primary" id="btnResume">தொடர்க · Resume</button>
+      <button class="btn danger" id="btnDiscard">நீக்கு · Discard</button>
+    </div>
+    <div class="start-grid">
+      <div class="panel">
+        <h2>தேர்வைத் தொடங்கு · Start the test</h2>
+        <label for="inName">பெயர் · Name</label>
+        <input id="inName" type="text" autocomplete="name" maxlength="60" placeholder="உங்கள் பெயர் · Your full name">
+        <label for="inMobile">கைபேசி எண் · Mobile number</label>
+        <input id="inMobile" type="tel" inputmode="numeric" autocomplete="tel" maxlength="10" placeholder="10-digit mobile number">
+        <div class="err" id="formErr" role="alert"></div>
+        <button class="btn primary" id="btnStart" style="width:100%;margin-top:6px">தேர்வைத் தொடங்கு · Start test</button>
+        <p class="en" id="storeWarn" hidden style="margin-top:10px;color:var(--bad)">This browser is blocking local storage, so your attempts cannot be saved.</p>
+      </div>
+      <div class="panel">
+        <h2>வழிமுறைகள் · Instructions</h2>
+        <ul class="rules">
+          <li>ஒவ்வொரு வினாவிற்கும் 1 நிமிடம்; நேரம் முடிந்ததும் தானாகச் சமர்ப்பிக்கப்படும்.<br><span class="en">1 minute per question; the test auto-submits when time is up.</span></li>
+          <li>ஒவ்வொரு வினாவிற்கும் செலவிட்ட நேரம் திரையில் காட்டப்படும்.<br><span class="en">Time spent on each question is shown on screen.</span></li>
+          <li>விடைகளை மாற்றலாம்; வினாவைக் குறித்து (Mark) பின்னர் பார்க்கலாம்.<br><span class="en">You can change answers and mark questions for review.</span></li>
+          <li>முடிவில் சரி, தவறு, விடையளிக்காதவை தனித்தனியாகக் காட்டப்படும்; PDF ஆகவும் பதிவிறக்கலாம்.<br><span class="en">Results show right, wrong and unanswered separately, and can be downloaded as a PDF.</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="panel" style="margin-bottom:30px">
+      <h2>சேமிக்கப்பட்ட தேர்வுகள் · Saved attempts</h2>
+      <div id="histBox" class="histwrap"></div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== TEST =============== -->
+<section id="vTest" hidden>
+  <div class="bar"><div class="wrap">
+    <div class="ttl">19ஆம் நூற்றாண்டில் சமூக, சமய சீர்திருத்த இயக்கங்கள்<br><span class="en" style="color:#b9c3dc">Social and Religious Reform Movements in the 19th Century</span></div>
+    <div class="clock qq" id="clkQ"><small>இந்த வினா · This question</small><b id="tQ">0:00</b></div>
+    <div class="clock" id="clkT"><small>மீதமுள்ள நேரம் · Time left</small><b id="tLeft">35:00</b></div>
+    <button class="btn" id="btnSubmitTop">சமர்ப்பி · Submit</button>
+  </div></div>
+  <div class="wrap layout">
+    <div class="qcard" id="qcard"></div>
+    <aside class="pal">
+      <h3>வினா பட்டியல் · Question palette</h3>
+      <p class="note">ஒவ்வொரு எண்ணின் கீழும் செலவிட்ட நேரம் · Time spent shown under each number</p>
+      <div class="grid" id="palette"></div>
+      <div class="legend"><span class="l1">விடையளித்தது · Answered</span><span class="l2">பார்த்தது · Seen</span><span class="l3">பார்க்காதது · Not seen</span><span class="l4">குறித்தது · Marked</span></div>
+    </aside>
+  </div>
+  <div class="nav"><div class="wrap">
+    <button class="btn" id="btnPrev">← முந்தையது · Previous</button>
+    <button class="btn ghost" id="btnClear">விடையை அழி · Clear</button>
+    <button class="btn ghost" id="btnMark">குறி · Mark for review</button>
+    <span class="sp"></span>
+    <button class="btn primary" id="btnNext">அடுத்தது · Next →</button>
+  </div></div>
+</section>
+
+<!-- =============== RESULT =============== -->
+<section id="vResult" hidden>
+  <div class="wrap">
+    <div class="score" id="scoreBox"></div>
+    <div class="actions">
+      <button class="btn primary" id="btnPdf">PDF பதிவிறக்கு · Download PDF</button>
+      <button class="btn" id="btnRetake">மீண்டும் எழுது · Retake test</button>
+      <button class="btn" id="btnHome">முகப்பு · Home / Saved attempts</button>
+    </div>
+    <div class="lvl" id="lvlBox"></div>
+    <div class="tchart">
+      <h3>ஒவ்வொரு வினாவிற்கும் செலவிட்ட நேரம் · Time taken per question</h3>
+      <p class="note">Green = right, red = wrong, grey = unanswered. Tap a bar to jump to that question.</p>
+      <div class="bars" id="bars"></div>
+      <div class="axis"><span>Q1</span><span id="axMax"></span><span id="axEnd"></span></div>
+    </div>
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <div id="rvList"></div>
+    <p class="foot">Attempts are saved in this browser on this device. Download the PDF to keep a copy that travels with you.</p>
+  </div>
+</section>
+
+<div id="printRoot"></div>
+
+<dialog id="dlgSubmit">
+  <h3>தேர்வைச் சமர்ப்பிக்கவா? · Submit the test?</h3>
+  <ul class="sumlist" id="dlgList"></ul>
+  <div class="row">
+    <button class="btn" id="dlgBack">தேர்விற்குத் திரும்பு · Back to test</button>
+    <button class="btn primary" id="dlgOk">சமர்ப்பி · Submit now</button>
+  </div>
+</dialog>
+<dialog id="dlgConfirm">
+  <h3 id="cfTitle"></h3>
+  <p id="cfMsg" style="margin:0"></p>
+  <div class="row">
+    <button class="btn" id="cfNo">இல்லை · Cancel</button>
+    <button class="btn primary" id="cfYes">சரி · Yes</button>
+  </div>
+</dialog>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+(function(){
+'use strict';
+
+/* ================= CONFIG – edit here ================= */
+const CFG = {
+  TEST_ID: "reform-movements-19c",
+  TEST_NAME: "Social and Religious Reform Movements in the 19th Century",
+  PER_Q_SECONDS: 60,        // 1 minute per question
+  MARK_PER_RIGHT: 1,
+  NEGATIVE_MARK: 0,         // e.g. 0.33 if you want negative marking
+  // Optional: send each submitted result to a Google Form (-> Google Sheet).
+  // Paste the form's ".../formResponse" URL and its entry ids (entry.123456789). Leave action "" to disable.
+  GOOGLE_FORM: {
+    action: "",
+    fields: { name:"", mobile:"", test:"", score:"", correct:"", wrong:"", unanswered:"", timeUsed:"", submittedAt:"", details:"" }
+  }
+};
+
+const Q = [{"lv":"E","q":["எந்த ஆண்டில் உடன்கட்டை ஏறுதல் (சதி) ஒழிக்கப்பட்டது?","In which year was Sati abolished?"],"o":["1826","1827","1829","1927"],"a":2,"x":["ராஜா ராம்மோகன் ராயின் பிரச்சாரத்தின் விளைவாக, கவர்னர் ஜெனரல் வில்லியம் பெண்டிங் 1829இல் சதி ஒழிப்புச் சட்டத்தை இயற்றினார்.","Following Raja Rammohan Roy's campaign, Governor-General William Bentinck abolished Sati in 1829."]},{"lv":"M","q":["கீழ்க்காணும் கூற்றுகளைக் கருதுக. சரியானவற்றைத் தேர்ந்தெடுக்க:","Consider the following statements and choose the correct ones:"],"st":[["நாம்தாரி இயக்கத்தை நிறுவியவர் பாபா தயாள் தாஸ்.","The Namdhari Movement was founded by Baba Dayal Das."],["நிரங்காரி இயக்கத்தை நிறுவியவர் பாபா ராம் சிங்.","The Nirankari Movement was founded by Baba Ram Singh."]],"o":[["1 மட்டும்","1 only"],["2 மட்டும்","2 only"],["1, 2 இரண்டும்","Both 1 and 2"],["இரண்டும் அல்ல","Neither 1 nor 2"]],"a":3,"x":["நிரங்காரி இயக்கம் – பாபா தயாள் தாஸ்; நாம்தாரி இயக்கம் – பாபா ராம் சிங். இரு கூற்றுகளிலும் நிறுவனர்கள் மாற்றப்பட்டுள்ளனர்.","Nirankari – Baba Dayal Das; Namdhari – Baba Ram Singh. The founders are swapped in both statements."]},{"lv":"M","q":["ராஜா ராம்மோகன் ராய் குறித்த கீழ்க்காணும் கூற்றுகளில் சரியானவற்றைத் தேர்ந்தெடுக்க:","Choose the correct statement(s) about Raja Rammohan Roy:"],"st":[["அவர் ஒரு கடவுள் கோட்பாட்டைப் போதித்தார்.","He preached monotheism – the worship of one God."],["அவர் உருவ வழிபாட்டை ஆதரித்தார்.","He supported idol worship."],["சதி, குழந்தைத் திருமணம், பலதாரமணம் ஆகியவற்றிற்கு எதிராகச் சிற்றேடுகளை வெளியிட்டார்.","He published tracts against sati, child marriage and polygamy."]],"o":[["1 மற்றும் 3 மட்டும்","1 and 3 only"],["1 மட்டும்","1 only"],["1 மற்றும் 2 மட்டும்","1 and 2 only"],["1, 2 மற்றும் 3","1, 2 and 3"]],"a":0,"x":["உபநிடதங்களின் அடிப்படையில் ஒரு கடவுள் கோட்பாட்டை வலியுறுத்தி, உருவ வழிபாட்டை எதிர்த்தார்; சமூகத் தீமைகளுக்கு எதிராகச் சிற்றேடுகள் வெளியிட்டார்.","Based on the Upanishads he upheld monotheism and opposed idolatry; he wrote tracts against social evils."]},{"lv":"E","q":["1898இல் இலங்கை சென்று பௌத்தம் தழுவிய அயோத்திதாசர், யாருடைய தாக்கத்தால் அவ்வாறு செய்தார்?","Under whose influence did Iyothee Thassar go to Sri Lanka in 1898 and convert to Buddhism?"],"o":[["H.P. பிளாவட்ஸ்கி","H.P. Blavatsky"],["அன்னிபெசன்ட்","Annie Besant"],["H.S. ஆல்காட்","H.S. Olcott"],["இரட்டைமலை சீனிவாசன்","Rettaimalai Srinivasan"]],"a":2,"x":["பிரம்மஞானசபை அமைப்பாளர் கர்னல் H.S. ஆல்காட்டின் தூண்டுதலால் இலங்கை சென்று பௌத்தம் தழுவி, அவ்வாண்டே சென்னையில் சாக்கிய பௌத்த சங்கத்தை நிறுவினார்.","Inspired by Theosophist organiser Col. H.S. Olcott, he embraced Buddhism in Sri Lanka and founded the Sakya Buddhist Society at Madras the same year."]},{"lv":"M","q":["மகரிஷி தேவேந்திரநாத் தாகூர் முன்வைத்த நம்பிக்கைக் கூறுகள் குறித்த கூற்றுகளில் சரியானவை எவை?","Which of the following statements about the articles of faith laid down by Maharishi Debendranath Tagore are correct?"],"st":[["தொடக்கத்தில் ஒரே ஒரு உயர்ந்த கடவுள் மட்டுமே இருந்தார்; அவரே பிரபஞ்சத்தைப் படைத்தார்.","In the beginning only the one supreme being existed, who created the Universe."],["அவரே உண்மை, எல்லையற்ற ஞானம், நன்மை, சக்தி ஆகியவற்றின் கடவுள்; எங்கும் நிறைந்தவர்.","He alone is the God of Truth, Infinite Wisdom, Goodness and Power, eternal and omnipresent."],["வீடுபேறு என்பது புரோகிதர்கள் நடத்தும் சடங்குகளைச் சார்ந்தது.","Salvation depends on rituals performed by priests."],["நம்பிக்கை என்பது அவரை நேசிப்பதிலும் அவர் விருப்பத்தைச் செயல்படுத்துவதிலும் அடங்கியுள்ளது.","Belief consists in loving Him and doing His will."]],"o":[["1, 2 மற்றும் 3 மட்டும்","1, 2 and 3 only"],["1, 2 மற்றும் 4 மட்டும்","1, 2 and 4 only"],["2, 3 மற்றும் 4 மட்டும்","2, 3 and 4 only"],["1, 3 மற்றும் 4 மட்டும்","1, 3 and 4 only"]],"a":1,"x":["மூன்றாவது நம்பிக்கைக்கூறு: 'நம் வீடுபேறு, இவ்வுலகிலும் மறுவுலகிலும் அவரை நம்புவதையும் வணங்குவதையும் சார்ந்தது'. புரோகிதச் சடங்குகள் குறிப்பிடப்படவில்லை.","The third article says salvation depends on belief in Him and His worship in this world and the next – not on priestly rituals."]},{"lv":"D","q":["பின்வருவனவற்றைக் காலவரிசைப்படி அமைக்க:","Arrange the following in chronological order:"],"st":[["ஆதி பிரம்ம சமாஜம்","Adi Brahmo Samaj"],["ஆரிய சமாஜம்","Arya Samaj"],["பிரார்த்தனை சமாஜம்","Prarthana Samaj"],["சத்யசோதக் சமாஜ்","Satyashodhak Samaj"],["பிரம்ம சமாஜம்","Brahmo Samaj"]],"o":["5 – 1 – 3 – 4 – 2","5 – 1 – 4 – 2 – 3","1 – 5 – 4 – 2 – 3","1 – 5 – 4 – 3 – 2"],"a":0,"x":["பிரம்ம சமாஜம் (1828) → ஆதி பிரம்ம சமாஜம் (1866) → பிரார்த்தனை சமாஜம் (1867) → சத்யசோதக் சமாஜ் (1873) → ஆரிய சமாஜம் (1875).","Brahmo Samaj (1828) → Adi Brahmo Samaj (1866) → Prarthana Samaj (1867) → Satyashodhak Samaj (1873) → Arya Samaj (1875)."]},{"lv":"E","q":["யாருடைய பணியும் இயக்கமும், 1856ஆம் ஆண்டு விதவை மறுமணச் சீர்திருத்தச் சட்டம் இயற்றப்படுவதற்கு வழிகோலியது?","Whose campaign and work led to the enactment of the Widows' Remarriage Reform Act of 1856?"],"o":[["இராஜா ராம்மோகன் ராய்","Raja Rammohan Roy"],["ஈஸ்வர் சந்திர வித்யாசாகர்","Iswarchandra Vidyasagar"],["அன்னிபெசன்ட்","Annie Besant"],["ஜோதிபா புலே","Jyotiba Phule"]],"a":1,"x":["இந்து மறைநூல்களில் விதவை மறுமணத்திற்குத் தடையில்லை என ஆதாரம் காட்டிய வித்யாசாகரின் இயக்கத்தின் விளைவாக 1856 சட்டம் இயற்றப்பட்டது.","Vidyasagar showed scriptural evidence that widow remarriage was not prohibited; his movement led to the 1856 Act."]},{"lv":"M","q":["நீதிபதி மகாதேவ் கோவிந்த் ரானடேயால் நிறுவப்படாத அமைப்பு எது?","Which one of these associations was NOT founded by Justice Mahadev Govind Ranade?"],"o":[["பிரார்த்தனை சமாஜம்","Prarthana Samaj"],["விதவை மறுமணச் சங்கம்","Widow Marriage Association"],["புனே சர்வஜனிக் சபா","Poona Sarvajanik Sabha"],["தக்காணக் கல்விக் கழகம்","Deccan Education Society"]],"a":0,"x":["பிரார்த்தனை சமாஜத்தை (1867) நிறுவியவர் டாக்டர் ஆத்மராம் பாண்டுரங்; ரானடே அதன் முக்கிய உறுப்பினர். மற்ற மூன்றையும் ரானடே நிறுவினார்.","Prarthana Samaj (1867) was founded by Dr Atmaram Pandurang; Ranade was a leading member. He founded the other three."]},{"lv":"D","q":["கேசவ் சந்திர சென் தொடர்பான கீழ்க்காணும் கூற்றுகளில் சரியானவை எவை?","Which of the following statements about Keshab Chandra Sen are correct?"],"st":[["அவர் 1857இல் பிரம்ம சமாஜத்தில் இணைந்தார்.","He joined the Brahmo Samaj in 1857."],["1866இல் ஏற்பட்ட பிளவில் வெளியேறி 'இந்திய பிரம்ம சமாஜத்தை' நிறுவினார்.","In the 1866 split he left and founded the 'Brahmo Samaj of India'."],["தம் பதினான்கு வயது மகளை ஓர் இந்திய இளவரசருக்கு மணமுடித்ததால், எதிர்ப்பாளர்கள் 'சாதாரண சமாஜத்தை' நிறுவினர்.","After he married his 14-year-old daughter to an Indian prince, his opponents founded the 'Sadharan Samaj'."],["அவரது அமைப்பே 'ஆதி பிரம்ம சமாஜம்' என அழைக்கப்பட்டது.","His organisation came to be known as the 'Adi Brahmo Samaj'."]],"o":[["1 மற்றும் 2 மட்டும்","1 and 2 only"],["1, 2 மற்றும் 4 மட்டும்","1, 2 and 4 only"],["2, 3 மற்றும் 4 மட்டும்","2, 3 and 4 only"],["1, 2 மற்றும் 3 மட்டும்","1, 2 and 3 only"]],"a":3,"x":["'ஆதி பிரம்ம சமாஜம்' என்பது தேவேந்திரநாத் தாகூரின் அமைப்பு; சென்னின் அமைப்பு 'இந்திய பிரம்ம சமாஜம்'.","'Adi Brahmo Samaj' was Debendranath Tagore's organisation; Sen's was the 'Brahmo Samaj of India'."]},{"lv":"E","q":["தயானந்த சரஸ்வதியால் நிறுவப்பெற்ற சமாஜத்தின் பெயர் யாது?","What was the name of the Samaj founded by Dayanand Saraswati?"],"o":[["பிரம்ம சமாஜம்","Brahmo Samaj"],["பிரார்த்தனை சமாஜம்","Prarthana Samaj"],["ஆரிய சமாஜம்","Arya Samaj"],["ஆதி பிரம்ம சமாஜம்","Adi Brahmo Samaj"]],"a":2,"x":["சுவாமி தயானந்த சரஸ்வதி 1875இல் பஞ்சாபில் ஆரிய சமாஜத்தை நிறுவினார்.","Swami Dayanand Saraswati founded the Arya Samaj in Punjab in 1875."]},{"lv":"M","q":["பிரார்த்தனை சமாஜம் குறித்த கீழ்க்காணும் கூற்றுகளில் சரியானவை எவை?","Which of the following statements about the Prarthana Samaj are correct?"],"st":[["இது டாக்டர் ஆத்மராம் பாண்டுரங்கால் நிறுவப்பட்டது.","It was founded by Dr Atmaram Pandurang."],["இது சாதிக்கலப்பு உணவு (சமபந்தி), சாதிக்கலப்புத் திருமணங்களை ஊக்குவித்தது.","It encouraged inter-caste dining and inter-caste marriages."],["இதன் மூலம் ஜோதிபா புலே ஆண்களின் மேம்பாட்டிற்காக மட்டுமே பணியாற்றினார்.","Through it, Jyotiba Phule worked only for the upliftment of men."],["இது பஞ்சாபைப் பிறப்பிடமாகக் கொண்டது.","It originated in Punjab."]],"o":[["1 மட்டும்","1 only"],["1 மற்றும் 2 மட்டும்","1 and 2 only"],["1, 2 மற்றும் 3 மட்டும்","1, 2 and 3 only"],["2, 3 மற்றும் 4 மட்டும்","2, 3 and 4 only"]],"a":1,"x":["பிரார்த்தனை சமாஜம் 1867இல் பம்பாயில் தொடங்கப்பட்டது (பஞ்சாபில் அல்ல); அதன் உறுப்பினர்கள் பெண்கள், ஒடுக்கப்பட்டோர் முன்னேற்றத்திற்கும் பாடுபட்டனர்; புலே அதன் உறுப்பினர் அல்லர்.","It began in Bombay in 1867 (not Punjab) and worked for women and the depressed classes; Phule was not associated with it."]},{"lv":"E","q":["புனே சர்வஜனிக் சபா நிறுவப்பட்ட ஆண்டு","The Poona Sarvajanik Sabha was founded in the year"],"o":["1867","1870","1875","1884"],"a":1,"x":["ரானடே புனே சர்வஜனிக் சபாவை 1870இல் நிறுவினார் (விதவை மறுமணச் சங்கம் 1861; தக்காணக் கல்விக் கழகம் 1884).","Ranade founded the Poona Sarvajanik Sabha in 1870 (Widow Marriage Association 1861; Deccan Education Society 1884)."]},{"lv":"M","q":["1875ஆம் ஆண்டில் தொடங்கப்பட்ட அமைப்புகள் எவை?","Which of the following were founded in 1875?"],"st":[["ஆரிய சமாஜம்","Arya Samaj"],["பிரம்மஞானசபை","Theosophical Society"],["பிரார்த்தனை சமாஜம்","Prarthana Samaj"],["அலிகார் முகமதிய ஆங்கிலோ–ஓரியண்டல் கல்லூரி","Aligarh Mohammedan Anglo-Oriental College"]],"o":[["1 மற்றும் 2 மட்டும்","1 and 2 only"],["1, 3 மற்றும் 4 மட்டும்","1, 3 and 4 only"],["1, 2 மற்றும் 4 மட்டும்","1, 2 and 4 only"],["2, 3 மற்றும் 4 மட்டும்","2, 3 and 4 only"]],"a":2,"x":["ஆரிய சமாஜம், பிரம்மஞானசபை (அமெரிக்கா), அலிகார் கல்லூரி ஆகியவை 1875இல் தொடங்கின; பிரார்த்தனை சமாஜம் 1867இல் தொடங்கியது.","The Arya Samaj, Theosophical Society (in the USA) and the Aligarh College all began in 1875; the Prarthana Samaj began in 1867."]},{"lv":"M","q":["பொருத்துக:","Match the following:"],"tb":{"h":[["பட்டியல் I","List I"],["பட்டியல் II","List II"]],"L":[["ஒரு பைசாத் தமிழன்","Oru Paisa Tamilan"],["திருவருட்பா","Thiruvarutpa"],["பாபா தயாள் தாஸ்","Baba Dayal Das"],["ஈஸ்வர் சந்திர வித்யாசாகர்","Ishwar Chandra Vidyasagar"],["தேவேந்திரநாத் தாகூர்","Debendranath Tagore"]],"R":[["விதவை மறுமணச் சீர்திருத்தச் சட்டம்","Widows' Remarriage Reform Act"],["நிரங்காரி இயக்கம்","Nirankari Movement"],["ஆதி பிரம்ம சமாஜம்","Adi Brahmo Samaj"],["வார இதழ் (பத்திரிக்கை)","Weekly journal"],["ஜீவகாருண்யப் பாடல்கள்","Songs of compassion (Jeevakarunya)"]]},"o":["A-4, B-5, C-3, D-1, E-2","A-5, B-4, C-2, D-1, E-3","A-4, B-1, C-2, D-5, E-3","A-4, B-5, C-2, D-1, E-3"],"a":3,"x":["ஒரு பைசாத் தமிழன் – அயோத்திதாசரின் வார இதழ்; திருவருட்பா – இராமலிங்கரின் ஜீவகாருண்யப் பாடல்கள்; தயாள் தாஸ் – நிரங்காரி; வித்யாசாகர் – 1856 சட்டம்; தேவேந்திரநாத் – ஆதி பிரம்ம சமாஜம்.","Oru Paisa Tamilan – Iyothee Thassar's weekly; Thiruvarutpa – Ramalinga's songs of compassion; Dayal Das – Nirankari; Vidyasagar – 1856 Act; Debendranath – Adi Brahmo Samaj."]},{"lv":"E","q":["பிரம்மஞானசபையின் நிறுவனர்கள் யார்?","Who among the following were the founders of the Theosophical Society?"],"st":[["H.P. பிளாவட்ஸ்கி","H.P. Blavatsky"],["அன்னிபெசன்ட்","Annie Besant"],["H.S. ஆல்காட்","H.S. Olcott"]],"o":[["மேற்கண்ட அனைவரும்","All of the above"],["1 மற்றும் 2 மட்டும்","1 and 2 only"],["2 மற்றும் 3 மட்டும்","2 and 3 only"],["1 மற்றும் 3 மட்டும்","1 and 3 only"]],"a":3,"x":["பிளாவட்ஸ்கியும் ஆல்காட்டும் 1875இல் நிறுவினர்; ஆல்காட்டின் மறைவுக்குப்பின் அன்னிபெசன்ட் தலைவரானார் (நிறுவனர் அல்லர்).","Blavatsky and Olcott founded it in 1875; Annie Besant became president after Olcott's death – she was not a founder."]},{"lv":"D","q":["சுவாமி விவேகானந்தர் குறித்த கீழ்க்காணும் கூற்றுகளில் சரியானவை எவை?","Which of the following statements about Swami Vivekananda are correct?"],"st":[["இயற்பெயர் நரேந்திரநாத் தத்தா; இராமகிருஷ்ணரின் முதன்மைச் சீடர்.","His original name was Narendra Nath Datta; he was Ramakrishna's prime disciple."],["மனிதத் தொண்டை வலியுறுத்தும் 'நடைமுறை வேதாந்தத்தை' முன்வைத்தார்.","He advocated the 'Practical Vedanta' of service to humanity."],["ஒடுக்கப்பட்டோரும் இந்துச் சடங்குகளில் பங்கேற்கலாம் எனக் கூறியதால் மரபுவழி இந்துக்களால் கண்டிக்கப்பட்டார்.","He was condemned by orthodox Hindus for suggesting that lower castes be allowed in Hindu rituals."],["1893இல் கல்கத்தாவில் நடந்த உலக சமய மாநாட்டில் உரையாற்றினார்.","He addressed the World Congress of Religions held at Calcutta in 1893."]],"o":[["1, 2 மற்றும் 3 மட்டும்","1, 2 and 3 only"],["1, 2 மற்றும் 4 மட்டும்","1, 2 and 4 only"],["2, 3 மற்றும் 4 மட்டும்","2, 3 and 4 only"],["1, 2, 3 மற்றும் 4","1, 2, 3 and 4"]],"a":0,"x":["உலக சமய மாநாடு 1893இல் சிக்காகோவில் நடைபெற்றது, கல்கத்தாவில் அல்ல.","The 1893 World Congress of Religions was held at Chicago, not Calcutta."]},{"lv":"M","q":["இராமகிருஷ்ணா மிஷன் குறித்த கீழ்க்காணும் கூற்றுகளில் சரியானவை எவை?","Which of the following statements about the Ramakrishna Mission are correct?"],"st":[["கல்வி, உடல் நலம், பேரிடர்களின்போது நிவாரணப் பணி போன்ற சமூகப் பணிகளில் செயலூக்கத்துடன் ஈடுபட்டது.","It was actively involved in social work such as education, health care and relief during calamities."],["பேரின்ப நிலை எய்தும் பழக்கங்கள் மூலம் ஆன்ம ரீதியாக இறைவனோடு இணைவதை இராமகிருஷ்ணர் வலியுறுத்தினார்.","Ramakrishna emphasised spiritual union with God through ecstatic practices."],["இராமகிருஷ்ணரே இராமகிருஷ்ணா மிஷனை ஏற்படுத்தினார்.","Ramakrishna himself founded the Ramakrishna Mission."]],"o":[["1 மட்டும்","1 only"],["1 மற்றும் 2 மட்டும்","1 and 2 only"],["3 மட்டும்","3 only"],["1 மற்றும் 3 மட்டும்","1 and 3 only"]],"a":1,"x":["இராமகிருஷ்ணரின் மறைவுக்குப்பின் (1886) சீடர் விவேகானந்தரே, கிறித்தவ மிஷனரி அமைப்பைப் பின்பற்றி இம்மிஷனை நிறுவினார்.","Vivekananda – not Ramakrishna – founded the Mission after Ramakrishna's death (1886), following the Christian missionary model."]},{"lv":"E","q":["'சத்யார்த்தபிரகாஷ்' எனும் நூலின் ஆசிரியர் யார்?","Who is the author of the book 'Satyarthaprakash'?"],"o":[["அன்னிபெசன்ட்","Annie Besant"],["தயானந்த சரஸ்வதி","Dayanand Saraswati"],["நாராயண குரு","Narayana Guru"],["அயோத்திதாசர்","Iyothee Thassar"]],"a":1,"x":["'சத்யார்த்தபிரகாஷ்' – ஆரிய சமாஜ நிறுவனர் தயானந்த சரஸ்வதியின் நூல்.","'Satyarthaprakash' was written by Dayanand Saraswati, founder of the Arya Samaj."]},{"lv":"M","q":["பின்வருவனவற்றுள் சமயப் புத்தெழுச்சி (மீட்டெடுப்பு) இயக்கங்களை மட்டுமே கொண்ட தொகுப்பு எது?","Which one of the following groups contains only revivalist movements?"],"o":[["ஆரிய சமாஜம், அலிகார் இயக்கம், தியோபந்த் இயக்கம்","Arya Samaj, Aligarh Movement, Deoband Movement"],["பிரம்ம சமாஜம், ஆரிய சமாஜம், தியோபந்த் இயக்கம்","Brahmo Samaj, Arya Samaj, Deoband Movement"],["ஆரிய சமாஜம், இராமகிருஷ்ணா மிஷன், தியோபந்த் இயக்கம்","Arya Samaj, Ramakrishna Mission, Deoband Movement"],["பிரார்த்தனை சமாஜம், அலிகார் இயக்கம், இராமகிருஷ்ணா மிஷன்","Prarthana Samaj, Aligarh Movement, Ramakrishna Mission"]],"a":2,"x":["சீர்திருத்தவாத இயக்கங்கள்: பிரம்ம சமாஜம், பிரார்த்தனை சமாஜம், அலிகார் இயக்கம். புத்தெழுச்சி இயக்கங்கள்: ஆரிய சமாஜம், இராமகிருஷ்ணா மிஷன், தியோபந்த் இயக்கம்.","Reformist: Brahmo Samaj, Prarthana Samaj, Aligarh. Revivalist: Arya Samaj, Ramakrishna Mission, Deoband."]},{"lv":"M","q":["பின்வருவனவற்றைக் காலவரிசைப்படி அமைக்க:","Arrange the following in chronological order:"],"st":[["பிரம்மஞானசபை","Theosophical Society"],["தக்காணக் கல்விக் கழகம்","Deccan Education Society"],["சாக்கிய பௌத்த சங்கம்","Sakya Buddhist Society"]],"o":["1 – 2 – 3","1 – 3 – 2","3 – 1 – 2","2 – 1 – 3"],"a":0,"x":["பிரம்மஞானசபை (1875) → தக்காணக் கல்விக் கழகம் (1884) → சாக்கிய பௌத்த சங்கம் (1898).","Theosophical Society (1875) → Deccan Education Society (1884) → Sakya Buddhist Society (1898)."]},{"lv":"E","q":["அன்னிபெசன்ட் தமது செய்தித்தாள்கள் மூலம் பிரம்மஞானக் கருத்துகளைப் பரப்பினார். அவை:","Annie Besant spread Theosophical ideas through her newspapers:"],"st":[["இந்தியா","India"],["நியூ இந்தியா","New India"],["காமன்வீல்","Commonweal"]],"o":[["மேற்கண்ட அனைத்தும்","All of the above"],["1 மற்றும் 2 மட்டும்","1 and 2 only"],["2 மற்றும் 3 மட்டும்","2 and 3 only"],["1 மற்றும் 3 மட்டும்","1 and 3 only"]],"a":2,"x":["அன்னிபெசன்ட்டின் இதழ்கள் 'நியூ இந்தியா', 'காமன்வீல்'.","Annie Besant's papers were 'New India' and 'Commonweal'."]},{"lv":"M","q":["கூற்று (A): ஜோதிபா புலே அனாதைகளுக்கான இல்லங்களையும் விதவைகளுக்கான காப்பகங்களையும் தொடங்கினார்.\nகாரணம் (R): ஜோதிபா புலே தம் மனைவி சாவித்திரிபாயுடன் இணைந்து ஒடுக்கப்பட்டோர், பெண்கள் ஆகியோரின் முன்னேற்றத்திற்காகத் தம் வாழ்க்கையை அர்ப்பணித்தார்.","Assertion (A): Jyotiba Phule opened orphanages and homes for widows.\nReason (R): Jyotiba Phule, along with his wife Savitribai, devoted their lives to the upliftment of the depressed classes and women."],"o":[["A, R இரண்டும் சரி; R, A-க்குச் சரியான விளக்கம்","Both A and R are true and R is the correct explanation of A"],["A, R இரண்டும் சரி; ஆனால் R, A-க்குச் சரியான விளக்கமல்ல","Both A and R are true but R is not the correct explanation of A"],["A சரி; R தவறு","A is true but R is false"],["A தவறு; R சரி","A is false but R is true"]],"a":0,"x":["புலேவும் சாவித்திரிபாயும் ஒடுக்கப்பட்டோர், பெண்களின் முன்னேற்றத்திற்காக வாழ்ந்தனர்; அதன் வெளிப்பாடே அனாதை இல்லம், விதவைகள் காப்பகம்.","The Phules lived for the upliftment of the oppressed and women; the orphanage and widows' home were expressions of that commitment."]},{"lv":"M","q":["சர் சையத் அகமத்கான் குறித்த கீழ்க்காணும் கூற்றுகளில் சரியானவை எவை?","Which of the following statements about Sir Sayyid Ahmed Khan are correct?"],"st":[["நவீன கல்வியின்மையே முஸ்லிம்களைப் பின்தங்கச் செய்தது எனக் கருதினார்.","He believed lack of modern education had kept the Muslims backward."],["மேலைநாட்டு அறிவியலையும் அரசுப் பணிகளையும் ஏற்கும்படி முஸ்லிம்களை வற்புறுத்தினார்.","He exhorted Muslims to accept Western science and take up government services."],["எழுச்சி பெற்ற தேசிய இயக்கத்தில் முஸ்லிம்கள் இணைய வேண்டும் என அறிவுறுத்தினார்.","He advised Muslims to join the rising nationalist movement."],["அறிவியல் கழகத்தை நிறுவி, ஆங்கில அறிவியல் நூல்களை உருதுவில் மொழிபெயர்த்தார்.","He founded a scientific society and translated English science books into Urdu."]],"o":[["1 மற்றும் 2 மட்டும்","1 and 2 only"],["2 மற்றும் 3 மட்டும்","2 and 3 only"],["1, 3 மற்றும் 4 மட்டும்","1, 3 and 4 only"],["1, 2 மற்றும் 4 மட்டும்","1, 2 and 4 only"]],"a":3,"x":["ஆங்கில அரசுடன் நல்லுறவே முஸ்லிம்களுக்கு நலம் எனக் கருதிய அவர், தேசிய இயக்கத்தில் இணையாதிருக்க அறிவுறுத்தினார்.","He felt cooperation with the British served Muslim interests, so he advised Muslims to stay away from the nationalist movement."]},{"lv":"D","q":["பொருத்துக:","Match the following:"],"tb":{"h":[["நிகழ்வு","Event"],["ஆண்டு","Year"]],"L":[["ரஹ்னுமாய் மஜ்தயாஸ்னன் சபா தொடக்கம்","Founding of the Rahnumai Mazdayasnan Sabha"],["தியோபந்தில் பள்ளி நிறுவப்படுதல்","Founding of the school at Deoband"],["பிரம்மஞானசபை அடையாறுக்கு மாற்றப்படுதல்","Shifting of the Theosophical Society to Adyar"],["அலிகார் கல்லூரி பல்கலைக்கழக அந்தஸ்து பெறுதல்","Aligarh College raised to university status"]],"R":[["1920","1920"],["1851","1851"],["1886","1886"],["1866","1866"]]},"o":["A-4, B-2, C-3, D-1","A-2, B-4, C-3, D-1","A-2, B-4, C-1, D-3","A-4, B-2, C-1, D-3"],"a":1,"x":["ரஹ்னுமாய் மஜ்தயாஸ்னன் சபா – 1851; தியோபந்த் பள்ளி – 1866; பிரம்மஞானசபை அடையாறில் – 1886; அலிகார் பல்கலைக்கழக அந்தஸ்து – 1920.","Rahnumai Mazdayasnan Sabha – 1851; Deoband school – 1866; Theosophical Society at Adyar – 1886; Aligarh university status – 1920."]},{"lv":"E","q":["'ராஸ்ட் கோப்தார்' (உண்மை விளம்பி) யாருடைய முழக்கக் குரலாக விளங்கியது?","'Rast Goftar' (The Truth Teller) was the voice of which movement?"],"o":[["அலிகார் இயக்கம்","Aligarh Movement"],["பார்சி இயக்கம்","Parsi Movement"],["இராமகிருஷ்ணா மிஷன்","Ramakrishna Mission"],["திராவிட மகாஜன சபை","Dravida Mahajana Sabha"]],"a":1,"x":["'ராஸ்ட் கோப்தார்' பார்சி சீர்திருத்த இயக்கத்தின் முக்கிய இதழ்.","'Rast Goftar' was the main mouthpiece of the Parsi reform movement."]},{"lv":"M","q":["பார்சி சீர்திருத்த இயக்கம் தொடர்பான கூற்றுகளில் சரியானவை எவை?","Which of the following statements about the Parsi reform movement are correct?"],"st":[["பர்துன்ஜி நௌரோஜி 1851இல் 'ரஹ்னுமாய் மஜ்தயாஸ்னன் சபாவை' நிறுவினார்.","Furdunji Naoroji founded the 'Rahnumai Mazdayasnan Sabha' in 1851."],["'ராஸ்ட் கோப்தார்' பிரார்த்தனை சமாஜத்தின் குரலாக விளங்கியது.","'Rast Goftar' was the voice of the Prarthana Samaj."],["பெர்ராம்ஜி மல்பாரி குழந்தைத் திருமணத்திற்கு எதிரான சட்டத்திற்காக இயக்கம் நடத்தினார்.","Behramji Malabari campaigned for legislation against child marriage."],["பெரோசா மேத்தா, தீன்சா வாச்சா ஆகியோர் தொடக்ககால காங்கிரசில் முக்கியப் பங்காற்றினர்.","Pherozeshah Mehta and Dinshaw Wacha played a big role in the early Congress."]],"o":[["1 மற்றும் 2 மட்டும்","1 and 2 only"],["2, 3 மற்றும் 4 மட்டும்","2, 3 and 4 only"],["1, 3 மற்றும் 4 மட்டும்","1, 3 and 4 only"],["1, 2, 3 மற்றும் 4","1, 2, 3 and 4"]],"a":2,"x":["'ராஸ்ட் கோப்தார்' பார்சி இயக்கத்தின் குரல்; பிரார்த்தனை சமாஜத்தின் அல்ல.","'Rast Goftar' voiced the Parsi movement, not the Prarthana Samaj."]},{"lv":"E","q":["அமிர்தசரசில் காலசா கல்லூரியை நிறுவிய சிங் சபை, எந்த இயக்கத்தின் முன்னோடி அமைப்பாகும்?","The Singh Sabha of Amritsar, which established the Khalsa College, was the forerunner of which movement?"],"o":[["அகாலி இயக்கம்","Akali Movement"],["நிரங்காரி இயக்கம்","Nirankari Movement"],["நாம்தாரி இயக்கம்","Namdhari Movement"],["ஆரிய சமாஜம்","Arya Samaj"]],"a":0,"x":["ஆரிய சமாஜம், கிறித்தவ மிஷனரிகளின் செல்வாக்கை எதிர்கொண்டு சீக்கிய மதத் தூய்மையை மீட்க உருவான சிங் சபையே அகாலி இயக்கத்தின் முன்னோடி.","Formed to restore the purity of Sikhism amid Arya Samaj and missionary influence, the Singh Sabha was a forerunner of the Akali Movement."]},{"lv":"D","q":["பின்வரும் இயக்கம் – நிறுவனர் இணைகளில் சரியாகப் பொருந்தியுள்ளது எது?","Which of the following pairs of Movement and its Founder is correctly matched?"],"o":[["இந்திய பிரம்ம சமாஜம் – ராம்மோகன் ராய்","Brahmo Samaj of India – Rammohan Roy"],["ஆதி பிரம்ம சமாஜம் – த்விஜேந்திரநாத் தாகூர்","Adi Brahmo Samaj – Dwijendranath Tagore"],["சாதாரண பிரம்ம சமாஜம் – ஆனந்த மோகன் போஸ்","Sadharan Brahmo Samaj – Ananda Mohan Bose"],["பிரம்ம சமாஜம் – கேசவ் சந்திர சென்","Brahmo Samaj – Keshab Chandra Sen"]],"a":2,"x":["சாதாரண பிரம்ம சமாஜத்தை ஆனந்த மோகன் போஸ் உள்ளிட்டோர் நிறுவினர். பிரம்ம சமாஜம் – ராம்மோகன் ராய்; இந்திய பிரம்ம சமாஜம் – கேசவ் சென்; ஆதி பிரம்ம சமாஜம் – தேவேந்திரநாத் தாகூர்.","The Sadharan Brahmo Samaj was founded by Ananda Mohan Bose and others. Brahmo Samaj – Rammohan Roy; Brahmo Samaj of India – Keshab Sen; Adi Brahmo Samaj – Debendranath Tagore."]},{"lv":"D","q":["ஒடுக்கப்பட்ட, ஏழை மக்களுக்காக ஜோதிபா புலே ஆற்றிய பணிகள் தொடர்பான கூற்றுகளில் சரியானவை எவை?","Which of the following statements about Jyotiba Phule's work for the poor and the marginalised are correct?"],"st":[["1852இல் புனேயில் 'தீண்டத்தகாதவர்களுக்கான' முதல் பள்ளியைத் திறந்தார்.","He opened the first school for 'untouchables' in Poona in 1852."],["பிராமணரல்லாத மக்களிடையே சுயமரியாதையைத் தூண்ட சத்யசோதக் சமாஜை நிறுவினார்.","He founded the Satyashodhak Samaj to stir the non-Brahman masses to self-respect."],["தம் தீவிரக் கருத்துகளைச் சுருக்கிக் கூறும் 'குலாம்கிரி' (அடிமைத்தனம்) நூலை எழுதினார்.","He wrote 'Gulamgiri' (Slavery), which summarised many of his radical ideas."],["விதவை மறுமணத்தை எதிர்த்தார்.","He opposed widow remarriage."]],"o":[["1 மற்றும் 2 மட்டும்","1 and 2 only"],["2, 3 மற்றும் 4 மட்டும்","2, 3 and 4 only"],["1, 2 மற்றும் 4 மட்டும்","1, 2 and 4 only"],["1, 2 மற்றும் 3 மட்டும்","1, 2 and 3 only"]],"a":3,"x":["புலே குழந்தைத் திருமணத்தை எதிர்த்து, விதவை மறுமணத்தை ஆதரித்தார்.","Phule opposed child marriage and supported widow remarriage."]},{"lv":"D","q":["பின்வரும் இணைகளில் தவறாகப் பொருந்தியது எது?","Which one of the following pairs is NOT correctly matched?"],"o":[["நாராயண குரு – அருவிப்புரம் கோயில்","Narayana Guru – Temple at Aruvipuram"],["அய்யன்காளி – ஸ்ரீ நாராயண தர்ம பரிபாலன யோகம்","Ayyankali – Sri Narayana Dharma Paripalana Yogam"],["அய்யன்காளி – சாது ஜன பரிபாலன சங்கம்","Ayyankali – Sadhu Jana Paripalana Sangam"],["நாராயண குரு – குமாரன் ஆசான், டாக்டர் பால்பு (தாக்கம் பெற்றோர்)","Narayana Guru – Kumaran Asan and Dr Palpu (influenced by him)"]],"a":1,"x":["SNDP யோகத்தை நிறுவியவர் நாராயண குரு; அய்யன்காளி 1907இல் சாது ஜன பரிபாலன சங்கத்தை நிறுவினார்.","The SNDP Yogam was founded by Narayana Guru; Ayyankali founded the Sadhu Jana Paripalana Sangam in 1907."]},{"lv":"M","q":["கூற்று (A): ஆரிய சமாஜம் 'சுத்தி' எனும் தூய்மைச் சடங்கை அறிமுகப்படுத்தியது.\nகாரணம் (R): வெளிநாட்டுப் பயணத்தால் தீட்டு ஏற்படும் என்பதையும் விதவை மறுமணத் தடையையும் ஆரிய சமாஜம் ஆதரித்தது.","Assertion (A): The Arya Samaj introduced a purificatory ceremony called 'Suddhi'.\nReason (R): The Arya Samaj upheld the polluting effects of foreign travel and the prohibition on widow remarriage."],"o":[["A, R இரண்டும் சரி; R, A-க்குச் சரியான விளக்கம்","Both A and R are true and R is the correct explanation of A"],["A, R இரண்டும் சரி; ஆனால் R, A-க்குச் சரியான விளக்கமல்ல","Both A and R are true but R is not the correct explanation of A"],["A சரி; R தவறு","A is true but R is false"],["A தவறு; R சரி","A is false but R is true"]],"a":2,"x":["இஸ்லாம்/கிறித்தவத்திற்கு மாறிய இந்துக்களை மீட்கவே சுத்தி. வெளிநாட்டுப் பயணத் தீட்டு, விதவை மறுமணத் தடை, குழந்தைத் திருமணம் ஆகியவற்றுக்கு மறைநூல் ஆதாரமில்லை என தயானந்தர் அறிவித்தார்.","Suddhi was meant for Hindus who had converted to Islam or Christianity. Dayanand declared that foreign-travel pollution, the ban on widow remarriage and child marriage had no scriptural sanction."]},{"lv":"D","q":["இராமலிங்க சுவாமிகள் (வள்ளலார்) குறித்த கீழ்க்காணும் கூற்றுகளில் சரியானவை எவை?","Which of the following statements about Ramalinga Swamigal (Vallalar) are correct?"],"st":[["தாவரங்கள் உட்பட அனைத்து உயிர்களிடமும் காட்டும் இரக்கத்தை 'ஜீவகாருண்யம்' என்றார்.","He called compassion towards all living beings, including plants, 'Jeevakarunya'."],["1865இல் சமரச வேத சன்மார்க்க சங்கத்தை நிறுவினார்; அது பின்னர் 'சமரச சுத்த சன்மார்க்க சத்திய சங்கம்' எனப் பெயர் மாற்றப்பட்டது.","In 1865 he founded the Samarasa Vedha Sanmarga Sangam, later renamed 'Samarasa Suddha Sanmarga Satya Sangam'."],["முறையான கல்வி கற்று அதன் வழியாகவே பேரறிஞரானார்.","He became a great scholar through years of formal education."],["1867இல் வடலூரில் சாதி வேறுபாடின்றி அனைவருக்கும் இலவச உணவகத்தை நிறுவினார்.","In 1867 he established a free feeding house at Vadalur for all, irrespective of caste."]],"o":[["1, 2 மற்றும் 3 மட்டும்","1, 2 and 3 only"],["2, 3 மற்றும் 4 மட்டும்","2, 3 and 4 only"],["1, 2 மற்றும் 4 மட்டும்","1, 2 and 4 only"],["1, 3 மற்றும் 4 மட்டும்","1, 3 and 4 only"]],"a":2,"x":["இராமலிங்கர் முறையான கல்வியின்றியே பேரறிவு பெற்றவர். 1866 பஞ்சத்தின் பின் 1867இல் வடலூர் தருமச்சாலையை நிறுவினார்; பாடல்கள் 'திருவருட்பா'.","Ramalinga gained immense scholarship without formal education. After the 1866 famine he set up the Vadalur feeding house (1867); his songs are the 'Thiruvarutpa'."]},{"lv":"M","q":["பின்வரும் அமைப்புகளில் C. அயோத்திதாசரால் நிறுவப்படாதது எது?","Which one of these associations was NOT founded by Iyothee Thassar?"],"o":[["ஆதி திராவிட மகாஜன சபை","Adi Dravida Mahajana Sabha"],["திராவிடர் கழகம்","Dravida Kazhagam"],["அத்வைதானந்த சபை","Advaidananda Sabha"],["திராவிட மகாஜன சபை","Dravida Mahajana Sabha"]],"a":0,"x":["அயோத்திதாசர் நிறுவியவை: அத்வைதானந்த சபை, திராவிடர் கழகம் (1882, ஜான் ரத்தினத்துடன்), திராவிட மகாஜன சபை (1891). 'ஆதி திராவிட மகாஜன சபை' அவர் நிறுவியதல்ல.","He founded the Advaidananda Sabha, Dravida Kazhagam (1882, with John Rathinam) and Dravida Mahajana Sabha (1891) – not an 'Adi Dravida Mahajana Sabha'."]},{"lv":"M","q":["பின்வரும் இதழ்கள்/செய்தித்தாள்களில் C. அயோத்திதாசரால் தொடங்கப்பட்டவை எவை?","Which of these journals and newspapers was/were founded by Iyothee Thassar?"],"st":[["ஒரு பைசாத் தமிழன்","Oru Paisa Tamilan"],["பறையன்","Paraiyan"],["திராவிட பாண்டியன்","Dravida Pandian"]],"o":[["மேற்கண்ட அனைத்தும்","All of the above"],["1 மற்றும் 2 மட்டும்","1 and 2 only"],["2 மற்றும் 3 மட்டும்","2 and 3 only"],["1 மற்றும் 3 மட்டும்","1 and 3 only"]],"a":3,"x":["'திராவிட பாண்டியன்' (1885), 'ஒரு பைசாத் தமிழன்' (1907–1914) ஆகியவை அயோத்திதாசர் இதழ்கள்; 'பறையன்' இரட்டைமலை சீனிவாசனின் இதழ்.","'Dravida Pandian' (1885) and 'Oru Paisa Tamilan' (1907–14) were Thassar's; 'Paraiyan' was Rettaimalai Srinivasan's journal."]},{"lv":"D","q":["பின்வருவனவற்றைக் காலவரிசைப்படி அமைக்க:","Arrange the following in chronological order:"],"st":[["விதவை மறுமணச் சீர்திருத்தச் சட்டம்","Widows' Remarriage Reform Act"],["சதி ஒழிப்புச் சட்டம்","Abolition of Sati"],["இந்திய தண்டனைச் சட்டத்தில் திருமண வயது பத்தாக நிர்ணயம்","Marriage age fixed at ten years in the Indian Penal Code"],["திருமண வயது பன்னிரண்டாக உயர்த்தப்படுதல்","Marriage age raised to twelve years"]],"o":["1 – 2 – 3 – 4","2 – 3 – 1 – 4","1 – 2 – 4 – 3","2 – 1 – 3 – 4"],"a":3,"x":["சதி ஒழிப்பு (1829) → விதவை மறுமணச் சட்டம் (1856) → IPC-யில் வயது 10 (1860) → 12 ஆக உயர்வு (1891); 1925இல் 13.","Abolition of Sati (1829) → Widows' Remarriage Act (1856) → age fixed at 10 in IPC (1860) → raised to 12 (1891); 13 in 1925."]}];
+const N = Q.length;
+const TOTAL_MS = N * CFG.PER_Q_SECONDS * 1000;
+const KEY_ATT = 'tnpsc:' + CFG.TEST_ID + ':attempts';
+const KEY_ACT = 'tnpsc:' + CFG.TEST_ID + ':active';
+const KEY_PROF = 'tnpsc:profile';
+
+const $ = (s, r=document) => r.querySelector(s);
+const store = {
+  get(k, d){ try{ const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; }catch(e){ return d; } },
+  set(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); return true; }catch(e){ return false; } },
+  del(k){ try{ localStorage.removeItem(k); }catch(e){} }
+};
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const nl = s => esc(s).replace(/\n/g, '<br>');
+const LV = { E:['எளிது','Easy'], M:['நடுத்தரம்','Medium'], D:['கடினம்','Difficult'] };
+const L = ['A','B','C','D'];
+const fmt = ms => { const s = Math.round(ms/1000); return Math.floor(s/60) + ':' + String(s%60).padStart(2,'0'); };
+const fmtLong = ms => { const s = Math.round(ms/1000); return Math.floor(s/60) + ' min ' + String(s%60).padStart(2,'0') + ' s'; };
+const dateStr = ms => new Date(ms).toLocaleString('en-IN', { day:'2-digit', month:'short', year:'numeric', hour:'2-digit', minute:'2-digit' });
+
+const S = { active:null, timer:null, saveCount:0, tab:'all', att:null };
+
+/* ================= bilingual building blocks ================= */
+const bi = t => `<div class="ta">${nl(t[0])}</div><div class="en">${nl(t[1])}</div>`;
+const optInner = o => Array.isArray(o)
+  ? `<span class="tx"><span class="ta">${esc(o[0])}</span><span class="en">${esc(o[1])}</span></span>`
+  : `<span class="tx"><span class="neutral">${esc(o)}</span></span>`;
+
+function matchHTML(t){
+  const col = (h, arr, key) => `<div><div class="mh">${esc(h[0])} / ${esc(h[1])}</div>` +
+    arr.map((x,i) => `<div class="mrow"><span class="mk">${key(i)}</span><div>${bi(x)}</div></div>`).join('') + `</div>`;
+  return `<div class="match">${col(t.h[0], t.L, i => String.fromCharCode(65+i))}` +
+         `${col(t.h[1], t.R, i => i+1)}</div>`;
+}
+function bodyHTML(q){
+  let h = `<div class="stem">${bi(q.q)}</div>`;
+  if (q.st) h += `<ol class="stm">${q.st.map(s => `<li>${bi(s)}</li>`).join('')}</ol>`;
+  if (q.tb) h += matchHTML(q.tb);
+  return h;
+}
+
+/* ================= start screen ================= */
+function show(id){
+  ['vStart','vTest','vResult'].forEach(v => $('#'+v).hidden = (v !== id));
+  window.scrollTo(0,0);
+}
+function toast(msg){
+  const t = $('#toast'); t.textContent = msg; t.hidden = false;
+  clearTimeout(toast._t); toast._t = setTimeout(() => t.hidden = true, 2600);
+}
+function ask(title, msg){
+  return new Promise(res => {
+    const d = $('#dlgConfirm'); $('#cfTitle').textContent = title; $('#cfMsg').textContent = msg;
+    const done = v => { d.close(); res(v); };
+    $('#cfYes').onclick = () => done(true); $('#cfNo').onclick = () => done(false);
+    d.oncancel = () => res(false);
+    d.showModal();
+  });
+}
+
+function renderStart(){
+  show('vStart');
+  $('#fN').textContent = N; $('#fT').textContent = (N * CFG.PER_Q_SECONDS / 60) + ' min';
+  const prof = store.get(KEY_PROF, {});
+  if (prof.name && !$('#inName').value) $('#inName').value = prof.name;
+  if (prof.mobile && !$('#inMobile').value) $('#inMobile').value = prof.mobile;
+  $('#storeWarn').hidden = store.set('tnpsc:probe', 1);
+  store.del('tnpsc:probe');
+
+  const act = store.get(KEY_ACT, null);
+  const rb = $('#resumeBox');
+  if (act && Date.now() < act.endsAt){
+    S.active = act; rb.hidden = false;
+    $('#resumeInfo').textContent = act.name + ' · ' + fmt(act.endsAt - Date.now()) + ' min left · ' +
+      act.answers.filter(a => a >= 0).length + '/' + N + ' answered';
+  } else { rb.hidden = true; }
+
+  const list = store.get(KEY_ATT, []);
+  const box = $('#histBox');
+  if (!list.length){ box.innerHTML = '<p class="empty">இன்னும் தேர்வுகள் இல்லை. · No attempts yet. Your finished tests will be saved here.</p>'; return; }
+  box.innerHTML = '<table class="hist"><thead><tr><th>Date</th><th>Name</th><th>Score</th><th>R / W / U</th><th>Time</th><th></th></tr></thead><tbody>' +
+    list.map(a => `<tr><td>${esc(dateStr(a.submittedAt))}</td><td>${esc(a.name)}</td><td><b>${fmtScore(a.score)}</b> / ${a.max}</td>` +
+      `<td>${a.right} / ${a.wrong} / ${a.skip}</td><td>${fmt(a.totalMs)}</td>` +
+      `<td><div class="acts"><button class="btn" data-v="${a.id}">பார்க்க · View</button><button class="btn" data-r="${a.id}">மீண்டும் · Retake</button><button class="btn danger" data-d="${a.id}" aria-label="Delete attempt">✕</button></div></td></tr>`).join('') +
+    '</tbody></table>';
+}
+const fmtScore = n => (Math.round(n * 100) / 100).toString();
+
+function validate(){
+  const name = $('#inName').value.trim().replace(/\s+/g,' ');
+  const mobile = $('#inMobile').value.replace(/\D/g,'');
+  const err = $('#formErr');
+  if (name.length < 2){ err.textContent = 'பெயரை உள்ளிடுக · Please enter your name.'; $('#inName').focus(); return null; }
+  if (!/^[6-9]\d{9}$/.test(mobile)){ err.textContent = 'சரியான 10 இலக்க கைபேசி எண்ணை உள்ளிடுக · Enter a valid 10-digit mobile number.'; $('#inMobile').focus(); return null; }
+  err.textContent = '';
+  return { name, mobile };
+}
+
+/* ================= running the test ================= */
+function startAttempt(name, mobile){
+  store.set(KEY_PROF, { name, mobile });
+  const now = Date.now();
+  S.active = { id:'a'+now, name, mobile, startedAt:now, endsAt:now + TOTAL_MS, lastTick:now, cur:0,
+    answers:Array(N).fill(-1), times:Array(N).fill(0), marked:Array(N).fill(false), visited:Array(N).fill(false) };
+  S.active.visited[0] = true;
+  persist(); enterTest();
+}
+function enterTest(){
+  show('vTest');
+  buildPalette(); renderQ(); updateClocks();
+  clearInterval(S.timer); S.timer = setInterval(tick, 250);
+}
+function persist(){ if (S.active) store.set(KEY_ACT, S.active); }
+
+function tick(){
+  const a = S.active; if (!a) return;
+  const now = Math.min(Date.now(), a.endsAt);
+  a.times[a.cur] += Math.max(0, now - a.lastTick);
+  a.lastTick = now;
+  updateClocks();
+  if (++S.saveCount % 20 === 0) persist();
+  if (Date.now() >= a.endsAt) finish('timeup');
+}
+function updateClocks(){
+  const a = S.active; if (!a) return;
+  const left = Math.max(0, a.endsAt - Date.now());
+  $('#tLeft').textContent = fmt(left);
+  const c = $('#clkT'); c.classList.toggle('low', left <= 5*60000 && left > 60000); c.classList.toggle('crit', left <= 60000);
+  $('#tQ').textContent = fmt(a.times[a.cur]);
+  const ch = $('#chipT'); if (ch) ch.textContent = '⏱ ' + fmt(a.times[a.cur]);
+  $('#clkQ').classList.toggle('over', a.times[a.cur] > CFG.PER_Q_SECONDS * 1000);
+  const t = $('#palette').children[a.cur];
+  if (t) t.querySelector('i').textContent = fmt(a.times[a.cur]);
+}
+
+function buildPalette(){
+  const p = $('#palette'); p.innerHTML = '';
+  for (let i = 0; i < N; i++){
+    const b = document.createElement('button');
+    b.className = 'tile'; b.type = 'button'; b.setAttribute('aria-label', 'Question ' + (i+1));
+    b.innerHTML = `<b>${i+1}</b><i></i>`;
+    b.onclick = () => goTo(i);
+    p.appendChild(b);
+  }
+}
+function paintPalette(){
+  const a = S.active;
+  [...$('#palette').children].forEach((t, i) => {
+    t.className = 'tile' + (a.answers[i] >= 0 ? ' ans' : (a.visited[i] ? ' vis' : '')) + (i === a.cur ? ' cur' : '') + (a.marked[i] ? ' mk' : '');
+    t.querySelector('i').textContent = a.times[i] > 0 ? fmt(a.times[i]) : '';
+  });
+}
+function renderQ(){
+  const a = S.active, q = Q[a.cur], i = a.cur;
+  $('#qcard').innerHTML =
+    `<div class="qhead"><span class="qno">வினா ${i+1} / ${N} · Question ${i+1} of ${N}</span>` +
+    `<span class="chip t" id="chipT">⏱ ${fmt(a.times[i])}</span></div>` +
+    bodyHTML(q) +
+    `<div class="opts" role="radiogroup" aria-label="Options">` +
+    q.o.map((o, k) => `<button type="button" class="opt" role="radio" aria-checked="${a.answers[i] === k}" data-k="${k}"><span class="lt">${L[k]}</span>${optInner(o)}</button>`).join('') +
+    `</div>`;
+  $('#qcard').querySelectorAll('.opt').forEach(b => b.onclick = () => {
+    tick(); a.answers[i] = +b.dataset.k; persist(); renderQ(); paintPalette();
+  });
+  $('#btnMark').textContent = a.marked[i] ? 'குறியை நீக்கு · Unmark' : 'குறி · Mark for review';
+  $('#btnPrev').disabled = i === 0;
+  $('#btnNext').textContent = i === N-1 ? 'முடி · Finish ✓' : 'அடுத்தது · Next →';
+  paintPalette(); updateClocks();
+}
+function goTo(i){
+  const a = S.active; tick();
+  a.cur = Math.max(0, Math.min(N-1, i)); a.visited[a.cur] = true;
+  persist(); renderQ(); window.scrollTo(0, 0);
+}
+function openSubmit(){
+  const a = S.active; tick();
+  const ans = a.answers.filter(x => x >= 0).length, mk = a.marked.filter(Boolean).length;
+  $('#dlgList').innerHTML =
+    `<li><span>விடையளித்தவை · Answered</span><b>${ans}</b></li>` +
+    `<li><span>விடையளிக்காதவை · Unanswered</span><b>${N-ans}</b></li>` +
+    `<li><span>குறித்தவை · Marked for review</span><b>${mk}</b></li>` +
+    `<li><span>மீதமுள்ள நேரம் · Time left</span><b>${fmt(Math.max(0, a.endsAt - Date.now()))}</b></li>`;
+  $('#dlgSubmit').showModal();
+}
+
+/* ================= scoring & finishing ================= */
+function grade(answers){
+  let right = 0, wrong = 0, skip = 0;
+  answers.forEach((s, i) => { if (s < 0) skip++; else if (s === Q[i].a) right++; else wrong++; });
+  const score = right * CFG.MARK_PER_RIGHT - wrong * CFG.NEGATIVE_MARK;
+  return { right, wrong, skip, score, max: N * CFG.MARK_PER_RIGHT };
+}
+function finish(reason){
+  const a = S.active; if (!a) return;
+  if (reason !== 'timeup') tick();
+  clearInterval(S.timer);
+  const g = grade(a.answers);
+  const att = Object.assign({
+    id:a.id, name:a.name, mobile:a.mobile, startedAt:a.startedAt,
+    submittedAt:Math.min(Date.now(), a.endsAt), reason,
+    answers:a.answers.slice(), times:a.times.slice(), marked:a.marked.slice(),
+    totalMs:a.times.reduce((x, y) => x + y, 0)
+  }, g);
+  const list = store.get(KEY_ATT, []); list.unshift(att); store.set(KEY_ATT, list);
+  store.del(KEY_ACT); S.active = null;
+  $('#dlgSubmit').open && $('#dlgSubmit').close();
+  sendToForm(att);
+  if (reason === 'timeup') toast('நேரம் முடிந்தது – தானாகச் சமர்ப்பிக்கப்பட்டது · Time up – submitted automatically');
+  showResult(att);
+}
+function sendToForm(att){
+  const f = CFG.GOOGLE_FORM; if (!f.action) return;
+  try{
+    const p = new URLSearchParams();
+    const put = (k, v) => { if (f.fields[k]) p.append(f.fields[k], v); };
+    put('name', att.name); put('mobile', att.mobile); put('test', CFG.TEST_NAME);
+    put('score', fmtScore(att.score)); put('correct', att.right); put('wrong', att.wrong); put('unanswered', att.skip);
+    put('timeUsed', fmtLong(att.totalMs)); put('submittedAt', new Date(att.submittedAt).toISOString());
+    put('details', att.answers.map((s, i) => (i+1) + ':' + (s < 0 ? '-' : L[s]) + ':' + Math.round(att.times[i]/1000) + 's').join(','));
+    fetch(f.action, { method:'POST', mode:'no-cors', body:p }).catch(() => {});
+  }catch(e){}
+}
+
+/* ================= result screen ================= */
+const status = (att, i) => att.answers[i] < 0 ? 'skip' : (att.answers[i] === Q[i].a ? 'right' : 'wrong');
+
+function reviewHTML(att, i){
+  const q = Q[i], st = status(att, i), sel = att.answers[i];
+  const badge = { right:['சரி','Right'], wrong:['தவறு','Wrong'], skip:['விடையளிக்கவில்லை','Unanswered'] }[st];
+  const opts = q.o.map((o, k) => {
+    let cls = '', tag = '';
+    if (k === q.a){ cls = 'ok'; tag = (sel === k ? 'உங்கள் விடை ✓ · Your answer' : 'சரியான விடை · Correct'); }
+    else if (k === sel){ cls = 'bad'; tag = 'உங்கள் விடை ✗ · Your answer'; }
+    return `<div class="ro ${cls}"><span class="lt">${L[k]}</span>${optInner(o)}<span class="tag">${tag}</span></div>`;
+  }).join('');
+  return `<article class="rv ${st}" id="rv${i}">` +
+    `<div class="rhead"><span class="qno">Q${i+1}</span><span class="badge ${st}">${badge[0]} · ${badge[1]}</span>` +
+    `<span class="chip ${q.lv}">${LV[q.lv][0]} · ${LV[q.lv][1]}</span><span class="sp"></span>` +
+    `<span class="chip t">⏱ ${fmt(att.times[i])}</span></div>` +
+    bodyHTML(q) + `<div class="ropts">${opts}</div>` +
+    `<div class="exp"><b>விளக்கம் · Explanation:</b><div class="ta">${esc(q.x[0])}</div><div class="en">${esc(q.x[1])}</div></div></article>`;
+}
+
+function showResult(att){
+  S.att = att; S.tab = 'all'; show('vResult');
+  const pct = Math.round(att.right / N * 100);
+  const seg = n => (n / N * 100).toFixed(2) + '%';
+  $('#scoreBox').innerHTML =
+    `<div class="who">${esc(att.name)} · ${esc(att.mobile)} · ${esc(dateStr(att.submittedAt))}${att.reason === 'timeup' ? ' · நேரம் முடிந்து சமர்ப்பிக்கப்பட்டது (time-up)' : ''}</div>` +
+    `<div class="big">${fmtScore(att.score)} <small>/ ${att.max}</small> <small>· ${pct}%</small></div>` +
+    `<div class="seg" aria-hidden="true"><i class="r" style="width:${seg(att.right)}"></i><i class="w" style="width:${seg(att.wrong)}"></i><i class="s" style="width:${seg(att.skip)}"></i></div>` +
+    `<div class="stats">` +
+    `<div class="stat r"><small>சரி · Right</small><b>${att.right}</b></div>` +
+    `<div class="stat w"><small>தவறு · Wrong</small><b>${att.wrong}</b></div>` +
+    `<div class="stat"><small>விடையளிக்காதவை · Unanswered</small><b>${att.skip}</b></div>` +
+    `<div class="stat"><small>மொத்த நேரம் · Total time</small><b>${fmtLong(att.totalMs)}</b></div>` +
+    `<div class="stat"><small>சராசரி / வினா · Avg per Q</small><b>${fmt(att.totalMs / N)}</b></div></div>`;
+
+  const lv = { E:[0,0], M:[0,0], D:[0,0] };
+  Q.forEach((q, i) => { lv[q.lv][1]++; if (status(att, i) === 'right') lv[q.lv][0]++; });
+  $('#lvlBox').innerHTML = Object.keys(lv).map(k => `<div><small class="en">${LV[k][0]} · ${LV[k][1]}</small><b>${lv[k][0]} / ${lv[k][1]}</b></div>`).join('');
+
+  const mx = Math.max(...att.times, 1);
+  $('#bars').innerHTML = att.times.map((t, i) =>
+    `<button type="button" class="${{right:'r',wrong:'w',skip:'s'}[status(att, i)]}" style="height:${Math.max(4, t / mx * 100)}%" title="Q${i+1}: ${fmt(t)}" aria-label="Question ${i+1}, ${fmt(t)}" data-i="${i}"></button>`).join('');
+  $('#axMax').textContent = 'Longest: ' + fmt(mx); $('#axEnd').textContent = 'Q' + N;
+  $('#bars').onclick = e => { const b = e.target.closest('button'); if (!b) return; S.tab = 'all'; renderTabs(); const el = document.getElementById('rv' + b.dataset.i); if (el) el.scrollIntoView({ behavior:'smooth', block:'start' }); };
+  renderTabs();
+}
+function renderTabs(){
+  const att = S.att;
+  const idx = { all:[...Array(N).keys()], right:[], wrong:[], skip:[] };
+  for (let i = 0; i < N; i++) idx[status(att, i)].push(i);
+  const names = { all:['எல்லா வினாக்கள்','All'], right:['சரி','Right'], wrong:['தவறு','Wrong'], skip:['விடையளிக்காதவை','Unanswered'] };
+  $('#tabs').innerHTML = Object.keys(names).map(k =>
+    `<button type="button" role="tab" data-t="${k}" aria-selected="${S.tab === k}">${names[k][0]} · ${names[k][1]}<span class="c">${idx[k].length}</span></button>`).join('');
+  $('#tabs').onclick = e => { const b = e.target.closest('button'); if (b){ S.tab = b.dataset.t; renderTabs(); } };
+  const list = idx[S.tab];
+  $('#rvList').innerHTML = list.length ? list.map(i => reviewHTML(att, i)).join('')
+    : '<div class="none">இந்தப் பிரிவில் வினாக்கள் இல்லை · No questions in this group.</div>';
+}
+
+/* ================= PDF (browser "Save as PDF") ================= */
+function downloadPdf(){
+  const att = S.att; if (!att) return;
+  const nums = k => { const r = []; for (let i = 0; i < N; i++) if (status(att, i) === k) r.push(i+1); return r.length ? r.join(', ') : '—'; };
+  const grid = att.times.map((t, i) => { const s = status(att, i);
+    return `<div class="${{right:'r',wrong:'w',skip:'s'}[s]}"><b>${i+1}</b> ${s === 'skip' ? '–' : L[att.answers[i]]} · ${fmt(t)}</div>`; }).join('');
+  $('#printRoot').innerHTML =
+    `<h1>${esc(CFG.TEST_NAME)}</h1>` +
+    `<div class="meta">${esc(att.name)} · ${esc(att.mobile)} · ${esc(dateStr(att.submittedAt))}</div>` +
+    `<div class="sumline"><span><b>Score:</b> ${fmtScore(att.score)} / ${att.max}</span><span><b>Right:</b> ${att.right}</span><span><b>Wrong:</b> ${att.wrong}</span>` +
+    `<span><b>Unanswered:</b> ${att.skip}</span><span><b>Total time:</b> ${fmtLong(att.totalMs)}</span><span><b>Avg / Q:</b> ${fmt(att.totalMs / N)}</span></div>` +
+    `<div class="lists"><p><b>சரி · Right:</b> ${nums('right')}</p><p><b>தவறு · Wrong:</b> ${nums('wrong')}</p><p><b>விடையளிக்கவில்லை · Unanswered:</b> ${nums('skip')}</p></div>` +
+    `<div class="meta" style="margin-top:6pt">Question · your answer · time taken</div><div class="tg">${grid}</div>` +
+    Q.map((q, i) => reviewHTML(att, i)).join('');
+  const old = document.title;
+  document.title = 'TNPSC_Mock_' + CFG.TEST_ID + '_' + att.name.replace(/[^\w]+/g, '_');
+  document.body.classList.add('printing');
+  const done = () => { document.body.classList.remove('printing'); document.title = old; window.removeEventListener('afterprint', done); };
+  window.addEventListener('afterprint', done);
+  setTimeout(() => window.print(), 80);
+}
+
+/* ================= wiring ================= */
+$('#btnStart').onclick = () => { const v = validate(); if (v) startAttempt(v.name, v.mobile); };
+$('#inMobile').addEventListener('keydown', e => { if (e.key === 'Enter') $('#btnStart').click(); });
+$('#btnResume').onclick = () => { if (S.active) enterTest(); };
+$('#btnDiscard').onclick = async () => { if (await ask('நீக்கவா? · Discard?', 'The unfinished test will be deleted.')){ store.del(KEY_ACT); S.active = null; renderStart(); } };
+$('#histBox').onclick = async e => {
+  const b = e.target.closest('button'); if (!b) return;
+  const list = store.get(KEY_ATT, []);
+  if (b.dataset.v){ const a = list.find(x => x.id === b.dataset.v); if (a) showResult(a); }
+  else if (b.dataset.r){ const a = list.find(x => x.id === b.dataset.r); if (a && await ask('மீண்டும் எழுதவா? · Retake?', 'A fresh timed attempt will start now for ' + a.name + '.')) startAttempt(a.name, a.mobile); }
+  else if (b.dataset.d){ if (await ask('நீக்கவா? · Delete?', 'This saved attempt will be removed from this browser.')){ store.set(KEY_ATT, list.filter(x => x.id !== b.dataset.d)); renderStart(); } }
+};
+$('#btnPrev').onclick = () => goTo(S.active.cur - 1);
+$('#btnNext').onclick = () => { if (S.active.cur === N - 1) openSubmit(); else goTo(S.active.cur + 1); };
+$('#btnClear').onclick = () => { tick(); S.active.answers[S.active.cur] = -1; persist(); renderQ(); };
+$('#btnMark').onclick = () => { const a = S.active; a.marked[a.cur] = !a.marked[a.cur]; persist(); renderQ(); };
+$('#btnSubmitTop').onclick = openSubmit;
+$('#dlgBack').onclick = () => $('#dlgSubmit').close();
+$('#dlgOk').onclick = () => finish('manual');
+$('#btnPdf').onclick = downloadPdf;
+$('#btnRetake').onclick = async () => { const a = S.att; if (a && await ask('மீண்டும் எழுதவா? · Retake?', 'A fresh timed attempt will start now for ' + a.name + '.')) startAttempt(a.name, a.mobile); };
+$('#btnHome').onclick = renderStart;
+document.addEventListener('keydown', e => {
+  if (!S.active || $('#vTest').hidden || e.target.tagName === 'INPUT' || document.querySelector('dialog[open]')) return;
+  const k = e.key.toLowerCase();
+  if ('abcd'.includes(k) && k.length === 1){ tick(); S.active.answers[S.active.cur] = 'abcd'.indexOf(k); persist(); renderQ(); }
+  else if (e.key === 'ArrowRight') $('#btnNext').click();
+  else if (e.key === 'ArrowLeft' && S.active.cur > 0) goTo(S.active.cur - 1);
+});
+window.addEventListener('beforeunload', e => { if (S.active && !$('#vTest').hidden){ persist(); e.preventDefault(); e.returnValue = ''; } });
+document.addEventListener('visibilitychange', () => { if (document.hidden) persist(); });
+
+/* ---- boot: finalise an expired unfinished attempt, otherwise show start ---- */
+(function boot(){
+  const act = store.get(KEY_ACT, null);
+  if (act && Date.now() >= act.endsAt){
+    S.active = act;
+    act.times[act.cur] += Math.max(0, act.endsAt - act.lastTick); act.lastTick = act.endsAt;
+    $('#vTest').hidden = false; finish('timeup'); return;
+  }
+  renderStart();
+})();
+})();
+</script>
+</body>
+</html>
