@@ -174,9 +174,9 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
   <div class="wrap">
     <div class="card" style="padding:22px">
       <h1>Directive Principles (DPSP) &amp; Fundamental Duties — Mock Test<br><span class="ta" style="font-size:1.05rem">அரசு நெறிமுறைக் கோட்பாடுகள் &amp; அடிப்படைக் கடமைகள் — மாதிரித் தேர்வு</span></h1>
-      <p class="sub">TNPSC pattern · bilingual (English + தமிழ்) · medium and difficult level</p>
+      <p class="sub">TNPSC pattern · bilingual (English + தமிழ்) · easy, medium and difficult level</p>
       <div class="chips">
-        <span class="chip">50 questions</span><span class="chip">40 minutes</span><span class="chip">36 DPSP + 14 FD</span><span class="chip">1 mark each · no negative marking</span>
+        <span class="chip">60 questions</span><span class="chip">48 minutes</span><span class="chip">43 DPSP + 17 FD</span><span class="chip">1 mark each · no negative marking</span>
       </div>
     </div>
 
@@ -193,7 +193,7 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
         <div class="field"><label for="inMobile">Mobile number / கைபேசி எண்</label><input id="inMobile" inputmode="numeric" autocomplete="tel" maxlength="18" placeholder="10-digit mobile number"></div>
         <div class="err" id="homeErr"></div>
         <ul class="rules">
-          <li>The timer runs for 40 minutes and the test is submitted automatically when time is up.</li>
+          <li>The timer runs for 48 minutes and the test is submitted automatically when time is up.</li>
           <li>The time you spend on every question is shown on screen and in the result.</li>
           <li>Your attempt is saved on this device. You can retake the full test or only the wrong and unanswered questions.</li>
         </ul>
@@ -210,8 +210,8 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
 
 <div id="screenTest" class="hidden">
   <div class="topbar"><div class="in">
-    <div class="row"><span class="pill" id="pillQ">Q 1/50</span><span class="pill q" id="pillQT" title="Time spent on this question">This Q 00:00</span></div>
-    <div class="row"><span class="pill" id="pillTime">40:00</span>
+    <div class="row"><span class="pill" id="pillQ">Q 1/60</span><span class="pill q" id="pillQT" title="Time spent on this question">This Q 00:00</span></div>
+    <div class="row"><span class="pill" id="pillTime">48:00</span>
       <button class="btn small" id="btnLang" title="Language">EN + தமிழ்</button>
       <button class="btn small primary" id="btnSubmit">Submit</button></div>
   </div></div>
@@ -242,6 +242,40 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
  {
   "id": 1,
   "topic": "DPSP",
+  "level": "Easy",
+  "type": "Single",
+  "en": "The Directive Principles of State Policy are placed in which Part of the Indian Constitution?",
+  "ta": "அரசு நெறிமுறைக் கோட்பாடுகள் இந்திய அரசியலமைப்பின் எந்தப் பகுதியில் இடம்பெற்றுள்ளன?",
+  "stmts": null,
+  "ask": null,
+  "match": null,
+  "opts": [
+   [
+    "Part III",
+    "பகுதி III"
+   ],
+   [
+    "Part IV",
+    "பகுதி IV"
+   ],
+   [
+    "Part II",
+    "பகுதி II"
+   ],
+   [
+    "Part V",
+    "பகுதி V"
+   ]
+  ],
+  "ans": 1,
+  "exp": [
+   "DPSP – Part IV (Articles 36–51). Fundamental Rights are in Part III and Fundamental Duties in Part IVA.",
+   "DPSP – பகுதி IV (சரத்து 36–51). அடிப்படை உரிமைகள் பகுதி III-இலும், அடிப்படைக் கடமைகள் பகுதி IVA-இலும் உள்ளன."
+  ]
+ },
+ {
+  "id": 2,
+  "topic": "DPSP",
   "level": "Medium",
   "type": "Single",
   "en": "Which Article of Part IV declares that the Directive Principles are not enforceable by any court, yet are fundamental in the governance of the country?",
@@ -250,10 +284,6 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
   "ask": null,
   "match": null,
   "opts": [
-   [
-    "Article 37",
-    "சரத்து 37"
-   ],
    [
     "Article 36",
     "சரத்து 36"
@@ -265,16 +295,20 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
    [
     "Article 51",
     "சரத்து 51"
+   ],
+   [
+    "Article 37",
+    "சரத்து 37"
    ]
   ],
-  "ans": 0,
+  "ans": 3,
   "exp": [
    "Article 36 defines ‘State’ (same meaning as in Part III). Article 37: the principles are not enforceable by courts but are fundamental in governance, and it is the duty of the State to apply them in making laws.",
    "சரத்து 36 ‘அரசு’ என்பதை வரையறுக்கிறது (பகுதி III-இல் உள்ள பொருளே). சரத்து 37: நீதிமன்றத்தால் செயல்படுத்த முடியாது; ஆனால் ஆட்சிக்கு அடிப்படையானவை; சட்டம் இயற்றும்போது இவற்றைப் பின்பற்றுவது அரசின் கடமை."
   ]
  },
  {
-  "id": 2,
+  "id": 3,
   "topic": "DPSP",
   "level": "Medium",
   "type": "Single",
@@ -289,26 +323,26 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
     "37 முதல் 51 வரை"
    ],
    [
-    "38 to 51",
-    "38 முதல் 51 வரை"
-   ],
-   [
     "36 to 50",
     "36 முதல் 50 வரை"
    ],
    [
     "38 to 50",
     "38 முதல் 50 வரை"
+   ],
+   [
+    "38 to 51",
+    "38 முதல் 51 வரை"
    ]
   ],
-  "ans": 1,
+  "ans": 3,
   "exp": [
    "Article 36 = definition of State; Article 37 = application of the principles. The directives proper run from Article 38 to Article 51.",
    "சரத்து 36 = ‘அரசு’ வரையறை; சரத்து 37 = கோட்பாடுகளின் செயலாக்கம். உண்மையான நெறிமுறைகள் சரத்து 38 முதல் 51 வரை."
   ]
  },
  {
-  "id": 3,
+  "id": 4,
   "topic": "DPSP",
   "level": "Medium",
   "type": "Single",
@@ -319,6 +353,10 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
   "match": null,
   "opts": [
    [
+    "Spain",
+    "ஸ்பெயின்"
+   ],
+   [
     "USSR",
     "சோவியத் ஒன்றியம்"
    ],
@@ -327,22 +365,18 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
     "வெய்மர் ஜெர்மனி"
    ],
    [
-    "Spain",
-    "ஸ்பெயின்"
-   ],
-   [
     "Canada",
     "கனடா"
    ]
   ],
-  "ans": 2,
+  "ans": 0,
   "exp": [
    "DPSP: Ireland (1937) ← Spain. (Fundamental Duties, in contrast, are from the USSR.)",
    "DPSP: அயர்லாந்து (1937) ← ஸ்பெயின். (அடிப்படைக் கடமைகள் சோவியத் ஒன்றியத்திலிருந்து பெறப்பட்டவை.)"
   ]
  },
  {
-  "id": 4,
+  "id": 5,
   "topic": "DPSP",
   "level": "Medium",
   "type": "Single",
@@ -357,26 +391,26 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
     "இந்திய அரசுச் சட்டம், 1919"
    ],
    [
-    "Government of India Act, 1935",
-    "இந்திய அரசுச் சட்டம், 1935"
-   ],
-   [
     "Indian Councils Act, 1909",
     "இந்திய கவுன்சில் சட்டம், 1909"
+   ],
+   [
+    "Government of India Act, 1935",
+    "இந்திய அரசுச் சட்டம், 1935"
    ],
    [
     "Indian Independence Act, 1947",
     "இந்திய சுதந்திரச் சட்டம், 1947"
    ]
   ],
-  "ans": 1,
+  "ans": 2,
   "exp": [
    "The Instruments of Instructions were issued to Governors under the Government of India Act 1935; the DPSP are similar instructions to the legislature and executive.",
    "இந்திய அரசுச் சட்டம் 1935-இன் கீழ் ஆளுநர்களுக்கு ‘அறிவுறுத்தல் ஆவணங்கள்’ வழங்கப்பட்டன. DPSP-யும் சட்டமன்றம், நிர்வாகத்திற்கான அத்தகைய அறிவுறுத்தல்களே."
   ]
  },
  {
-  "id": 5,
+  "id": 6,
   "topic": "DPSP",
   "level": "Difficult",
   "type": "Match the following",
@@ -458,7 +492,7 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
   ]
  },
  {
-  "id": 6,
+  "id": 7,
   "topic": "DPSP",
   "level": "Difficult",
   "type": "Four statements",
@@ -493,26 +527,26 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
     "I, II மற்றும் III"
    ],
    [
+    "I and IV only",
+    "I மற்றும் IV மட்டும்"
+   ],
+   [
     "II and III only",
     "II மற்றும் III மட்டும்"
    ],
    [
     "I, II and IV",
     "I, II மற்றும் IV"
-   ],
-   [
-    "I and IV only",
-    "I மற்றும் IV மட்டும்"
    ]
   ],
-  "ans": 3,
+  "ans": 1,
   "exp": [
    "I – true (Art. 36 adopts the Part III definition). II – false: the idea came from Ireland (which took it from Spain), not the USA. III – false: courts cannot void a law for violating a directive. IV – true: a law giving effect to a directive may be upheld as ‘reasonable’ under Arts. 14/19.",
    "I – சரி (சரத்து 36, பகுதி III வரையறையையே ஏற்கிறது). II – தவறு: இக்கருத்து அயர்லாந்திலிருந்து (அது ஸ்பெயினிலிருந்து) பெறப்பட்டது; அமெரிக்காவிலிருந்து அல்ல. III – தவறு: நெறிமுறையை மீறியதற்காக நீதிமன்றம் சட்டத்தை செல்லாததாக்க முடியாது. IV – சரி: நெறிமுறையைச் செயல்படுத்தும் சட்டம் சரத்து 14/19-இன் கீழ் ‘நியாயமானது’ எனக் கொள்ளப்படலாம்."
   ]
  },
  {
-  "id": 7,
+  "id": 8,
   "topic": "DPSP",
   "level": "Difficult",
   "type": "Four pairs",
@@ -546,7 +580,95 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
   ]
  },
  {
-  "id": 8,
+  "id": 9,
+  "topic": "DPSP",
+  "level": "Difficult",
+  "type": "Four statements",
+  "en": "Which of the following Articles embody Socialistic principles?",
+  "ta": "பின்வரும் சரத்துகளில் எவை சோசலிசக் கொள்கைகளை உள்ளடக்கியவை?",
+  "stmts": [
+   [
+    "Article 39A (equal justice and free legal aid)",
+    "சரத்து 39A (சமநீதி, இலவச சட்ட உதவி)"
+   ],
+   [
+    "Article 43A (participation of workers in management of industries)",
+    "சரத்து 43A (தொழிற்சாலை நிர்வாகத்தில் தொழிலாளர் பங்கேற்பு)"
+   ],
+   [
+    "Article 48A (protection of environment, forests and wildlife)",
+    "சரத்து 48A (சுற்றுச்சூழல், காடுகள், வனவிலங்கு பாதுகாப்பு)"
+   ],
+   [
+    "Article 41 (right to work, education and public assistance)",
+    "சரத்து 41 (வேலை, கல்வி, பொது உதவிக்கான உரிமை)"
+   ]
+  ],
+  "ask": [
+   "Which of the above are Socialistic principles?",
+   "மேற்கண்டவற்றுள் சோசலிசக் கொள்கைகள் எவை?"
+  ],
+  "match": null,
+  "opts": [
+   [
+    "I, II and IV",
+    "I, II மற்றும் IV"
+   ],
+   [
+    "I, II and III",
+    "I, II மற்றும் III"
+   ],
+   [
+    "II, III and IV",
+    "II, III மற்றும் IV"
+   ],
+   [
+    "I, III and IV",
+    "I, III மற்றும் IV"
+   ]
+  ],
+  "ans": 0,
+  "exp": [
+   "Socialistic: 38, 39, 39A, 41, 42, 43, 43A, 47. Article 48A (environment, forests, wildlife) is a Liberal-intellectual principle.",
+   "சோசலிசக் கொள்கைகள்: 38, 39, 39A, 41, 42, 43, 43A, 47. சரத்து 48A (சுற்றுச்சூழல், காடுகள், வனவிலங்கு) தாராளவாத-அறிவுசார் கொள்கை."
+  ]
+ },
+ {
+  "id": 10,
+  "topic": "DPSP",
+  "level": "Easy",
+  "type": "Single",
+  "en": "Which Article directs the State to secure a Uniform Civil Code for all citizens?",
+  "ta": "அனைத்துக் குடிமக்களுக்கும் பொது சிவில் சட்டத்தை உறுதிசெய்ய அரசுக்கு வழிகாட்டும் சரத்து எது?",
+  "stmts": null,
+  "ask": null,
+  "match": null,
+  "opts": [
+   [
+    "Article 40",
+    "சரத்து 40"
+   ],
+   [
+    "Article 44",
+    "சரத்து 44"
+   ],
+   [
+    "Article 45",
+    "சரத்து 45"
+   ],
+   [
+    "Article 48",
+    "சரத்து 48"
+   ]
+  ],
+  "ans": 1,
+  "exp": [
+   "Article 44 – Uniform Civil Code (a Liberal-intellectual principle).",
+   "சரத்து 44 – பொது சிவில் சட்டம் (தாராளவாத-அறிவுசார் கொள்கை)."
+  ]
+ },
+ {
+  "id": 11,
   "topic": "DPSP",
   "level": "Medium",
   "type": "Match the following",
@@ -613,22 +735,22 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
     "a-4, b-2, c-1, d-3"
    ],
    [
-    "a-2, b-4, c-3, d-1",
-    "a-2, b-4, c-3, d-1"
-   ],
-   [
     "a-2, b-4, c-1, d-3",
     "a-2, b-4, c-1, d-3"
+   ],
+   [
+    "a-2, b-4, c-3, d-1",
+    "a-2, b-4, c-3, d-1"
    ]
   ],
-  "ans": 3,
+  "ans": 2,
   "exp": [
    "39A – equal justice & free legal aid; 43B – co-operative societies (97th Amendment 2011); 45 – early childhood care & education below six (as amended by 86th Amendment 2002); 49 – protection of monuments.",
    "39A – சமநீதி, இலவச சட்ட உதவி; 43B – கூட்டுறவுச் சங்கங்கள் (97-ஆவது திருத்தம் 2011); 45 – ஆறு வயதுக்குட்பட்டோருக்கான குழந்தைப் பருவ பராமரிப்பு, கல்வி (86-ஆவது திருத்தம் 2002); 49 – நினைவுச்சின்னப் பாதுகாப்பு."
   ]
  },
  {
-  "id": 9,
+  "id": 12,
   "topic": "DPSP",
   "level": "Difficult",
   "type": "Four pairs",
@@ -643,26 +765,26 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
     "சரத்து 40 – கிராம பஞ்சாயத்துகளை அமைத்தல்"
    ],
    [
-    "Article 42 – Just and humane conditions of work and maternity relief",
-    "சரத்து 42 – நியாயமான, மனிதாபிமான பணிச்சூழல்; மகப்பேறு உதவி"
-   ],
-   [
     "Article 43 – Participation of workers in management of industries",
     "சரத்து 43 – தொழிற்சாலை நிர்வாகத்தில் தொழிலாளர் பங்கேற்பு"
+   ],
+   [
+    "Article 42 – Just and humane conditions of work and maternity relief",
+    "சரத்து 42 – நியாயமான, மனிதாபிமான பணிச்சூழல்; மகப்பேறு உதவி"
    ],
    [
     "Article 50 – Separation of judiciary from the executive",
     "சரத்து 50 – நீதித்துறையை நிர்வாகத்துறையிலிருந்து பிரித்தல்"
    ]
   ],
-  "ans": 2,
+  "ans": 1,
   "exp": [
    "Article 43 deals with a living wage (and cottage industries); participation of workers in management is Article 43A (42nd Amendment).",
    "சரத்து 43 வாழ்வூதியம் (மற்றும் குடிசைத் தொழில்கள்) பற்றியது; தொழிலாளர் நிர்வாகப் பங்கேற்பு சரத்து 43A (42-ஆவது திருத்தம்)."
   ]
  },
  {
-  "id": 10,
+  "id": 13,
   "topic": "DPSP",
   "level": "Difficult",
   "type": "Four statements",
@@ -693,6 +815,10 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
   "match": null,
   "opts": [
    [
+    "I, II and IV",
+    "I, II மற்றும் IV"
+   ],
+   [
     "I, II and III",
     "I, II மற்றும் III"
    ],
@@ -703,20 +829,16 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
    [
     "I and IV only",
     "I மற்றும் IV மட்டும்"
-   ],
-   [
-    "I, II and IV",
-    "I, II மற்றும் IV"
    ]
   ],
-  "ans": 3,
+  "ans": 0,
   "exp": [
    "42nd Amendment (1976) added four directives (39(f) as modified, 39A, 43A, 48A). The 44th Amendment (1978) added only one – a clause on minimising inequalities in Article 38. The 97th Amendment (2011) added Article 43B.",
    "42-ஆவது திருத்தம் (1976) நான்கு நெறிமுறைகளைச் சேர்த்தது (39(f), 39A, 43A, 48A). 44-ஆவது திருத்தம் (1978) சரத்து 38-இல் ஒரு உட்பிரிவை மட்டுமே சேர்த்தது (இரண்டு அல்ல). 97-ஆவது திருத்தம் (2011) சரத்து 43B-ஐச் சேர்த்தது."
   ]
  },
  {
-  "id": 11,
+  "id": 14,
   "topic": "DPSP",
   "level": "Medium",
   "type": "Single",
@@ -750,7 +872,7 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
   ]
  },
  {
-  "id": 12,
+  "id": 15,
   "topic": "DPSP",
   "level": "Medium",
   "type": "Single",
@@ -765,26 +887,26 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
     "நிலவுடைமை, விவசாயக் கூலி மட்டும்"
    ],
    [
-    "Income (and eliminate inequalities in status, facilities and opportunities)",
-    "வருமானம் (மேலும் அந்தஸ்து, வசதிகள், வாய்ப்புகளில் உள்ள ஏற்றத்தாழ்வுகளை நீக்குதல்)"
-   ],
-   [
     "Taxation and public expenditure",
     "வரிவிதிப்பு, பொதுச் செலவு"
    ],
    [
     "Education and public health only",
     "கல்வி, பொது சுகாதாரம் மட்டும்"
+   ],
+   [
+    "Income (and eliminate inequalities in status, facilities and opportunities)",
+    "வருமானம் (மேலும் அந்தஸ்து, வசதிகள், வாய்ப்புகளில் உள்ள ஏற்றத்தாழ்வுகளை நீக்குதல்)"
    ]
   ],
-  "ans": 1,
+  "ans": 3,
   "exp": [
    "Article 38(2): minimise inequalities in income and endeavour to eliminate inequalities in status, facilities and opportunities – among individuals and groups.",
    "சரத்து 38(2): வருமான ஏற்றத்தாழ்வுகளைக் குறைத்தல்; அந்தஸ்து, வசதிகள், வாய்ப்புகளில் உள்ள ஏற்றத்தாழ்வுகளை நீக்க முயல்தல் – தனிநபர்கள், குழுக்கள் இரண்டிலும்."
   ]
  },
  {
-  "id": 13,
+  "id": 16,
   "topic": "DPSP",
   "level": "Difficult",
   "type": "Match the following",
@@ -851,22 +973,56 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
     "a-4, b-3, c-1, d-2"
    ],
    [
-    "a-3, b-4, c-2, d-1",
-    "a-3, b-4, c-2, d-1"
-   ],
-   [
     "a-3, b-4, c-1, d-2",
     "a-3, b-4, c-1, d-2"
+   ],
+   [
+    "a-3, b-4, c-2, d-1",
+    "a-3, b-4, c-2, d-1"
    ]
   ],
-  "ans": 3,
+  "ans": 2,
   "exp": [
    "39(b) distribution of material resources to subserve the common good; 39(c) no concentration of wealth and means of production; 39(d) equal pay for equal work for men and women; 39(f) opportunities for healthy development of children.",
    "39(b) பொதுநலனுக்காக வளங்களைப் பகிர்தல்; 39(c) செல்வமும் உற்பத்திச் சாதனங்களும் சிலரிடம் குவிதலைத் தடுத்தல்; 39(d) ஆண்–பெண் இருவருக்கும் சம வேலைக்குச் சம ஊதியம்; 39(f) குழந்தைகளின் ஆரோக்கிய வளர்ச்சிக்கான வாய்ப்புகள்."
   ]
  },
  {
-  "id": 14,
+  "id": 17,
+  "topic": "DPSP",
+  "level": "Medium",
+  "type": "Single",
+  "en": "Article 31C, inserted by the 25th Amendment Act 1971, originally protected laws giving effect to which directives from challenge under Articles 14, 19 and 31?",
+  "ta": "25-ஆவது திருத்தச் சட்டம் 1971 மூலம் சேர்க்கப்பட்ட சரத்து 31C, சரத்து 14, 19, 31-ஐ மீறுவதாக எழும் சவாலிலிருந்து எந்த நெறிமுறைகளைச் செயல்படுத்தும் சட்டங்களைப் பாதுகாத்தது?",
+  "stmts": null,
+  "ask": null,
+  "match": null,
+  "opts": [
+   [
+    "Articles 38 and 39",
+    "சரத்து 38, 39"
+   ],
+   [
+    "Article 39(b) and (c)",
+    "சரத்து 39(b), (c)"
+   ],
+   [
+    "Articles 39A and 41",
+    "சரத்து 39A, 41"
+   ],
+   [
+    "Articles 40 and 48",
+    "சரத்து 40, 48"
+   ]
+  ],
+  "ans": 1,
+  "exp": [
+   "Originally Article 31C covered only laws implementing Article 39(b) and (c). The 42nd Amendment (1976) extended it to all directives, but Minerva Mills (1980) struck that extension down.",
+   "சரத்து 31C தொடக்கத்தில் 39(b), (c)-ஐச் செயல்படுத்தும் சட்டங்களை மட்டுமே பாதுகாத்தது. 42-ஆவது திருத்தம் (1976) அதை எல்லா நெறிமுறைகளுக்கும் நீட்டித்தது; மினர்வா மில்ஸ் (1980) அந்த நீட்டிப்பை ரத்து செய்தது."
+  ]
+ },
+ {
+  "id": 18,
   "topic": "DPSP",
   "level": "Medium",
   "type": "Chronological order",
@@ -897,6 +1053,10 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
   "match": null,
   "opts": [
    [
+    "3-2-4-1",
+    "3-2-4-1"
+   ],
+   [
     "3-4-2-1",
     "3-4-2-1"
    ],
@@ -905,22 +1065,52 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
     "2-3-4-1"
    ],
    [
-    "3-2-4-1",
-    "3-2-4-1"
-   ],
-   [
     "3-2-1-4",
     "3-2-1-4"
    ]
   ],
-  "ans": 2,
+  "ans": 0,
   "exp": [
    "Champakam Dorairajan (1951) → Golaknath (1967) → Kesavananda Bharati (1973) → Minerva Mills (1980) – ‘C-G-K-M’.",
    "சம்பகம் துரைராஜன் (1951) → கோலக்நாத் (1967) → கேசவானந்த பாரதி (1973) → மினர்வா மில்ஸ் (1980) – ‘C-G-K-M’."
   ]
  },
  {
-  "id": 15,
+  "id": 19,
+  "topic": "DPSP",
+  "level": "Easy",
+  "type": "Single",
+  "en": "Protection and improvement of the environment and safeguarding of forests and wildlife is directed by which Article?",
+  "ta": "சுற்றுச்சூழலைப் பாதுகாத்து மேம்படுத்துதல், காடுகள், வனவிலங்குகளைக் காத்தல் ஆகியவற்றை வலியுறுத்தும் சரத்து எது?",
+  "stmts": null,
+  "ask": null,
+  "match": null,
+  "opts": [
+   [
+    "Article 47",
+    "சரத்து 47"
+   ],
+   [
+    "Article 49",
+    "சரத்து 49"
+   ],
+   [
+    "Article 43A",
+    "சரத்து 43A"
+   ],
+   [
+    "Article 48A",
+    "சரத்து 48A"
+   ]
+  ],
+  "ans": 3,
+  "exp": [
+   "Article 48A was added by the 42nd Amendment (1976). Its counterpart for citizens is Article 51A(g).",
+   "சரத்து 48A 42-ஆவது திருத்தத்தால் (1976) சேர்க்கப்பட்டது. குடிமக்களுக்கான இணை விதி சரத்து 51A(g)."
+  ]
+ },
+ {
+  "id": 20,
   "topic": "DPSP",
   "level": "Medium",
   "type": "Single",
@@ -939,22 +1129,22 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
     "கேசவானந்த பாரதி எதிர் கேரள மாநிலம் (1973)"
    ],
    [
-    "Minerva Mills v. Union of India (1980)",
-    "மினர்வா மில்ஸ் எதிர் இந்திய ஒன்றியம் (1980)"
-   ],
-   [
     "State of Madras v. Champakam Dorairajan (1951)",
     "மதராஸ் மாநிலம் எதிர் சம்பகம் துரைராஜன் (1951)"
+   ],
+   [
+    "Minerva Mills v. Union of India (1980)",
+    "மினர்வா மில்ஸ் எதிர் இந்திய ஒன்றியம் (1980)"
    ]
   ],
-  "ans": 3,
+  "ans": 2,
   "exp": [
    "The Madras communal Government Order case (1951). Parliament responded with the 1st Amendment (1951), later the 4th (1955) and 17th (1964).",
    "மதராஸ் வகுப்புவாரி அரசாணை வழக்கு (1951). இதற்குப் பதிலாக நாடாளுமன்றம் 1-ஆவது திருத்தத்தை (1951) இயற்றியது; பின்னர் 4-ஆவது (1955), 17-ஆவது (1964) திருத்தங்களும் வந்தன."
   ]
  },
  {
-  "id": 16,
+  "id": 21,
   "topic": "DPSP",
   "level": "Difficult",
   "type": "Four statements",
@@ -989,26 +1179,26 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
     "I, II மற்றும் III"
    ],
    [
-    "II, III and IV",
-    "II, III மற்றும் IV"
-   ],
-   [
     "I, III and IV",
     "I, III மற்றும் IV"
    ],
    [
     "II and III only",
     "II மற்றும் III மட்டும்"
+   ],
+   [
+    "II, III and IV",
+    "II, III மற்றும் IV"
    ]
   ],
-  "ans": 1,
+  "ans": 3,
   "exp": [
    "The 24th Amendment (1971) declared Parliament’s power to amend Fundamental Rights; the 25th Amendment (1971) inserted Article 31C; the 42nd Amendment extended 31C to all directives. Statement I mixes up 24th and 25th.",
    "24-ஆவது திருத்தம் (1971) அடிப்படை உரிமைகளைத் திருத்தும் நாடாளுமன்ற அதிகாரத்தை உறுதிசெய்தது; 25-ஆவது திருத்தம் (1971) சரத்து 31C-ஐச் சேர்த்தது; 42-ஆவது திருத்தம் 31C-ஐ அனைத்து நெறிமுறைகளுக்கும் நீட்டித்தது. கூற்று I-இல் 24, 25 குழப்பப்பட்டுள்ளது."
   ]
  },
  {
-  "id": 17,
+  "id": 22,
   "topic": "DPSP",
   "level": "Difficult",
   "type": "Single",
@@ -1023,26 +1213,26 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
     "முதல் பகுதியை ரத்துசெய்து, இரண்டாம் பகுதியை உறுதிசெய்தல்"
    ],
    [
-    "Striking down its second part (bar on judicial review) and upholding the first part",
-    "அதன் இரண்டாம் பகுதியை (நீதிமன்ற மறுஆய்வுத் தடை) ரத்துசெய்து, முதல் பகுதியை உறுதிசெய்தல்"
-   ],
-   [
     "Striking down Article 31C in its entirety",
     "சரத்து 31C-ஐ முழுமையாக ரத்துசெய்தல்"
    ],
    [
     "Upholding Article 31C in its entirety",
     "சரத்து 31C-ஐ முழுமையாக உறுதிசெய்தல்"
+   ],
+   [
+    "Striking down its second part (bar on judicial review) and upholding the first part",
+    "அதன் இரண்டாம் பகுதியை (நீதிமன்ற மறுஆய்வுத் தடை) ரத்துசெய்து, முதல் பகுதியை உறுதிசெய்தல்"
    ]
   ],
-  "ans": 1,
+  "ans": 3,
   "exp": [
    "The bar on judicial review (second part) was held unconstitutional – the case that gave rise to the basic structure doctrine; the first part was upheld.",
    "நீதிமன்ற மறுஆய்வைத் தடுக்கும் இரண்டாம் பகுதி அரசியலமைப்புக்கு முரணானது எனத் தீர்ப்பளிக்கப்பட்டது – இவ்வழக்கே அடிப்படைக் கட்டமைப்புக் கோட்பாட்டைத் தோற்றுவித்தது; முதல் பகுதி உறுதிசெய்யப்பட்டது."
   ]
  },
  {
-  "id": 18,
+  "id": 23,
   "topic": "DPSP",
   "level": "Difficult",
   "type": "Assertion & Reason",
@@ -1076,7 +1266,7 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
   ]
  },
  {
-  "id": 19,
+  "id": 24,
   "topic": "DPSP",
   "level": "Medium",
   "type": "Four statements",
@@ -1111,80 +1301,26 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
     "I மற்றும் II மட்டும்"
    ],
    [
-    "I, II and III",
-    "I, II மற்றும் III"
-   ],
-   [
     "II and III only",
     "II மற்றும் III மட்டும்"
+   ],
+   [
+    "I, II and III",
+    "I, II மற்றும் III"
    ],
    [
     "I, II, III and IV",
     "I, II, III மற்றும் IV"
    ]
   ],
-  "ans": 1,
+  "ans": 2,
   "exp": [
    "IV is wrong – it is Fundamental Rights that do not require legislation (automatically enforced); the Directive Principles require legislation for implementation.",
    "IV தவறு – சட்டம் தேவையின்றித் தானாகவே செயல்படுவது அடிப்படை உரிமைகளே; நெறிமுறைக் கோட்பாடுகளைச் செயல்படுத்த சட்டம் தேவை."
   ]
  },
  {
-  "id": 20,
-  "topic": "DPSP",
-  "level": "Difficult",
-  "type": "Four statements",
-  "en": "Which of the following statements on the criticism of the Directive Principles is INCORRECT?",
-  "ta": "நெறிமுறைக் கோட்பாடுகள் மீதான விமர்சனங்கள் குறித்த பின்வரும் கூற்றுகளில் தவறானது எது?",
-  "stmts": [
-   [
-    "K.T. Shah called them ‘pious superfluities’.",
-    "கே.டி. ஷா அவற்றை ‘பயனற்ற புனித வார்த்தைகள்’ என்றார்."
-   ],
-   [
-    "Sir Ivor Jennings held that they reflect 19th-century English political philosophy.",
-    "சர் ஐவர் ஜென்னிங்ஸ், அவை 19-ஆம் நூற்றாண்டு ஆங்கில அரசியல் தத்துவத்தைப் பிரதிபலிக்கின்றன என்றார்."
-   ],
-   [
-    "K. Santhanam pointed to possible conflicts between Centre and States, President and Prime Minister, and Governor and Chief Minister.",
-    "மத்திய–மாநில அரசுகள், குடியரசுத்தலைவர்–பிரதமர், ஆளுநர்–முதலமைச்சர் இடையே மோதல் ஏற்படலாம் என கே. சந்தானம் சுட்டிக்காட்டினார்."
-   ],
-   [
-    "N. Srinivasan said they are conservative and reflect Fabian socialism without the socialism.",
-    "என். சீனிவாசன், அவை பழமைவாதமானவை; சோசலிசமற்ற ஃபேபியன் சோசலிசத்தைப் பிரதிபலிக்கின்றன என்றார்."
-   ]
-  ],
-  "ask": [
-   "Which statement is incorrect?",
-   "எந்தக் கூற்று தவறானது?"
-  ],
-  "match": null,
-  "opts": [
-   [
-    "Statement I",
-    "கூற்று I"
-   ],
-   [
-    "Statement II",
-    "கூற்று II"
-   ],
-   [
-    "Statement III",
-    "கூற்று III"
-   ],
-   [
-    "Statement IV",
-    "கூற்று IV"
-   ]
-  ],
-  "ans": 3,
-  "exp": [
-   "Statement IV is wrong: the ‘conservative / 19th-century English political philosophy (Fabian socialism without the socialism)’ criticism is Sir Ivor Jennings’s. N. Srinivasan argued they are neither properly classified nor logically arranged.",
-   "கூற்று IV தவறு: ‘பழமைவாதம் / 19-ஆம் நூற்றாண்டு ஆங்கில அரசியல் தத்துவம் (சோசலிசமற்ற ஃபேபியன் சோசலிசம்)’ என்பது சர் ஐவர் ஜென்னிங்ஸின் விமர்சனம். என். சீனிவாசன், அவை முறையாக வகைப்படுத்தப்படவில்லை; தர்க்கரீதியாக அடுக்கப்படவில்லை என்றார்."
-  ]
- },
- {
-  "id": 21,
+  "id": 25,
   "topic": "DPSP",
   "level": "Difficult",
   "type": "Three statements",
@@ -1215,26 +1351,26 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
     "I மட்டும்"
    ],
    [
-    "III only",
-    "III மட்டும்"
-   ],
-   [
     "II only",
     "II மட்டும்"
    ],
    [
     "I and II only",
     "I மற்றும் II மட்டும்"
+   ],
+   [
+    "III only",
+    "III மட்டும்"
    ]
   ],
-  "ans": 1,
+  "ans": 3,
   "exp": [
    "Article 335 (Part XVI) – SC/ST claims to services; Article 350A (Part XVII) – mother-tongue instruction at primary stage; Article 351 (Part XVII) – promotion of Hindi. So III is incorrect.",
    "சரத்து 335 (பகுதி XVI) – பணிகளில் SC/ST கோரிக்கைகள்; சரத்து 350A (பகுதி XVII) – தொடக்கநிலையில் தாய்மொழிக் கல்வி; சரத்து 351 (பகுதி XVII) – இந்தி மொழி வளர்ச்சி. எனவே III தவறு."
   ]
  },
  {
-  "id": 22,
+  "id": 26,
   "topic": "DPSP",
   "level": "Difficult",
   "type": "Match the following",
@@ -1316,7 +1452,7 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
   ]
  },
  {
-  "id": 23,
+  "id": 27,
   "topic": "DPSP",
   "level": "Medium",
   "type": "Two statements",
@@ -1339,12 +1475,12 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
   "match": null,
   "opts": [
    [
-    "I only",
-    "I மட்டும்"
-   ],
-   [
     "II only",
     "II மட்டும்"
+   ],
+   [
+    "I only",
+    "I மட்டும்"
    ],
    [
     "Both I and II",
@@ -1355,14 +1491,48 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
     "Neither I nor II"
    ]
   ],
-  "ans": 0,
+  "ans": 1,
   "exp": [
    "The 86th Amendment inserted Article 21A, changed Article 45 to early childhood care and education below six, and added the 11th Fundamental Duty. Article 43B was added by the 97th Amendment (2011).",
    "86-ஆவது திருத்தம் சரத்து 21A-ஐச் சேர்த்து, சரத்து 45-ஐ ஆறு வயதுக்குட்பட்டோருக்கான குழந்தைப் பருவ பராமரிப்பு, கல்வியாக மாற்றி, 11-ஆவது அடிப்படைக் கடமையையும் சேர்த்தது. சரத்து 43B 97-ஆவது திருத்தத்தால் (2011) சேர்க்கப்பட்டது."
   ]
  },
  {
-  "id": 24,
+  "id": 28,
+  "topic": "DPSP",
+  "level": "Easy",
+  "type": "Single",
+  "en": "Separation of the judiciary from the executive in the public services of the State is directed by:",
+  "ta": "அரசுப் பணிகளில் நீதித்துறையை நிர்வாகத்துறையிலிருந்து பிரிக்க வேண்டும் என்று கூறும் சரத்து:",
+  "stmts": null,
+  "ask": null,
+  "match": null,
+  "opts": [
+   [
+    "Article 50",
+    "சரத்து 50"
+   ],
+   [
+    "Article 51",
+    "சரத்து 51"
+   ],
+   [
+    "Article 49",
+    "சரத்து 49"
+   ],
+   [
+    "Article 39A",
+    "சரத்து 39A"
+   ]
+  ],
+  "ans": 0,
+  "exp": [
+   "Article 50 – separation of judiciary from executive (given effect by the CrPC 1973).",
+   "சரத்து 50 – நீதித்துறை, நிர்வாகத்துறைப் பிரிப்பு (குற்றவியல் நடைமுறைச் சட்டம் 1973 மூலம் செயல்படுத்தப்பட்டது)."
+  ]
+ },
+ {
+  "id": 29,
   "topic": "DPSP",
   "level": "Medium",
   "type": "Single",
@@ -1377,26 +1547,26 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
     "2002"
    ],
    [
-    "2009",
-    "2009"
-   ],
-   [
     "2005",
     "2005"
    ],
    [
     "2011",
     "2011"
+   ],
+   [
+    "2009",
+    "2009"
    ]
   ],
-  "ans": 1,
+  "ans": 3,
   "exp": [
    "RTE Act – passed 2009, in force from 1 April 2010; Article 21A came through the 86th Amendment (2002).",
    "கல்வி உரிமைச் சட்டம் – 2009-இல் நிறைவேற்றம்; 2010 ஏப்ரல் 1 முதல் நடைமுறை; சரத்து 21A 86-ஆவது திருத்தம் (2002) மூலம் வந்தது."
   ]
  },
  {
-  "id": 25,
+  "id": 30,
   "topic": "DPSP",
   "level": "Difficult",
   "type": "Four pairs",
@@ -1435,22 +1605,22 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
     "III மட்டும்"
    ],
    [
-    "II only",
-    "II மட்டும்"
-   ],
-   [
     "IV only",
     "IV மட்டும்"
+   ],
+   [
+    "II only",
+    "II மட்டும்"
    ]
   ],
-  "ans": 2,
+  "ans": 3,
   "exp": [
    "Article 48 deals with organisation of agriculture and animal husbandry and prohibition of slaughter of cows, calves and milch/draught cattle. Protection and improvement of the environment, forests and wildlife is Article 48A.",
    "சரத்து 48 வேளாண்மை, கால்நடை வளர்ப்பை அமைத்தல் மற்றும் பசு, கன்று, பால்தரும்/வேலைசெய் கால்நடைகளின் வதைத் தடை பற்றியது. சுற்றுச்சூழல், காடுகள், வனவிலங்கு பாதுகாப்பு சரத்து 48A ஆகும்."
   ]
  },
  {
-  "id": 26,
+  "id": 31,
   "topic": "DPSP",
   "level": "Medium",
   "type": "Single",
@@ -1465,26 +1635,60 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
     "நாடுகளுக்கிடையே நியாயமான, மதிப்புமிக்க உறவுகளைப் பேணுதல்"
    ],
    [
-    "Foster respect for international law and treaty obligations",
-    "சர்வதேச சட்டம், ஒப்பந்தக் கடமைகளுக்கு மதிப்பளித்தல்"
-   ],
-   [
     "Provide political asylum to all persecuted foreign nationals",
     "துன்புறுத்தப்படும் அனைத்து வெளிநாட்டினருக்கும் அரசியல் தஞ்சம் அளித்தல்"
+   ],
+   [
+    "Foster respect for international law and treaty obligations",
+    "சர்வதேச சட்டம், ஒப்பந்தக் கடமைகளுக்கு மதிப்பளித்தல்"
    ],
    [
     "Encourage settlement of international disputes by arbitration",
     "சர்வதேசப் பூசல்களை நடுவர் மன்றம் மூலம் தீர்க்க ஊக்குவித்தல்"
    ]
   ],
-  "ans": 2,
+  "ans": 1,
   "exp": [
    "Article 51 has four parts: peace and security; just and honourable relations; respect for international law/treaties; arbitration of disputes.",
    "சரத்து 51-இல் நான்கு பகுதிகள்: அமைதி, பாதுகாப்பு; நியாயமான, மதிப்புமிக்க உறவுகள்; சர்வதேச சட்டம்/ஒப்பந்த மதிப்பு; பூசல்களுக்கு நடுவர் தீர்வு."
   ]
  },
  {
-  "id": 27,
+  "id": 32,
+  "topic": "DPSP",
+  "level": "Medium",
+  "type": "Single",
+  "en": "Article 43 directs the State to promote cottage industries on an individual or co-operative basis in:",
+  "ta": "சரத்து 43, குடிசைத் தொழில்களைத் தனிநபர் அல்லது கூட்டுறவு அடிப்படையில் எந்தப் பகுதிகளில் ஊக்குவிக்க அரசுக்கு வழிகாட்டுகிறது?",
+  "stmts": null,
+  "ask": null,
+  "match": null,
+  "opts": [
+   [
+    "Rural areas",
+    "கிராமப்புறங்கள்"
+   ],
+   [
+    "Urban slums",
+    "நகர்ப்புறச் சேரிகள்"
+   ],
+   [
+    "Hilly regions only",
+    "மலைப்பகுதிகள் மட்டும்"
+   ],
+   [
+    "Tribal areas only",
+    "பழங்குடிப் பகுதிகள் மட்டும்"
+   ]
+  ],
+  "ans": 0,
+  "exp": [
+   "Article 43 (Gandhian): cottage industries in rural areas, on an individual or co-operative basis. Article 43B: co-operative societies.",
+   "சரத்து 43 (காந்தியம்): கிராமப்புறங்களில் தனிநபர்/கூட்டுறவு அடிப்படையில் குடிசைத் தொழில்கள். சரத்து 43B: கூட்டுறவுச் சங்கங்கள்."
+  ]
+ },
+ {
+  "id": 33,
   "topic": "DPSP",
   "level": "Medium",
   "type": "Single",
@@ -1518,7 +1722,7 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
   ]
  },
  {
-  "id": 28,
+  "id": 34,
   "topic": "DPSP",
   "level": "Medium",
   "type": "Match the following",
@@ -1585,22 +1789,22 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
     "a-4, b-3, c-1, d-2"
    ],
    [
-    "a-3, b-4, c-1, d-2",
-    "a-3, b-4, c-1, d-2"
-   ],
-   [
     "a-3, b-4, c-2, d-1",
     "a-3, b-4, c-2, d-1"
+   ],
+   [
+    "a-3, b-4, c-1, d-2",
+    "a-3, b-4, c-1, d-2"
    ]
   ],
-  "ans": 2,
+  "ans": 3,
   "exp": [
    "Right to work, education, public assistance – 41; just & humane conditions, maternity relief – 42; living wage – 43; workers’ participation in management – 43A.",
    "வேலை, கல்வி, பொது உதவிக்கான உரிமை – 41; நியாயமான, மனிதாபிமான பணிச்சூழல், மகப்பேறு உதவி – 42; வாழ்வூதியம் – 43; நிர்வாகத்தில் தொழிலாளர் பங்கேற்பு – 43A."
   ]
  },
  {
-  "id": 29,
+  "id": 35,
   "topic": "DPSP",
   "level": "Difficult",
   "type": "Four statements",
@@ -1654,7 +1858,7 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
   ]
  },
  {
-  "id": 30,
+  "id": 36,
   "topic": "DPSP",
   "level": "Medium",
   "type": "Single",
@@ -1665,10 +1869,6 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
   "match": null,
   "opts": [
    [
-    "Abolition of untouchability",
-    "தீண்டாமை ஒழிப்பு"
-   ],
-   [
     "Equal pay for equal work for both men and women",
     "ஆண், பெண் இருவருக்கும் சம வேலைக்குச் சம ஊதியம்"
    ],
@@ -1677,18 +1877,56 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
     "தேசிய முக்கியத்துவம் வாய்ந்த நினைவுச்சின்னப் பாதுகாப்பு"
    ],
    [
+    "Abolition of untouchability",
+    "தீண்டாமை ஒழிப்பு"
+   ],
+   [
     "Separation of judiciary from the executive",
     "நீதித்துறையை நிர்வாகத்துறையிலிருந்து பிரித்தல்"
    ]
   ],
-  "ans": 0,
+  "ans": 2,
   "exp": [
    "Abolition of untouchability is a Fundamental Right (Article 17). The others are Articles 39(d), 49 and 50.",
    "தீண்டாமை ஒழிப்பு அடிப்படை உரிமை (சரத்து 17). மற்றவை சரத்து 39(d), 49, 50 ஆகும்."
   ]
  },
  {
-  "id": 31,
+  "id": 37,
+  "topic": "DPSP",
+  "level": "Easy",
+  "type": "Single",
+  "en": "Which of the following is true about the Directive Principles of State Policy?",
+  "ta": "அரசு நெறிமுறைக் கோட்பாடுகள் குறித்துப் பின்வருவனவற்றுள் சரியானது எது?",
+  "stmts": null,
+  "ask": null,
+  "match": null,
+  "opts": [
+   [
+    "They are enforceable by the courts",
+    "அவற்றை நீதிமன்றங்கள் மூலம் செயல்படுத்தலாம்"
+   ],
+   [
+    "They can be enforced through writs under Article 32",
+    "சரத்து 32-இன் கீழ் பேராணைகள் மூலம் செயல்படுத்தலாம்"
+   ],
+   [
+    "They apply only to citizens, not to the State",
+    "அவை அரசுக்கு அல்ல, குடிமக்களுக்கு மட்டுமே பொருந்தும்"
+   ],
+   [
+    "They are not enforceable by the courts",
+    "அவற்றை நீதிமன்றங்கள் மூலம் செயல்படுத்த இயலாது"
+   ]
+  ],
+  "ans": 3,
+  "exp": [
+   "DPSP are non-justiciable (Article 37) and are directions to the State, not to citizens.",
+   "DPSP நீதிமன்றத்தால் செயல்படுத்த இயலாதவை (சரத்து 37); அவை குடிமக்களுக்கு அல்ல, அரசுக்கான வழிகாட்டல்கள்."
+  ]
+ },
+ {
+  "id": 38,
   "topic": "DPSP",
   "level": "Medium",
   "type": "Single",
@@ -1699,12 +1937,12 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
   "match": null,
   "opts": [
    [
-    "Advocates Act, 1961",
-    "வழக்கறிஞர்கள் சட்டம், 1961"
-   ],
-   [
     "Legal Services Authorities Act, 1987 (Lok Adalats)",
     "சட்ட சேவைகள் ஆணையச் சட்டம், 1987 (லோக் அதாலத்)"
+   ],
+   [
+    "Advocates Act, 1961",
+    "வழக்கறிஞர்கள் சட்டம், 1961"
    ],
    [
     "Protection of Civil Rights Act, 1955",
@@ -1715,14 +1953,14 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
     "தேசிய கௌரவ அவமதிப்புத் தடுப்புச் சட்டம், 1971"
    ]
   ],
-  "ans": 1,
+  "ans": 0,
   "exp": [
    "The Legal Services Authorities Act, 1987 provides free legal aid and Lok Adalats – giving effect to Article 39A.",
    "சட்ட சேவைகள் ஆணையச் சட்டம் 1987 இலவச சட்ட உதவி, லோக் அதாலத்களை வழங்குகிறது – சரத்து 39A-ஐச் செயல்படுத்துகிறது."
   ]
  },
  {
-  "id": 32,
+  "id": 39,
   "topic": "DPSP",
   "level": "Medium",
   "type": "Single",
@@ -1733,12 +1971,12 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
   "match": null,
   "opts": [
    [
-    "45; 21A",
-    "45; 21A"
-   ],
-   [
     "45; 21",
     "45; 21"
+   ],
+   [
+    "45; 21A",
+    "45; 21A"
    ],
    [
     "41; 21A",
@@ -1749,14 +1987,14 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
     "46; 21A"
    ]
   ],
-  "ans": 0,
+  "ans": 1,
   "exp": [
    "Article 45 (as amended) = early childhood care and education below six; Article 21A = free and compulsory education for 6–14 years.",
    "சரத்து 45 (திருத்தப்பட்டது) = ஆறு வயதுக்குட்பட்டோருக்கான பராமரிப்பு, கல்வி; சரத்து 21A = 6–14 வயதினருக்கான இலவச, கட்டாயக் கல்வி."
   ]
  },
  {
-  "id": 33,
+  "id": 40,
   "topic": "DPSP",
   "level": "Difficult",
   "type": "Assertion & Reason",
@@ -1790,7 +2028,7 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
   ]
  },
  {
-  "id": 34,
+  "id": 41,
   "topic": "DPSP",
   "level": "Difficult",
   "type": "Single",
@@ -1824,7 +2062,7 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
   ]
  },
  {
-  "id": 35,
+  "id": 42,
   "topic": "DPSP",
   "level": "Difficult",
   "type": "Four statements",
@@ -1863,22 +2101,22 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
     "I மற்றும் IV மட்டும்"
    ],
    [
-    "I, II, III and IV",
-    "I, II, III மற்றும் IV"
-   ],
-   [
     "II, III and IV",
     "II, III மற்றும் IV"
+   ],
+   [
+    "I, II, III and IV",
+    "I, II, III மற்றும் IV"
    ]
   ],
-  "ans": 3,
+  "ans": 2,
   "exp": [
    "After Minerva Mills (1980) Fundamental Rights enjoy supremacy; Parliament may amend them to implement directives so long as the basic structure is not damaged; the FR–DPSP balance is itself part of the basic structure. Statement I is false.",
    "மினர்வா மில்ஸுக்குப் (1980) பிறகு அடிப்படை உரிமைகளே மேலோங்கியவை; அடிப்படைக் கட்டமைப்பைப் பாதிக்காதவரை நெறிமுறைகளைச் செயல்படுத்த நாடாளுமன்றம் அவற்றைத் திருத்தலாம்; FR–DPSP சமநிலையே அடிப்படைக் கட்டமைப்பின் பகுதி. கூற்று I தவறு."
   ]
  },
  {
-  "id": 36,
+  "id": 43,
   "topic": "DPSP",
   "level": "Medium",
   "type": "Four statements",
@@ -1913,26 +2151,60 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
     "I மற்றும் III மட்டும்"
    ],
    [
-    "II and IV only",
-    "II மற்றும் IV மட்டும்"
-   ],
-   [
     "I, II and IV only",
     "I, II மற்றும் IV மட்டும்"
+   ],
+   [
+    "II and IV only",
+    "II மற்றும் IV மட்டும்"
    ],
    [
     "II, III and IV only",
     "II, III மற்றும் IV மட்டும்"
    ]
   ],
-  "ans": 2,
+  "ans": 1,
   "exp": [
    "Social justice supports laws that remove economic inequalities, give working people a decent standard of living and protect weaker sections; distributing legislative powers is a federal matter, not social justice.",
    "பொருளாதார ஏற்றத்தாழ்வுகளை நீக்குதல், உழைக்கும் மக்களுக்குப் பண்பான வாழ்க்கைத் தரம், நலிந்தோர் நலன் பாதுகாப்பு ஆகியவற்றுக்கான சட்டங்களை சமூக நீதி ஆதரிக்கிறது; சட்டமியற்றும் அதிகாரப் பகிர்வு கூட்டாட்சி சார்ந்தது."
   ]
  },
  {
-  "id": 37,
+  "id": 44,
+  "topic": "FD",
+  "level": "Easy",
+  "type": "Single",
+  "en": "Fundamental Duties are given in which Part of the Constitution?",
+  "ta": "அடிப்படைக் கடமைகள் அரசியலமைப்பின் எந்தப் பகுதியில் கொடுக்கப்பட்டுள்ளன?",
+  "stmts": null,
+  "ask": null,
+  "match": null,
+  "opts": [
+   [
+    "Part IV A",
+    "பகுதி IV A"
+   ],
+   [
+    "Part III",
+    "பகுதி III"
+   ],
+   [
+    "Part IV",
+    "பகுதி IV"
+   ],
+   [
+    "Part V",
+    "பகுதி V"
+   ]
+  ],
+  "ans": 0,
+  "exp": [
+   "Part IVA, containing the single Article 51A.",
+   "பகுதி IVA – இதில் ஒரே சரத்து 51A உள்ளது."
+  ]
+ },
+ {
+  "id": 45,
   "topic": "FD",
   "level": "Medium",
   "type": "Four statements",
@@ -1986,7 +2258,7 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
   ]
  },
  {
-  "id": 38,
+  "id": 46,
   "topic": "FD",
   "level": "Medium",
   "type": "Single",
@@ -1997,10 +2269,6 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
   "match": null,
   "opts": [
    [
-    "8, 10, 11",
-    "8, 10, 11"
-   ],
-   [
     "10, 8, 11",
     "10, 8, 11"
    ],
@@ -2009,18 +2277,22 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
     "8, 11, 12"
    ],
    [
+    "8, 10, 11",
+    "8, 10, 11"
+   ],
+   [
     "6, 8, 11",
     "6, 8, 11"
    ]
   ],
-  "ans": 0,
+  "ans": 2,
   "exp": [
    "Swaran Singh Committee: 8 → 42nd Amendment: 10 → 86th Amendment (2002): 11 duties.",
    "ஸ்வரண் சிங் குழு: 8 → 42-ஆவது திருத்தம்: 10 → 86-ஆவது திருத்தம் (2002): 11 கடமைகள்."
   ]
  },
  {
-  "id": 39,
+  "id": 47,
   "topic": "FD",
   "level": "Medium",
   "type": "Four statements",
@@ -2055,26 +2327,60 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
     "I மற்றும் II"
    ],
    [
-    "I and IV",
-    "I மற்றும் IV"
-   ],
-   [
     "II and III",
     "II மற்றும் III"
+   ],
+   [
+    "I and IV",
+    "I மற்றும் IV"
    ],
    [
     "III and IV",
     "III மற்றும் IV"
    ]
   ],
-  "ans": 1,
+  "ans": 2,
   "exp": [
    "Paying taxes and voting in elections are NOT among the Fundamental Duties (the tax duty was recommended by the Swaran Singh Committee but not accepted).",
    "வரி செலுத்துதல், தேர்தலில் வாக்களித்தல் ஆகியவை அடிப்படைக் கடமைகளில் இல்லை (வரி செலுத்தும் கடமை ஸ்வரண் சிங் குழுவால் பரிந்துரைக்கப்பட்டும் ஏற்கப்படவில்லை)."
   ]
  },
  {
-  "id": 40,
+  "id": 48,
+  "topic": "FD",
+  "level": "Easy",
+  "type": "Single",
+  "en": "The Fundamental Duties were added to the Constitution by which Amendment?",
+  "ta": "அடிப்படைக் கடமைகள் எந்தத் திருத்தத்தின் மூலம் அரசியலமைப்பில் சேர்க்கப்பட்டன?",
+  "stmts": null,
+  "ask": null,
+  "match": null,
+  "opts": [
+   [
+    "44th Amendment",
+    "44-ஆவது திருத்தம்"
+   ],
+   [
+    "42nd Amendment",
+    "42-ஆவது திருத்தம்"
+   ],
+   [
+    "32nd Amendment",
+    "32-ஆவது திருத்தம்"
+   ],
+   [
+    "86th Amendment",
+    "86-ஆவது திருத்தம்"
+   ]
+  ],
+  "ans": 1,
+  "exp": [
+   "42nd Amendment Act, 1976 added Part IVA with 10 duties; the 86th Amendment (2002) added the 11th.",
+   "42-ஆவது திருத்தச் சட்டம் 1976 பகுதி IVA-இல் 10 கடமைகளைச் சேர்த்தது; 86-ஆவது திருத்தம் (2002) 11-ஆவது கடமையைச் சேர்த்தது."
+  ]
+ },
+ {
+  "id": 49,
   "topic": "FD",
   "level": "Medium",
   "type": "Match the following",
@@ -2133,6 +2439,10 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
   },
   "opts": [
    [
+    "a-4, b-1, c-3, d-2",
+    "a-4, b-1, c-3, d-2"
+   ],
+   [
     "a-4, b-3, c-1, d-2",
     "a-4, b-3, c-1, d-2"
    ],
@@ -2141,22 +2451,18 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
     "a-1, b-4, c-3, d-2"
    ],
    [
-    "a-4, b-1, c-3, d-2",
-    "a-4, b-1, c-3, d-2"
-   ],
-   [
     "a-4, b-1, c-2, d-3",
     "a-4, b-1, c-2, d-3"
    ]
   ],
-  "ans": 2,
+  "ans": 0,
   "exp": [
    "51A(a) abide by the Constitution, respect Flag and Anthem; 51A(d) defend the country and render national service; 51A(h) scientific temper, humanism, spirit of inquiry and reform; 51A(k) educational opportunities to child/ward aged 6–14.",
    "51A(a) அரசியலமைப்பிற்குக் கீழ்ப்படிதல், தேசியக் கொடி, கீதத்தை மதித்தல்; 51A(d) நாட்டைக் காத்தல், தேசியப் பணியாற்றுதல்; 51A(h) அறிவியல் மனப்பான்மை, மனிதநேயம், ஆய்ந்தறியும் ஆர்வம், சீர்திருத்த உணர்வு; 51A(k) 6–14 வயதுக் குழந்தைக்குக் கல்வி வாய்ப்பு."
   ]
  },
  {
-  "id": 41,
+  "id": 50,
   "topic": "FD",
   "level": "Difficult",
   "type": "Match the following",
@@ -2215,12 +2521,12 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
   },
   "opts": [
    [
-    "a-3, b-4, c-1, d-2",
-    "a-3, b-4, c-1, d-2"
-   ],
-   [
     "a-3, b-1, c-4, d-2",
     "a-3, b-1, c-4, d-2"
+   ],
+   [
+    "a-3, b-4, c-1, d-2",
+    "a-3, b-4, c-1, d-2"
    ],
    [
     "a-4, b-3, c-1, d-2",
@@ -2231,14 +2537,14 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
     "a-3, b-4, c-2, d-1"
    ]
   ],
-  "ans": 0,
+  "ans": 1,
   "exp": [
    "51A(e) harmony & dignity of women; 51A(g) natural environment & compassion for living creatures; 51A(i) safeguard public property & abjure violence; 51A(j) strive for excellence.",
    "51A(e) நல்லிணக்கம், பெண்களின் கண்ணியம்; 51A(g) இயற்கைச் சூழல், உயிரினங்களிடம் கருணை; 51A(i) பொதுச் சொத்து பாதுகாப்பு, வன்முறை கைவிடல்; 51A(j) சிறந்து விளங்கப் பாடுபடுதல்."
   ]
  },
  {
-  "id": 42,
+  "id": 51,
   "topic": "FD",
   "level": "Difficult",
   "type": "Four statements",
@@ -2292,7 +2598,41 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
   ]
  },
  {
-  "id": 43,
+  "id": 52,
+  "topic": "FD",
+  "level": "Easy",
+  "type": "Single",
+  "en": "Which Article of the Indian Constitution enumerates the Fundamental Duties?",
+  "ta": "இந்திய அரசியலமைப்பில் அடிப்படைக் கடமைகளைப் பட்டியலிடும் சரத்து எது?",
+  "stmts": null,
+  "ask": null,
+  "match": null,
+  "opts": [
+   [
+    "Articles 12–35",
+    "சரத்து 12–35"
+   ],
+   [
+    "Articles 36–50",
+    "சரத்து 36–50"
+   ],
+   [
+    "Article 51A",
+    "சரத்து 51A"
+   ],
+   [
+    "Article 19",
+    "சரத்து 19"
+   ]
+  ],
+  "ans": 2,
+  "exp": [
+   "Article 51A (Part IVA).",
+   "சரத்து 51A (பகுதி IVA)."
+  ]
+ },
+ {
+  "id": 53,
   "topic": "FD",
   "level": "Medium",
   "type": "Single",
@@ -2326,41 +2666,7 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
   ]
  },
  {
-  "id": 44,
-  "topic": "FD",
-  "level": "Difficult",
-  "type": "Single",
-  "en": "Which of the following was NOT a criticism of the Fundamental Duties?",
-  "ta": "பின்வருவனவற்றுள் எது அடிப்படைக் கடமைகள் மீதான விமர்சனம் அல்ல?",
-  "stmts": null,
-  "ask": null,
-  "match": null,
-  "opts": [
-   [
-    "The list is not exhaustive – it omits voting, paying taxes and family planning",
-    "பட்டியல் முழுமையானது அல்ல – வாக்களித்தல், வரி செலுத்துதல், குடும்பக் கட்டுப்பாடு விடுபட்டுள்ளன"
-   ],
-   [
-    "Terms like ‘noble ideals’ and ‘composite culture’ are vague",
-    "‘உயரிய இலட்சியங்கள்’, ‘கலப்புப் பண்பாடு’ போன்ற சொற்கள் தெளிவற்றவை"
-   ],
-   [
-    "Being non-justiciable, they are merely a code of moral precepts",
-    "செயல்படுத்த இயலாதவை என்பதால் அவை வெறும் அறவியல் அறிவுரைகளே"
-   ],
-   [
-    "They provide for penal sanctions that curtail the freedoms of citizens",
-    "அவை குடிமக்களின் சுதந்திரத்தைக் குறைக்கும் தண்டனை அங்கீகாரத்தை வழங்குகின்றன"
-   ]
-  ],
-  "ans": 3,
-  "exp": [
-   "The Committee’s suggestion of penalties was NOT accepted. Real criticisms: not exhaustive, vague, moral precepts, superfluous, and placed as an appendage to Part IV.",
-   "தண்டனை விதிக்கும் குழுவின் பரிந்துரை ஏற்கப்படவில்லை. உண்மையான விமர்சனங்கள்: முழுமையற்றவை, தெளிவற்றவை, அறவியல் அறிவுரைகள், தேவையற்றவை, பகுதி IV-இன் இணைப்பாக வைக்கப்பட்டவை."
-  ]
- },
- {
-  "id": 45,
+  "id": 54,
   "topic": "FD",
   "level": "Difficult",
   "type": "Four statements",
@@ -2391,6 +2697,10 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
   "match": null,
   "opts": [
    [
+    "I, II and III",
+    "I, II மற்றும் III"
+   ],
+   [
     "I and II only",
     "I மற்றும் II மட்டும்"
    ],
@@ -2401,20 +2711,16 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
    [
     "I and IV only",
     "I மற்றும் IV மட்டும்"
-   ],
-   [
-    "I, II and III",
-    "I, II மற்றும் III"
    ]
   ],
-  "ans": 3,
+  "ans": 0,
   "exp": [
    "Rejected: penalty/punishment for non-compliance; bar on questioning such penal laws in court; duty to pay taxes. The separate chapter on duties was accepted (Part IVA).",
    "ஏற்கப்படாதவை: கடமையைப் புறக்கணிப்போருக்குத் தண்டனை; அத்தகைய சட்டங்களை நீதிமன்றத்தில் கேள்வி எழுப்பத் தடை; வரி செலுத்தும் கடமை. கடமைகளுக்கு தனி அத்தியாயம் (பகுதி IVA) ஏற்கப்பட்டது."
   ]
  },
  {
-  "id": 46,
+  "id": 55,
   "topic": "FD",
   "level": "Difficult",
   "type": "Match the following",
@@ -2477,108 +2783,60 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
     "a-2, b-3, c-1, d-4"
    ],
    [
-    "a-2, b-1, c-3, d-4",
-    "a-2, b-1, c-3, d-4"
-   ],
-   [
     "a-1, b-2, c-3, d-4",
     "a-1, b-2, c-3, d-4"
    ],
    [
     "a-2, b-1, c-4, d-3",
     "a-2, b-1, c-4, d-3"
+   ],
+   [
+    "a-2, b-1, c-3, d-4",
+    "a-2, b-1, c-3, d-4"
    ]
   ],
-  "ans": 1,
+  "ans": 3,
   "exp": [
    "Prevention of Insults to National Honour Act 1971 – Constitution, Flag, Anthem; Protection of Civil Rights Act 1955 – caste/religion offences; UAPA 1967 – communal organisation as unlawful association; Representation of the People Act 1951 – disqualification for corrupt practice.",
    "தேசிய கௌரவ அவமதிப்புத் தடுப்புச் சட்டம் 1971 – அரசியலமைப்பு, கொடி, கீதம்; குடிமை உரிமைப் பாதுகாப்புச் சட்டம் 1955 – சாதி/மதக் குற்றங்கள்; சட்டவிரோத நடவடிக்கைகள் (தடுப்பு) சட்டம் 1967 – வகுப்புவாத அமைப்பைச் சட்டவிரோதமாக அறிவித்தல்; மக்கள் பிரதிநிதித்துவச் சட்டம் 1951 – ஊழல் நடைமுறைக்கு தகுதிநீக்கம்."
   ]
  },
  {
-  "id": 47,
+  "id": 56,
   "topic": "FD",
-  "level": "Difficult",
-  "type": "Match the following",
-  "en": "Match the cases with the principle laid down:",
-  "ta": "வழக்குகளை அவை வகுத்த கோட்பாட்டுடன் பொருத்துக:",
+  "level": "Easy",
+  "type": "Single",
+  "en": "Fundamental Duties were incorporated in the Constitution on the recommendation of:",
+  "ta": "அடிப்படைக் கடமைகள் எந்தக் குழுவின் பரிந்துரையின்பேரில் அரசியலமைப்பில் சேர்க்கப்பட்டன?",
   "stmts": null,
-  "ask": [
-   "Choose the correct code:",
-   "சரியான குறியீட்டைத் தேர்ந்தெடுக:"
-  ],
-  "match": {
-   "lh": [
-    "Case",
-    "Case"
-   ],
-   "rh": [
-    "Principle",
-    "Principle"
-   ],
-   "left": [
-    [
-     "a. Rural Litigation and Entitlement Kendra v. State of U.P. (1985)",
-     "a. ரூரல் லிட்டிகேஷன் அண்ட் என்டைட்டில்மென்ட் கேந்திரா எதிர் உ.பி. (1985)"
-    ],
-    [
-     "b. Bijoe Emmanuel v. State of Kerala (1986)",
-     "b. பிஜோ இம்மானுவேல் எதிர் கேரளா (1986)"
-    ],
-    [
-     "c. AIIMS Students’ Union v. AIIMS (2001)",
-     "c. AIIMS மாணவர் சங்கம் எதிர் AIIMS (2001)"
-    ],
-    [
-     "d. Shyam Narayan Chouksey v. Union of India (2016)",
-     "d. ஷ்யாம் நாராயண் சௌக்சே எதிர் இந்திய ஒன்றியம் (2016)"
-    ]
-   ],
-   "right": [
-    [
-     "1. Duties are not enforceable by writ; they guide interpretation",
-     "1. கடமைகள் பேராணை மூலம் செயல்படுத்தப்படாது; விளக்கத்திற்கு வழிகாட்டும்"
-    ],
-    [
-     "2. Students refusing to sing the Anthem cannot be expelled",
-     "2. தேசிய கீதம் பாட மறுத்த மாணவர்களை நீக்கக் கூடாது"
-    ],
-    [
-     "3. Limestone mining in Doon Valley halted citing Article 51A(g)",
-     "3. சரத்து 51A(g)-ஐ மேற்கோளிட்டு டூன் பள்ளத்தாக்கு சுண்ணாம்புச் சுரங்கம் நிறுத்தப்பட்டது"
-    ],
-    [
-     "4. National Anthem made mandatory in cinema halls (relaxed in 2018)",
-     "4. திரையரங்குகளில் தேசிய கீதம் கட்டாயமாக்கப்பட்டது (2018-இல் தளர்வு)"
-    ]
-   ]
-  },
+  "ask": null,
+  "match": null,
   "opts": [
    [
-    "a-3, b-2, c-1, d-4",
-    "a-3, b-2, c-1, d-4"
+    "Shah Commission",
+    "ஷா ஆணையம்"
    ],
    [
-    "a-3, b-1, c-2, d-4",
-    "a-3, b-1, c-2, d-4"
+    "Santhanam Committee",
+    "சந்தானம் குழு"
    ],
    [
-    "a-2, b-3, c-1, d-4",
-    "a-2, b-3, c-1, d-4"
+    "Administrative Reforms Commission",
+    "நிர்வாகச் சீர்திருத்த ஆணையம்"
    ],
    [
-    "a-3, b-2, c-4, d-1",
-    "a-3, b-2, c-4, d-1"
+    "Swaran Singh Committee",
+    "ஸ்வரண் சிங் குழு"
    ]
   ],
-  "ans": 0,
+  "ans": 3,
   "exp": [
-   "RLEK (1985) – Doon Valley limestone mining halted citing 51A(g); Bijoe Emmanuel (1986) – no expulsion for not singing the Anthem; AIIMS Students’ Union (2001) – duties not enforceable by writ; Shyam Narayan Chouksey (2016) – Anthem mandatory in cinemas (relaxed in 2018).",
-   "RLEK (1985) – 51A(g) அடிப்படையில் டூன் பள்ளத்தாக்கு சுண்ணாம்புக்கல் சுரங்கம் நிறுத்தம்; பிஜோ இம்மானுவேல் (1986) – தேசிய கீதம் பாடாததற்காக நீக்கக் கூடாது; AIIMS மாணவர் சங்கம் (2001) – கடமைகள் பேராணை மூலம் செயல்படுத்தப்படாது; ஷ்யாம் நாராயண் சௌக்சே (2016) – திரையரங்குகளில் தேசிய கீதம் கட்டாயம் (2018-இல் தளர்வு)."
+   "The Swaran Singh Committee (1976) was set up during the Emergency.",
+   "நெருக்கடிநிலைக் காலத்தில் (1976) அமைக்கப்பட்ட ஸ்வரண் சிங் குழு இதைப் பரிந்துரைத்தது."
   ]
  },
  {
-  "id": 48,
+  "id": 57,
   "topic": "FD",
   "level": "Difficult",
   "type": "Four statements",
@@ -2617,22 +2875,22 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
     "II, III மற்றும் IV"
    ],
    [
-    "I, II and III",
-    "I, II மற்றும் III"
-   ],
-   [
     "I, III and IV",
     "I, III மற்றும் IV"
+   ],
+   [
+    "I, II and III",
+    "I, II மற்றும் III"
    ]
   ],
-  "ans": 3,
+  "ans": 2,
   "exp": [
    "Duties apply to citizens only (not foreigners). Some are moral (e.g., cherishing freedom-struggle ideals), others civic (e.g., respecting the Constitution, Flag, Anthem). They are non-justiciable but Parliament may enforce them by suitable legislation.",
    "கடமைகள் குடிமக்களுக்கு மட்டுமே (வெளிநாட்டினருக்கு அல்ல). சில அறவியல் சார்ந்தவை (விடுதலைப் போராட்ட இலட்சியங்களைப் போற்றுதல்), சில குடிமையியல் சார்ந்தவை (அரசியலமைப்பு, கொடி, கீதத்தை மதித்தல்). அவை நீதிமன்றத்தால் செயல்படுத்த இயலாதவை; ஆனால் நாடாளுமன்றம் தகுந்த சட்டத்தால் செயல்படுத்தலாம்."
   ]
  },
  {
-  "id": 49,
+  "id": 58,
   "topic": "FD",
   "level": "Difficult",
   "type": "Four statements",
@@ -2663,12 +2921,12 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
   "match": null,
   "opts": [
    [
-    "I, II and III",
-    "I, II மற்றும் III"
-   ],
-   [
     "I and II only",
     "I மற்றும் II மட்டும்"
+   ],
+   [
+    "I, II and III",
+    "I, II மற்றும் III"
    ],
    [
     "II, III and IV",
@@ -2679,14 +2937,14 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
     "I மற்றும் IV மட்டும்"
    ]
   ],
-  "ans": 0,
+  "ans": 1,
   "exp": [
    "Voting, paying taxes and family planning are not Fundamental Duties; ‘safeguard public property and abjure violence’ is Article 51A(i).",
    "வாக்களித்தல், வரி செலுத்துதல், குடும்பக் கட்டுப்பாடு ஆகியவை அடிப்படைக் கடமைகள் அல்ல; ‘பொதுச் சொத்தைப் பாதுகாத்து வன்முறையைக் கைவிடுதல்’ சரத்து 51A(i) ஆகும்."
   ]
  },
  {
-  "id": 50,
+  "id": 59,
   "topic": "FD",
   "level": "Difficult",
   "type": "Single",
@@ -2697,12 +2955,12 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
   "match": null,
   "opts": [
    [
-    "To promote just and honourable relations between nations",
-    "நாடுகளுக்கிடையே நியாயமான, மதிப்புமிக்க உறவுகளை வளர்த்தல்"
-   ],
-   [
     "To strive towards excellence in all spheres of activity",
     "அனைத்துத் துறைகளிலும் சிறந்து விளங்கப் பாடுபடுதல்"
+   ],
+   [
+    "To promote just and honourable relations between nations",
+    "நாடுகளுக்கிடையே நியாயமான, மதிப்புமிக்க உறவுகளை வளர்த்தல்"
    ],
    [
     "To have compassion for living creatures",
@@ -2713,10 +2971,44 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
     "அறிவியல் மனப்பான்மை, மனிதநேயம், ஆய்ந்தறியும் ஆர்வத்தை வளர்த்தல்"
    ]
   ],
-  "ans": 0,
+  "ans": 1,
   "exp": [
    "‘Just and honourable relations between nations’ is part of Article 51 (DPSP). The others are Article 51A(j), (g) and (h).",
    "‘நாடுகளுக்கிடையே நியாயமான, மதிப்புமிக்க உறவுகள்’ சரத்து 51 (DPSP)-இன் பகுதி. மற்றவை சரத்து 51A(j), (g), (h)."
+  ]
+ },
+ {
+  "id": 60,
+  "topic": "FD",
+  "level": "Easy",
+  "type": "Single",
+  "en": "Article 51A(h) states the duty:",
+  "ta": "சரத்து 51A(h) கூறும் கடமை:",
+  "stmts": null,
+  "ask": null,
+  "match": null,
+  "opts": [
+   [
+    "To develop the scientific temper, humanism and the spirit of inquiry and reform",
+    "அறிவியல் மனப்பான்மை, மனிதநேயம், ஆய்ந்தறியும் ஆர்வம், சீர்திருத்த உணர்வை வளர்த்தல்"
+   ],
+   [
+    "To defend the country and render national service",
+    "நாட்டைக் காத்து, தேசியப் பணியாற்றுதல்"
+   ],
+   [
+    "To value and preserve the rich heritage of our composite culture",
+    "நமது கலப்புப் பண்பாட்டின் வளமான மரபைப் போற்றிப் பாதுகாத்தல்"
+   ],
+   [
+    "To uphold and protect the sovereignty, unity and integrity of India",
+    "இந்தியாவின் இறையாண்மை, ஒற்றுமை, ஒருமைப்பாட்டைப் பாதுகாத்தல்"
+   ]
+  ],
+  "ans": 0,
+  "exp": [
+   "51A(h) – scientific temper, humanism and the spirit of inquiry and reform. (51A(d) – defend the country; 51A(f) – composite culture; 51A(c) – sovereignty, unity and integrity.)",
+   "51A(h) – அறிவியல் மனப்பான்மை, மனிதநேயம், ஆய்ந்தறியும் ஆர்வம், சீர்திருத்த உணர்வு. (51A(d) – நாட்டைக் காத்தல்; 51A(f) – கலப்புப் பண்பாடு; 51A(c) – இறையாண்மை, ஒற்றுமை, ஒருமைப்பாடு.)"
   ]
  }
 ]</script>
@@ -2726,11 +3018,11 @@ table.match th{background:var(--brand-soft);color:var(--brand)}
 
 /* ---------- configuration ---------- */
 var TEST_TITLE = "DPSP & Fundamental Duties Mock Test";
-var TEST_MINUTES = 40;            // full test duration
+var TEST_MINUTES = 48;            // full test duration
 // Optional: send every result to a Google Form (linked to a Google Sheet).
 // Fill `url` (the form's .../formResponse address) and the entry ids to switch it on.
 var GOOGLE_FORM = { url: "", fields: { name:"", mobile:"", test:"", score:"", correct:"", wrong:"", unanswered:"", time:"", answers:"" } };
-var STORE_KEY = "dpspfd50_attempts_v1", PROG_KEY = "dpspfd50_progress_v1", USER_KEY = "dpspfd50_user_v1";
+var STORE_KEY = "dpspfd60_attempts_v1", PROG_KEY = "dpspfd60_progress_v1", USER_KEY = "dpspfd60_user_v1";
 
 /* ---------- data ---------- */
 var Q = JSON.parse(document.getElementById("qdata").textContent);
