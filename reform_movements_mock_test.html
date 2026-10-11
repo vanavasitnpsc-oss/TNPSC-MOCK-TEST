@@ -246,6 +246,14 @@ input[type=text],input[type=tel]{font-size:1.1rem;padding:14px 16px}
 }
 @media (prefers-reduced-motion:reduce){.pal{transition:none}}
 
+/* top-bar buttons: readable on the dark header (were white-on-white) */
+.bar .btn{background:#2c3d66;border:1.5px solid #5a6e9f;color:#fff}
+.bar .btn:hover{background:#38507f;border-color:#8fa4d6}
+.bar .btn:disabled{opacity:.5}
+.bar #btnSubmitTop{background:#ffd166;border-color:#ffd166;color:#162033}
+.bar #btnSubmitTop:hover{background:#ffdd8a;border-color:#ffdd8a}
+.bar .btn:focus-visible{outline:3px solid #ffd166;outline-offset:2px}
+
 /* ---------- print (Download PDF) ---------- */
 #printRoot{display:none}
 @media print{
