@@ -1,0 +1,1757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mock Test – Nationalism: Gandhian Phase | தேசியம்: காந்திய காலகட்டம்</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f6fa; --card:#ffffff; --ink:#1c2230; --muted:#5b6475; --line:#e1e5ee;
+  --brand:#1f4fd8; --brand-d:#173aa3; --ok:#12805c; --ok-bg:#e4f5ee; --bad:#c0392b; --bad-bg:#fdecea;
+  --warn:#b26a00; --warn-bg:#fff4e0; --na:#6b7280; --na-bg:#eef0f4; --ta:#8a3b12;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:"Inter","Noto Sans Tamil","Nirmala UI","Latha",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;font-size:16px}
+.wrap{max-width:900px;margin:0 auto;padding:16px}
+h1{font-size:1.35rem;margin:0 0 4px}
+h2{font-size:1.1rem;margin:0 0 8px}
+.sub{color:var(--muted);font-size:.92rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:14px}
+.ta{font-family:"Noto Sans Tamil","Nirmala UI","Latha",sans-serif;color:var(--ta)}
+.pre{white-space:pre-line}
+label{display:block;font-weight:600;font-size:.9rem;margin:10px 0 4px}
+input[type=text],input[type=tel]{width:100%;padding:11px 12px;border:1px solid #c9cfdc;border-radius:10px;font-size:1rem;font-family:inherit}
+input:focus{outline:2px solid var(--brand);border-color:var(--brand)}
+.err{color:var(--bad);font-size:.85rem;min-height:1.1em;margin-top:4px}
+button{font-family:inherit;font-size:.95rem;font-weight:600;border-radius:10px;border:1px solid transparent;padding:10px 16px;cursor:pointer}
+.btn{background:var(--brand);color:#fff}.btn:hover{background:var(--brand-d)}
+.btn2{background:#fff;color:var(--brand);border-color:var(--brand)}
+.btn3{background:#fff;color:var(--ink);border-color:#c9cfdc}
+.btn-ok{background:var(--ok);color:#fff}
+.btn-bad{background:var(--bad);color:#fff}
+button:disabled{opacity:.45;cursor:not-allowed}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.grow{flex:1}
+.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:12px 0}
+.info{background:var(--na-bg);border-radius:10px;padding:10px 12px}
+.info b{display:block;font-size:1.15rem}
+ul.plain{margin:6px 0 0 18px;padding:0;color:var(--muted);font-size:.92rem}
+.banner{background:var(--warn-bg);border:1px solid #f0d49a;color:var(--warn);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+table.hist{width:100%;border-collapse:collapse;font-size:.9rem}
+table.hist th,table.hist td{padding:8px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}
+table.hist button{padding:6px 10px;font-size:.8rem}
+/* test screen */
+.topbar{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line);padding:10px 16px;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+.topbar .in{max-width:900px;margin:0 auto;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.timer{font-variant-numeric:tabular-nums;font-weight:700;font-size:1.25rem;padding:4px 12px;border-radius:999px;background:var(--na-bg)}
+.timer.low{background:var(--bad-bg);color:var(--bad)}
+.qtime{font-variant-numeric:tabular-nums;font-size:.9rem;color:var(--muted)}
+.qno{font-weight:700;color:var(--brand)}
+.chip{display:inline-block;font-size:.72rem;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--na-bg);color:var(--muted);margin-left:6px;vertical-align:middle}
+.chip.Easy{background:#e4f5ee;color:var(--ok)}.chip.Medium{background:var(--warn-bg);color:var(--warn)}.chip.Difficult{background:var(--bad-bg);color:var(--bad)}
+.qtext{font-size:1.05rem;font-weight:500;margin:6px 0 12px}
+.qtext .ta{margin-top:6px;font-weight:500}
+.opt{display:flex;gap:10px;align-items:flex-start;width:100%;text-align:left;background:#fff;color:var(--ink);border:1.5px solid #c9cfdc;border-radius:12px;padding:11px 12px;margin:8px 0;font-weight:400;font-size:1rem}
+.opt:hover{border-color:var(--brand);background:#f3f6ff}
+.opt.sel{border-color:var(--brand);background:#e8eeff}
+.opt .lt{flex:none;width:26px;height:26px;border-radius:50%;background:var(--na-bg);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem}
+.opt.sel .lt{background:var(--brand);color:#fff}
+.opt .tx{flex:1}
+.opt .tx .ta{display:block;margin-top:2px;font-size:.95rem}
+.palette{display:grid;grid-template-columns:repeat(auto-fill,minmax(54px,1fr));gap:8px}
+.pb{padding:6px 2px;border-radius:10px;border:1.5px solid #c9cfdc;background:#fff;color:var(--ink);font-weight:600;font-size:.9rem;line-height:1.15}
+.pb small{display:block;font-weight:400;font-size:.68rem;color:var(--muted)}
+.pb.ans{background:var(--ok-bg);border-color:var(--ok)}
+.pb.cur{outline:2.5px solid var(--brand);outline-offset:1px}
+.legend{font-size:.8rem;color:var(--muted);margin-top:8px}
+/* results */
+.score-hero{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.bigscore{font-size:2.4rem;font-weight:800;color:var(--brand);line-height:1}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-top:14px}
+.stat{border-radius:12px;padding:10px 12px;background:var(--na-bg)}
+.stat b{font-size:1.4rem;display:block}
+.stat.ok{background:var(--ok-bg);color:var(--ok)}.stat.bad{background:var(--bad-bg);color:var(--bad)}.stat.na{background:var(--na-bg);color:var(--na)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 14px}
+.tab{background:#fff;color:var(--ink);border:1.5px solid #c9cfdc;padding:8px 14px}
+.tab.active{background:var(--brand);color:#fff;border-color:var(--brand)}
+.rq{border:1px solid var(--line);border-left-width:6px;border-radius:12px;padding:14px;margin-bottom:12px;background:#fff;break-inside:avoid;page-break-inside:avoid}
+.rq.right{border-left-color:var(--ok)}.rq.wrong{border-left-color:var(--bad)}.rq.unans{border-left-color:var(--na)}
+.rq .hd{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:.85rem;margin-bottom:6px}
+.badge{font-weight:700;padding:2px 10px;border-radius:999px}
+.badge.right{background:var(--ok-bg);color:var(--ok)}.badge.wrong{background:var(--bad-bg);color:var(--bad)}.badge.unans{background:var(--na-bg);color:var(--na)}
+.ro{padding:8px 10px;border:1.5px solid var(--line);border-radius:10px;margin:6px 0;display:flex;gap:8px}
+.ro.correct{background:var(--ok-bg);border-color:var(--ok)}
+.ro.chosen-wrong{background:var(--bad-bg);border-color:var(--bad)}
+.ro .lt{font-weight:700;flex:none;width:22px}
+.ro .ta{display:block;font-size:.93rem}
+.tag{font-size:.72rem;font-weight:700;margin-left:6px}
+.expl{margin-top:8px;background:#f7f9ff;border:1px dashed #b9c6ee;border-radius:10px;padding:8px 10px;font-size:.92rem}
+.expl .ta{margin-top:4px}
+.hidden{display:none !important}
+.print-head{display:none}
+.footer{color:var(--muted);font-size:.8rem;text-align:center;margin:18px 0 30px}
+@media (max-width:520px){.wrap{padding:10px}.card{padding:14px}}
+@media print{
+  body{background:#fff;font-size:12px}
+  .no-print,.topbar,.tabs,.actions{display:none !important}
+  .wrap{max-width:none;padding:0}
+  .card{border:none;padding:0;margin-bottom:8px}
+  .print-head{display:block;margin-bottom:8px;border-bottom:2px solid #333;padding-bottom:6px}
+  #resultList .rq.hidden{display:block !important}
+  .rq,.ro,.badge,.stat,.expl{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+
+<!-- HOME -->
+<div id="home" class="wrap">
+  <div class="card">
+    <h1>Nationalism: Gandhian Phase</h1>
+    <h1 class="ta" style="font-size:1.2rem">தேசியம்: காந்திய காலகட்டம்</h1>
+    <div class="sub">History • Std X • Unit 8 &nbsp;|&nbsp; வரலாறு • 10ஆம் வகுப்பு • அலகு 8</div>
+    <div class="info-grid">
+      <div class="info"><span class="sub">Questions</span><b id="iN">50</b></div>
+      <div class="info"><span class="sub">Time allowed</span><b id="iT">37:30</b></div>
+      <div class="info"><span class="sub">Marks</span><b>1 each</b></div>
+      <div class="info"><span class="sub">Negative marks</span><b>None</b></div>
+    </div>
+    <ul class="plain">
+      <li>Every question is shown in English and Tamil. / ஒவ்வொரு வினாவும் ஆங்கிலத்திலும் தமிழிலும் உள்ளது.</li>
+      <li>Timer: 0.75 minute per question; the test submits automatically when time is up.</li>
+      <li>Time spent on each question is shown while you attempt and in the result.</li>
+      <li>Your attempts are saved on this device. If the page closes or reloads, you can resume the same test with the time still running.</li>
+    </ul>
+  </div>
+
+  <div id="resumeBox" class="banner hidden">
+    <b>You have an unfinished test.</b> <span id="resumeInfo"></span>
+    <div class="row" style="margin-top:8px"><button class="btn" id="btnResume">Resume test</button></div>
+  </div>
+
+  <div class="card" id="startCard">
+    <h2>Enter your details to begin</h2>
+    <label for="fName">Name</label>
+    <input type="text" id="fName" autocomplete="name" placeholder="Your full name">
+    <label for="fMobile">Mobile number</label>
+    <input type="tel" id="fMobile" inputmode="numeric" maxlength="10" autocomplete="tel" placeholder="10-digit mobile number">
+    <div class="err" id="fErr"></div>
+    <div class="row" style="margin-top:8px"><button class="btn" id="btnStart">Start Test</button></div>
+  </div>
+
+  <div class="card hidden" id="histCard">
+    <div class="row" style="justify-content:space-between"><h2 style="margin:0">Saved attempts</h2><button class="btn3" id="btnClearHist" style="padding:6px 10px;font-size:.8rem">Clear all</button></div>
+    <div style="overflow-x:auto"><table class="hist"><thead><tr><th>#</th><th>Date</th><th>Test</th><th>Score</th><th>Time</th><th></th></tr></thead><tbody id="histBody"></tbody></table></div>
+  </div>
+  <div class="footer">Results are stored only in your browser on this device.</div>
+</div>
+
+<!-- TEST -->
+<div id="test" class="hidden">
+  <div class="topbar"><div class="in">
+    <div><span class="qno" id="tQno"></span> <span class="qtime" id="tQtime"></span></div>
+    <div class="timer" id="tTimer">00:00</div>
+    <div class="row"><button class="btn-ok" id="btnSubmit">Submit</button></div>
+  </div></div>
+  <div class="wrap">
+    <div class="card" id="qCard"></div>
+    <div class="row" style="margin-bottom:14px">
+      <button class="btn3" id="btnPrev">◀ Previous</button>
+      <button class="btn3" id="btnClear">Clear answer</button>
+      <div class="grow"></div>
+      <button class="btn" id="btnNext">Next ▶</button>
+    </div>
+    <div class="card">
+      <h2>Question palette &amp; time per question</h2>
+      <div class="palette" id="palette"></div>
+      <div class="legend">Green = answered • Outline = current • Small number = seconds spent</div>
+    </div>
+  </div>
+</div>
+
+<!-- RESULT -->
+<div id="result" class="hidden">
+  <div class="wrap">
+    <div class="print-head" id="printHead"></div>
+    <div class="card">
+      <div class="score-hero">
+        <div><div class="sub">Your score</div><div class="bigscore" id="rScore"></div></div>
+        <div class="grow"><h2 id="rWho" style="margin:0"></h2><div class="sub" id="rMeta"></div></div>
+      </div>
+      <div class="stats" id="rStats"></div>
+    </div>
+    <div class="card actions">
+      <div class="row">
+        <button class="btn" id="btnRetakeAll">Retake full test</button>
+        <button class="btn2" id="btnRetakeWU">Retake wrong &amp; unanswered</button>
+        <button class="btn2" id="btnPdf">Download attempted test as PDF</button>
+        <button class="btn3" id="btnHome">Home</button>
+      </div>
+      <div class="sub" style="margin-top:8px">PDF: in the print window choose “Save as PDF” as the destination.</div>
+    </div>
+    <div class="tabs" id="rTabs"></div>
+    <div id="resultList"></div>
+  </div>
+</div>
+
+<script>
+const QS = [
+ {
+  "id": "B1",
+  "diff": "Easy",
+  "en": {
+   "q": "Gandhi regarded ______ as his political guru.",
+   "o": [
+    "Dadabhai Naoroji",
+    "Bal Gangadhar Tilak",
+    "Lala Lajpat Rai",
+    "Gopal Krishna Gokhale"
+   ]
+  },
+  "ta": {
+   "q": "காந்தியடிகள் ______ அவர்களைத் தமது அரசியல் குருவாக ஏற்றார்.",
+   "o": [
+    "தாதாபாய் நவ்ரோஜி",
+    "பால கங்காதர திலகர்",
+    "லாலா லஜபதி ராய்",
+    "கோபால கிருஷ்ண கோகலே"
+   ]
+  },
+  "ans": 3,
+  "exp": {
+   "en": "On Gokhale's advice Gandhi toured the country before entering politics.",
+   "ta": "கோகலேயின் அறிவுரைப்படி அரசியலுக்கு முன் காந்தி நாடெங்கும் பயணம் செய்தார்."
+  }
+ },
+ {
+  "id": "W6",
+  "diff": "Medium",
+  "en": {
+   "q": "Consider the following events:\n1. Gandhi went to South Africa from India\n2. Annie Besant came to India for the first time\n3. Vivekananda addressed the Parliament of the World's Religions in Chicago\nAll happened in the year:",
+   "o": [
+    "1890",
+    "1891",
+    "1893",
+    "1895"
+   ]
+  },
+  "ta": {
+   "q": "பின்வரும் நிகழ்வுகளைக் கருதுக:\n1. காந்தி இந்தியாவிலிருந்து தென்னாப்பிரிக்கா சென்றார்\n2. அன்னிபெசன்ட் முதன்முறையாக இந்தியா வந்தார்\n3. சிகாகோ உலகச் சமயங்களின் மாநாட்டில் விவேகானந்தர் உரையாற்றினார்\nஇவை அனைத்தும் நடந்த ஆண்டு:",
+   "o": [
+    "1890",
+    "1891",
+    "1893",
+    "1895"
+   ]
+  },
+  "ans": 2,
+  "exp": {
+   "en": "Gandhi left for South Africa in April 1893; the Chicago Parliament and Annie Besant's arrival were also in 1893.",
+   "ta": "காந்தி 1893 ஏப்ரலில் தென்னாப்பிரிக்கா சென்றார்; சிகாகோ மாநாடும் அன்னிபெசன்ட் வருகையும் 1893-இலேயே நிகழ்ந்தன."
+  }
+ },
+ {
+  "id": "N17",
+  "diff": "Medium",
+  "en": {
+   "q": "Match the following:\nList I: A. Phoenix Settlement\n   B. Tolstoy Farm\n   C. Hindustan Republican Army\n   D. Hindustan Socialist Republican Association\nList II: 1. 1928\n   2. 1905\n   3. 1924\n   4. 1910",
+   "o": [
+    "A-2, B-4, C-3, D-1",
+    "A-4, B-2, C-3, D-1",
+    "A-2, B-4, C-1, D-3",
+    "A-2, B-3, C-4, D-1"
+   ]
+  },
+  "ta": {
+   "q": "பொருத்துக:\nபட்டியல் I: A. ஃபீனிக்ஸ் குடியிருப்பு\n   B. டால்ஸ்டாய் பண்ணை\n   C. இந்துஸ்தான் குடியரசு இராணுவம்\n   D. இந்துஸ்தான் சோஷலிஸ்ட் குடியரசு அமைப்பு\nபட்டியல் II: 1. 1928\n   2. 1905\n   3. 1924\n   4. 1910",
+   "o": [
+    "A-2, B-4, C-3, D-1",
+    "A-4, B-2, C-3, D-1",
+    "A-2, B-4, C-1, D-3",
+    "A-2, B-3, C-4, D-1"
+   ]
+  },
+  "ans": 0,
+  "exp": {
+   "en": "Phoenix Settlement (1905), Tolstoy Farm (1910), HRA (1924), HSRA (1928).",
+   "ta": "ஃபீனிக்ஸ் குடியிருப்பு (1905), டால்ஸ்டாய் பண்ணை (1910), HRA (1924), HSRA (1928)."
+  }
+ },
+ {
+  "id": "N1",
+  "diff": "Medium",
+  "en": {
+   "q": "Consider the following statements about the Champaran Satyagraha:\n1. Under the tinkathia system, peasants were forced to cultivate indigo on 3/20 of their land.\n2. Rajkumar Shukla, an agriculturist, persuaded Gandhi to visit Champaran.\n3. Gandhi was assisted by Brajkishore Prasad and Rajendra Prasad.\n4. The Lieutenant Governor's committee, which did not include Gandhi, recommended abolition of the tinkathia system.\nWhich of the above statements are incorrect?",
+   "o": [
+    "1 only",
+    "4 only",
+    "2 and 3 only",
+    "1 and 4 only"
+   ]
+  },
+  "ta": {
+   "q": "சம்பரான் சத்தியாகிரகம் குறித்த பின்வரும் கூற்றுகளைக் கருதுக:\n1. தீன் காதியா முறையில் விவசாயிகள் தம் நிலத்தின் 3/20 பங்கில் அவுரி பயிரிடக் கட்டாயப்படுத்தப்பட்டனர்.\n2. விவசாயி ராஜ்குமார் சுக்லா காந்தியைச் சம்பரானுக்கு வருமாறு வற்புறுத்தினார்.\n3. காந்தியடிகளுக்குப் பிரஜ்கிஷோர் பிரசாத்தும் இராஜேந்திர பிரசாத்தும் உதவினர்.\n4. காந்தியடிகள் உறுப்பினராக இல்லாத துணைநிலை ஆளுநர் குழு தீன் காதியா முறையை ரத்து செய்யப் பரிந்துரைத்தது.\nமேற்கண்டவற்றில் தவறான கூற்றுகள் எவை?",
+   "o": [
+    "1 மட்டும்",
+    "4 மட்டும்",
+    "2, 3 மட்டும்",
+    "1, 4 மட்டும்"
+   ]
+  },
+  "ans": 1,
+  "exp": {
+   "en": "Gandhi was a member of the Lieutenant Governor's committee, so statement 4 is incorrect.",
+   "ta": "துணைநிலை ஆளுநர் குழுவில் காந்தியடிகளும் உறுப்பினராக இருந்தார்; எனவே கூற்று 4 தவறு."
+  }
+ },
+ {
+  "id": "W5",
+  "diff": "Medium",
+  "en": {
+   "q": "Arrange the following in chronological order:\n1. Ahmedabad Mill Strike\n2. Champaran Satyagraha\n3. Rowlatt Satyagraha\n4. Kheda Satyagraha\n5. Jallianwala Bagh Massacre",
+   "o": [
+    "1-2-4-5-3",
+    "1-2-3-4-5",
+    "2-1-4-3-5",
+    "1-2-5-3-4"
+   ]
+  },
+  "ta": {
+   "q": "பின்வருவனவற்றைக் காலவரிசைப்படி அமைக்க:\n1. அகமதாபாத் மில் வேலைநிறுத்தம்\n2. சம்பரான் சத்தியாகிரகம்\n3. ரௌலட் சத்தியாகிரகம்\n4. கேதா சத்தியாகிரகம்\n5. ஜாலியன் வாலா பாக் படுகொலை",
+   "o": [
+    "1-2-4-5-3",
+    "1-2-3-4-5",
+    "2-1-4-3-5",
+    "1-2-5-3-4"
+   ]
+  },
+  "ans": 2,
+  "exp": {
+   "en": "Champaran → Ahmedabad (1918) → Kheda (1918) → Rowlatt Satyagraha (6 Apr 1919) → Jallianwala Bagh (13 Apr 1919).",
+   "ta": "சம்பரான் → அகமதாபாத் (1918) → கேதா (1918) → ரௌலட் சத்தியாகிரகம் (1919 ஏப். 6) → ஜாலியன் வாலா பாக் (1919 ஏப். 13)."
+  }
+ },
+ {
+  "id": "B2",
+  "diff": "Easy",
+  "en": {
+   "q": "Who was arrested during the anti-Rowlatt protests in Amritsar?",
+   "o": [
+    "Motilal Nehru",
+    "Dr. Saifuddin Kitchlew",
+    "Mohamed Ali",
+    "Raj Kumar Shukla"
+   ]
+  },
+  "ta": {
+   "q": "அமிர்தசரஸில் ரௌலட் சட்ட எதிர்ப்புப் போராட்டங்களின்போது கைது செய்யப்பட்டவர் யார்?",
+   "o": [
+    "மோதிலால் நேரு",
+    "டாக்டர் சைஃபுதீன் கிச்லு",
+    "முகம்மது அலி",
+    "ராஜ் குமார் சுக்லா"
+   ]
+  },
+  "ans": 1,
+  "exp": {
+   "en": "Dr. Saifuddin Kitchlew and Dr. Satyapal were arrested on 9 April 1919.",
+   "ta": "டாக்டர் சைஃபுதீன் கிச்லுவும் டாக்டர் சத்யபாலும் 1919 ஏப். 9இல் கைது செய்யப்பட்டனர்."
+  }
+ },
+ {
+  "id": "N2",
+  "diff": "Difficult",
+  "en": {
+   "q": "Consider the following statements about Jallianwala Bagh (13 April 1919):\n1. The firing lasted ten minutes until the troops ran out of ammunition.\n2. The official report put the number of those killed at 379.\n3. Gandhi returned his knighthood and Tagore surrendered the Kaiser-i-Hind medal.\nWhich of the above statements are correct?",
+   "o": [
+    "1 and 2 only",
+    "2 and 3 only",
+    "1 and 3 only",
+    "1, 2 and 3"
+   ]
+  },
+  "ta": {
+   "q": "ஜாலியன் வாலா பாக் (1919 ஏப்ரல் 13) குறித்த பின்வரும் கூற்றுகளைக் கருதுக:\n1. வீரர்களிடம் தோட்டாக்கள் தீரும்வரை பத்து நிமிடம் துப்பாக்கிச்சூடு நடந்தது.\n2. அதிகாரபூர்வ அறிக்கையின்படி 379 பேர் உயிரிழந்தனர்.\n3. காந்தியடிகள் தம் ‘நைட்’ பட்டத்தையும், தாகூர் கெய்சர்-இ-ஹிந்த் பதக்கத்தையும் திருப்பி அளித்தனர்.\nமேற்கண்டவற்றில் சரியான கூற்றுகள் எவை?",
+   "o": [
+    "1, 2 மட்டும்",
+    "2, 3 மட்டும்",
+    "1, 3 மட்டும்",
+    "1, 2, 3"
+   ]
+  },
+  "ans": 0,
+  "exp": {
+   "en": "Names are swapped in statement 3: Tagore returned his knighthood; Gandhi surrendered the Kaiser-i-Hind medal.",
+   "ta": "கூற்று 3இல் பெயர்கள் மாற்றப்பட்டுள்ளன: தாகூர் ‘நைட்’ பட்டத்தையும், காந்தி கெய்சர்-இ-ஹிந்த் பதக்கத்தையும் திருப்பினர்."
+  }
+ },
+ {
+  "id": "W7",
+  "diff": "Easy",
+  "en": {
+   "q": "Rabindranath Tagore returned his knighthood and Gandhi surrendered his Kaiser-i-Hind medal in response to:",
+   "o": [
+    "Rowlatt Satyagraha",
+    "Chauri Chaura Incident",
+    "Non-Cooperation Movement",
+    "Jallianwala Bagh Massacre"
+   ]
+  },
+  "ta": {
+   "q": "இரவீந்திரநாத் தாகூர் தமது ‘நைட்’ பட்டத்தையும், காந்தியடிகள் கெய்சர்-இ-ஹிந்த் பதக்கத்தையும் திருப்பி அளித்ததற்குக் காரணம்:",
+   "o": [
+    "ரௌலட் சத்தியாகிரகம்",
+    "சௌரி சௌரா சம்பவம்",
+    "ஒத்துழையாமை இயக்கம்",
+    "ஜாலியன் வாலா பாக் படுகொலை"
+   ]
+  },
+  "ans": 3,
+  "exp": {
+   "en": "The brutality of General Dyer at Jallianwala Bagh (13 Apr 1919) enraged Indians.",
+   "ta": "1919 ஏப். 13 ஜாலியன் வாலா பாக்கில் ஜெனரல் டயரின் கொடுமை இந்தியர்களைக் கொதிப்படையச் செய்தது."
+  }
+ },
+ {
+  "id": "B3",
+  "diff": "Medium",
+  "en": {
+   "q": "The Khilafat Movement was led by ______.",
+   "o": [
+    "the Ali brothers – Maulana Mohamed Ali and Maulana Shaukat Ali",
+    "Abul Kalam Azad and Hasrat Mohani",
+    "Muhammad Iqbal and M.A. Jinnah",
+    "Gandhi and Rajendra Prasad"
+   ]
+  },
+  "ta": {
+   "q": "கிலாபத் இயக்கத்தை வழிநடத்தியவர்கள் ______.",
+   "o": [
+    "அலி சகோதரர்கள் – மௌலானா முகமது அலி, மௌலானா சௌகத் அலி",
+    "அபுல் கலாம் ஆசாத், ஹஸ்ரத் மொஹானி",
+    "முகம்மது இக்பால், M.A. ஜின்னா",
+    "காந்தியடிகள், இராஜேந்திர பிரசாத்"
+   ]
+  },
+  "ans": 0,
+  "exp": {
+   "en": "The Caliph of Turkey was harshly treated after WWI; the Ali brothers led the protest.",
+   "ta": "முதல் உலகப்போருக்குப் பின் துருக்கி கலிபா கடுமையாக நடத்தப்பட்டதால் அலி சகோதரர்கள் இயக்கத்தை வழிநடத்தினர்."
+  }
+ },
+ {
+  "id": "W4",
+  "diff": "Medium",
+  "en": {
+   "q": "Who presided over the All India Khilafat Conference held at Delhi in November 1919?",
+   "o": [
+    "Maulana Mohamed Ali",
+    "Maulana Shaukat Ali",
+    "Gandhi",
+    "Abul Kalam Azad"
+   ]
+  },
+  "ta": {
+   "q": "1919 நவம்பரில் தில்லியில் நடைபெற்ற அகில இந்திய கிலாபத் மாநாட்டுக்குத் தலைமை தாங்கியவர் யார்?",
+   "o": [
+    "மௌலானா முகமது அலி",
+    "மௌலானா சௌகத் அலி",
+    "காந்தியடிகள்",
+    "அபுல் கலாம் ஆசாத்"
+   ]
+  },
+  "ans": 2,
+  "exp": {
+   "en": "Gandhi presided over the Delhi Khilafat Conference (Nov 1919); the Ali brothers led the movement.",
+   "ta": "1919 நவம்பர் தில்லி கிலாபத் மாநாட்டுக்குக் காந்தியடிகள் தலைமை தாங்கினார்; இயக்கத்தை வழிநடத்தியவர்கள் அலி சகோதரர்கள்."
+  }
+ },
+ {
+  "id": "W8",
+  "diff": "Difficult",
+  "en": {
+   "q": "Consider the following statements and choose the correct ones:\n1. Congress approved the Non-Cooperation Movement in a special session held at Calcutta in September 1920, chaired by Lala Lajpat Rai.\n2. It was passed at the Nagpur Session held in December 1920, chaired by C. Vijayaraghavachariar.",
+   "o": [
+    "1 only",
+    "2 only",
+    "Both 1 and 2",
+    "Neither 1 nor 2"
+   ]
+  },
+  "ta": {
+   "q": "பின்வரும் கூற்றுகளில் சரியானவற்றைத் தேர்க:\n1. 1920 செப்டம்பரில் கல்கத்தாவில் நடந்த சிறப்பு அமர்வில், லாலா லஜபதி ராய் தலைமையில் ஒத்துழையாமை இயக்கத்துக்குக் காங்கிரஸ் ஒப்புதல் அளித்தது.\n2. 1920 டிசம்பரில் நாக்பூர் அமர்வில், C. விஜயராகவாச்சாரியார் தலைமையில் அது நிறைவேற்றப்பட்டது.",
+   "o": [
+    "1 மட்டும்",
+    "2 மட்டும்",
+    "1, 2 இரண்டும்",
+    "1, 2 இரண்டுமில்லை"
+   ]
+  },
+  "ans": 2,
+  "exp": {
+   "en": "Approved at the Calcutta special session (Sept 1920, presided by Lala Lajpat Rai) and passed at Nagpur (Dec 1920, C. Vijayaraghavachariar).",
+   "ta": "கல்கத்தா சிறப்பு அமர்வில் (1920 செப்., தலைமை: லாலா லஜபதி ராய்) ஒப்புதல்; நாக்பூரில் (1920 டிச., தலைமை: C. விஜயராகவாச்சாரியார்) நிறைவேற்றம்."
+  }
+ },
+ {
+  "id": "N4",
+  "diff": "Medium",
+  "en": {
+   "q": "Assertion (A): Gandhi withdrew the Non-Cooperation Movement in 1922.\nReason (R): A mob at Chauri Chaura burnt the police station and 22 policemen lost their lives.",
+   "o": [
+    "Both A and R are correct but R is not the correct explanation of A",
+    "A is correct but R is wrong",
+    "A is wrong but R is correct",
+    "Both A and R are correct and R is the correct explanation of A"
+   ]
+  },
+  "ta": {
+   "q": "கூற்று (A): 1922இல் காந்தியடிகள் ஒத்துழையாமை இயக்கத்தைத் திரும்பப் பெற்றார்.\nகாரணம் (R): சௌரி சௌராவில் கூட்டம் காவல்நிலையத்தைத் தீயிட்டதில் 22 காவலர்கள் உயிரிழந்தனர்.",
+   "o": [
+    "A, R இரண்டும் சரி; ஆனால் R என்பது A-க்குச் சரியான விளக்கமல்ல",
+    "A சரி; ஆனால் R தவறு",
+    "A தவறு; ஆனால் R சரி",
+    "A, R இரண்டும் சரி; R என்பது A-க்குச் சரியான விளக்கம்"
+   ]
+  },
+  "ans": 3,
+  "exp": {
+   "en": "The Chauri Chaura violence (5 Feb 1922) made Gandhi withdraw the movement immediately.",
+   "ta": "1922 பிப். 5 சௌரி சௌரா வன்முறையால் காந்தியடிகள் இயக்கத்தை உடனே திரும்பப் பெற்றார்."
+  }
+ },
+ {
+  "id": "N16",
+  "diff": "Difficult",
+  "en": {
+   "q": "Consider the following statements about the Swarajists:\n1. Pro-changers like Motilal Nehru and C.R. Das wanted to contest elections and wreck the government from within.\n2. No-changers like Vallabhbhai Patel and C. Rajaji wanted to continue non-cooperation.\n3. The Swaraj Party was formed on 1 January 1923.\n4. In Bengal, the Swarajists took charge of the transferred subjects.\nHow many of the above statements are correct?",
+   "o": [
+    "Only one",
+    "Only two",
+    "Only three",
+    "All four"
+   ]
+  },
+  "ta": {
+   "q": "சுயராஜ்ஜியக் கட்சியினர் குறித்த பின்வரும் கூற்றுகளைக் கருதுக:\n1. மோதிலால் நேரு, சி.ஆர். தாஸ் போன்ற மாற்றம் விரும்புவோர் தேர்தலில் போட்டியிட்டு அரசைச் சீர்குலைக்க விரும்பினர்.\n2. வல்லபாய் பட்டேல், சி. ராஜாஜி போன்ற மாற்றம் விரும்பாதோர் ஒத்துழையாமையைத் தொடர விரும்பினர்.\n3. சுயராஜ்ஜியக் கட்சி 1923 ஜனவரி 1இல் தொடங்கப்பட்டது.\n4. வங்காளத்தில் சுயராஜ்ஜியக் கட்சியினர் மாற்றப்பட்ட துறைகளின் பொறுப்பை ஏற்றனர்.\nமேற்கண்டவற்றில் எத்தனை கூற்றுகள் சரி?",
+   "o": [
+    "ஒன்று மட்டும்",
+    "இரண்டு மட்டும்",
+    "மூன்று மட்டும்",
+    "நான்கும்"
+   ]
+  },
+  "ans": 2,
+  "exp": {
+   "en": "In Bengal they refused to take charge of the transferred subjects, so statement 4 is wrong.",
+   "ta": "வங்காளத்தில் அவர்கள் மாற்றப்பட்ட துறைகளை ஏற்க மறுத்தனர்; எனவே கூற்று 4 தவறு."
+  }
+ },
+ {
+  "id": "B4",
+  "diff": "Easy",
+  "en": {
+   "q": "The Government of India Act, 1919 introduced ______ in the provinces.",
+   "o": [
+    "Provincial autonomy",
+    "Federation",
+    "Communal electorates",
+    "Dyarchy"
+   ]
+  },
+  "ta": {
+   "q": "1919 இந்திய அரசுச் சட்டம் மாகாணங்களில் ______ஐ அறிமுகப்படுத்தியது.",
+   "o": [
+    "மாகாணத் தன்னாட்சி",
+    "கூட்டாட்சி",
+    "வகுப்புவாரித் தொகுதிகள்",
+    "இரட்டை ஆட்சி"
+   ]
+  },
+  "ans": 3,
+  "exp": {
+   "en": "Dyarchy divided provincial subjects into Reserved (British) and Transferred (Indian ministers); ended in 1935.",
+   "ta": "இரட்டை ஆட்சி மாகாணத் துறைகளை ஒதுக்கப்பட்டவை (ஆங்கிலேயர்), மாற்றப்பட்டவை (இந்திய அமைச்சர்) எனப் பிரித்தது; 1935இல் முடிந்தது."
+  }
+ },
+ {
+  "id": "N8",
+  "diff": "Difficult",
+  "en": {
+   "q": "Arrange in chronological order:\n1. Announcement of the Simon Commission\n2. Chauri Chaura incident\n3. Formation of the Swaraj Party\n4. Kakori Conspiracy",
+   "o": [
+    "2-4-3-1",
+    "2-3-4-1",
+    "3-2-4-1",
+    "2-3-1-4"
+   ]
+  },
+  "ta": {
+   "q": "காலவரிசைப்படி அமைக்க:\n1. சைமன் குழு அறிவிப்பு\n2. சௌரி சௌரா சம்பவம்\n3. சுயராஜ்ஜியக் கட்சி உருவாக்கம்\n4. காகோரி சதி",
+   "o": [
+    "2-4-3-1",
+    "2-3-4-1",
+    "3-2-4-1",
+    "2-3-1-4"
+   ]
+  },
+  "ans": 1,
+  "exp": {
+   "en": "Chauri Chaura (1922) → Swaraj Party (1 Jan 1923) → Kakori (1925) → Simon Commission (8 Nov 1927).",
+   "ta": "சௌரி சௌரா (1922) → சுயராஜ்ஜியக் கட்சி (1923 ஜன. 1) → காகோரி (1925) → சைமன் குழு (1927 நவ. 8)."
+  }
+ },
+ {
+  "id": "N5",
+  "diff": "Medium",
+  "en": {
+   "q": "Assertion (A): All sections of India welcomed the Simon Commission.\nReason (R): The Commission was an all-white commission with no Indian member.",
+   "o": [
+    "Both A and R are correct but R is not the correct explanation of A",
+    "A is correct but R is wrong",
+    "A is wrong but R is correct",
+    "Both A and R are correct and R is the correct explanation of A"
+   ]
+  },
+  "ta": {
+   "q": "கூற்று (A): சைமன் குழுவை இந்தியாவின் அனைத்துத் தரப்பினரும் வரவேற்றனர்.\nகாரணம் (R): அக்குழுவில் இந்தியர் எவரும் இடம்பெறாமல் அனைவரும் வெள்ளையர்களாக இருந்தனர்.",
+   "o": [
+    "A, R இரண்டும் சரி; ஆனால் R என்பது A-க்குச் சரியான விளக்கமல்ல",
+    "A சரி; ஆனால் R தவறு",
+    "A தவறு; ஆனால் R சரி",
+    "A, R இரண்டும் சரி; R என்பது A-க்குச் சரியான விளக்கம்"
+   ]
+  },
+  "ans": 2,
+  "exp": {
+   "en": "Congress and the Muslim League boycotted it (‘Go Back Simon’) because no Indian was a member.",
+   "ta": "இந்தியர் ஒருவரும் இல்லாததால் காங்கிரஸ், முஸ்லீம் லீக் உள்ளிட்டோர் புறக்கணித்தனர் (‘சைமனே திரும்பிப் போ’)."
+  }
+ },
+ {
+  "id": "N6",
+  "diff": "Difficult",
+  "en": {
+   "q": "Which of the following pairs is NOT correctly matched?",
+   "o": [
+    "Tej Bahadur Sapru – Opposed Jinnah's demand for one-third seats for Muslims",
+    "Mohan Singh – Organised the first INA with Indian prisoners of war",
+    "Liaqat Ali Khan – Finance Member in the interim government",
+    "Rajkumar Shukla – Persuaded Gandhi to visit Champaran"
+   ]
+  },
+  "ta": {
+   "q": "பின்வரும் இணைகளில் சரியாகப் பொருந்தாதது எது?",
+   "o": [
+    "தேஜ் பஹதூர் சாப்ரூ – முஸ்லீம்களுக்கு 1/3 இடம் வேண்டும் என்ற ஜின்னாவின் கோரிக்கையை எதிர்த்தார்",
+    "மோகன் சிங் – இந்தியப் போர்க்கைதிகளைக் கொண்டு முதல் INA-வை உருவாக்கினார்",
+    "லியாகத் அலிகான் – இடைக்கால அரசின் நிதி உறுப்பினர்",
+    "ராஜ்குமார் சுக்லா – காந்தியைச் சம்பரானுக்கு அழைத்தவர்"
+   ]
+  },
+  "ans": 0,
+  "exp": {
+   "en": "Sapru supported Jinnah's one-third demand; it was defeated at the All Party Conference.",
+   "ta": "ஜின்னாவின் 1/3 இடக் கோரிக்கையைச் சாப்ரூ ஆதரித்தார்; அது அனைத்துக் கட்சி மாநாட்டில் தோல்வியடைந்தது."
+  }
+ },
+ {
+  "id": "N3",
+  "diff": "Difficult",
+  "en": {
+   "q": "Match the following:\nList I: A. Alluri Sitarama Raju\n   B. Surya Sen\n   C. M. Singaravelar\n   D. Ram Prasad Bismil\nList II: 1. Chittagong Armoury Raid\n   2. Rampa uprising\n   3. Presidential address at the Kanpur Communist Conference\n   4. Kakori train robbery",
+   "o": [
+    "A-1, B-2, C-3, D-4",
+    "A-2, B-1, C-4, D-3",
+    "A-3, B-1, C-2, D-4",
+    "A-2, B-1, C-3, D-4"
+   ]
+  },
+  "ta": {
+   "q": "பொருத்துக:\nபட்டியல் I: A. அல்லூரி சீதாராம ராஜு\n   B. சூர்யா சென்\n   C. M. சிங்காரவேலர்\n   D. ராம்பிரசாத் பிஸ்மில்\nபட்டியல் II: 1. சிட்டகாங் ஆயுதக்கிடங்குத் தாக்குதல்\n   2. ராம்பா கிளர்ச்சி\n   3. கான்பூர் பொதுவுடைமை மாநாட்டுத் தலைமை உரை\n   4. காகோரி ரயில் கொள்ளை",
+   "o": [
+    "A-1, B-2, C-3, D-4",
+    "A-2, B-1, C-4, D-3",
+    "A-3, B-1, C-2, D-4",
+    "A-2, B-1, C-3, D-4"
+   ]
+  },
+  "ans": 3,
+  "exp": {
+   "en": "Raju – Rampa (1922–24); Surya Sen – Chittagong (1930); Singaravelar – Kanpur 1925; Bismil – Kakori (1925).",
+   "ta": "ராஜு – ராம்பா (1922–24); சூர்யா சென் – சிட்டகாங் (1930); சிங்காரவேலர் – கான்பூர் 1925; பிஸ்மில் – காகோரி (1925)."
+  }
+ },
+ {
+  "id": "B5",
+  "diff": "Easy",
+  "en": {
+   "q": "Which among the following was declared as ‘Independence Day’?",
+   "o": [
+    "26th January 1930",
+    "26th December 1929",
+    "16th June 1946",
+    "15th January 1947"
+   ]
+  },
+  "ta": {
+   "q": "பின்வருவனவற்றுள் ‘சுதந்திர நாள்’ எனப் பிரகடனம் செய்யப்பட்ட நாள் எது?",
+   "o": [
+    "1930 ஜனவரி 26",
+    "1929 டிசம்பர் 26",
+    "1946 ஜூன் 16",
+    "1947 ஜனவரி 15"
+   ]
+  },
+  "ans": 0,
+  "exp": {
+   "en": "After the Lahore session (Dec 1929), 26 January 1930 was declared Independence Day.",
+   "ta": "லாகூர் அமர்வுக்குப் (1929 டிச.) பின் 1930 ஜனவரி 26 சுதந்திர நாளாக அறிவிக்கப்பட்டது."
+  }
+ },
+ {
+  "id": "W10",
+  "diff": "Medium",
+  "en": {
+   "q": "Consider the following statements and choose the correct ones:\n1. On 12 March 1930, Gandhi set out from Sabarmati Ashram with 78 of its inmates.\n2. He covered a distance of 241 miles (390 km) in 24 days to reach Dandi.\n3. He took a lump of salt, breaking the salt law, on 6 April 1930.",
+   "o": [
+    "All of the above",
+    "1 and 2 only",
+    "2 and 3 only",
+    "1 and 3 only"
+   ]
+  },
+  "ta": {
+   "q": "பின்வரும் கூற்றுகளில் சரியானவற்றைத் தேர்க:\n1. 1930 மார்ச் 12ஆம் நாள் சபர்மதி ஆசிரமத்திலிருந்து 78 தொண்டர்களுடன் காந்தியடிகள் புறப்பட்டார்.\n2. 24 நாள்களில் 241 மைல் (390 கி.மீ) நடந்து தண்டியை அடைந்தார்.\n3. 1930 ஏப்ரல் 6ஆம் நாள் ஒரு கைப்பிடி உப்பை எடுத்து உப்புச் சட்டத்தை மீறினார்.",
+   "o": [
+    "மேற்கூறிய அனைத்தும்",
+    "1, 2 மட்டும்",
+    "2, 3 மட்டும்",
+    "1, 3 மட்டும்"
+   ]
+  },
+  "ans": 0,
+  "exp": {
+   "en": "Dandi March: 12 Mar 1930, 78 volunteers, 241 miles, 24 days; salt law broken on the morning of 6 Apr after reaching Dandi on 5 Apr.",
+   "ta": "தண்டி யாத்திரை: 1930 மார்ச் 12, 78 பேர், 241 மைல், 24 நாள்; ஏப். 5இல் தண்டி சேர்ந்து மறுநாள் உப்புச் சட்டம் மீறல்."
+  }
+ },
+ {
+  "id": "N18",
+  "diff": "Easy",
+  "en": {
+   "q": "In the Salt Satyagraha in Tamil Nadu, C. Rajaji led a salt march from ______ to ______.",
+   "o": [
+    "Tiruchirappalli to Vedaranyam",
+    "Madras to Cuddalore",
+    "Madurai to Rameswaram",
+    "Tiruchirappalli to Nagapattinam"
+   ]
+  },
+  "ta": {
+   "q": "தமிழ்நாட்டில் உப்பு சத்தியாகிரகத்தின்போது சி. ராஜாஜி ______ இலிருந்து ______ வரை உப்பு யாத்திரை நடத்தினார்.",
+   "o": [
+    "திருச்சிராப்பள்ளி – வேதாரண்யம்",
+    "மதராஸ் – கடலூர்",
+    "மதுரை – இராமேசுவரம்",
+    "திருச்சிராப்பள்ளி – நாகப்பட்டினம்"
+   ]
+  },
+  "ans": 0,
+  "exp": {
+   "en": "Rajaji's march: Tiruchirappalli → Vedaranyam, parallel to Gandhi's Dandi March.",
+   "ta": "ராஜாஜியின் யாத்திரை: திருச்சிராப்பள்ளி → வேதாரண்யம்; காந்தியின் தண்டி யாத்திரைக்கு இணையாக நடந்தது."
+  }
+ },
+ {
+  "id": "W9",
+  "diff": "Easy",
+  "en": {
+   "q": "Who organised the Khudai Khidmatgar, also known as the Red Shirts?",
+   "o": [
+    "Abul Kalam Azad",
+    "Khan Abdul Ghaffar Khan",
+    "Gandhiji",
+    "Jawaharlal Nehru"
+   ]
+  },
+  "ta": {
+   "q": "‘செஞ்சட்டையினர்’ என்றும் அழைக்கப்படும் குதாய் கிட்மத்கர் அமைப்பை ஏற்படுத்தியவர் யார்?",
+   "o": [
+    "அபுல் கலாம் ஆசாத்",
+    "கான் அப்துல் கஃபார் கான்",
+    "காந்தியடிகள்",
+    "ஜவகர்லால் நேரு"
+   ]
+  },
+  "ans": 1,
+  "exp": {
+   "en": "Khan Abdul Ghaffar Khan led the Salt Satyagraha in the North-West Frontier Province.",
+   "ta": "வடமேற்கு எல்லை மாகாணத்தில் உப்பு சத்தியாகிரகத்தைக் கான் அப்துல் கஃபார் கான் வழிநடத்தினார்."
+  }
+ },
+ {
+  "id": "B6",
+  "diff": "Medium",
+  "en": {
+   "q": "When was the first Forest Act enacted?",
+   "o": [
+    "1858",
+    "1911",
+    "1865",
+    "1936"
+   ]
+  },
+  "ta": {
+   "q": "முதலாவது வனச்சட்டம் எப்போது இயற்றப்பட்டது?",
+   "o": [
+    "1858",
+    "1911",
+    "1865",
+    "1936"
+   ]
+  },
+  "ans": 2,
+  "exp": {
+   "en": "The first Forest Act (1865) restricted forest-dwellers' access to firewood, fodder and minor produce; the Indian Forest Act came in 1878.",
+   "ta": "1865 முதல் வனச்சட்டம் சுள்ளி, தீவனம், சிறு வனப்பொருள்களைச் சேகரிக்கத் தடை விதித்தது; இந்திய வனங்கள் சட்டம் 1878இல் வந்தது."
+  }
+ },
+ {
+  "id": "W11",
+  "diff": "Medium",
+  "en": {
+   "q": "Indian National Congress attended which of these Round Table Conferences (RTCs)?",
+   "o": [
+    "1st RTC only",
+    "2nd RTC only",
+    "3rd RTC only",
+    "All 3 RTCs"
+   ]
+  },
+  "ta": {
+   "q": "இந்திய தேசிய காங்கிரஸ் பங்கேற்ற வட்டமேசை மாநாடு (மாநாடுகள்) எது?",
+   "o": [
+    "முதல் மாநாடு மட்டும்",
+    "இரண்டாம் மாநாடு மட்டும்",
+    "மூன்றாம் மாநாடு மட்டும்",
+    "மூன்று மாநாடுகளும்"
+   ]
+  },
+  "ans": 1,
+  "exp": {
+   "en": "Congress skipped the 1st (leaders in jail) and 3rd (Civil Disobedience revived); Gandhi attended only the 2nd (7 Sept 1931) after the Gandhi–Irwin Pact.",
+   "ta": "முதல் (தலைவர்கள் சிறையில்), மூன்றாம் (சட்டமறுப்பு புத்துயிர்) மாநாடுகளில் காங்கிரஸ் பங்கேற்கவில்லை; காந்தி–இர்வின் ஒப்பந்தத்தின் பின் இரண்டாம் மாநாட்டில் (1931 செப். 7) மட்டும் கலந்துகொண்டது."
+  }
+ },
+ {
+  "id": "N7",
+  "diff": "Medium",
+  "en": {
+   "q": "Arrange in chronological order:\n1. Communal Award\n2. Second Round Table Conference\n3. Gandhi–Irwin Pact\n4. Temple Entry Day",
+   "o": [
+    "3-2-1-4",
+    "2-3-1-4",
+    "3-1-2-4",
+    "1-3-2-4"
+   ]
+  },
+  "ta": {
+   "q": "காலவரிசைப்படி அமைக்க:\n1. வகுப்புவாரி ஒதுக்கீடு\n2. இரண்டாம் வட்டமேசை மாநாடு\n3. காந்தி–இர்வின் ஒப்பந்தம்\n4. கோவில் நுழைவு நாள்",
+   "o": [
+    "3-2-1-4",
+    "2-3-1-4",
+    "3-1-2-4",
+    "1-3-2-4"
+   ]
+  },
+  "ans": 0,
+  "exp": {
+   "en": "Gandhi–Irwin Pact (5 Mar 1931) → 2nd RTC (7 Sept 1931) → Communal Award (16 Aug 1932) → Temple Entry Day (8 Jan 1933).",
+   "ta": "காந்தி–இர்வின் ஒப்பந்தம் (1931 மார்ச் 5) → 2ஆம் வட்டமேசை (1931 செப். 7) → வகுப்புவாரி ஒதுக்கீடு (1932 ஆக. 16) → கோவில் நுழைவு நாள் (1933 ஜன. 8)."
+  }
+ },
+ {
+  "id": "W12",
+  "diff": "Easy",
+  "en": {
+   "q": "Who announced the Communal Award on 16 August 1932?",
+   "o": [
+    "Lord Willingdon",
+    "Lord Irwin",
+    "Ramsay MacDonald",
+    "Stanley Baldwin"
+   ]
+  },
+  "ta": {
+   "q": "1932 ஆகஸ்ட் 16இல் வகுப்புவாரி ஒதுக்கீட்டை அறிவித்தவர் யார்?",
+   "o": [
+    "வில்லிங்டன் பிரபு",
+    "இர்வின் பிரபு",
+    "ராம்சே மெக்டொனால்டு",
+    "ஸ்டான்லி பால்ட்வின்"
+   ]
+  },
+  "ans": 2,
+  "exp": {
+   "en": "British PM Ramsay MacDonald announced it; it gave separate electorates to minorities and the depressed classes.",
+   "ta": "பிரிட்டிஷ் பிரதமர் ராம்சே மெக்டொனால்டு அறிவித்தார்; சிறுபான்மையினருக்கும் ஒடுக்கப்பட்டோருக்கும் தனித்தொகுதி வழங்கியது."
+  }
+ },
+ {
+  "id": "N9",
+  "diff": "Medium",
+  "en": {
+   "q": "According to the Poona Pact, the seats reserved for the depressed classes were increased from ______, and ______ of the seats in the Central Legislature were reserved for them.",
+   "o": [
+    "148 to 71; 18 per cent",
+    "71 to 184; 8 per cent",
+    "71 to 148; 8 per cent",
+    "71 to 148; 18 per cent"
+   ]
+  },
+  "ta": {
+   "q": "பூனா ஒப்பந்தப்படி ஒடுக்கப்பட்ட வகுப்பினருக்கான இடங்கள் ______ ஆக உயர்த்தப்பட்டன; மத்தியச் சட்டப்பேரவையில் ______ இடங்கள் அவர்களுக்கு ஒதுக்கப்பட்டன.",
+   "o": [
+    "148இலிருந்து 71; 18 சதவிகிதம்",
+    "71இலிருந்து 184; 8 சதவிகிதம்",
+    "71இலிருந்து 148; 8 சதவிகிதம்",
+    "71இலிருந்து 148; 18 சதவிகிதம்"
+   ]
+  },
+  "ans": 3,
+  "exp": {
+   "en": "Poona Pact (Gandhi–Ambedkar, 1932): joint electorate with reserved seats, 71 → 148, 18% in the Central Legislature.",
+   "ta": "பூனா ஒப்பந்தம் (காந்தி–அம்பேத்கர், 1932): இடஒதுக்கீட்டுடன் கூடிய கூட்டுத்தொகுதி; 71 → 148; மத்தியப் பேரவையில் 18%."
+  }
+ },
+ {
+  "id": "B7",
+  "diff": "Easy",
+  "en": {
+   "q": "On 8 January 1933, which day was observed?",
+   "o": [
+    "Temple Entry Day",
+    "Day of Deliverance",
+    "Direct Action Day",
+    "Independence Day"
+   ]
+  },
+  "ta": {
+   "q": "1933 ஜனவரி 8 அன்று அனுசரிக்கப்பட்ட நாள் எது?",
+   "o": [
+    "கோவில் நுழைவு நாள்",
+    "மீட்பு நாள்",
+    "நேரடி நடவடிக்கை நாள்",
+    "சுதந்திர நாள்"
+   ]
+  },
+  "ans": 0,
+  "exp": {
+   "en": "Part of Gandhi's campaign against untouchability (Harijan Sevak Sangh, Harijan Tour).",
+   "ta": "தீண்டாமை ஒழிப்புப் பிரச்சாரத்தின் (அரிஜன சேவை சங்கம், அரிஜன யாத்திரை) ஒரு பகுதி."
+  }
+ },
+ {
+  "id": "B12",
+  "diff": "Medium",
+  "en": {
+   "q": "Match the following:\nList I: A. Rowlatt Act\n   B. Non-Cooperation Movement\n   C. Government of India Act, 1919\n   D. Communist Party of India\nList II: 1. Dyarchy\n   2. M.N. Roy\n   3. Black Act\n   4. Surrender of titles",
+   "o": [
+    "A-3, B-4, C-1, D-2",
+    "A-4, B-3, C-1, D-2",
+    "A-3, B-4, C-2, D-1",
+    "A-1, B-4, C-3, D-2"
+   ]
+  },
+  "ta": {
+   "q": "பொருத்துக:\nபட்டியல் I: A. ரௌலட் சட்டம்\n   B. ஒத்துழையாமை இயக்கம்\n   C. 1919 இந்திய அரசுச் சட்டம்\n   D. இந்தியப் பொதுவுடைமைக் கட்சி\nபட்டியல் II: 1. இரட்டை ஆட்சி\n   2. M.N. ராய்\n   3. கருப்புச் சட்டம்\n   4. பட்டங்களைத் துறத்தல்",
+   "o": [
+    "A-3, B-4, C-1, D-2",
+    "A-4, B-3, C-1, D-2",
+    "A-3, B-4, C-2, D-1",
+    "A-1, B-4, C-3, D-2"
+   ]
+  },
+  "ans": 0,
+  "exp": {
+   "en": "Rowlatt Act = Black Act; NCM began with surrender of titles; 1919 Act = Dyarchy; CPI founder = M.N. Roy.",
+   "ta": "ரௌலட் சட்டம் = கருப்புச் சட்டம்; ஒத்துழையாமை = பட்டங்களைத் துறத்தல்; 1919 சட்டம் = இரட்டை ஆட்சி; CPI நிறுவனர் = M.N. ராய்."
+  }
+ },
+ {
+  "id": "W1",
+  "diff": "Difficult",
+  "en": {
+   "q": "Which of the following pair is correctly matched?",
+   "o": [
+    "Communist Party of India (CPI) – 1925",
+    "Congress Socialist Party – 1924",
+    "Hindustan Republican Army (HRA) – 1928",
+    "Hindustan Socialist Republican Association – 1924"
+   ]
+  },
+  "ta": {
+   "q": "பின்வரும் இணைகளில் சரியாகப் பொருத்தப்பட்டுள்ளது எது?",
+   "o": [
+    "இந்தியப் பொதுவுடைமைக் கட்சி (CPI) – 1925",
+    "காங்கிரஸ் சோஷலிஸ்ட் கட்சி – 1924",
+    "இந்துஸ்தான் குடியரசு இராணுவம் (HRA) – 1928",
+    "இந்துஸ்தான் சோஷலிஸ்ட் குடியரசு அமைப்பு (HSRA) – 1924"
+   ]
+  },
+  "ans": 0,
+  "exp": {
+   "en": "CPI was founded on Indian soil at the 1925 Kanpur Communist Conference (Singaravelar presided). CSP – 1934; HRA – 1924; HSRA – 1928.",
+   "ta": "1925 கான்பூர் பொதுவுடைமை மாநாட்டில் (சிங்காரவேலர் தலைமை) இந்திய மண்ணில் CPI உருவானது. CSP – 1934; HRA – 1924; HSRA – 1928."
+  }
+ },
+ {
+  "id": "W3",
+  "diff": "Medium",
+  "en": {
+   "q": "Which of the following pair is wrongly matched?",
+   "o": [
+    "Kanpur Conspiracy Case of 1924 – M.N. Roy",
+    "Kakori Conspiracy Case of 1925 – Bhagat Singh",
+    "Chittagong Armoury Raid of 1930 – Surya Sen",
+    "Meerut Conspiracy Case of 1929 – S.A. Dange"
+   ]
+  },
+  "ta": {
+   "q": "பின்வரும் இணைகளில் தவறாகப் பொருத்தப்பட்டுள்ளது எது?",
+   "o": [
+    "1924 கான்பூர் சதி வழக்கு – M.N. ராய்",
+    "1925 காகோரி சதி வழக்கு – பகத்சிங்",
+    "1930 சிட்டகாங் ஆயுதக்கிடங்குத் தாக்குதல் – சூர்யா சென்",
+    "1929 மீரட் சதி வழக்கு – S.A. டாங்கே"
+   ]
+  },
+  "ans": 1,
+  "exp": {
+   "en": "The Kakori case (1925) involved Ram Prasad Bismil and Ashfaqulla Khan, not Bhagat Singh.",
+   "ta": "1925 காகோரி சதி வழக்கில் தொடர்புடையவர்கள் ராம்பிரசாத் பிஸ்மில், அஷ்ஃபாகுல்லா கான்; பகத்சிங் அல்ல."
+  }
+ },
+ {
+  "id": "W2",
+  "diff": "Easy",
+  "en": {
+   "q": "Who along with Bhagat Singh threw a smoke bomb inside the Central Legislative Assembly in 1929?",
+   "o": [
+    "Rajguru",
+    "B.K. Dutt",
+    "Sukhdev",
+    "Surya Sen"
+   ]
+  },
+  "ta": {
+   "q": "1929இல் மத்திய சட்டப்பேரவையில் பகத்சிங்குடன் இணைந்து புகைக்குண்டு வீசியவர் யார்?",
+   "o": [
+    "ராஜகுரு",
+    "B.K. தத்",
+    "சுக்தேவ்",
+    "சூர்யா சென்"
+   ]
+  },
+  "ans": 1,
+  "exp": {
+   "en": "Bhagat Singh and B.K. Dutt threw the smoke bomb shouting ‘Inquilab Zindabad’. Surya Sen led the Chittagong Armoury Raid.",
+   "ta": "பகத்சிங்கும் B.K. தத்தும் ‘இன்குலாப் ஜிந்தாபாத்’ முழங்கி புகைக்குண்டு வீசினர். சூர்யா சென் சிட்டகாங் ஆயுதக்கிடங்குத் தாக்குதலுக்குத் தலைமை தாங்கினார்."
+  }
+ },
+ {
+  "id": "W16",
+  "diff": "Difficult",
+  "en": {
+   "q": "Which of the following events happened in the month of August?\n1. Non-Cooperation Movement started (1920)\n2. Civil Disobedience Movement started (1930)\n3. Quit India Movement started (1942)\n4. Communal Award announced (1932)",
+   "o": [
+    "All of the above",
+    "1, 2 & 3 only",
+    "2, 3 & 4 only",
+    "1, 3 & 4 only"
+   ]
+  },
+  "ta": {
+   "q": "பின்வரும் நிகழ்வுகளில் ஆகஸ்ட் மாதத்தில் நிகழ்ந்தவை எவை?\n1. ஒத்துழையாமை இயக்கம் தொடக்கம் (1920)\n2. சட்டமறுப்பு இயக்கம் தொடக்கம் (1930)\n3. வெள்ளையனே வெளியேறு இயக்கம் தொடக்கம் (1942)\n4. வகுப்புவாரி ஒதுக்கீடு அறிவிப்பு (1932)",
+   "o": [
+    "மேற்கூறிய அனைத்தும்",
+    "1, 2, 3 மட்டும்",
+    "2, 3, 4 மட்டும்",
+    "1, 3, 4 மட்டும்"
+   ]
+  },
+  "ans": 3,
+  "exp": {
+   "en": "NCM – 1 Aug 1920; Quit India – 8 Aug 1942; Communal Award – 16 Aug 1932. Civil Disobedience began with the Dandi March in March 1930.",
+   "ta": "ஒத்துழையாமை – 1920 ஆக. 1; வெ.வெ. இயக்கம் – 1942 ஆக. 8; வகுப்புவாரி ஒதுக்கீடு – 1932 ஆக. 16. சட்டமறுப்பு 1930 மார்ச்சில் தண்டி யாத்திரையுடன் தொடங்கியது."
+  }
+ },
+ {
+  "id": "N10",
+  "diff": "Medium",
+  "en": {
+   "q": "Which of the following is NOT a feature of the Government of India Act, 1935?",
+   "o": [
+    "The franchise was extended to more than half of the population",
+    "Provincial autonomy",
+    "Dyarchy at the Centre",
+    "Burma was separated from India"
+   ]
+  },
+  "ta": {
+   "q": "1935 இந்திய அரசுச் சட்டத்தின் அம்சமாக இல்லாதது எது?",
+   "o": [
+    "மக்கள்தொகையில் பாதிக்கும் மேற்பட்டோருக்கு வாக்குரிமை",
+    "மாகாணத் தன்னாட்சி",
+    "மையத்தில் இரட்டை ஆட்சி",
+    "பர்மா இந்தியாவிலிருந்து பிரிக்கப்பட்டது"
+   ]
+  },
+  "ans": 0,
+  "exp": {
+   "en": "The franchise was property-based; only about 10% of the population could vote.",
+   "ta": "வாக்குரிமை சொத்தின் அடிப்படையில் இருந்தது; மக்கள்தொகையில் சுமார் 10% பேர் மட்டுமே வாக்களிக்கத் தகுதி பெற்றனர்."
+  }
+ },
+ {
+  "id": "B8",
+  "diff": "Medium",
+  "en": {
+   "q": "Which Act introduced Provincial Autonomy?",
+   "o": [
+    "1858 Act",
+    "Indian Councils Act, 1909",
+    "Government of India Act, 1919",
+    "Government of India Act, 1935"
+   ]
+  },
+  "ta": {
+   "q": "மாகாணத் தன்னாட்சியை அறிமுகம் செய்த சட்டம் எது?",
+   "o": [
+    "1858ஆம் ஆண்டுச் சட்டம்",
+    "இந்திய கவுன்சில் சட்டம், 1909",
+    "இந்திய அரசுச் சட்டம், 1919",
+    "இந்திய அரசுச் சட்டம், 1935"
+   ]
+  },
+  "ans": 3,
+  "exp": {
+   "en": "The 1935 Act gave provincial autonomy (and dyarchy at the Centre).",
+   "ta": "1935 சட்டம் மாகாணத் தன்னாட்சியையும் மையத்தில் இரட்டை ஆட்சியையும் வழங்கியது."
+  }
+ },
+ {
+  "id": "N11",
+  "diff": "Difficult",
+  "en": {
+   "q": "Consider the following statements about the first Congress Ministries (1937):\n1. Congress won 7 of the 11 provinces and formed ministries in 8 provinces.\n2. Ministers' salaries were reduced from Rs. 2,000 to Rs. 500 per month.\n3. The ban on all political organisations, including the Communist Party, was lifted.\n4. Temple entry legislation was passed.\nWhich of the above statements are correct?",
+   "o": [
+    "1, 2 and 3",
+    "2, 3 and 4",
+    "1, 3 and 4",
+    "1, 2 and 4"
+   ]
+  },
+  "ta": {
+   "q": "முதல் காங்கிரஸ் அமைச்சரவைகள் (1937) குறித்த பின்வரும் கூற்றுகளைக் கருதுக:\n1. 11 மாகாணங்களில் 7இல் வெற்றிபெற்ற காங்கிரஸ் 8 மாகாணங்களில் ஆட்சி அமைத்தது.\n2. அமைச்சர் ஊதியம் மாதம் ₹2000இலிருந்து ₹500 ஆகக் குறைக்கப்பட்டது.\n3. பொதுவுடைமைக் கட்சி உட்பட அனைத்து அரசியல் அமைப்புகள் மீதான தடையும் நீக்கப்பட்டது.\n4. கோவில் நுழைவுச் சட்டம் நிறைவேற்றப்பட்டது.\nமேற்கண்டவற்றில் சரியானவை எவை?",
+   "o": [
+    "1, 2, 3",
+    "2, 3, 4",
+    "1, 3, 4",
+    "1, 2, 4"
+   ]
+  },
+  "ans": 3,
+  "exp": {
+   "en": "The ban was lifted on all organisations except the Communist Party.",
+   "ta": "பொதுவுடைமைக் கட்சி தவிர மற்ற அமைப்புகள் மீதான தடை நீக்கப்பட்டது."
+  }
+ },
+ {
+  "id": "B9",
+  "diff": "Difficult",
+  "en": {
+   "q": "Choose the correct statement:\n(i) The Communist Party of India was founded in Tashkent in 1920.\n(ii) M. Singaravelar was tried in the Kanpur Conspiracy Case.\n(iii) The Congress Socialist Party was formed by Jayaprakash Narayan, Acharya Narendra Dev and Minoo Masani.\n(iv) The Socialists did not participate in the Quit India Movement.",
+   "o": [
+    "(i) and (ii) are correct",
+    "(ii) and (iii) are correct",
+    "(iv) is correct",
+    "(i), (ii) and (iii) are correct"
+   ]
+  },
+  "ta": {
+   "q": "சரியான கூற்றைத் தேர்க:\n(i) இந்தியப் பொதுவுடைமைக் கட்சி 1920இல் தாஷ்கண்டில் தொடங்கப்பட்டது.\n(ii) M. சிங்காரவேலர் கான்பூர் சதித்திட்ட வழக்கில் விசாரிக்கப்பட்டார்.\n(iii) காங்கிரஸ் சோஷலிஸ்ட் கட்சியை ஜெயப்பிரகாஷ் நாராயண், ஆச்சார்ய நரேந்திர தேவ், மினு மசானி உருவாக்கினர்.\n(iv) வெள்ளையனே வெளியேறு இயக்கத்தில் சோஷலிஸ்ட்டுகள் பங்கேற்கவில்லை.",
+   "o": [
+    "(i), (ii) சரி",
+    "(ii), (iii) சரி",
+    "(iv) சரி",
+    "(i), (ii), (iii) சரி"
+   ]
+  },
+  "ans": 3,
+  "exp": {
+   "en": "Socialists (J.P. Narayan, Aruna Asaf Ali, Usha Mehta) led the Quit India movement, so (iv) is wrong.",
+   "ta": "ஜெயப்பிரகாஷ் நாராயண், அருணா ஆசப் அலி, உஷா மேத்தா ஆகிய சோஷலிஸ்ட்டுகள் இயக்கத்தை வழிநடத்தினர்; எனவே (iv) தவறு."
+  }
+ },
+ {
+  "id": "B11",
+  "diff": "Medium",
+  "en": {
+   "q": "Assertion (A): The Congress Ministries resigned in 1939.\nReason (R): The colonial government of India entered the war without consulting the elected Congress ministries.",
+   "o": [
+    "Both A and R are correct but R is not the correct explanation of A",
+    "A is correct but R is wrong",
+    "A is wrong but R is correct",
+    "Both A and R are correct and R is the correct explanation of A"
+   ]
+  },
+  "ta": {
+   "q": "கூற்று (A): 1939இல் காங்கிரஸ் அமைச்சரவைகள் பதவி விலகின.\nகாரணம் (R): தேர்ந்தெடுக்கப்பட்ட காங்கிரஸ் அமைச்சரவைகளை ஆலோசிக்காமல் காலனி அரசு இந்தியாவைப் போரில் ஈடுபடுத்தியது.",
+   "o": [
+    "A, R இரண்டும் சரி; ஆனால் R என்பது A-க்குச் சரியான விளக்கமல்ல",
+    "A சரி; ஆனால் R தவறு",
+    "A தவறு; ஆனால் R சரி",
+    "A, R இரண்டும் சரி; R என்பது A-க்குச் சரியான விளக்கம்"
+   ]
+  },
+  "ans": 3,
+  "exp": {
+   "en": "Both are correct and R explains A.",
+   "ta": "A, R இரண்டும் சரி; R என்பது A-க்கான விளக்கம்."
+  }
+ },
+ {
+  "id": "W15",
+  "diff": "Medium",
+  "en": {
+   "q": "Who was the candidate proposed by Gandhi for the Presidentship of the Congress in 1939?",
+   "o": [
+    "Subhas Chandra Bose",
+    "Pattabhi Sitaramayya",
+    "J. Nehru",
+    "Abul Kalam Azad"
+   ]
+  },
+  "ta": {
+   "q": "1939இல் காங்கிரஸ் தலைவர் பதவிக்குக் காந்தி முன்மொழிந்த வேட்பாளர் யார்?",
+   "o": [
+    "சுபாஷ் சந்திர போஸ்",
+    "பட்டாபி சீதாராமய்யா",
+    "ஜே. நேரு",
+    "அபுல் கலாம் ஆசாத்"
+   ]
+  },
+  "ans": 1,
+  "exp": {
+   "en": "Bose defeated Gandhi's candidate Pattabhi Sitaramayya, then resigned and founded the Forward Bloc.",
+   "ta": "காந்தியின் வேட்பாளர் பட்டாபி சீதாராமய்யாவைப் போஸ் வென்றார்; பின்னர் பதவி விலகிப் பார்வர்டு பிளாக்கைத் தொடங்கினார்."
+  }
+ },
+ {
+  "id": "W13",
+  "diff": "Easy",
+  "en": {
+   "q": "Who was the first to offer Individual Satyagraha?",
+   "o": [
+    "Gandhi",
+    "J. Nehru",
+    "Vinobha Bhave",
+    "C. Rajaji"
+   ]
+  },
+  "ta": {
+   "q": "தனிநபர் சத்தியாகிரகத்தை முதலில் மேற்கொண்டவர் யார்?",
+   "o": [
+    "காந்தியடிகள்",
+    "ஜே. நேரு",
+    "வினோபா பாவே",
+    "சி. ராஜாஜி"
+   ]
+  },
+  "ans": 2,
+  "exp": {
+   "en": "Vinobha Bhave offered the first individual satyagraha on 17 October 1940.",
+   "ta": "வினோபா பாவே 1940 அக்டோபர் 17இல் முதல் தனிநபர் சத்தியாகிரகம் மேற்கொண்டார்."
+  }
+ },
+ {
+  "id": "N12",
+  "diff": "Medium",
+  "en": {
+   "q": "Consider the following statements about the Cripps Mission:\n1. The mission under Sir Stafford Cripps came on 22 March 1942.\n2. It offered Dominion Status after the War.\n3. It offered Indian control of defence during the War.\n4. Both the Congress and the Muslim League rejected the proposals.\nWhich of the above statements are correct?",
+   "o": [
+    "1, 2 and 3",
+    "2, 3 and 4",
+    "1, 3 and 4",
+    "1, 2 and 4"
+   ]
+  },
+  "ta": {
+   "q": "கிரிப்ஸ் தூதுக்குழு குறித்த பின்வரும் கூற்றுகளைக் கருதுக:\n1. சர் ஸ்டாஃபோர்டு கிரிப்ஸ் தலைமையிலான தூதுக்குழு 1942 மார்ச் 22இல் வந்தது.\n2. போருக்குப் பிறகு டொமினியன் அந்தஸ்து வழங்க முன்வந்தது.\n3. போரின்போது பாதுகாப்புத் துறையை இந்தியரிடம் வழங்க முன்வந்தது.\n4. காங்கிரஸ், முஸ்லீம் லீக் இரண்டுமே முன்மொழிவுகளை நிராகரித்தன.\nமேற்கண்டவற்றில் சரியான கூற்றுகள் எவை?",
+   "o": [
+    "1, 2, 3",
+    "2, 3, 4",
+    "1, 3, 4",
+    "1, 2, 4"
+   ]
+  },
+  "ans": 3,
+  "exp": {
+   "en": "Defence was to remain under British control during the War. Gandhi called the offer a ‘post-dated cheque on a crashing bank’.",
+   "ta": "போரின்போது பாதுகாப்புத் துறை பிரிட்டிஷ் கட்டுப்பாட்டிலேயே இருக்கும் என்றது. காந்தி இதை ‘திவாலாகும் வங்கியில் பின்தேதியிட்ட காசோலை’ என்றார்."
+  }
+ },
+ {
+  "id": "B10",
+  "diff": "Medium",
+  "en": {
+   "q": "Assertion (A): The Congress attended the First Round Table Conference.\nReason (R): The Gandhi–Irwin Pact enabled the Congress to attend the Second Round Table Conference.",
+   "o": [
+    "Both A and R are correct but R is not the correct explanation of A",
+    "A is correct but R is wrong",
+    "A is wrong but R is correct",
+    "Both A and R are correct and R is the correct explanation of A"
+   ]
+  },
+  "ta": {
+   "q": "கூற்று (A): காங்கிரஸ் முதல் வட்டமேசை மாநாட்டில் கலந்துகொண்டது.\nகாரணம் (R): காந்தி–இர்வின் ஒப்பந்தம் இரண்டாம் வட்டமேசை மாநாட்டில் காங்கிரஸ் பங்கேற்க வழிவகுத்தது.",
+   "o": [
+    "A, R இரண்டும் சரி; ஆனால் R என்பது A-க்குச் சரியான விளக்கமல்ல",
+    "A சரி; ஆனால் R தவறு",
+    "A தவறு; ஆனால் R சரி",
+    "A, R இரண்டும் சரி; R என்பது A-க்குச் சரியான விளக்கம்"
+   ]
+  },
+  "ans": 2,
+  "exp": {
+   "en": "A is wrong (leaders were in jail); R is correct.",
+   "ta": "A தவறு (தலைவர்கள் சிறையில் இருந்தனர்); R சரி."
+  }
+ },
+ {
+  "id": "W14",
+  "diff": "Medium",
+  "en": {
+   "q": "Who established the Congress Radio underground during the Quit India Movement?",
+   "o": [
+    "Aruna Asaf Ali",
+    "Usha Mehta",
+    "Jayaprakash Narayan",
+    "Ramanand Misra"
+   ]
+  },
+  "ta": {
+   "q": "வெள்ளையனே வெளியேறு இயக்கத்தின்போது காங்கிரஸ் வானொலியைத் திரைமறைவில் நிறுவியவர் யார்?",
+   "o": [
+    "அருணா ஆசப் அலி",
+    "உஷா மேத்தா",
+    "ஜெயப்பிரகாஷ் நாராயண்",
+    "ராமாநந்த் மிஸ்ரா"
+   ]
+  },
+  "ans": 1,
+  "exp": {
+   "en": "Usha Mehta's underground Congress Radio functioned till November 1942.",
+   "ta": "உஷா மேத்தாவின் திரைமறைவு காங்கிரஸ் வானொலி 1942 நவம்பர் வரை செயல்பட்டது."
+  }
+ },
+ {
+  "id": "N15",
+  "diff": "Medium",
+  "en": {
+   "q": "Which of the following statements about the Indian National Army (INA) is correct?",
+   "o": [
+    "Bose reached Japan by submarine in March 1941.",
+    "The women's brigade was named after Sarojini Naidu.",
+    "It was first organised by Gen. Mohan Singh with Indian prisoners of war in Malaya and Burma, with Japanese support.",
+    "The Provisional Government of Free India was set up at Rangoon."
+   ]
+  },
+  "ta": {
+   "q": "இந்திய தேசிய இராணுவம் (INA) குறித்த பின்வரும் கூற்றுகளில் சரியானது எது?",
+   "o": [
+    "1941 மார்ச்சில் போஸ் நீர்மூழ்கிக் கப்பலில் ஜப்பான் சென்றடைந்தார்.",
+    "பெண்கள் பிரிவுக்குச் சரோஜினி நாயுடுவின் பெயர் சூட்டப்பட்டது.",
+    "ஜப்பானிய ஆதரவுடன் மலாயா, பர்மாவில் இந்தியப் போர்க்கைதிகளைக் கொண்டு ஜெனரல் மோகன் சிங் முதலில் இதனை உருவாக்கினார்.",
+    "சுதந்திர இந்தியாவின் தற்காலிக அரசு ரங்கூனில் அமைக்கப்பட்டது."
+   ]
+  },
+  "ans": 2,
+  "exp": {
+   "en": "Bose escaped to Afghanistan in March 1941 and reached Japan by submarine in Feb 1943; the brigade honoured Rani of Jhansi; the Provisional Government was in Singapore.",
+   "ta": "போஸ் 1941 மார்ச்சில் ஆப்கானிஸ்தானுக்குத் தப்பினார்; 1943 பிப்ரவரியில் ஜப்பான் சென்றார்; பெண்கள் படை ஜான்சி ராணி பெயரில்; தற்காலிக அரசு சிங்கப்பூரில்."
+  }
+ },
+ {
+  "id": "W19",
+  "diff": "Easy",
+  "en": {
+   "q": "Who gave the slogan ‘Dilli Chalo’?",
+   "o": [
+    "Subhas Bose",
+    "Gandhi",
+    "Nehru",
+    "Ambedkar"
+   ]
+  },
+  "ta": {
+   "q": "‘தில்லி சலோ’ (தில்லிக்குப் புறப்படு) என்ற முழக்கத்தை வெளியிட்டவர் யார்?",
+   "o": [
+    "சுபாஷ் போஸ்",
+    "காந்தியடிகள்",
+    "நேரு",
+    "அம்பேத்கர்"
+   ]
+  },
+  "ans": 0,
+  "exp": {
+   "en": "Subhas Chandra Bose gave the ‘Dilli Chalo’ slogan to the INA.",
+   "ta": "இந்திய தேசிய இராணுவத்துக்குச் சுபாஷ் சந்திர போஸ் ‘தில்லி சலோ’ முழக்கத்தை வழங்கினார்."
+  }
+ },
+ {
+  "id": "W18",
+  "diff": "Medium",
+  "en": {
+   "q": "Arrange the following events in chronological order as they happened in the year 1946:\n1. Interim Government formation\n2. Direct Action Day\n3. Royal Indian Navy Revolt",
+   "o": [
+    "1-2-3",
+    "2-3-1",
+    "3-2-1",
+    "2-1-3"
+   ]
+  },
+  "ta": {
+   "q": "1946ஆம் ஆண்டில் நிகழ்ந்த பின்வரும் நிகழ்வுகளைக் காலவரிசைப்படி அமைக்க:\n1. இடைக்கால அரசு அமைப்பு\n2. நேரடி நடவடிக்கை நாள்\n3. ராயல் இந்தியக் கடற்படைக் கிளர்ச்சி",
+   "o": [
+    "1-2-3",
+    "2-3-1",
+    "3-2-1",
+    "2-1-3"
+   ]
+  },
+  "ans": 2,
+  "exp": {
+   "en": "Navy Revolt (Feb) → Direct Action Day (16 Aug) → Interim Government under Nehru (Sept).",
+   "ta": "கடற்படைக் கிளர்ச்சி (பிப்.) → நேரடி நடவடிக்கை நாள் (ஆக. 16) → நேரு தலைமையில் இடைக்கால அரசு (செப்.)."
+  }
+ },
+ {
+  "id": "N13",
+  "diff": "Medium",
+  "en": {
+   "q": "Which of the following statements about the Cabinet Mission is incorrect?",
+   "o": [
+    "Its members were Pethick Lawrence, Sir Stafford Cripps and A.V. Alexander.",
+    "It was sent by Prime Minister Winston Churchill after the Second World War.",
+    "It rejected the demand for Pakistan and proposed a federal government.",
+    "The provinces were to be divided into three groups."
+   ]
+  },
+  "ta": {
+   "q": "அமைச்சரவைத் தூதுக்குழு குறித்த பின்வரும் கூற்றுகளில் தவறானது எது?",
+   "o": [
+    "பெதிக் லாரன்ஸ், சர் ஸ்டாஃபோர்டு கிரிப்ஸ், A.V. அலெக்சாண்டர் ஆகியோர் உறுப்பினர்கள்.",
+    "இரண்டாம் உலகப்போருக்குப் பின் பிரதமர் வின்ஸ்டன் சர்ச்சில் இதனை அனுப்பினார்.",
+    "பாகிஸ்தான் கோரிக்கையை நிராகரித்து, கூட்டாட்சி அரசை முன்மொழிந்தது.",
+    "மாகாணங்கள் மூன்று தொகுப்புகளாகப் பிரிக்கப்பட இருந்தன."
+   ]
+  },
+  "ans": 1,
+  "exp": {
+   "en": "Labour PM Clement Attlee sent the mission, not Churchill.",
+   "ta": "தொழிலாளர் கட்சிப் பிரதமர் கிளமென்ட் அட்லி இதனை அனுப்பினார்; சர்ச்சில் அல்ல."
+  }
+ },
+ {
+  "id": "W17",
+  "diff": "Medium",
+  "en": {
+   "q": "Which of the following pair is wrongly matched?",
+   "o": [
+    "Mountbatten Plan – 3 June 1947",
+    "Direct Action Day – 15 August 1946",
+    "Jallianwala Bagh Massacre – 13 April 1919",
+    "Rowlatt Satyagraha – 6 April 1919"
+   ]
+  },
+  "ta": {
+   "q": "பின்வரும் இணைகளில் தவறாகப் பொருத்தப்பட்டுள்ளது எது?",
+   "o": [
+    "மவுண்ட்பேட்டன் திட்டம் – 1947 ஜூன் 3",
+    "நேரடி நடவடிக்கை நாள் – 1946 ஆகஸ்ட் 15",
+    "ஜாலியன் வாலா பாக் படுகொலை – 1919 ஏப்ரல் 13",
+    "ரௌலட் சத்தியாகிரகம் – 1919 ஏப்ரல் 6"
+   ]
+  },
+  "ans": 1,
+  "exp": {
+   "en": "Jinnah declared Direct Action Day on 16 August 1946.",
+   "ta": "ஜின்னா நேரடி நடவடிக்கை நாளை 1946 ஆகஸ்ட் 16இல் அறிவித்தார்."
+  }
+ },
+ {
+  "id": "N14",
+  "diff": "Difficult",
+  "en": {
+   "q": "Consider the following statements about the Mountbatten Plan (3 June 1947):\n1. Power would be transferred on the basis of dominion status to India and Pakistan.\n2. A Boundary Commission under Radcliffe would announce its award before the transfer of power.\n3. Princely states had to join either India or Pakistan.\n4. The Punjab and Bengal Legislative Assemblies would vote on partition.\nWhich of the above statements are incorrect?",
+   "o": [
+    "1 only",
+    "2 only",
+    "3 and 4 only",
+    "2 and 4 only"
+   ]
+  },
+  "ta": {
+   "q": "மவுண்ட்பேட்டன் திட்டம் (1947 ஜூன் 3) குறித்த பின்வரும் கூற்றுகளைக் கருதுக:\n1. இந்தியா, பாகிஸ்தானுக்கு டொமினியன் அந்தஸ்துடன் அதிகாரம் மாற்றப்படும்.\n2. அதிகார மாற்றத்துக்கு முன்பே ராட்கிளிஃப் தலைமையிலான எல்லை நிர்ணய ஆணையம் முடிவை அறிவிக்கும்.\n3. சிற்றரசுகள் இந்தியா அல்லது பாகிஸ்தானில் சேர வேண்டும்.\n4. பஞ்சாப், வங்காளச் சட்டப்பேரவைகள் பிரிவினை குறித்து வாக்களிக்கும்.\nமேற்கண்டவற்றில் தவறான கூற்றுகள் எவை?",
+   "o": [
+    "1 மட்டும்",
+    "2 மட்டும்",
+    "3, 4 மட்டும்",
+    "2, 4 மட்டும்"
+   ]
+  },
+  "ans": 1,
+  "exp": {
+   "en": "The Radcliffe award was to be announced after the transfer of power.",
+   "ta": "ராட்கிளிஃப் ஆணையத்தின் முடிவு அதிகார மாற்றத்துக்குப் பிறகே அறிவிக்கப்பட இருந்தது."
+  }
+ },
+ {
+  "id": "N19",
+  "diff": "Easy",
+  "en": {
+   "q": "Which of the following was NOT a founder of the Congress Socialist Party (1934)?",
+   "o": [
+    "Jayaprakash Narayan",
+    "Acharya Narendra Dev",
+    "Minoo Masani",
+    "M.N. Roy"
+   ]
+  },
+  "ta": {
+   "q": "காங்கிரஸ் சோஷலிஸ்ட் கட்சியின் (1934) நிறுவனர்களில் ஒருவர் அல்லாதவர் யார்?",
+   "o": [
+    "ஜெயப்பிரகாஷ் நாராயண்",
+    "ஆச்சார்ய நரேந்திர தேவ்",
+    "மினு மசானி",
+    "M.N. ராய்"
+   ]
+  },
+  "ans": 3,
+  "exp": {
+   "en": "M.N. Roy was a founder of the Communist Party of India (Tashkent, 1920).",
+   "ta": "M.N. ராய் இந்தியப் பொதுவுடைமைக் கட்சியின் (தாஷ்கண்ட், 1920) நிறுவனர்."
+  }
+ }
+];
+const SEC_PER_Q = 45;                       // 0.75 minute per question
+const K_CUR = 'tnpsc_u8_current_v1', K_HIST = 'tnpsc_u8_attempts_v1', K_USER = 'tnpsc_u8_user_v1';
+const LET = ['a','b','c','d'];
+const BY = Object.fromEntries(QS.map(q => [q.id, q]));
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fmt = s => { s = Math.max(0, Math.round(s)); const m = Math.floor(s/60), r = s%60; return String(m).padStart(2,'0')+':'+String(r).padStart(2,'0'); };
+const jget = (k, d) => { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch(e) { return d; } };
+const jset = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch(e) {} };
+const jdel = k => { try { localStorage.removeItem(k); } catch(e) {} };
+
+let A = null, lastTs = 0, lastSave = 0, timerId = null, tab = 'all';
+
+/* ---------- views ---------- */
+function show(id){ ['home','test','result'].forEach(v => $(v).classList.toggle('hidden', v !== id)); window.scrollTo(0,0); }
+
+/* ---------- home ---------- */
+function renderHome(){
+  const u = jget(K_USER, {});
+  if (u.name) $('fName').value = u.name;
+  if (u.mobile) $('fMobile').value = u.mobile;
+  const cur = jget(K_CUR, null);
+  $('resumeBox').classList.toggle('hidden', !(cur && cur.status === 'running'));
+  if (cur && cur.status === 'running') {
+    const done = Object.keys(cur.answers).length;
+    $('resumeInfo').textContent = `${cur.name} • ${done}/${cur.qids.length} answered • ${cur.mode === 'full' ? 'Full test' : 'Wrong & unanswered'}`;
+  }
+  const h = jget(K_HIST, []);
+  $('histCard').classList.toggle('hidden', !h.length);
+  $('histBody').innerHTML = h.slice().reverse().map((a, i) => {
+    const n = h.length - i;
+    const wu = a.qids.filter(id => a.answers[id] !== BY[id].ans).length;
+    return `<tr><td>${n}</td><td>${esc(new Date(a.submittedAt).toLocaleString())}</td>
+      <td>${a.mode === 'full' ? 'Full' : 'Wrong &amp; unans.'} (${a.qids.length})</td>
+      <td><b>${a.score}/${a.qids.length}</b></td><td>${fmt(a.elapsed)}</td>
+      <td style="white-space:nowrap"><button class="btn2" data-v="${a.id}">View</button>
+      <button class="btn3" data-r="${a.id}">Retake full</button>
+      ${wu ? `<button class="btn3" data-w="${a.id}">Retake wrong+unans. (${wu})</button>` : ''}</td></tr>`;
+  }).join('');
+}
+$('histBody').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  const h = jget(K_HIST, []);
+  const find = id => h.find(x => x.id === id);
+  if (b.dataset.v) { A = find(b.dataset.v); renderResult(); }
+  if (b.dataset.r) { const a = find(b.dataset.r); startTest(QS.map(q => q.id), 'full', a.name, a.mobile); }
+  if (b.dataset.w) { const a = find(b.dataset.w); startTest(wuIds(a), 'wrong', a.name, a.mobile); }
+});
+$('btnClearHist').onclick = () => { if (confirm('Delete all saved attempts on this device?')) { jdel(K_HIST); renderHome(); } };
+$('btnStart').onclick = () => {
+  const name = $('fName').value.trim(), mobile = $('fMobile').value.trim();
+  if (name.length < 2) return $('fErr').textContent = 'Please enter your name.';
+  if (!/^[6-9]\d{9}$/.test(mobile)) return $('fErr').textContent = 'Enter a valid 10-digit mobile number.';
+  $('fErr').textContent = '';
+  if (jget(K_CUR, null)?.status === 'running' && !confirm('An unfinished test exists. Starting a new test will discard it. Continue?')) return;
+  jset(K_USER, {name, mobile});
+  startTest(QS.map(q => q.id), 'full', name, mobile);
+};
+$('btnResume').onclick = () => { A = jget(K_CUR, null); if (A) enterTest(); };
+
+/* ---------- test ---------- */
+function wuIds(a){ return a.qids.filter(id => a.answers[id] !== BY[id].ans); }
+function startTest(qids, mode, name, mobile){
+  const now = Date.now();
+  A = { id: 'a' + now, name, mobile, mode, qids, answers: {}, times: {}, cur: 0,
+        startedAt: now, deadline: now + qids.length * SEC_PER_Q * 1000, duration: qids.length * SEC_PER_Q, status: 'running' };
+  jset(K_CUR, A);
+  enterTest();
+}
+function enterTest(){
+  lastTs = Date.now(); lastSave = lastTs;
+  show('test'); renderQ(); renderPalette(); updateTimerUI();
+  clearInterval(timerId); timerId = setInterval(tick, 250);
+}
+function save(){ if (A && A.status === 'running') jset(K_CUR, A); }
+function tick(){
+  if (!A || A.status !== 'running') return;
+  const now = Date.now();
+  let d = (now - lastTs) / 1000; lastTs = now; d = Math.min(Math.max(d, 0), 2);
+  const id = A.qids[A.cur]; A.times[id] = (A.times[id] || 0) + d;
+  updateTimerUI();
+  if (now >= A.deadline) { submit(true); return; }
+  if (now - lastSave > 2000) { save(); lastSave = now; }
+}
+function updateTimerUI(){
+  const rem = (A.deadline - Date.now()) / 1000;
+  $('tTimer').textContent = fmt(rem);
+  $('tTimer').classList.toggle('low', rem <= 300);
+  const id = A.qids[A.cur];
+  $('tQtime').textContent = '⏱ this question: ' + fmt(A.times[id] || 0);
+  const pb = $('palette').children[A.cur]; if (pb) pb.querySelector('small').textContent = Math.round(A.times[id] || 0) + 's';
+}
+function qBlock(q){
+  return `<div class="qtext pre">${esc(q.en.q)}<div class="ta pre">${esc(q.ta.q)}</div></div>`;
+}
+function optText(q, i){
+  const e = q.en.o[i], t = q.ta.o[i];
+  return esc(e) + (t !== e ? `<span class="ta">${esc(t)}</span>` : '');
+}
+function renderQ(){
+  const id = A.qids[A.cur], q = BY[id], sel = A.answers[id];
+  $('tQno').textContent = `Q ${A.cur + 1} / ${A.qids.length}`;
+  $('qCard').innerHTML = `<span class="chip ${q.diff}">${q.diff}</span>` + qBlock(q) +
+    q.en.o.map((_, i) => `<button class="opt ${sel === i ? 'sel' : ''}" data-i="${i}"><span class="lt">${LET[i]}</span><span class="tx">${optText(q, i)}</span></button>`).join('');
+  $('btnPrev').disabled = A.cur === 0;
+  $('btnNext').disabled = A.cur === A.qids.length - 1;
+  [...$('palette').children].forEach((b, i) => b.classList.toggle('cur', i === A.cur));
+}
+function renderPalette(){
+  $('palette').innerHTML = A.qids.map((id, i) =>
+    `<button class="pb ${A.answers[id] !== undefined ? 'ans' : ''} ${i === A.cur ? 'cur' : ''}" data-i="${i}">${i + 1}<small>${Math.round(A.times[id] || 0)}s</small></button>`).join('');
+}
+function go(i){ A.cur = Math.max(0, Math.min(A.qids.length - 1, i)); save(); renderQ(); updateTimerUI(); }
+$('qCard').addEventListener('click', e => {
+  const b = e.target.closest('.opt'); if (!b) return;
+  A.answers[A.qids[A.cur]] = +b.dataset.i; save(); renderQ(); renderPalette();
+});
+$('btnClear').onclick = () => { delete A.answers[A.qids[A.cur]]; save(); renderQ(); renderPalette(); };
+$('btnPrev').onclick = () => go(A.cur - 1);
+$('btnNext').onclick = () => go(A.cur + 1);
+$('palette').addEventListener('click', e => { const b = e.target.closest('.pb'); if (b) go(+b.dataset.i); });
+$('btnSubmit').onclick = () => {
+  const n = A.qids.length, done = Object.keys(A.answers).length;
+  if (confirm(`Submit now?\nAnswered: ${done} of ${n}\nUnanswered: ${n - done}`)) submit(false);
+};
+function submit(auto){
+  clearInterval(timerId);
+  const now = Math.min(Date.now(), A.deadline);
+  A.status = 'done'; A.submittedAt = now; A.autoSubmitted = !!auto;
+  A.elapsed = Math.round((now - A.startedAt) / 1000);
+  A.score = A.qids.filter(id => A.answers[id] === BY[id].ans).length;
+  const h = jget(K_HIST, []); h.push(A); jset(K_HIST, h); jdel(K_CUR);
+  if (auto) alert("Time is up! Your test has been submitted automatically.\nநேரம் முடிந்தது! உங்கள் தேர்வு தானாகச் சமர்ப்பிக்கப்பட்டது.");
+  renderResult();
+}
+
+/* ---------- result ---------- */
+function status(a, id){ const v = a.answers[id]; return v === undefined ? 'unans' : (v === BY[id].ans ? 'right' : 'wrong'); }
+function renderResult(){
+  const a = A, n = a.qids.length;
+  const st = {right: 0, wrong: 0, unans: 0}; a.qids.forEach(id => st[status(a, id)]++);
+  $('rScore').textContent = `${st.right} / ${n}`;
+  $('rWho').textContent = `${a.name} • ${a.mobile}`;
+  const when = new Date(a.submittedAt).toLocaleString();
+  $('rMeta').textContent = `${when} • ${a.mode === 'full' ? 'Full test' : 'Wrong & unanswered retake'} • ${a.autoSubmitted ? 'auto-submitted at time-up' : 'submitted manually'}`;
+  const pct = Math.round(st.right * 100 / n);
+  $('rStats').innerHTML = `
+    <div class="stat ok"><span>Right</span><b>${st.right}</b></div>
+    <div class="stat bad"><span>Wrong</span><b>${st.wrong}</b></div>
+    <div class="stat na"><span>Unanswered</span><b>${st.unans}</b></div>
+    <div class="stat"><span>Accuracy</span><b>${pct}%</b></div>
+    <div class="stat"><span>Total time</span><b>${fmt(a.elapsed)}</b><span class="sub">of ${fmt(a.duration)}</span></div>`;
+  $('printHead').innerHTML = `<b>Mock Test – Nationalism: Gandhian Phase / தேசியம்: காந்திய காலகட்டம்</b><br>${esc(a.name)} • ${esc(a.mobile)} • ${esc(when)} • Score ${st.right}/${n} • Right ${st.right} • Wrong ${st.wrong} • Unanswered ${st.unans} • Time ${fmt(a.elapsed)}`;
+  const defs = [['all','All', n], ['right','Right', st.right], ['wrong','Wrong', st.wrong], ['unans','Unanswered', st.unans]];
+  $('rTabs').innerHTML = defs.map(d => `<button class="tab ${tab === d[0] ? 'active' : ''}" data-t="${d[0]}">${d[1]} (${d[2]})</button>`).join('');
+  $('btnRetakeWU').disabled = (st.wrong + st.unans) === 0;
+  $('btnRetakeWU').textContent = `Retake wrong & unanswered (${st.wrong + st.unans})`;
+  $('resultList').innerHTML = a.qids.map((id, k) => {
+    const q = BY[id], s = status(a, id), my = a.answers[id];
+    const label = {right: 'Right ✓', wrong: 'Wrong ✗', unans: 'Unanswered'}[s];
+    const opts = q.en.o.map((_, i) => {
+      const cls = i === q.ans ? 'correct' : (i === my ? 'chosen-wrong' : '');
+      const tag = i === q.ans ? '<span class="tag" style="color:var(--ok)">✓ correct answer</span>' : (i === my ? '<span class="tag" style="color:var(--bad)">your answer</span>' : '');
+      const mine = (i === my && i === q.ans) ? '<span class="tag" style="color:var(--ok)"> (your answer)</span>' : '';
+      return `<div class="ro ${cls}"><span class="lt">${LET[i]})</span><span>${optText(q, i)}${tag}${mine}</span></div>`;
+    }).join('');
+    return `<div class="rq ${s} ${tab === 'all' || tab === s ? '' : 'hidden'}" data-s="${s}">
+      <div class="hd"><span><b>Q${k + 1}</b><span class="chip ${q.diff}">${q.diff}</span></span>
+      <span><span class="badge ${s}">${label}</span> &nbsp; ⏱ ${fmt(a.times[id] || 0)}</span></div>
+      ${qBlock(q)}${opts}
+      <div class="expl"><b>Explanation:</b> ${esc(q.exp.en)}<div class="ta">${esc(q.exp.ta)}</div></div></div>`;
+  }).join('');
+  show('result');
+}
+$('rTabs').addEventListener('click', e => {
+  const b = e.target.closest('.tab'); if (!b) return;
+  tab = b.dataset.t;
+  [...$('rTabs').children].forEach(x => x.classList.toggle('active', x === b));
+  [...$('resultList').children].forEach(c => c.classList.toggle('hidden', !(tab === 'all' || c.dataset.s === tab)));
+});
+$('btnRetakeAll').onclick = () => startTest(QS.map(q => q.id), 'full', A.name, A.mobile);
+$('btnRetakeWU').onclick = () => { const ids = wuIds(A); if (ids.length) startTest(ids, 'wrong', A.name, A.mobile); };
+$('btnHome').onclick = () => { renderHome(); show('home'); };
+$('btnPdf').onclick = () => {
+  const t = document.title;
+  document.title = `MockTest_${A.name.replace(/\s+/g, '_')}_${new Date(A.submittedAt).toISOString().slice(0, 10)}`;
+  window.print();
+  setTimeout(() => document.title = t, 500);
+};
+
+/* ---------- boot ---------- */
+$('iN').textContent = QS.length;
+$('iT').textContent = fmt(QS.length * SEC_PER_Q);
+document.addEventListener('visibilitychange', () => { if (document.hidden) save(); });
+window.addEventListener('beforeunload', save);
+(function boot(){
+  const cur = jget(K_CUR, null);
+  if (cur && cur.status === 'running' && Date.now() >= cur.deadline) {   // time ran out while the page was closed
+    A = cur; submit(true); return;
+  }
+  renderHome(); show('home');
+})();
+</script>
+</body>
+</html>
