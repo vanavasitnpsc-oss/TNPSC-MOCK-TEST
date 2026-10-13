@@ -121,7 +121,7 @@ table.hist button{padding:6px 10px;font-size:.8rem}
     </div>
     <ul class="plain">
       <li>Every question is shown in English and Tamil. / ஒவ்வொரு வினாவும் ஆங்கிலத்திலும் தமிழிலும் உள்ளது.</li>
-      <li>Timer: 0.75 minute per question; the test submits automatically when time is up.</li>
+      <li>Timer: 0.6 minute per question; the test submits automatically when time is up.</li>
       <li>Time spent on each question is shown while you attempt and in the result.</li>
       <li>Your attempts are saved on this device. If the page closes or reloads, you can resume the same test with the time still running.</li>
     </ul>
@@ -281,6 +281,33 @@ const QS = [
   }
  },
  {
+  "id": "N20",
+  "diff": "Medium",
+  "en": {
+   "q": "Consider the following pairs:\nEvent – Date\n1. Rowlatt Satyagraha – 6 April 1919\n2. Khilafat Committee at Allahabad adopting Gandhi’s non-cooperation programme – 9 June 1920\n3. Beginning of the Non-Cooperation Movement – 1 August 1921\n4. Gandhi reaching Dandi – 5 April 1930\nWhich of the pairs given above are correctly matched?",
+   "o": [
+    "1 and 2 only",
+    "1, 2 and 4 only",
+    "2, 3 and 4 only",
+    "1, 3 and 4 only"
+   ]
+  },
+  "ta": {
+   "q": "பின்வரும் இணைகளைக் கருதுக:\nநிகழ்வு – நாள்\n1. ரௌலட் சத்தியாகிரகம் – 1919 ஏப்ரல் 6\n2. காந்தியின் ஒத்துழையாமைத் திட்டத்தை அலகாபாத் கிலாபத் குழு ஏற்றது – 1920 ஜூன் 9\n3. ஒத்துழையாமை இயக்கம் தொடங்கியது – 1921 ஆகஸ்ட் 1\n4. காந்தியடிகள் தண்டியை அடைந்தது – 1930 ஏப்ரல் 5\nமேற்கண்டவற்றுள் சரியாகப் பொருத்தப்பட்டவை எவை?",
+   "o": [
+    "1, 2 மட்டும்",
+    "1, 2, 4 மட்டும்",
+    "2, 3, 4 மட்டும்",
+    "1, 3, 4 மட்டும்"
+   ]
+  },
+  "ans": 1,
+  "exp": {
+   "en": "Pair 3 is wrong: Non-Cooperation began on 1 August 1920 (not 1921). Pairs 1, 2 and 4 are correct.",
+   "ta": "இணை 3 தவறு: ஒத்துழையாமை இயக்கம் தொடங்கியது 1920 ஆகஸ்ட் 1 (1921 அல்ல). இணைகள் 1, 2, 4 சரி."
+  }
+ },
+ {
   "id": "N1",
   "diff": "Medium",
   "en": {
@@ -336,29 +363,29 @@ const QS = [
  },
  {
   "id": "B2",
-  "diff": "Easy",
+  "diff": "Medium",
   "en": {
-   "q": "Who was arrested during the anti-Rowlatt protests in Amritsar?",
+   "q": "Which two leaders were arrested at Amritsar on 9 April 1919 during the protests against the Rowlatt Act?",
    "o": [
-    "Motilal Nehru",
-    "Dr. Saifuddin Kitchlew",
-    "Mohamed Ali",
-    "Raj Kumar Shukla"
+    "Mohamed Ali and Shaukat Ali",
+    "Motilal Nehru and C. R. Das",
+    "Dr. Saifuddin Kitchlew and Dr. Satyapal",
+    "Raj Kumar Shukla and Brajkishore Prasad"
    ]
   },
   "ta": {
-   "q": "அமிர்தசரஸில் ரௌலட் சட்ட எதிர்ப்புப் போராட்டங்களின்போது கைது செய்யப்பட்டவர் யார்?",
+   "q": "ரௌலட் சட்டத்திற்கு எதிரான போராட்டங்களின்போது 1919 ஏப்ரல் 9 அன்று அமிர்தசரஸில் கைது செய்யப்பட்ட இரு தலைவர்கள் யார்?",
    "o": [
-    "மோதிலால் நேரு",
-    "டாக்டர் சைஃபுதீன் கிச்லு",
-    "முகம்மது அலி",
-    "ராஜ் குமார் சுக்லா"
+    "முகம்மது அலி, ஷௌகத் அலி",
+    "மோதிலால் நேரு, சி.ஆர். தாஸ்",
+    "டாக்டர் சைஃபுதீன் கிச்லு, டாக்டர் சத்யபால்",
+    "ராஜ் குமார் சுக்லா, பிரஜ்கிஷோர் பிரசாத்"
    ]
   },
-  "ans": 1,
+  "ans": 2,
   "exp": {
-   "en": "Dr. Saifuddin Kitchlew and Dr. Satyapal were arrested on 9 April 1919.",
-   "ta": "டாக்டர் சைஃபுதீன் கிச்லுவும் டாக்டர் சத்யபாலும் 1919 ஏப். 9இல் கைது செய்யப்பட்டனர்."
+   "en": "Dr. Saifuddin Kitchlew and Dr. Satyapal were arrested on 9 April 1919; the protests that followed led to Jallianwala Bagh (13 April).",
+   "ta": "டாக்டர் சைஃபுதீன் கிச்லுவும் டாக்டர் சத்யபாலும் 1919 ஏப். 9 அன்று கைது செய்யப்பட்டனர்; இதைத் தொடர்ந்தே ஏப். 13 ஜாலியன் வாலா பாக் நிகழ்ந்தது."
   }
  },
  {
@@ -389,30 +416,30 @@ const QS = [
   }
  },
  {
-  "id": "W7",
-  "diff": "Easy",
+  "id": "N25",
+  "diff": "Medium",
   "en": {
-   "q": "Rabindranath Tagore returned his knighthood and Gandhi surrendered his Kaiser-i-Hind medal in response to:",
+   "q": "Arrange the following events in chronological order:\n1. Poona Pact\n2. Declaration of Poorna Swaraj at the Lahore session\n3. Gandhi–Irwin Pact\n4. Dandi March (Salt Satyagraha)",
    "o": [
-    "Rowlatt Satyagraha",
-    "Chauri Chaura Incident",
-    "Non-Cooperation Movement",
-    "Jallianwala Bagh Massacre"
+    "2-3-4-1",
+    "4-2-3-1",
+    "2-4-1-3",
+    "2-4-3-1"
    ]
   },
   "ta": {
-   "q": "இரவீந்திரநாத் தாகூர் தமது ‘நைட்’ பட்டத்தையும், காந்தியடிகள் கெய்சர்-இ-ஹிந்த் பதக்கத்தையும் திருப்பி அளித்ததற்குக் காரணம்:",
+   "q": "பின்வரும் நிகழ்வுகளைக் காலவரிசைப்படி அமைக்க:\n1. பூனா ஒப்பந்தம்\n2. லாகூர் மாநாட்டில் பூரண சுயராஜ்யப் பிரகடனம்\n3. காந்தி–இர்வின் ஒப்பந்தம்\n4. தண்டி யாத்திரை (உப்புச் சத்தியாகிரகம்)",
    "o": [
-    "ரௌலட் சத்தியாகிரகம்",
-    "சௌரி சௌரா சம்பவம்",
-    "ஒத்துழையாமை இயக்கம்",
-    "ஜாலியன் வாலா பாக் படுகொலை"
+    "2-3-4-1",
+    "4-2-3-1",
+    "2-4-1-3",
+    "2-4-3-1"
    ]
   },
   "ans": 3,
   "exp": {
-   "en": "The brutality of General Dyer at Jallianwala Bagh (13 Apr 1919) enraged Indians.",
-   "ta": "1919 ஏப். 13 ஜாலியன் வாலா பாக்கில் ஜெனரல் டயரின் கொடுமை இந்தியர்களைக் கொதிப்படையச் செய்தது."
+   "en": "Lahore (Dec 1929) → Dandi March (12 Mar–5 Apr 1930) → Gandhi–Irwin Pact (5 Mar 1931) → Poona Pact (Sept 1932).",
+   "ta": "லாகூர் (1929 டிச.) → தண்டி யாத்திரை (1930 மார்ச் 12–ஏப். 5) → காந்தி–இர்வின் ஒப்பந்தம் (1931 மார்ச் 5) → பூனா ஒப்பந்தம் (1932 செப்.)."
   }
  },
  {
@@ -497,10 +524,37 @@ const QS = [
   }
  },
  {
+  "id": "N21",
+  "diff": "Difficult",
+  "en": {
+   "q": "Consider the following pairs:\nPersonality – Association\n1. Sir Muhammad Sadullah – Led the Assam Valley Muslim Party\n2. Bhulabhai Desai – Member of the Congress defence committee for the INA trial\n3. Acharya Narendra Dev – Established the Congress Radio underground\n4. M.P.T. Acharya – Led the Chittagong Armoury Raid\nWhich of the pairs given above are correctly matched?",
+   "o": [
+    "2 and 3 only",
+    "1, 3 and 4 only",
+    "3 and 4 only",
+    "1 and 2 only"
+   ]
+  },
+  "ta": {
+   "q": "பின்வரும் இணைகளைக் கருதுக:\nஆளுமை – தொடர்பு\n1. சர் முகம்மது சாதுல்லா – அஸ்ஸாம் பள்ளத்தாக்கு முஸ்லீம் கட்சியின் தலைவர்\n2. புலாபாய் தேசாய் – ஐ.என்.ஏ. வழக்கிற்காகக் காங்கிரஸ் அமைத்த வழக்காடு குழுவின் உறுப்பினர்\n3. ஆச்சார்ய நரேந்திர தேவ் – காங்கிரஸ் வானொலியை நிறுவியவர்\n4. எம்.பி.டி. ஆச்சார்யா – சிட்டகாங் ஆயுதக்கிடங்குத் தாக்குதலை வழிநடத்தியவர்\nமேற்கண்டவற்றுள் சரியாகப் பொருத்தப்பட்டவை எவை?",
+   "o": [
+    "2, 3 மட்டும்",
+    "1, 3, 4 மட்டும்",
+    "3, 4 மட்டும்",
+    "1, 2 மட்டும்"
+   ]
+  },
+  "ans": 3,
+  "exp": {
+   "en": "Pairs 1 and 2 are correct. Usha Mehta established the Congress Radio; Surya Sen led the Chittagong raid (M.P.T. Acharya was a founding member of the CPI).",
+   "ta": "இணைகள் 1, 2 சரி. காங்கிரஸ் வானொலியை நிறுவியவர் உஷா மேத்தா; சிட்டகாங் தாக்குதலை வழிநடத்தியவர் சூர்யா சென் (எம்.பி.டி. ஆச்சார்யா CPI-இன் நிறுவன உறுப்பினர்)."
+  }
+ },
+ {
   "id": "N4",
   "diff": "Medium",
   "en": {
-   "q": "Assertion (A): Gandhi withdrew the Non-Cooperation Movement in 1922.\nReason (R): A mob at Chauri Chaura burnt the police station and 22 policemen lost their lives.",
+   "q": "Assertion (A): Gandhi withdrew the Non-Cooperation Movement in 1922.\nReason (R): On 5 February 1922, a mob at Chauri Chaura burnt the police station and 22 policemen lost their lives.",
    "o": [
     "Both A and R are correct but R is not the correct explanation of A",
     "A is correct but R is wrong",
@@ -509,7 +563,7 @@ const QS = [
    ]
   },
   "ta": {
-   "q": "கூற்று (A): 1922இல் காந்தியடிகள் ஒத்துழையாமை இயக்கத்தைத் திரும்பப் பெற்றார்.\nகாரணம் (R): சௌரி சௌராவில் கூட்டம் காவல்நிலையத்தைத் தீயிட்டதில் 22 காவலர்கள் உயிரிழந்தனர்.",
+   "q": "கூற்று (A): 1922இல் காந்தியடிகள் ஒத்துழையாமை இயக்கத்தைத் திரும்பப் பெற்றார்.\nகாரணம் (R): 1922 பிப்ரவரி 5 அன்று சௌரி சௌராவில் கூட்டம் காவல்நிலையத்தைத் தீயிட்டதில் 22 காவலர்கள் உயிரிழந்தனர்.",
    "o": [
     "A, R இரண்டும் சரி; ஆனால் R என்பது A-க்குச் சரியான விளக்கமல்ல",
     "A சரி; ஆனால் R தவறு",
@@ -519,8 +573,8 @@ const QS = [
   },
   "ans": 3,
   "exp": {
-   "en": "The Chauri Chaura violence (5 Feb 1922) made Gandhi withdraw the movement immediately.",
-   "ta": "1922 பிப். 5 சௌரி சௌரா வன்முறையால் காந்தியடிகள் இயக்கத்தை உடனே திரும்பப் பெற்றார்."
+   "en": "On 5 Feb 1922 the Chauri Chaura mob burnt the police station (22 policemen died) and Gandhi immediately withdrew the movement.",
+   "ta": "1922 பிப். 5 சௌரி சௌரா வன்முறையில் 22 காவலர்கள் உயிரிழந்தனர்; காந்தியடிகள் உடனே இயக்கத்தைத் திரும்பப் பெற்றார்."
   }
  },
  {
@@ -578,6 +632,60 @@ const QS = [
   }
  },
  {
+  "id": "W19",
+  "diff": "Easy",
+  "en": {
+   "q": "Who gave the slogan ‘Dilli Chalo’?",
+   "o": [
+    "Gandhi",
+    "Nehru",
+    "Subhas Bose",
+    "Ambedkar"
+   ]
+  },
+  "ta": {
+   "q": "‘தில்லி சலோ’ (தில்லிக்குப் புறப்படு) என்ற முழக்கத்தை வெளியிட்டவர் யார்?",
+   "o": [
+    "காந்தியடிகள்",
+    "நேரு",
+    "சுபாஷ் போஸ்",
+    "அம்பேத்கர்"
+   ]
+  },
+  "ans": 2,
+  "exp": {
+   "en": "Subhas Chandra Bose gave the ‘Dilli Chalo’ slogan to the INA.",
+   "ta": "சுபாஷ் சந்திர போஸ் ஐ.என்.ஏ-வுக்கு ‘தில்லி சலோ’ முழக்கத்தை வழங்கினார்."
+  }
+ },
+ {
+  "id": "N22",
+  "diff": "Medium",
+  "en": {
+   "q": "Consider the following pairs:\nPlace – Significance\n1. Chauri Chaura – A village near Gorakhpur\n2. Kakori – A village near Lucknow\n3. Bardoli – Gandhi announced a no-tax campaign (February 1922)\n4. Kanpur – Venue of the Congress session that declared Poorna Swaraj as the goal\nWhich of the pairs given above is/are NOT correctly matched?",
+   "o": [
+    "3 only",
+    "1 and 4 only",
+    "4 only",
+    "2 and 3 only"
+   ]
+  },
+  "ta": {
+   "q": "பின்வரும் இணைகளைக் கருதுக:\nஇடம் – சிறப்பு\n1. சௌரி சௌரா – கோரக்பூர் அருகிலுள்ள ஒரு கிராமம்\n2. காகோரி – லக்னோ அருகிலுள்ள ஒரு கிராமம்\n3. பர்தோலி – காந்தியடிகள் வரிகொடா இயக்கத்தை அறிவித்த இடம் (1922 பிப்ரவரி)\n4. கான்பூர் – பூரண சுயராஜ்யத்தை இலக்காக அறிவித்த காங்கிரஸ் மாநாடு நடைபெற்ற இடம்\nமேற்கண்டவற்றுள் சரியாகப் பொருத்தப்படாதவை எவை?",
+   "o": [
+    "3 மட்டும்",
+    "1, 4 மட்டும்",
+    "4 மட்டும்",
+    "2, 3 மட்டும்"
+   ]
+  },
+  "ans": 2,
+  "exp": {
+   "en": "Pair 4 is wrong: Poorna Swaraj was declared at the Lahore session (December 1929, Nehru presiding); the Kanpur conference of 1925 was the Communist conference.",
+   "ta": "இணை 4 தவறு: பூரண சுயராஜ்யம் லாகூர் மாநாட்டில் (1929 டிசம்பர், தலைவர் நேரு) அறிவிக்கப்பட்டது; 1925 கான்பூர் மாநாடு பொதுவுடைமை மாநாடு."
+  }
+ },
+ {
   "id": "N8",
   "diff": "Difficult",
   "en": {
@@ -608,7 +716,7 @@ const QS = [
   "id": "N5",
   "diff": "Medium",
   "en": {
-   "q": "Assertion (A): All sections of India welcomed the Simon Commission.\nReason (R): The Commission was an all-white commission with no Indian member.",
+   "q": "Assertion (A): The British Government announced the appointment of the Indian Statutory Commission on 8 November 1927.\nReason (R): The protesters who marched with black flags against the Simon Commission were brutally assaulted by the police.",
    "o": [
     "Both A and R are correct but R is not the correct explanation of A",
     "A is correct but R is wrong",
@@ -617,7 +725,7 @@ const QS = [
    ]
   },
   "ta": {
-   "q": "கூற்று (A): சைமன் குழுவை இந்தியாவின் அனைத்துத் தரப்பினரும் வரவேற்றனர்.\nகாரணம் (R): அக்குழுவில் இந்தியர் எவரும் இடம்பெறாமல் அனைவரும் வெள்ளையர்களாக இருந்தனர்.",
+   "q": "கூற்று (A): இந்திய சட்டப்பூர்வ ஆணையத்தை (Indian Statutory Commission) நியமிப்பதாக 1927 நவம்பர் 8 அன்று ஆங்கிலேய அரசு அறிவித்தது.\nகாரணம் (R): சைமன் குழுவுக்கு எதிராகக் கருப்புக்கொடி ஏந்தி ஊர்வலம் சென்றவர்களைக் காவல்துறை கொடூரமாகத் தாக்கியது.",
    "o": [
     "A, R இரண்டும் சரி; ஆனால் R என்பது A-க்குச் சரியான விளக்கமல்ல",
     "A சரி; ஆனால் R தவறு",
@@ -625,10 +733,10 @@ const QS = [
     "A, R இரண்டும் சரி; R என்பது A-க்குச் சரியான விளக்கம்"
    ]
   },
-  "ans": 2,
+  "ans": 0,
   "exp": {
-   "en": "Congress and the Muslim League boycotted it (‘Go Back Simon’) because no Indian was a member.",
-   "ta": "இந்தியர் ஒருவரும் இல்லாததால் காங்கிரஸ், முஸ்லீம் லீக் உள்ளிட்டோர் புறக்கணித்தனர் (‘சைமனே திரும்பிப் போ’)."
+   "en": "Both are correct (announced 8 Nov 1927; protesters were assaulted), but the assault does not explain the announcement of the Commission.",
+   "ta": "இரண்டும் சரி (1927 நவ. 8 அறிவிப்பு; போராட்டக்காரர்கள் தாக்கப்பட்டனர்); ஆனால் தாக்குதல் என்பது குழு அறிவிக்கப்பட்டதற்கு விளக்கமாகாது."
   }
  },
  {
@@ -686,30 +794,57 @@ const QS = [
   }
  },
  {
-  "id": "B5",
-  "diff": "Easy",
+  "id": "N26",
+  "diff": "Medium",
   "en": {
-   "q": "Which among the following was declared as ‘Independence Day’?",
+   "q": "Arrange the following events in chronological order:\n1. Indian Independence Act\n2. Direct Action Day\n3. Wavell Plan\n4. Mountbatten Plan",
    "o": [
-    "26th January 1930",
-    "26th December 1929",
-    "16th June 1946",
-    "15th January 1947"
+    "3-4-2-1",
+    "3-2-4-1",
+    "2-3-4-1",
+    "3-2-1-4"
    ]
   },
   "ta": {
-   "q": "பின்வருவனவற்றுள் ‘சுதந்திர நாள்’ எனப் பிரகடனம் செய்யப்பட்ட நாள் எது?",
+   "q": "பின்வரும் நிகழ்வுகளைக் காலவரிசைப்படி அமைக்க:\n1. இந்திய சுதந்திரச் சட்டம்\n2. நேரடி நடவடிக்கை நாள்\n3. வேவல் திட்டம்\n4. மௌண்ட்பேட்டன் திட்டம்",
    "o": [
-    "1930 ஜனவரி 26",
-    "1929 டிசம்பர் 26",
-    "1946 ஜூன் 16",
-    "1947 ஜனவரி 15"
+    "3-4-2-1",
+    "3-2-4-1",
+    "2-3-4-1",
+    "3-2-1-4"
    ]
   },
-  "ans": 0,
+  "ans": 1,
   "exp": {
-   "en": "After the Lahore session (Dec 1929), 26 January 1930 was declared Independence Day.",
-   "ta": "லாகூர் அமர்வுக்குப் (1929 டிச.) பின் 1930 ஜனவரி 26 சுதந்திர நாளாக அறிவிக்கப்பட்டது."
+   "en": "Wavell Plan (14 June 1945) → Direct Action Day (16 Aug 1946) → Mountbatten Plan (3 June 1947) → Indian Independence Act (18 July 1947).",
+   "ta": "வேவல் திட்டம் (1945 ஜூன் 14) → நேரடி நடவடிக்கை நாள் (1946 ஆக. 16) → மௌண்ட்பேட்டன் திட்டம் (1947 ஜூன் 3) → இந்திய சுதந்திரச் சட்டம் (1947 ஜூலை 18)."
+  }
+ },
+ {
+  "id": "B5",
+  "diff": "Medium",
+  "en": {
+   "q": "Which among the following was declared as ‘Independence Day’ after the Lahore session of the Congress?",
+   "o": [
+    "31st December 1929",
+    "26th January 1930",
+    "26th December 1929",
+    "26th January 1950"
+   ]
+  },
+  "ta": {
+   "q": "காங்கிரஸின் லாகூர் மாநாட்டுக்குப் பின் ‘சுதந்திர நாள்’ எனப் பிரகடனம் செய்யப்பட்ட நாள் எது?",
+   "o": [
+    "1929 டிசம்பர் 31",
+    "1930 ஜனவரி 26",
+    "1929 டிசம்பர் 26",
+    "1950 ஜனவரி 26"
+   ]
+  },
+  "ans": 1,
+  "exp": {
+   "en": "Purna Swaraj resolution (Lahore, 31 Dec 1929; tricolour hoisted on the Ravi bank); 26 January 1930 was declared Independence Day. 26 Jan 1950 is Republic Day.",
+   "ta": "பூரண சுயராஜ்யத் தீர்மானம் (லாகூர், 1929 டிச. 31; ராவி நதிக்கரையில் மூவர்ணக்கொடி); 1930 ஜனவரி 26 சுதந்திர நாளாகக் கடைப்பிடிக்கப்பட்டது. 1950 ஜனவரி 26 குடியரசு நாள்."
   }
  },
  {
@@ -791,6 +926,33 @@ const QS = [
   "exp": {
    "en": "Khan Abdul Ghaffar Khan led the Salt Satyagraha in the North-West Frontier Province.",
    "ta": "வடமேற்கு எல்லை மாகாணத்தில் உப்பு சத்தியாகிரகத்தைக் கான் அப்துல் கஃபார் கான் வழிநடத்தினார்."
+  }
+ },
+ {
+  "id": "N23",
+  "diff": "Easy",
+  "en": {
+   "q": "Consider the following pairs about Gandhi’s South African phase:\nPlace / Event – Fact\n1. Pietermaritzburg Railway Station – Gandhi was thrown out of a first class compartment\n2. Transvaal – Indians had to pay a poll tax of £3\n3. Smuts–Gandhi Agreement – Abolition of the poll tax on indentured labourers\n4. Phoenix Settlement – Inspired by Tolstoy’s The Kingdom of God is Within You\nWhich of the pairs given above are correctly matched?",
+   "o": [
+    "1 and 2 only",
+    "1, 2 and 3 only",
+    "2, 3 and 4 only",
+    "1, 2, 3 and 4"
+   ]
+  },
+  "ta": {
+   "q": "தென்னாப்பிரிக்கக் காலம் குறித்த பின்வரும் இணைகளைக் கருதுக:\nஇடம் / நிகழ்வு – செய்தி\n1. பீட்டர்மாரிட்ஸ்பர்க் இரயில் நிலையம் – காந்தி முதல் வகுப்புப் பெட்டியிலிருந்து தூக்கி எறியப்பட்டார்\n2. டிரான்ஸ்வால் – இந்தியர்கள் £3 தலைவரி செலுத்த வேண்டியிருந்தது\n3. ஸ்மட்ஸ்–காந்தி உடன்படிக்கை – ஒப்பந்தக் கூலிகள் மீதான தலைவரி ஒழிக்கப்பட்டது\n4. ஃபீனிக்ஸ் குடியிருப்பு – டால்ஸ்டாயின் ‘கடவுளின் இராச்சியம் உன்னுள் இருக்கிறது’ நூலால் தூண்டப்பட்டது\nமேற்கண்டவற்றுள் சரியாகப் பொருத்தப்பட்டவை எவை?",
+   "o": [
+    "1, 2 மட்டும்",
+    "1, 2, 3 மட்டும்",
+    "2, 3, 4 மட்டும்",
+    "1, 2, 3, 4"
+   ]
+  },
+  "ans": 1,
+  "exp": {
+   "en": "Pair 4 is wrong: the Phoenix Settlement (1905) was inspired by Ruskin’s Unto This Last.",
+   "ta": "இணை 4 தவறு: ஃபீனிக்ஸ் குடியிருப்பு (1905) ரஸ்கினால் தூண்டப்பட்டு நிறுவப்பட்டது."
   }
  },
  {
@@ -929,6 +1091,33 @@ const QS = [
   }
  },
  {
+  "id": "N27",
+  "diff": "Medium",
+  "en": {
+   "q": "Which of the following events happened last?",
+   "o": [
+    "Formation of the Swaraj Party",
+    "Formation of the Hindustan Republican Army at Kanpur",
+    "Formation of the All India Workers’ and Peasants’ Party",
+    "Kakori train robbery"
+   ]
+  },
+  "ta": {
+   "q": "பின்வரும் நிகழ்வுகளில் கடைசியாக நிகழ்ந்தது எது?",
+   "o": [
+    "சுயராஜ்யக் கட்சி உருவாக்கம்",
+    "கான்பூரில் இந்துஸ்தான் குடியரசு இராணுவம் உருவாக்கம்",
+    "அகில இந்தியத் தொழிலாளர் – உழவர் கட்சி உருவாக்கம்",
+    "காகோரி இரயில் கொள்ளை"
+   ]
+  },
+  "ans": 2,
+  "exp": {
+   "en": "Swaraj Party (1 Jan 1923) → HRA (1924) → Kakori (1925) → All India Workers’ and Peasants’ Party (1928).",
+   "ta": "சுயராஜ்யக் கட்சி (1923 ஜன. 1) → HRA (1924) → காகோரி (1925) → அகில இந்தியத் தொழிலாளர் – உழவர் கட்சி (1928)."
+  }
+ },
+ {
   "id": "B7",
   "diff": "Easy",
   "en": {
@@ -1007,6 +1196,60 @@ const QS = [
   "exp": {
    "en": "CPI was founded on Indian soil at the 1925 Kanpur Communist Conference (Singaravelar presided). CSP – 1934; HRA – 1924; HSRA – 1928.",
    "ta": "1925 கான்பூர் பொதுவுடைமை மாநாட்டில் (சிங்காரவேலர் தலைமை) இந்திய மண்ணில் CPI உருவானது. CSP – 1934; HRA – 1924; HSRA – 1928."
+  }
+ },
+ {
+  "id": "W7",
+  "diff": "Easy",
+  "en": {
+   "q": "Rabindranath Tagore returned his knighthood and Gandhi surrendered his Kaiser-i-Hind medal in response to:",
+   "o": [
+    "Non-Cooperation Movement",
+    "Jallianwala Bagh Massacre",
+    "Chauri Chaura Incident",
+    "Rowlatt Satyagraha"
+   ]
+  },
+  "ta": {
+   "q": "இரவீந்திரநாத் தாகூர் தமது ‘நைட்’ பட்டத்தையும், காந்தியடிகள் கெய்சர்-இ-ஹிந்த் பதக்கத்தையும் திருப்பி அளித்ததற்குக் காரணம்:",
+   "o": [
+    "ஒத்துழையாமை இயக்கம்",
+    "ஜாலியன் வாலா பாக் படுகொலை",
+    "சௌரி சௌரா சம்பவம்",
+    "ரௌலட் சத்தியாகிரகம்"
+   ]
+  },
+  "ans": 1,
+  "exp": {
+   "en": "The brutality of General Dyer at Jallianwala Bagh (13 Apr 1919) enraged Indians.",
+   "ta": "1919 ஏப். 13 ஜாலியன் வாலா பாக்கில் ஜெனரல் டயரின் கொடுமை இந்தியர்களைக் கொதிப்படையச் செய்தது."
+  }
+ },
+ {
+  "id": "N24",
+  "diff": "Medium",
+  "en": {
+   "q": "Match the following:\nList I: A. Vinoba Bhave\n   B. Jayaprakash Narayan\n   C. Liaqat Ali Khan\n   D. Bhulabhai Desai\nList II: 1. Finance Member in the interim government\n   2. First to offer Individual Satyagraha\n   3. Member of the INA defence committee\n   4. Escaped from prison during the Quit India Movement",
+   "o": [
+    "A-1, B-2, C-3, D-4",
+    "A-2, B-1, C-4, D-3",
+    "A-2, B-4, C-1, D-3",
+    "A-2, B-4, C-3, D-1"
+   ]
+  },
+  "ta": {
+   "q": "பொருத்துக:\nபட்டியல் I: A. வினோபா பாவே\n   B. ஜெயப்பிரகாஷ் நாராயண்\n   C. லியாகத் அலிகான்\n   D. புலாபாய் தேசாய்\nபட்டியல் II: 1. இடைக்கால அரசின் நிதி உறுப்பினர்\n   2. தனிநபர் சத்தியாகிரகத்தை முதலில் மேற்கொண்டவர்\n   3. ஐ.என்.ஏ. வழக்காடு குழு உறுப்பினர்\n   4. வெள்ளையனே வெளியேறு இயக்கத்தின்போது சிறையிலிருந்து தப்பியவர்",
+   "o": [
+    "A-1, B-2, C-3, D-4",
+    "A-2, B-1, C-4, D-3",
+    "A-2, B-4, C-1, D-3",
+    "A-2, B-4, C-3, D-1"
+   ]
+  },
+  "ans": 2,
+  "exp": {
+   "en": "Vinoba Bhave – first Individual Satyagrahi (17 Oct 1940); J.P. Narayan – escaped from prison; Liaqat Ali Khan – Finance Member (Oct 1946); Bhulabhai Desai – INA defence committee.",
+   "ta": "வினோபா பாவே – முதல் தனிநபர் சத்தியாகிரகி (1940 அக். 17); ஜெ.பி. நாராயண் – சிறையிலிருந்து தப்பினார்; லியாகத் அலிகான் – நிதி உறுப்பினர் (1946 அக்.); புலாபாய் தேசாய் – ஐ.என்.ஏ. வழக்காடு குழு."
   }
  },
  {
@@ -1145,6 +1388,33 @@ const QS = [
   }
  },
  {
+  "id": "N28",
+  "diff": "Difficult",
+  "en": {
+   "q": "Which of the following events took place in 1934?\n1. Formation of the Congress Socialist Party\n2. Ban on the Communist Party of India\n3. Bhagat Singh and B.K. Dutt throwing a smoke bomb inside the Central Legislative Assembly\n4. Poona Pact",
+   "o": [
+    "2 and 3 only",
+    "3 and 4 only",
+    "1, 2 and 3 only",
+    "1 and 2 only"
+   ]
+  },
+  "ta": {
+   "q": "பின்வரும் நிகழ்வுகளில் 1934இல் நடைபெற்றவை எவை?\n1. காங்கிரஸ் சோஷலிஸ்ட் கட்சி உருவாக்கம்\n2. இந்தியப் பொதுவுடைமைக் கட்சிக்குத் தடை\n3. பகத் சிங்கும் பி.கே. தத்தும் மத்திய சட்டமன்றத்தில் புகை குண்டு வீசியது\n4. பூனா ஒப்பந்தம்",
+   "o": [
+    "2, 3 மட்டும்",
+    "3, 4 மட்டும்",
+    "1, 2, 3 மட்டும்",
+    "1, 2 மட்டும்"
+   ]
+  },
+  "ans": 3,
+  "exp": {
+   "en": "CSP was formed and the CPI was banned in 1934. The smoke bomb was in 1929; the Poona Pact in 1932.",
+   "ta": "1934இல் CSP உருவாக்கப்பட்டது; CPI தடை செய்யப்பட்டது. புகை குண்டு வீச்சு 1929இல்; பூனா ஒப்பந்தம் 1932இல்."
+  }
+ },
+ {
   "id": "N11",
   "diff": "Difficult",
   "en": {
@@ -1229,24 +1499,24 @@ const QS = [
   "id": "W15",
   "diff": "Medium",
   "en": {
-   "q": "Who was the candidate proposed by Gandhi for the Presidentship of the Congress in 1939?",
+   "q": "Who was the candidate proposed by Gandhi against Subhas Chandra Bose for the Presidentship of the Congress in 1939?",
    "o": [
-    "Subhas Chandra Bose",
     "Pattabhi Sitaramayya",
     "J. Nehru",
-    "Abul Kalam Azad"
+    "Abul Kalam Azad",
+    "Rajendra Prasad"
    ]
   },
   "ta": {
-   "q": "1939இல் காங்கிரஸ் தலைவர் பதவிக்குக் காந்தி முன்மொழிந்த வேட்பாளர் யார்?",
+   "q": "1939இல் காங்கிரஸ் தலைவர் பதவிக்குச் சுபாஷ் சந்திர போஸுக்கு எதிராகக் காந்தி முன்மொழிந்த வேட்பாளர் யார்?",
    "o": [
-    "சுபாஷ் சந்திர போஸ்",
     "பட்டாபி சீதாராமய்யா",
     "ஜே. நேரு",
-    "அபுல் கலாம் ஆசாத்"
+    "அபுல் கலாம் ஆசாத்",
+    "இராஜேந்திர பிரசாத்"
    ]
   },
-  "ans": 1,
+  "ans": 0,
   "exp": {
    "en": "Bose defeated Gandhi's candidate Pattabhi Sitaramayya, then resigned and founded the Forward Bloc.",
    "ta": "காந்தியின் வேட்பாளர் பட்டாபி சீதாராமய்யாவைப் போஸ் வென்றார்; பின்னர் பதவி விலகிப் பார்வர்டு பிளாக்கைத் தொடங்கினார்."
@@ -1280,6 +1550,33 @@ const QS = [
   }
  },
  {
+  "id": "N29",
+  "diff": "Difficult",
+  "en": {
+   "q": "In which of the following pairs is the order of events NOT chronological (earlier event first)?",
+   "o": [
+    "Third Round Table Conference → Poona Pact",
+    "Rowlatt Satyagraha → Jallianwala Bagh Massacre",
+    "Formation of the Swaraj Party → Kakori train robbery",
+    "Individual Satyagraha → Cripps Mission"
+   ]
+  },
+  "ta": {
+   "q": "பின்வரும் இணைகளில் நிகழ்வுகளின் வரிசை (முந்தையது முதலில்) காலவரிசைப்படி அமையாதது எது?",
+   "o": [
+    "மூன்றாம் வட்டமேசை மாநாடு → பூனா ஒப்பந்தம்",
+    "ரௌலட் சத்தியாகிரகம் → ஜாலியன் வாலா பாக் படுகொலை",
+    "சுயராஜ்யக் கட்சி உருவாக்கம் → காகோரி இரயில் கொள்ளை",
+    "தனிநபர் சத்தியாகிரகம் → கிரிப்ஸ் தூதுக்குழு"
+   ]
+  },
+  "ans": 0,
+  "exp": {
+   "en": "The Poona Pact (Sept 1932) came before the Third RTC (17 Nov–24 Dec 1932). The other three pairs are in correct order.",
+   "ta": "பூனா ஒப்பந்தம் (1932 செப்.) மூன்றாம் வட்டமேசை மாநாட்டுக்கு (1932 நவ. 17–டிச. 24) முன்பே நிகழ்ந்தது. மற்ற மூன்று இணைகளும் சரியான வரிசையில் உள்ளன."
+  }
+ },
+ {
   "id": "N12",
   "diff": "Medium",
   "en": {
@@ -1308,9 +1605,9 @@ const QS = [
  },
  {
   "id": "B10",
-  "diff": "Medium",
+  "diff": "Difficult",
   "en": {
-   "q": "Assertion (A): The Congress attended the First Round Table Conference.\nReason (R): The Gandhi–Irwin Pact enabled the Congress to attend the Second Round Table Conference.",
+   "q": "Assertion (A): The Congress did not attend the First Round Table Conference held in London in November 1930.\nReason (R): The Gandhi–Irwin Pact was signed on 5 March 1931.",
    "o": [
     "Both A and R are correct but R is not the correct explanation of A",
     "A is correct but R is wrong",
@@ -1319,7 +1616,7 @@ const QS = [
    ]
   },
   "ta": {
-   "q": "கூற்று (A): காங்கிரஸ் முதல் வட்டமேசை மாநாட்டில் கலந்துகொண்டது.\nகாரணம் (R): காந்தி–இர்வின் ஒப்பந்தம் இரண்டாம் வட்டமேசை மாநாட்டில் காங்கிரஸ் பங்கேற்க வழிவகுத்தது.",
+   "q": "கூற்று (A): 1930 நவம்பரில் லண்டனில் நடைபெற்ற முதல் வட்டமேசை மாநாட்டில் காங்கிரஸ் கலந்துகொள்ளவில்லை.\nகாரணம் (R): காந்தி–இர்வின் ஒப்பந்தம் 1931 மார்ச் 5 அன்று கையெழுத்தானது.",
    "o": [
     "A, R இரண்டும் சரி; ஆனால் R என்பது A-க்குச் சரியான விளக்கமல்ல",
     "A சரி; ஆனால் R தவறு",
@@ -1327,10 +1624,10 @@ const QS = [
     "A, R இரண்டும் சரி; R என்பது A-க்குச் சரியான விளக்கம்"
    ]
   },
-  "ans": 2,
+  "ans": 0,
   "exp": {
-   "en": "A is wrong (leaders were in jail); R is correct.",
-   "ta": "A தவறு (தலைவர்கள் சிறையில் இருந்தனர்); R சரி."
+   "en": "Both are correct (leaders were in jail in 1930; the Pact was signed on 5 March 1931), but the Pact came after the conference and does not explain A.",
+   "ta": "இரண்டும் சரி (1930இல் தலைவர்கள் சிறையில் இருந்தனர்; ஒப்பந்தம் 1931 மார்ச் 5இல் கையெழுத்தானது); ஆனால் ஒப்பந்தம் மாநாட்டுக்குப் பின் நிகழ்ந்தது, A-க்கு விளக்கமாகாது."
   }
  },
  {
@@ -1385,33 +1682,6 @@ const QS = [
   "exp": {
    "en": "Bose escaped to Afghanistan in March 1941 and reached Japan by submarine in Feb 1943; the brigade honoured Rani of Jhansi; the Provisional Government was in Singapore.",
    "ta": "போஸ் 1941 மார்ச்சில் ஆப்கானிஸ்தானுக்குத் தப்பினார்; 1943 பிப்ரவரியில் ஜப்பான் சென்றார்; பெண்கள் படை ஜான்சி ராணி பெயரில்; தற்காலிக அரசு சிங்கப்பூரில்."
-  }
- },
- {
-  "id": "W19",
-  "diff": "Easy",
-  "en": {
-   "q": "Who gave the slogan ‘Dilli Chalo’?",
-   "o": [
-    "Subhas Bose",
-    "Gandhi",
-    "Nehru",
-    "Ambedkar"
-   ]
-  },
-  "ta": {
-   "q": "‘தில்லி சலோ’ (தில்லிக்குப் புறப்படு) என்ற முழக்கத்தை வெளியிட்டவர் யார்?",
-   "o": [
-    "சுபாஷ் போஸ்",
-    "காந்தியடிகள்",
-    "நேரு",
-    "அம்பேத்கர்"
-   ]
-  },
-  "ans": 0,
-  "exp": {
-   "en": "Subhas Chandra Bose gave the ‘Dilli Chalo’ slogan to the INA.",
-   "ta": "இந்திய தேசிய இராணுவத்துக்குச் சுபாஷ் சந்திர போஸ் ‘தில்லி சலோ’ முழக்கத்தை வழங்கினார்."
   }
  },
  {
@@ -1550,7 +1820,7 @@ const QS = [
   }
  }
 ];
-const SEC_PER_Q = 45;                       // 0.75 minute per question
+const SEC_PER_Q = 36;                       // 0.6 minute per question
 const K_CUR = 'tnpsc_u8_current_v1', K_HIST = 'tnpsc_u8_attempts_v1', K_USER = 'tnpsc_u8_user_v1';
 const LET = ['a','b','c','d'];
 const BY = Object.fromEntries(QS.map(q => [q.id, q]));
