@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TNPSC Mock Test – Simplification (Set 2)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f6fb;--card:#fff;--ink:#1c2333;--muted:#5d6785;--line:#dfe4f0;--brand:#2748c7;--brand-d:#1b349a;
+  --ok:#14804a;--okbg:#e5f6ec;--bad:#c0392b;--badbg:#fdecea;--warn:#b26a00;--warnbg:#fff4de;--grey:#e9ecf4}
+@media (prefers-color-scheme:dark){:root{--bg:#121626;--card:#1b2136;--ink:#e8ebf7;--muted:#9aa4c4;--line:#2c3454;
+  --brand:#6b8cff;--brand-d:#8aa4ff;--ok:#4cd08a;--okbg:#143324;--bad:#ff7b6b;--badbg:#3a1c1a;--warn:#ffb54d;--warnbg:#3a2c12;--grey:#262d47}}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:'Noto Sans Tamil',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+.wrap{max-width:860px;margin:0 auto;padding:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:0 1px 3px rgba(20,30,70,.06)}
+h1{font-size:1.45rem;margin:0 0 4px}h2{font-size:1.15rem;margin:0 0 8px}
+.sub{color:var(--muted);font-size:.95rem}
+.hidden{display:none!important}
+label{display:block;font-weight:600;margin:14px 0 6px}
+input[type=text],input[type=tel]{width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;font-size:1rem;background:var(--card);color:var(--ink);font-family:inherit}
+input:focus{outline:none;border-color:var(--brand)}
+.err{color:var(--bad);font-size:.88rem;min-height:1.2em;margin-top:4px}
+.btn{appearance:none;border:0;border-radius:10px;padding:12px 20px;font-size:1rem;font-weight:700;cursor:pointer;font-family:inherit;background:var(--brand);color:#fff}
+.btn:hover{background:var(--brand-d)}
+.btn.sec{background:var(--grey);color:var(--ink)}.btn.sec:hover{filter:brightness(.96)}
+.btn.danger{background:var(--bad)}
+.btn.sm{padding:7px 12px;font-size:.88rem}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.rules{margin:12px 0 0;padding-left:20px}.rules li{margin:4px 0}
+.meta{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+.pill{background:var(--grey);border-radius:999px;padding:5px 12px;font-size:.88rem;font-weight:600}
+.banner{background:var(--warnbg);color:var(--warn);border:1.5px solid var(--warn);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+.banner .row{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.hrow{display:flex;gap:10px;align-items:center;justify-content:space-between;border:1.5px solid var(--line);border-radius:10px;padding:8px 12px;margin:8px 0;flex-wrap:wrap}
+.hrow small{color:var(--muted)}
+
+.topbar{position:sticky;top:0;z-index:20;background:var(--bg);padding:8px 0}
+.topbar .in{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px}
+.timer{font-variant-numeric:tabular-nums;font-size:1.35rem;font-weight:800;color:var(--brand)}
+.timer.low{color:var(--bad);animation:pulse 1s infinite}
+@keyframes pulse{50%{opacity:.55}}
+.progress{height:6px;background:var(--grey);border-radius:99px;overflow:hidden;margin-top:8px}
+.progress>div{height:100%;background:var(--brand);width:0;transition:width .25s}
+.qh{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:6px;flex-wrap:wrap}
+.qno{font-weight:700;color:var(--muted);font-size:.9rem}
+.qt{font-variant-numeric:tabular-nums;background:var(--grey);border-radius:999px;padding:3px 12px;font-size:.85rem;font-weight:700}
+.stem{font-size:1.06rem;overflow-x:auto;padding:2px 0}
+.stem .en{font-weight:600}.stem .ta{margin-top:6px}
+.expr{margin:10px 0 2px;font-size:1.12rem;overflow-x:auto;padding:4px 0}
+.opt{display:flex;gap:12px;align-items:center;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;margin:10px 0;cursor:pointer;background:var(--card);width:100%;text-align:left;color:inherit;font:inherit}
+.opt:hover{border-color:var(--brand)}
+.opt .k{flex:0 0 32px;height:32px;border-radius:50%;background:var(--grey);display:grid;place-items:center;font-weight:700;font-size:.92rem}
+.opt.sel{border-color:var(--brand);background:rgba(39,72,199,.08)}
+.opt.sel .k{background:var(--brand);color:#fff}
+.opt .t{overflow-x:auto}
+.ta{font-family:'Noto Sans Tamil',system-ui,sans-serif}
+.nav{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;align-items:center}.nav .sp{flex:1}
+.palette{display:grid;grid-template-columns:repeat(auto-fill,minmax(46px,1fr));gap:8px;margin-top:14px}
+.pb{height:48px;border-radius:9px;border:1.5px solid var(--line);background:var(--grey);font-weight:700;cursor:pointer;color:var(--ink);font-family:inherit;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.1;padding:0}
+.pb small{font-size:.62rem;font-weight:600;opacity:.8}
+.pb.ans{background:var(--ok);border-color:var(--ok);color:#fff}
+.pb.cur{outline:3px solid var(--brand);outline-offset:1px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:.85rem;color:var(--muted);margin-top:10px}
+.legend span::before{content:"";display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px;background:var(--grey);border:1px solid var(--line)}
+.legend .a::before{background:var(--ok);border-color:var(--ok)}.legend .c::before{background:var(--card);border:2px solid var(--brand)}
+
+.modal{position:fixed;inset:0;background:rgba(10,15,35,.55);display:grid;place-items:center;z-index:50;padding:16px}
+.modal .box{background:var(--card);border-radius:14px;padding:22px;max-width:420px;width:100%}
+.modal .row{display:flex;gap:10px;justify-content:flex-end;margin-top:16px;flex-wrap:wrap}
+
+.score{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.ring{width:118px;height:118px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--brand) calc(var(--p)*1%),var(--grey) 0)}
+.ring>div{width:92px;height:92px;border-radius:50%;background:var(--card);display:grid;place-items:center;text-align:center;line-height:1.1}
+.ring b{font-size:1.5rem}.ring small{color:var(--muted);font-size:.78rem}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;flex:1;min-width:260px}
+.stat{border-radius:12px;padding:10px 12px;background:var(--grey)}.stat b{display:block;font-size:1.35rem}
+.stat.ok{background:var(--okbg);color:var(--ok)}.stat.bad{background:var(--badbg);color:var(--bad)}.stat.warn{background:var(--warnbg);color:var(--warn)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 8px;position:sticky;top:0;background:var(--bg);padding:8px 0;z-index:10}
+.tab{border:1.5px solid var(--line);background:var(--card);border-radius:999px;padding:8px 14px;font-weight:700;cursor:pointer;font-family:inherit;color:var(--ink)}
+.tab.on{background:var(--brand);border-color:var(--brand);color:#fff}
+.rev{margin:12px 0}
+.rev .hd{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
+.badge{font-size:.78rem;font-weight:800;border-radius:999px;padding:3px 10px}
+.badge.ok{background:var(--okbg);color:var(--ok)}.badge.bad{background:var(--badbg);color:var(--bad)}.badge.warn{background:var(--warnbg);color:var(--warn)}
+.time{margin-left:auto;font-size:.85rem;color:var(--muted);font-weight:700}
+.ro{display:flex;gap:10px;align-items:center;border:1.5px solid var(--line);border-radius:10px;padding:8px 12px;margin:6px 0}
+.ro .k{flex:0 0 28px;height:28px;border-radius:50%;background:var(--grey);display:grid;place-items:center;font-weight:700;font-size:.85rem}
+.ro.right{border-color:var(--ok);background:var(--okbg)}.ro.right .k{background:var(--ok);color:#fff}
+.ro.wrong{border-color:var(--bad);background:var(--badbg)}.ro.wrong .k{background:var(--bad);color:#fff}
+.ro .tag{margin-left:auto;font-size:.76rem;font-weight:800;white-space:nowrap}
+.expl{margin-top:10px;background:var(--grey);border-radius:10px;padding:10px 12px;font-size:.93rem}
+.empty{text-align:center;color:var(--muted);padding:26px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+
+.fr{display:inline-block;vertical-align:middle;text-align:center;margin:0 3px}
+.fr>.n{display:block;border-bottom:1.5px solid currentColor;padding:0 4px 1px}
+.fr>.d{display:block;padding:1px 4px 0}
+math{font-size:1.08em;font-family:'STIX Two Math','Latin Modern Math','Cambria Math','DejaVu Math TeX Gyre','Noto Sans Math',serif}
+i{font-family:'Times New Roman',Times,serif}
+
+@media print{
+  body{background:#fff;color:#000}
+  .noprint,.tabs,.topbar{display:none!important}
+  .wrap{max-width:none;padding:0}
+  .card{box-shadow:none;break-inside:avoid;border-color:#bbb}
+  .rev{break-inside:avoid}
+  :root{--card:#fff;--ink:#111;--grey:#eceef5;--line:#bbb}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<section id="start" class="card">
+  <h1>TNPSC Mock Test – Simplification (Set 2)</h1>
+  <div class="sub ta">சுருக்குதல் (தொகுப்பு 2) · தமிழ் &amp; English</div>
+  <div class="meta">
+    <span class="pill">25 Questions · 25 வினாக்கள்</span>
+    <span class="pill">25 Minutes · 25 நிமிடங்கள்</span>
+    <span class="pill">Easy & Medium</span>
+  </div>
+  <div id="resume" class="banner hidden"></div>
+  <label for="nm">Name / பெயர்</label>
+  <input id="nm" type="text" autocomplete="name" maxlength="60" placeholder="Your full name">
+  <label for="mb">Mobile Number / கைபேசி எண்</label>
+  <input id="mb" type="tel" inputmode="numeric" autocomplete="tel" maxlength="10" placeholder="10-digit mobile number">
+  <div id="serr" class="err"></div>
+  <ul class="rules">
+    <li>Time limit is <b>25 minutes</b>; the test is <b>submitted automatically</b> when time is up.<br><span class="ta">நேர வரம்பு 25 நிமிடங்கள்; நேரம் முடிந்ததும் தானாகவே சமர்ப்பிக்கப்படும்.</span></li>
+    <li>Each question carries 1 mark. No negative marking.<br><span class="ta">ஒவ்வொரு வினாவிற்கும் 1 மதிப்பெண். எதிர்மறை மதிப்பெண் இல்லை.</span></li>
+    <li>You can move between questions and change answers until you submit. The time spent on each question is shown.<br><span class="ta">சமர்ப்பிக்கும் வரை விடைகளை மாற்றலாம். ஒவ்வொரு வினாவிற்கும் செலவிட்ட நேரம் காட்டப்படும்.</span></li>
+    <li>Your progress is saved automatically. If the page closes or refreshes, reopen it and tap <b>Resume</b>.<br><span class="ta">உங்கள் முன்னேற்றம் தானாகச் சேமிக்கப்படும். பக்கம் மூடினால் மீண்டும் திறந்து <b>Resume</b> அழுத்தவும்.</span></li>
+  </ul>
+  <div style="margin-top:18px"><button class="btn" id="go">Start Test / தேர்வைத் தொடங்கு</button></div>
+  <div id="histwrap" class="hidden" style="margin-top:22px">
+    <h2>Saved attempts / சேமித்த முயற்சிகள்</h2>
+    <div id="hist"></div>
+    <button class="btn sec sm" id="clearhist">Clear saved attempts</button>
+  </div>
+</section>
+
+<section id="test" class="hidden">
+  <div class="topbar"><div class="in">
+    <div><b id="who" style="font-size:.95rem"></b><div class="sub" id="pgtxt" style="font-size:.82rem"></div></div>
+    <div style="text-align:right"><div class="sub" style="font-size:.75rem">Time left / மீதமுள்ள நேரம்</div><div class="timer" id="timer"></div></div>
+  </div><div class="progress"><div id="bar"></div></div></div>
+  <div class="card" id="qcard"></div>
+  <div class="card" style="margin-top:12px">
+    <div class="sub" style="font-weight:700">Question Palette / வினா பட்டியல் <span style="font-weight:400">(time spent shown on each)</span></div>
+    <div class="palette" id="palette"></div>
+    <div class="legend"><span class="a">Answered</span><span>Not answered</span><span class="c">Current</span></div>
+    <div style="margin-top:16px;text-align:right"><button class="btn danger" id="submit">Submit Test / சமர்ப்பி</button></div>
+  </div>
+</section>
+
+<section id="result" class="hidden">
+  <div class="card">
+    <h1>Result / முடிவு</h1>
+    <div class="sub" id="rwho"></div>
+    <div class="score" style="margin-top:14px">
+      <div class="ring" id="ring"><div><div><b id="rs"></b><br><small>Score</small></div></div></div>
+      <div class="stats" id="stats"></div>
+    </div>
+    <div class="actions noprint">
+      <button class="btn" id="rfull">Retake full test / முழு தேர்வு மீண்டும்</button>
+      <button class="btn" id="rwrong">Retake wrong &amp; unanswered / தவறு &amp; விடையற்றவை மட்டும்</button>
+      <button class="btn sec" id="rpdf">Download attempted test (PDF)</button>
+      <button class="btn sec" id="rhome">Home / முகப்பு</button>
+    </div>
+    <div class="sub noprint" style="margin-top:8px;font-size:.82rem">PDF: choose “Save as PDF” in the print window. Attempts are saved on this device/browser.</div>
+  </div>
+  <div class="tabs noprint" id="tabs"></div>
+  <div id="review"></div>
+</section>
+</div>
+
+<div class="modal hidden" id="modal"><div class="box">
+  <h2 id="mt"></h2><div id="mb2" class="sub"></div>
+  <div class="row"><button class="btn sec" id="mno">Go back / திரும்பு</button><button class="btn danger" id="myes">Submit / சமர்ப்பி</button></div>
+</div></div>
+
+<script>
+const CFG = {slug:"simplification-2", minutes:25};
+const Q = [{"en": "Simplify:", "ta": "சுருக்குக:", "expr": "36 ÷ 4 × 3 + 12 − 5 × 2", "opts": ["5", "19", "29", "68"], "ans": 2, "expl": "BODMAS: ÷ and × from left to right first: 36 ÷ 4 = 9; 9 × 3 = 27; 5 × 2 = 10. Then 27 + 12 − 10 = 29."}, {"en": "Simplify:", "ta": "சுருக்குக:", "expr": "20 + [8 × 2 + {(6 × 3) − (10 ÷ 5)}]", "opts": ["44", "50", "56", "52"], "ans": 3, "expl": "Innermost brackets first: 6 × 3 = 18 and 10 ÷ 5 = 2, so {18 − 2} = 16. Then 8 × 2 = 16, so [16 + 16] = 32. Finally 20 + 32 = 52."}, {"en": "If 5<sup>7<\/sup> + 5<sup>7<\/sup> + 5<sup>7<\/sup> + 5<sup>7<\/sup> + 5<sup>7<\/sup> = 5<sup><i>y<\/i><\/sup>, then the value of <i>y<\/i> is", "ta": "5<sup>7<\/sup> + 5<sup>7<\/sup> + 5<sup>7<\/sup> + 5<sup>7<\/sup> + 5<sup>7<\/sup> = 5<sup><i>y<\/i><\/sup> எனில், <i>y<\/i> ன் மதிப்பு", "expr": "", "opts": ["5", "8", "7", "9"], "ans": 1, "expl": "5⁷ is added 5 times, so the sum = 5 × 5⁷ = 5⁸. Hence y = 8."}, {"en": "2<sup>40<\/sup> + 2<sup>40<\/sup> is equal to", "ta": "2<sup>40<\/sup> + 2<sup>40<\/sup> –ன் மதிப்பு", "expr": "", "opts": ["2<sup>41<\/sup>", "4<sup>40<\/sup>", "2<sup>80<\/sup>", "4<sup>80<\/sup>"], "ans": 0, "expl": "2⁴⁰ + 2⁴⁰ = 2 × 2⁴⁰ = 2⁴¹. (Adding equal powers does not double the exponent.)"}, {"en": "Find the value of:", "ta": "மதிப்பு காண்க:", "expr": "(2<sup>3<\/sup>)<sup>2<\/sup> × 2<sup>4<\/sup> ÷ 2<sup>5<\/sup>", "opts": ["16", "64", "32", "128"], "ans": 2, "expl": "(2³)² = 2⁶. Then 2⁶ × 2⁴ ÷ 2⁵ = 2^(6 + 4 − 5) = 2⁵ = 32."}, {"en": "The algebraic statement for 5 less than 2 times <i>p<\/i> is", "ta": "<i>p<\/i> ன் 2 மடங்கில் 5 குறைவு என்பதற்கான இயற்கணிதக் கூற்று.", "expr": "", "opts": ["2<i>p<\/i> − 5", "5<i>p<\/i> − 2", "2 − 5<i>p<\/i>", "5 − 2<i>p<\/i>"], "ans": 0, "expl": "\"2 times p\" = 2p, and \"5 less than\" it means subtract 5 from it: 2p − 5."}, {"en": "The solution of (2<i>x<\/i> − 1)<sup>2<\/sup> = 9 is", "ta": "(2<i>x<\/i> − 1)<sup>2<\/sup> = 9 என்ற சமன்பாட்டின் தீர்வு", "expr": "", "opts": ["−1", "1, 2", "−2, 1", "−1, 2"], "ans": 3, "expl": "2x − 1 = ±3. If 2x − 1 = 3 then x = 2; if 2x − 1 = −3 then x = −1."}, {"en": "If <span class=\"fr\"><span class=\"n\"><i>a<\/i><\/span><span class=\"d\">3<\/span><\/span> = <span class=\"fr\"><span class=\"n\"><i>b<\/i><\/span><span class=\"d\">4<\/span><\/span> = <span class=\"fr\"><span class=\"n\"><i>c<\/i><\/span><span class=\"d\">7<\/span><\/span> then <span class=\"fr\"><span class=\"n\"><i>a<\/i> + <i>b<\/i> + <i>c<\/i><\/span><span class=\"d\"><i>c<\/i><\/span><\/span> is equal to", "ta": "<span class=\"fr\"><span class=\"n\"><i>a<\/i><\/span><span class=\"d\">3<\/span><\/span> = <span class=\"fr\"><span class=\"n\"><i>b<\/i><\/span><span class=\"d\">4<\/span><\/span> = <span class=\"fr\"><span class=\"n\"><i>c<\/i><\/span><span class=\"d\">7<\/span><\/span> எனில் <span class=\"fr\"><span class=\"n\"><i>a<\/i> + <i>b<\/i> + <i>c<\/i><\/span><span class=\"d\"><i>c<\/i><\/span><\/span> =", "expr": "", "opts": ["7", "2", "<span class=\"fr\"><span class=\"n\">1<\/span><span class=\"d\">2<\/span><\/span>", "<span class=\"fr\"><span class=\"n\">1<\/span><span class=\"d\">7<\/span><\/span>"], "ans": 1, "expl": "Let a/3 = b/4 = c/7 = k. Then a = 3k, b = 4k, c = 7k, and (a + b + c)/c = 14k/7k = 2."}, {"en": "Given F<sub>1<\/sub> = 1, F<sub>2<\/sub> = 3 and F<sub><i>n<\/i><\/sub> = F<sub><i>n<\/i>−1<\/sub> + F<sub><i>n<\/i>−2<\/sub>, then F<sub>5<\/sub> is", "ta": "F<sub>1<\/sub> = 1, F<sub>2<\/sub> = 3 மற்றும் F<sub><i>n<\/i><\/sub> = F<sub><i>n<\/i>−1<\/sub> + F<sub><i>n<\/i>−2<\/sub> எனில் F<sub>5<\/sub> ஆனது", "expr": "", "opts": ["7", "8", "11", "18"], "ans": 2, "expl": "F₃ = F₂ + F₁ = 3 + 1 = 4; F₄ = 4 + 3 = 7; F₅ = 7 + 4 = 11."}, {"en": "Simplify:", "ta": "சுருக்குக:", "expr": "<span class=\"fr\"><span class=\"n\">2<\/span><span class=\"d\">3<\/span><\/span> + <span class=\"fr\"><span class=\"n\">3<\/span><span class=\"d\">4<\/span><\/span> − <span class=\"fr\"><span class=\"n\">5<\/span><span class=\"d\">6<\/span><\/span>", "opts": ["<span class=\"fr\"><span class=\"n\">7<\/span><span class=\"d\">12<\/span><\/span>", "<span class=\"fr\"><span class=\"n\">5<\/span><span class=\"d\">12<\/span><\/span>", "<span class=\"fr\"><span class=\"n\">1<\/span><span class=\"d\">2<\/span><\/span>", "<span class=\"fr\"><span class=\"n\">11<\/span><span class=\"d\">12<\/span><\/span>"], "ans": 0, "expl": "LCM of 3, 4, 6 is 12. (8 + 9 − 10)/12 = 7/12."}, {"en": "Simplify: 5<span class=\"fr\"><span class=\"n\">1<\/span><span class=\"d\">2<\/span><\/span> + <span class=\"fr\"><span class=\"n\">3<\/span><span class=\"d\">4<\/span><\/span> of <span class=\"fr\"><span class=\"n\">8<\/span><span class=\"d\">9<\/span><\/span>", "ta": "சுருக்குக: 5<span class=\"fr\"><span class=\"n\">1<\/span><span class=\"d\">2<\/span><\/span> + <span class=\"fr\"><span class=\"n\">3<\/span><span class=\"d\">4<\/span><\/span> இன் <span class=\"fr\"><span class=\"n\">8<\/span><span class=\"d\">9<\/span><\/span>", "expr": "", "opts": ["5<span class=\"fr\"><span class=\"n\">5<\/span><span class=\"d\">9<\/span><\/span>", "6<span class=\"fr\"><span class=\"n\">1<\/span><span class=\"d\">6<\/span><\/span>", "6<span class=\"fr\"><span class=\"n\">1<\/span><span class=\"d\">4<\/span><\/span>", "6<span class=\"fr\"><span class=\"n\">8<\/span><span class=\"d\">9<\/span><\/span>"], "ans": 1, "expl": "\"of\" is done first: 3/4 of 8/9 = 2/3. Then 5½ + 2/3 = 11/2 + 2/3 = 33/6 + 4/6 = 37/6 = 6 1/6."}, {"en": "Find the value of <math><msqrt><mrow><mn>27<\/mn><\/mrow><\/msqrt><\/math> + <math><msqrt><mrow><mn>12<\/mn><\/mrow><\/msqrt><\/math>.", "ta": "மதிப்பு காண்க: <math><msqrt><mrow><mn>27<\/mn><\/mrow><\/msqrt><\/math> + <math><msqrt><mrow><mn>12<\/mn><\/mrow><\/msqrt><\/math>.", "expr": "", "opts": ["<math><msqrt><mrow><mn>39<\/mn><\/mrow><\/msqrt><\/math>", "5<math><msqrt><mrow><mn>6<\/mn><\/mrow><\/msqrt><\/math>", "3<math><msqrt><mrow><mn>5<\/mn><\/mrow><\/msqrt><\/math>", "5<math><msqrt><mrow><mn>3<\/mn><\/mrow><\/msqrt><\/math>"], "ans": 3, "expl": "√27 = 3√3 and √12 = 2√3, so the sum = 5√3. (Surds can be added only when the radicand is the same.)"}, {"en": "Find the value of:", "ta": "மதிப்பு காண்க:", "expr": "<math><msqrt><mrow><mn>50<\/mn><\/mrow><\/msqrt><\/math> + <math><msqrt><mrow><mn>18<\/mn><\/mrow><\/msqrt><\/math> − <math><msqrt><mrow><mn>32<\/mn><\/mrow><\/msqrt><\/math>", "opts": ["4<math><msqrt><mrow><mn>2<\/mn><\/mrow><\/msqrt><\/math>", "6<math><msqrt><mrow><mn>2<\/mn><\/mrow><\/msqrt><\/math>", "2<math><msqrt><mrow><mn>2<\/mn><\/mrow><\/msqrt><\/math>", "6"], "ans": 0, "expl": "√50 = 5√2, √18 = 3√2, √32 = 4√2. So 5√2 + 3√2 − 4√2 = 4√2."}, {"en": "Find the value of:", "ta": "மதிப்பு காண்க:", "expr": "0.6 × 0.6 + 0.4 × 0.4 + 2 × 0.6 × 0.4", "opts": ["0.52", "0.76", "1", "1.24"], "ans": 2, "expl": "It has the form a² + b² + 2ab = (a + b)² with a = 0.6, b = 0.4. So (0.6 + 0.4)² = 1."}, {"en": "If '−' means 'multiplied by', '×' means 'plus', '+' means 'divided by' and '÷' means 'minus', then find the value of 14 − 10 × 4 ÷ 16 + 8.", "ta": "'−' குறியைப் பெருக்கலாகவும், '×' குறியைக் கூட்டலாகவும், '+' குறியை வகுத்தலாகவும், '÷' குறியைக் கழித்தலாகவும் கொண்டால், 14 − 10 × 4 ÷ 16 + 8 இன் மதிப்பு காண்க.", "expr": "", "opts": ["6", "134", "−2", "142"], "ans": 3, "expl": "Replace the symbols: 14 × 10 + 4 − 16 ÷ 8 = 140 + 4 − 2 = 142."}, {"en": "If '+' means '−', '−' means '×', '×' means '÷' and '÷' means '+', then 40 ÷ 8 × 4 − 3 + 5 = ?", "ta": "'+' என்பது '−', '−' என்பது '×', '×' என்பது '÷' மற்றும் '÷' என்பது '+' எனில், 40 ÷ 8 × 4 − 3 + 5 இன் மதிப்பு என்ன?", "expr": "", "opts": ["31", "41", "37", "47"], "ans": 1, "expl": "Replace the symbols: 40 + 8 ÷ 4 × 3 − 5. By BODMAS: 8 ÷ 4 = 2; 2 × 3 = 6; 40 + 6 − 5 = 41."}, {"en": "If A denotes +, B denotes −, C denotes × and D denotes ÷, then what is the value of 2C15B7A100D10?", "ta": "A என்பது +, B என்பது −, C என்பது × மற்றும் D என்பது ÷ எனில், 2C15B7A100D10 ன் மதிப்பு என்ன?", "expr": "", "opts": ["33", "24", "26", "36"], "ans": 0, "expl": "2C15B7A100D10 = 2 × 15 − 7 + 100 ÷ 10 = 30 − 7 + 10 = 33."}, {"en": "Simplify:", "ta": "சுருக்குக:", "expr": "<span class=\"fr\"><span class=\"n\">2<\/span><span class=\"d\">5<\/span><\/span> × (<span class=\"fr\"><span class=\"n\">−3<\/span><span class=\"d\">7<\/span><\/span>) − <span class=\"fr\"><span class=\"n\">1<\/span><span class=\"d\">6<\/span><\/span> × <span class=\"fr\"><span class=\"n\">3<\/span><span class=\"d\">2<\/span><\/span> + <span class=\"fr\"><span class=\"n\">1<\/span><span class=\"d\">14<\/span><\/span> × <span class=\"fr\"><span class=\"n\">2<\/span><span class=\"d\">5<\/span><\/span>", "opts": ["−<span class=\"fr\"><span class=\"n\">75<\/span><span class=\"d\">140<\/span><\/span>", "<span class=\"fr\"><span class=\"n\">105<\/span><span class=\"d\">140<\/span><\/span>", "−<span class=\"fr\"><span class=\"n\">11<\/span><span class=\"d\">28<\/span><\/span>", "−<span class=\"fr\"><span class=\"n\">1<\/span><span class=\"d\">4<\/span><\/span>"], "ans": 2, "expl": "2/5 × (−3/7) = −6/35; 1/6 × 3/2 = 1/4; 1/14 × 2/5 = 1/35. So −6/35 − 1/4 + 1/35 = −5/35 − 1/4 = −1/7 − 1/4 = −11/28."}, {"en": "Find <i>x<\/i>: 2<span class=\"fr\"><span class=\"n\">1<\/span><span class=\"d\">3<\/span><\/span> + 1<span class=\"fr\"><span class=\"n\">5<\/span><span class=\"d\">6<\/span><\/span> − <i>x<\/i> + <span class=\"fr\"><span class=\"n\">20<\/span><span class=\"d\">3<\/span><\/span> = 7<span class=\"fr\"><span class=\"n\">1<\/span><span class=\"d\">3<\/span><\/span>", "ta": "<i>x<\/i> ன் மதிப்பைக் காண்க: 2<span class=\"fr\"><span class=\"n\">1<\/span><span class=\"d\">3<\/span><\/span> + 1<span class=\"fr\"><span class=\"n\">5<\/span><span class=\"d\">6<\/span><\/span> − <i>x<\/i> + <span class=\"fr\"><span class=\"n\">20<\/span><span class=\"d\">3<\/span><\/span> = 7<span class=\"fr\"><span class=\"n\">1<\/span><span class=\"d\">3<\/span><\/span>", "expr": "", "opts": ["−3<span class=\"fr\"><span class=\"n\">1<\/span><span class=\"d\">2<\/span><\/span>", "3<span class=\"fr\"><span class=\"n\">1<\/span><span class=\"d\">2<\/span><\/span>", "4<span class=\"fr\"><span class=\"n\">1<\/span><span class=\"d\">2<\/span><\/span>", "−4<span class=\"fr\"><span class=\"n\">1<\/span><span class=\"d\">2<\/span><\/span>"], "ans": 1, "expl": "7/3 + 11/6 + 20/3 = 14/6 + 11/6 + 40/6 = 65/6. And 7⅓ = 44/6. So x = 65/6 − 44/6 = 21/6 = 3½."}, {"en": "Find the value of:", "ta": "மதிப்பு காண்க:", "expr": "<span class=\"fr\"><span class=\"n\">1<\/span><span class=\"d\">1 + <span class=\"fr\"><span class=\"n\">1<\/span><span class=\"d\">1 + <span class=\"fr\"><span class=\"n\">1<\/span><span class=\"d\">2<\/span><\/span><\/span><\/span><\/span><\/span>", "opts": ["<span class=\"fr\"><span class=\"n\">5<\/span><span class=\"d\">3<\/span><\/span>", "<span class=\"fr\"><span class=\"n\">2<\/span><span class=\"d\">3<\/span><\/span>", "<span class=\"fr\"><span class=\"n\">3<\/span><span class=\"d\">2<\/span><\/span>", "<span class=\"fr\"><span class=\"n\">3<\/span><span class=\"d\">5<\/span><\/span>"], "ans": 3, "expl": "Work from the bottom: 1 + 1/2 = 3/2; 1 ÷ 3/2 = 2/3; 1 + 2/3 = 5/3; 1 ÷ 5/3 = 3/5."}, {"en": "Simplify:", "ta": "சுருக்குக:", "expr": "(<span class=\"fr\"><span class=\"n\"><i>m<\/i><sup><i>a<\/i><\/sup><\/span><span class=\"d\"><i>m<\/i><sup><i>b<\/i><\/sup><\/span><\/span>)<sup>(<i>a<\/i>+<i>b<\/i>)<\/sup> × (<span class=\"fr\"><span class=\"n\"><i>m<\/i><sup><i>b<\/i><\/sup><\/span><span class=\"d\"><i>m<\/i><sup><i>c<\/i><\/sup><\/span><\/span>)<sup>(<i>b<\/i>+<i>c<\/i>)<\/sup> × (<span class=\"fr\"><span class=\"n\"><i>m<\/i><sup><i>c<\/i><\/sup><\/span><span class=\"d\"><i>m<\/i><sup><i>a<\/i><\/sup><\/span><\/span>)<sup>(<i>c<\/i>+<i>a<\/i>)<\/sup> × <span class=\"fr\"><span class=\"n\">1<\/span><span class=\"d\"><i>m<\/i><\/span><\/span>", "opts": ["<span class=\"fr\"><span class=\"n\">1<\/span><span class=\"d\"><i>m<\/i><\/span><\/span>", "<i>m<\/i>", "1", "<i>m<\/i><sup>(<i>a<\/i>+<i>b<\/i>+<i>c<\/i>)<\/sup>"], "ans": 0, "expl": "(m^a/m^b)^(a+b) = m^((a−b)(a+b)) = m^(a²−b²). Similarly the others give m^(b²−c²) and m^(c²−a²). Sum of exponents = 0, so the product is m⁰ × 1/m = 1/m."}, {"en": "35568 ÷ ? % of 650 = 456", "ta": "35568 ÷ ? % of 650 = 456", "expr": "", "opts": ["14", "16", "12", "18"], "ans": 2, "expl": "? % of 650 = 35568 ÷ 456 = 78. So ? = 78/650 × 100 = 12."}, {"en": "If <i>m<\/i> : <i>n<\/i> = 3 : 2, find the ratio <span class=\"fr\"><span class=\"n\">4<i>m<\/i> + 5<i>n<\/i><\/span><span class=\"d\">4<i>m<\/i> − 5<i>n<\/i><\/span><\/span>.", "ta": "<i>m<\/i> : <i>n<\/i> = 3 : 2 எனில் <span class=\"fr\"><span class=\"n\">4<i>m<\/i> + 5<i>n<\/i><\/span><span class=\"d\">4<i>m<\/i> − 5<i>n<\/i><\/span><\/span> ன் விகித மதிப்பு காண்க.", "expr": "", "opts": ["10 : 11", "22 : 3", "13 : 5", "11 : 1"], "ans": 3, "expl": "Take m = 3, n = 2: (4×3 + 5×2)/(4×3 − 5×2) = 22/2 = 11, i.e. 11 : 1."}, {"en": "If <i>a<\/i> + <i>b<\/i> = 7 and <i>a<\/i><i>b<\/i> = 12, then find the value of <i>a<\/i>² + <i>b<\/i>².", "ta": "<i>a<\/i> + <i>b<\/i> = 7 மற்றும் <i>a<\/i><i>b<\/i> = 12 எனில், <i>a<\/i>² + <i>b<\/i>² இன் மதிப்பைக் காண்க.", "expr": "", "opts": ["49", "25", "37", "19"], "ans": 1, "expl": "a² + b² = (a + b)² − 2ab = 49 − 24 = 25."}, {"en": "If 4 <i>x<\/i> 7 3 is a multiple of 11, where <i>x<\/i> is a digit, what is the value of <i>x<\/i>?", "ta": "4 <i>x<\/i> 7 3 என்ற எண் 11ஆல் வகுபடும் எனில், <i>x<\/i> இன் மதிப்பு யாது?", "expr": "", "opts": ["8", "3", "5", "9"], "ans": 0, "expl": "Rule for 11: (sum of digits at odd places) − (sum at even places) = 0 or a multiple of 11. (4 + 7) − (x + 3) = 8 − x, which is 0 for x = 8. Check: 4873 = 11 × 443."}];
+const L = ['A','B','C','D'];
+const $ = id => document.getElementById(id);
+const fmt = s => { s = Math.max(0, Math.round(s)); return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0'); };
+const fmtLong = s => { s = Math.round(s); const m = Math.floor(s/60), r = s%60; return m ? m+'m '+r+'s' : r+'s'; };
+const esc = s => String(s).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const KP = 'tnpsc:'+CFG.slug+':prog', KH = 'tnpsc:'+CFG.slug+':hist';
+const store = {
+  get(k,d){ try{ const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; }catch(e){ return d; } },
+  set(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} },
+  del(k){ try{ localStorage.removeItem(k); }catch(e){} }
+};
+
+let S = null, tick = null, lastSave = 0, R = null;
+
+function stemHTML(q){
+  return '<div class="stem"><div class="en">'+q.en+'</div><div class="ta">'+q.ta+'</div>'+(q.expr?'<div class="expr">'+q.expr+'</div>':'')+'</div>';
+}
+function show_(id){ ['start','test','result'].forEach(x => $(x).classList.toggle('hidden', x!==id)); window.scrollTo({top:0}); }
+
+/* ---------- home ---------- */
+function modeLabel(m){ return m==='retake' ? 'Wrong & unanswered retake' : 'Full test'; }
+function renderHome(){
+  show_('start');
+  const p = store.get(KP, null);
+  const rb = $('resume');
+  if (p && p.active){
+    const left = (p.endTs - Date.now())/1000;
+    rb.classList.remove('hidden');
+    rb.innerHTML = '<b>Unfinished test found / முடிக்காத தேர்வு உள்ளது</b><br>'+esc(p.user.nm)+' · '+modeLabel(p.mode)+' · '+(left>0 ? 'time left '+fmt(left) : 'time is over — it will be submitted')+
+      '<div class="row"><button class="btn sm" id="rsm">Resume / தொடர்</button><button class="btn sm sec" id="dsc">Discard / நீக்கு</button></div>';
+    $('rsm').onclick = resume;
+    $('dsc').onclick = () => { store.del(KP); renderHome(); };
+  } else rb.classList.add('hidden');
+  const h = store.get(KH, []);
+  $('histwrap').classList.toggle('hidden', !h.length);
+  $('hist').innerHTML = h.map(a => {
+    const sc = scoreOf(a);
+    return '<div class="hrow"><div><b>'+esc(new Date(a.ts).toLocaleString())+'</b> · '+esc(a.user.nm)+'<br><small>'+modeLabel(a.mode)+' · Score '+sc.ok+'/'+a.active.length+' · '+fmtLong(a.used)+'</small></div>'+
+           '<button class="btn sm" data-id="'+a.id+'">View / பார்</button></div>';
+  }).join('');
+  $('hist').onclick = e => { const b = e.target.closest('button[data-id]'); if(!b) return;
+    const a = store.get(KH, []).find(x => String(x.id)===b.dataset.id); if (a) showResult(a); };
+}
+$('clearhist').onclick = () => { if (confirm('Delete all saved attempts on this device?')) { store.del(KH); renderHome(); } };
+
+$('go').onclick = () => {
+  const nm = $('nm').value.trim(), mb = $('mb').value.trim();
+  if (nm.length < 2) { $('serr').textContent = 'Please enter your name. / பெயரை உள்ளிடவும்.'; return; }
+  if (!/^[6-9]\d{9}$/.test(mb)) { $('serr').textContent = 'Enter a valid 10-digit mobile number. / சரியான 10 இலக்க கைபேசி எண்ணை உள்ளிடவும்.'; return; }
+  $('serr').textContent = '';
+  begin({nm, mb}, Q.map((_,i)=>i), 'full', CFG.minutes);
+};
+
+/* ---------- session ---------- */
+function begin(user, active, mode, minutes){
+  const now = Date.now();
+  S = {user, active, mode, minutes, answers:Array(active.length).fill(null), spent:Array(active.length).fill(0),
+       startTs:now, endTs:now+minutes*60000, cur:0, lastSwitch:now, done:false};
+  run();
+}
+function resume(){
+  const p = store.get(KP, null); if (!p) return;
+  S = p; S.done = false;
+  if (Date.now() >= S.endTs){ S.lastSwitch = S.endTs; finish(true); return; }
+  S.lastSwitch = Date.now(); run();
+}
+function run(){
+  show_('test');
+  $('who').textContent = S.user.nm + (S.mode==='retake' ? ' · Retake' : '');
+  buildPalette(); show(S.cur, true);
+  clearInterval(tick); tick = setInterval(onTick, 250); onTick(); persist();
+  window.addEventListener('beforeunload', warn);
+}
+function warn(e){ if (S && !S.done){ e.preventDefault(); e.returnValue = ''; } }
+function bank(){ const now = Math.min(Date.now(), S.endTs); S.spent[S.cur] += Math.max(0, (now - S.lastSwitch)/1000); S.lastSwitch = now; }
+function persist(){ if (!S || S.done) return; bank(); store.set(KP, S); lastSave = Date.now(); }
+
+function onTick(){
+  const left = (S.endTs - Date.now())/1000;
+  const t = $('timer'); t.textContent = fmt(left); t.classList.toggle('low', left <= 300);
+  const q = S.spent[S.cur] + (Date.now() - S.lastSwitch)/1000;
+  if ($('qt')) $('qt').textContent = '⏱ This question: ' + fmt(q);
+  const pb = $('palette').children[S.cur]; if (pb) pb.querySelector('small').textContent = fmtLong(q);
+  if (Date.now() - lastSave > 5000) persist();
+  if (left <= 0) finish(true);
+}
+function buildPalette(){
+  $('palette').innerHTML = S.active.map((_,i)=>'<button class="pb" data-i="'+i+'">'+(i+1)+'<small>&nbsp;</small></button>').join('');
+  $('palette').onclick = e => { const b = e.target.closest('.pb'); if (b) show(+b.dataset.i); };
+}
+function paint(){
+  [...$('palette').children].forEach((b,i)=>{
+    b.classList.toggle('ans', S.answers[i]!==null); b.classList.toggle('cur', i===S.cur);
+    b.querySelector('small').innerHTML = S.spent[i] >= 1 || i===S.cur ? fmtLong(S.spent[i]) : '&nbsp;';
+  });
+  const n = S.answers.filter(a=>a!==null).length;
+  $('pgtxt').textContent = 'Answered '+n+' / '+S.active.length;
+  $('bar').style.width = (n/S.active.length*100)+'%';
+}
+function show(i, first){
+  if (S.done) return;
+  if (!first) bank();
+  S.cur = i;
+  const q = Q[S.active[i]];
+  let h = '<div class="qh"><span class="qno">Question '+(i+1)+' of '+S.active.length+' · வினா '+(i+1)+'</span><span class="qt" id="qt"></span></div>'+stemHTML(q);
+  q.opts.forEach((o,k)=>{ h += '<button class="opt'+(S.answers[i]===k?' sel':'')+'" data-k="'+k+'"><span class="k">'+L[k]+'</span><span class="t">'+o+'</span></button>'; });
+  h += '<div class="nav"><button class="btn sec" id="pv"'+(i===0?' disabled':'')+'>← Previous</button>'+
+       '<button class="btn sec" id="clr"'+(S.answers[i]===null?' disabled':'')+'>Clear</button><span class="sp"></span>'+
+       (i<S.active.length-1 ? '<button class="btn" id="nx">Next →</button>' : '<button class="btn danger" id="sb2">Submit</button>')+'</div>';
+  $('qcard').innerHTML = h;
+  $('qcard').querySelectorAll('.opt').forEach(b => b.onclick = () => { S.answers[i] = +b.dataset.k; show(i); });
+  if ($('pv')) $('pv').onclick = () => show(i-1);
+  if ($('nx')) $('nx').onclick = () => show(i+1);
+  if ($('sb2')) $('sb2').onclick = askSubmit;
+  $('clr').onclick = () => { S.answers[i] = null; show(i); };
+  paint(); persist(); onTick(); if (!first) window.scrollTo({top:0});
+}
+$('submit').onclick = askSubmit;
+function askSubmit(){
+  const un = S.answers.filter(a=>a===null).length;
+  $('mt').textContent = 'Submit the test? / சமர்ப்பிக்கவா?';
+  $('mb2').innerHTML = 'Answered: <b>'+(S.active.length-un)+'</b> · Unanswered: <b>'+un+'</b><br>Time left: <b>'+fmt((S.endTs-Date.now())/1000)+'</b>';
+  $('modal').classList.remove('hidden');
+}
+$('mno').onclick = () => $('modal').classList.add('hidden');
+$('myes').onclick = () => { $('modal').classList.add('hidden'); finish(false); };
+
+/* ---------- finish / result ---------- */
+function statusOf(a){ return a.active.map((qi,k) => a.answers[k]===null ? 'un' : (a.answers[k]===Q[qi].ans ? 'ok' : 'bad')); }
+function scoreOf(a){ const st = statusOf(a); return {ok:st.filter(s=>s==='ok').length, bad:st.filter(s=>s==='bad').length, un:st.filter(s=>s==='un').length}; }
+
+function finish(auto){
+  if (!S || S.done) return;
+  bank(); S.done = true; clearInterval(tick);
+  window.removeEventListener('beforeunload', warn);
+  $('modal').classList.add('hidden');
+  const used = Math.min((Date.now() - S.startTs)/1000, S.minutes*60);
+  const att = {id:Date.now(), ts:Date.now(), user:S.user, mode:S.mode, active:S.active, answers:S.answers, spent:S.spent, used, auto, minutes:S.minutes};
+  const h = store.get(KH, []); h.unshift(att); store.set(KH, h.slice(0, 20));
+  store.del(KP);
+  showResult(att);
+}
+
+function showResult(a){
+  R = a; show_('result');
+  const sc = scoreOf(a), n = a.active.length, att = sc.ok + sc.bad;
+  $('rwho').innerHTML = '<b>'+esc(a.user.nm)+'</b> · '+esc(a.user.mb)+' · '+modeLabel(a.mode)+' · '+esc(new Date(a.ts).toLocaleString())+
+    (a.auto ? ' · <span style="color:var(--bad)">Auto-submitted (time up) / நேரம் முடிந்ததால் தானாக சமர்ப்பிக்கப்பட்டது</span>' : '');
+  $('rs').textContent = sc.ok+' / '+n;
+  $('ring').style.setProperty('--p', sc.ok/n*100);
+  $('stats').innerHTML =
+    '<div class="stat ok"><b>'+sc.ok+'</b>Correct / சரி</div>'+
+    '<div class="stat bad"><b>'+sc.bad+'</b>Wrong / தவறு</div>'+
+    '<div class="stat warn"><b>'+sc.un+'</b>Unanswered / விடையளிக்காதவை</div>'+
+    '<div class="stat"><b>'+(sc.ok/n*100).toFixed(1)+'%</b>Score</div>'+
+    '<div class="stat"><b>'+(att ? (sc.ok/att*100).toFixed(0) : 0)+'%</b>Accuracy</div>'+
+    '<div class="stat"><b>'+fmtLong(a.used)+'</b>Total time taken</div>';
+  const tabs = [['all','All / அனைத்தும்',n],['ok','Correct / சரி',sc.ok],['bad','Wrong / தவறு',sc.bad],['un','Unanswered / விடையற்றவை',sc.un]];
+  $('tabs').innerHTML = tabs.map(t=>'<button class="tab'+(t[0]==='all'?' on':'')+'" data-f="'+t[0]+'">'+t[1]+' ('+t[2]+')</button>').join('');
+  $('tabs').onclick = e => { const b = e.target.closest('.tab'); if (!b) return;
+    [...$('tabs').children].forEach(x=>x.classList.toggle('on', x===b)); render(b.dataset.f); };
+  $('rwrong').disabled = (sc.bad + sc.un) === 0;
+  render('all');
+}
+function render(f){
+  const st = statusOf(R);
+  const list = st.map((s,k)=>k).filter(k => f==='all' || st[k]===f);
+  if (!list.length){ $('review').innerHTML = '<div class="card empty">No questions in this list. / இந்த பட்டியலில் வினாக்கள் இல்லை.</div>'; return; }
+  $('review').innerHTML = list.map(k=>{
+    const q = Q[R.active[k]], s = st[k], mine = R.answers[k];
+    const badge = s==='ok' ? '<span class="badge ok">Correct · சரி</span>' : s==='bad' ? '<span class="badge bad">Wrong · தவறு</span>' : '<span class="badge warn">Unanswered · விடையில்லை</span>';
+    let o = '';
+    q.opts.forEach((t,j)=>{
+      let cls='', tag='';
+      if (j===q.ans){ cls='right'; tag = (mine===j) ? 'Your answer ✓' : 'Correct answer'; }
+      else if (j===mine){ cls='wrong'; tag='Your answer ✗'; }
+      o += '<div class="ro '+cls+'"><span class="k">'+L[j]+'</span><span>'+t+'</span>'+(tag?'<span class="tag">'+tag+'</span>':'')+'</div>';
+    });
+    return '<div class="card rev"><div class="hd"><b>Q'+(k+1)+'</b>'+badge+'<span class="time">⏱ '+fmtLong(R.spent[k])+'</span></div>'+stemHTML(q)+o+
+           '<div class="expl"><b>Explanation:</b> '+q.expl+'</div></div>';
+  }).join('');
+}
+$('rfull').onclick = () => begin(R.user, Q.map((_,i)=>i), 'full', CFG.minutes);
+$('rwrong').onclick = () => {
+  const st = statusOf(R);
+  const act = R.active.filter((qi,k) => st[k] !== 'ok');
+  if (act.length) begin(R.user, act, 'retake', act.length);   // 1 minute per question
+};
+$('rpdf').onclick = () => {
+  [...$('tabs').children].forEach(x=>x.classList.toggle('on', x.dataset.f==='all')); render('all');
+  setTimeout(() => window.print(), 150);
+};
+$('rhome').onclick = renderHome;
+
+renderHome();
+</script>
+</body>
+</html>
