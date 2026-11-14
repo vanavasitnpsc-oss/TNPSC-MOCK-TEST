@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>கணிதம் – மாதிரித் தேர்வு 1 / Maths – Model Test 1</title>
+<style>
+:root{--ink:#1f2a37;--mut:#5b6675;--line:#dfe4ea;--bg:#f5f7fa;--card:#fff;--pri:#1f5fbf;--pri-d:#174a96;--ok:#1a7f4b;--okbg:#e6f5ec;--bad:#c0392b;--badbg:#fdecea;--warn:#b26a00;--warnbg:#fff4e0}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:"Noto Sans Tamil","Nirmala UI","Latha","Tamil Sangam MN","Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;padding-bottom:46px}
+.wrap{max-width:900px;margin:0 auto;padding:14px}
+h1{font-size:1.25rem;margin:.2rem 0}
+h2{font-size:1.05rem;margin:.2rem 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:12px 0}
+.mut{color:var(--mut);font-size:.9rem}
+.btn{appearance:none;border:1px solid var(--pri);background:var(--pri);color:#fff;border-radius:8px;padding:9px 16px;font:inherit;font-weight:600;cursor:pointer}
+.btn:hover{background:var(--pri-d)}
+.btn.sec{background:#fff;color:var(--pri)}
+.btn.sec:hover{background:#eef4fc}
+.btn.dng{background:#fff;color:var(--bad);border-color:var(--bad)}
+.btn.sm{padding:5px 10px;font-size:.85rem}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+input[type=text],input[type=tel]{width:100%;padding:10px 12px;border:1px solid #b9c2cd;border-radius:8px;font:inherit}
+label.f{display:block;font-weight:600;margin:10px 0 4px}
+.err{color:var(--bad);font-size:.9rem;min-height:1.2em}
+.topics{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.chip{background:#eef4fc;color:var(--pri-d);border-radius:20px;padding:3px 10px;font-size:.85rem}
+/* test */
+.bar{position:sticky;top:0;z-index:5;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px 12px;display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-top:8px}
+.bar .t{font-weight:700;font-size:1.15rem;font-variant-numeric:tabular-nums}
+.bar .t.low{color:var(--bad)}
+.qtime{font-variant-numeric:tabular-nums;color:var(--mut);font-size:.9rem}
+.topic{font-size:.8rem;color:var(--pri-d);font-weight:600;text-transform:uppercase;letter-spacing:.02em}
+.q .ta{font-weight:600;margin:.3rem 0}
+.q .en{color:#334155;margin:.2rem 0 .6rem}
+.opt{display:flex;gap:10px;align-items:flex-start;border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;margin:8px 0;cursor:pointer;background:#fff}
+.opt:hover{border-color:#9db8e0}
+.opt.sel{border-color:var(--pri);background:#eef4fc}
+.opt .k{flex:0 0 26px;height:26px;border-radius:50%;background:#e8edf3;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem}
+.opt.sel .k{background:var(--pri);color:#fff}
+.opt .ta{font-weight:500;margin:0}
+.opt .en{margin:0;color:#475569;font-size:.95rem}
+.nav{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.nav .sp{flex:1}
+.pal{display:grid;grid-template-columns:repeat(auto-fill,minmax(54px,1fr));gap:6px}
+.pb{border:1.5px solid var(--line);border-radius:8px;background:#fff;padding:3px 0;font:inherit;cursor:pointer;text-align:center;line-height:1.15}
+.pb b{display:block;font-size:.95rem}
+.pb small{display:block;font-size:.68rem;color:var(--mut);font-variant-numeric:tabular-nums}
+.pb.ans{background:var(--okbg);border-color:#7cc59c}
+.pb.cur{outline:2.5px solid var(--pri)}
+.pb.vis{background:var(--warnbg);border-color:#e6b567}
+.legend{display:flex;gap:12px;flex-wrap:wrap;font-size:.8rem;color:var(--mut);margin-top:8px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;border:1.5px solid var(--line);vertical-align:-1px;margin-right:4px}
+/* result */
+.score{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0}
+.sbox{flex:1 1 120px;border-radius:10px;padding:10px;text-align:center;border:1px solid var(--line);background:#fff}
+.sbox .n{font-size:1.5rem;font-weight:800}
+.sbox.ok{background:var(--okbg);color:var(--ok)}.sbox.bad{background:var(--badbg);color:var(--bad)}.sbox.un{background:var(--warnbg);color:var(--warn)}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+.tab{border:1px solid var(--line);background:#fff;border-radius:20px;padding:5px 14px;font:inherit;cursor:pointer}
+.tab.on{background:var(--pri);border-color:var(--pri);color:#fff}
+.rv{border:1px solid var(--line);border-left:5px solid var(--line);border-radius:10px;padding:12px;margin:10px 0;background:#fff;break-inside:avoid}
+.rv.right{border-left-color:var(--ok)}.rv.wrong{border-left-color:var(--bad)}.rv.un{border-left-color:var(--warn)}
+.rv .hd{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:.85rem;color:var(--mut);margin-bottom:4px}
+.rv .st{font-weight:700}
+.rv .st.right{color:var(--ok)}.rv .st.wrong{color:var(--bad)}.rv .st.un{color:var(--warn)}
+.ro{display:flex;gap:8px;border:1px solid var(--line);border-radius:8px;padding:6px 10px;margin:5px 0;font-size:.95rem}
+.ro.c{background:var(--okbg);border-color:#7cc59c}
+.ro.w{background:var(--badbg);border-color:#e6a49c}
+.ro .k{font-weight:700;flex:0 0 22px}
+.ro .tag{margin-left:auto;font-size:.75rem;font-weight:700;white-space:nowrap}
+.exp{background:#f3f6fb;border-radius:8px;padding:8px 10px;margin-top:8px;font-size:.92rem}
+.exp .ta{margin-bottom:4px}
+.list .row{display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap;border-top:1px solid var(--line);padding:10px 0}
+.list .row:first-child{border-top:0}
+.ov{text-decoration:overline}
+sup{font-size:.7em}
+.foot{position:fixed;left:0;right:0;bottom:0;background:#14315c;color:#fff;text-align:center;padding:8px 10px;font-size:.88rem;z-index:20}
+.banner{background:var(--warnbg);border:1px solid #e6b567;border-radius:10px;padding:10px 14px;margin:10px 0;display:flex;gap:10px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+[hidden]{display:none!important}
+#printArea{display:none}
+@media print{
+  @page{size:A4;margin:12mm 12mm 18mm}
+  body{background:#fff;padding:0}
+  body.printing #app{display:none}
+  body.printing #printArea{display:block}
+  .foot{display:block;position:fixed;bottom:0;left:0;right:0;background:#fff;color:#14315c;border-top:1px solid #14315c;padding:4px;font-size:10pt}
+  #printArea .rv{box-shadow:none}
+}
+</style>
+</head>
+<body>
+<div id="app" class="wrap">
+
+<section id="home">
+  <div class="card">
+    <h1>கணிதம் – மாதிரித் தேர்வு 1 / Maths – Model Test 1</h1>
+    <div class="mut">எளிமையாக்குதல் • மீ.பொ.வ. & மீ.சி.ம. • விகிதம் & விகிதசமம் • சதவீதம்  /  Simplification • HCF & LCM • Ratio & Proportion • Percentage</div>
+    <div class="topics" id="topicChips"></div>
+    <p class="mut" id="rules"></p>
+    <div id="resumeBox"></div>
+    <label class="f" for="nm">பெயர் / Name</label>
+    <input id="nm" type="text" autocomplete="name" placeholder="உங்கள் பெயர் / Your name">
+    <label class="f" for="mb">கைபேசி எண் / Mobile number</label>
+    <input id="mb" type="tel" inputmode="numeric" maxlength="10" autocomplete="tel" placeholder="10 இலக்க எண் / 10-digit number">
+    <div class="err" id="hErr"></div>
+    <button class="btn" id="startBtn">தேர்வைத் தொடங்கு / Start Test</button>
+  </div>
+  <div class="card list" id="savedBox" hidden>
+    <h2>சேமித்த தேர்வுகள் / Saved attempts</h2>
+    <div id="savedList"></div>
+  </div>
+</section>
+
+<section id="test" hidden>
+  <div class="bar">
+    <div><b id="qNo"></b> <span class="mut" id="qTotal"></span></div>
+    <div>⏳ <span class="t" id="tLeft">00:00</span></div>
+    <div class="qtime">⏱ இக்கேள்வி / This Q: <b id="qTime">0:00</b></div>
+  </div>
+  <div class="card q" id="qCard"></div>
+  <div class="nav">
+    <button class="btn sec" id="prevBtn">« முந்தைய / Prev</button>
+    <button class="btn sec" id="clrBtn">தேர்வை நீக்கு / Clear</button>
+    <span class="sp"></span>
+    <button class="btn" id="nextBtn">அடுத்தது / Next »</button>
+    <button class="btn dng" id="subBtn">சமர்ப்பி / Submit</button>
+  </div>
+  <div class="card">
+    <h2>கேள்விகள் / Questions <span class="mut">(ஒவ்வொன்றிலும் செலவழித்த நேரம் / time spent)</span></h2>
+    <div class="pal" id="pal"></div>
+    <div class="legend"><span><i style="background:#e6f5ec"></i>விடையளித்தது / Answered</span><span><i style="background:#fff4e0"></i>பார்த்தது / Visited</span><span><i></i>பார்க்கவில்லை / Not visited</span></div>
+  </div>
+</section>
+
+<section id="result" hidden>
+  <div class="card">
+    <h1>முடிவு / Result</h1>
+    <div class="mut" id="who"></div>
+    <div class="score" id="scoreBox"></div>
+    <div class="mut" id="timeInfo"></div>
+    <div class="nav">
+      <button class="btn" id="retakeAll">முழு தேர்வு மீண்டும் / Retake full test</button>
+      <button class="btn sec" id="retakeWU">தவறான & விடையளிக்காதவை மட்டும் / Retake wrong &amp; unanswered</button>
+      <button class="btn sec" id="pdfBtn">⬇ PDF பதிவிறக்கம் / Download as PDF</button>
+      <button class="btn sec" id="homeBtn">முகப்பு / Home</button>
+    </div>
+    <div class="mut" style="margin-top:6px">✔ இந்த முயற்சி தானாகவே சேமிக்கப்பட்டது / This attempt is saved automatically. PDF: “Save as PDF” ஐத் தேர்ந்தெடுக்கவும் / choose “Save as PDF” in the print dialog.</div>
+  </div>
+  <div class="tabs" id="tabs"></div>
+  <div id="reviewList"></div>
+</section>
+
+</div>
+<div id="printArea"></div>
+<div class="foot">ஒளிரும் வனவாசி அகாடமி, சேலம் (செல்:9789521578)</div>
+
+<script>
+const TEST_ID = "maths-model-1";
+const TOPICS = [{"id": "simp", "en": "Simplification", "ta": "எளிமையாக்குதல்"}, {"id": "hcf", "en": "HCF and LCM", "ta": "மீ.பொ.வ. மற்றும் மீ.சி.ம."}, {"id": "ratio", "en": "Ratio and Proportion", "ta": "விகிதம் மற்றும் விகிதசமம்"}, {"id": "pct", "en": "Percentage", "ta": "சதவீதம்"}];
+const QS = [{"topic": "simp", "en": "If the sum of a number greater than 1 and its reciprocal is 17/4, the number is:", "ta": "1-ஐ விடப் பெரிய ஒரு எண்ணும் அதன் தலைகீழியும் சேர்ந்த கூடுதல் 17/4 எனில், அவ்வெண்:", "opts": [{"en": "3", "ta": "3"}, {"en": "4", "ta": "4"}, {"en": "5", "ta": "5"}, {"en": "1/4", "ta": "1/4"}], "ans": 1, "exp_en": "x + 1/x = 17/4 ⇒ 4x² − 17x + 4 = 0 ⇒ (x − 4)(4x − 1) = 0 ⇒ x = 4 or 1/4. The number greater than 1 is 4.", "exp_ta": "x + 1/x = 17/4 ⇒ 4x² − 17x + 4 = 0 ⇒ (x − 4)(4x − 1) = 0 ⇒ x = 4 அல்லது 1/4. 1-ஐ விடப் பெரியது 4."}, {"topic": "simp", "en": "Simplify: 108 × 108 + 92 × 92 = ?", "ta": "சுருக்குக: 108 × 108 + 92 × 92 = ?", "opts": [{"en": "20028", "ta": "20028"}, {"en": "20064", "ta": "20064"}, {"en": "20118", "ta": "20118"}, {"en": "20128", "ta": "20128"}], "ans": 3, "exp_en": "(100 + 8)² + (100 − 8)² = 2(100² + 8²) = 2(10000 + 64) = 20128.", "exp_ta": "(100 + 8)² + (100 − 8)² = 2(100² + 8²) = 2(10000 + 64) = 20128."}, {"topic": "simp", "en": "If (75)² − (45)² = 30 × x, then x = ?", "ta": "(75)² − (45)² = 30 × x எனில், x = ?", "opts": [{"en": "120", "ta": "120"}, {"en": "100", "ta": "100"}, {"en": "90", "ta": "90"}, {"en": "60", "ta": "60"}], "ans": 0, "exp_en": "a² − b² = (a + b)(a − b) = (75 + 45)(75 − 45) = 120 × 30. Hence 30x = 120 × 30 and x = 120.", "exp_ta": "a² − b² = (a + b)(a − b) = (75 + 45)(75 − 45) = 120 × 30. எனவே 30x = 120 × 30; x = 120."}, {"topic": "simp", "en": "Half of a number added to three-quarters of the same number gives 25. The number is:", "ta": "ஒரு எண்ணின் பாதியுடன் அதே எண்ணின் முக்கால் பங்கைக் கூட்டினால் 25 கிடைக்கும். அவ்வெண்:", "opts": [{"en": "10", "ta": "10"}, {"en": "15", "ta": "15"}, {"en": "20", "ta": "20"}, {"en": "25", "ta": "25"}], "ans": 2, "exp_en": "x/2 + 3x/4 = 5x/4 = 25 ⇒ x = 20.", "exp_ta": "x/2 + 3x/4 = 5x/4 = 25 ⇒ x = 20."}, {"topic": "simp", "en": "The difference between 1 3/16 and its reciprocal is:", "ta": "1 3/16 என்ற எண்ணுக்கும் அதன் தலைகீழிக்கும் உள்ள வித்தியாசம்:", "opts": [{"en": "35/304", "ta": "35/304"}, {"en": "105/304", "ta": "105/304"}, {"en": "617/304", "ta": "617/304"}, {"en": "3/19", "ta": "3/19"}], "ans": 1, "exp_en": "1 3/16 = 19/16 and its reciprocal = 16/19. Difference = (19² − 16²) ÷ (16 × 19) = (361 − 256) ÷ 304 = 105/304.", "exp_ta": "1 3/16 = 19/16; அதன் தலைகீழி = 16/19. வித்தியாசம் = (19² − 16²) ÷ (16 × 19) = (361 − 256) ÷ 304 = 105/304."}, {"topic": "simp", "en": "If the number 5*8274 is exactly divisible by 3, the smallest digit that can replace * is:", "ta": "5*8274 என்ற எண் 3 ஆல் மீதியின்றி வகுபடும் எனில், * இடத்தில் வரக்கூடிய மிகச்சிறிய இலக்கம்:", "opts": [{"en": "2", "ta": "2"}, {"en": "0", "ta": "0"}, {"en": "1", "ta": "1"}, {"en": "3", "ta": "3"}], "ans": 2, "exp_en": "A number is divisible by 3 if its digit sum is. 5 + 8 + 2 + 7 + 4 = 26, so 26 + d must be a multiple of 3. The smallest digit is d = 1 (27).", "exp_ta": "ஒரு எண்ணின் இலக்கங்களின் கூடுதல் 3-இன் மடங்கு எனில் அவ்வெண் 3 ஆல் வகுபடும். 5 + 8 + 2 + 7 + 4 = 26; 26 + d என்பது 3-இன் மடங்காக வேண்டும். மிகச்சிறிய இலக்கம் d = 1 (27)."}, {"topic": "simp", "en": "Which of the following statements is/are correct?<br>(1) 0.<span class=\"ov\">36</span> = 4/11<br>(2) 0.<span class=\"ov\">9</span> = 9/10<br>(3) 0.1<span class=\"ov\">6</span> = 1/6", "ta": "பின்வரும் கூற்றுகளில் எது/எவை சரியானது/சரியானவை?<br>(1) 0.<span class=\"ov\">36</span> = 4/11<br>(2) 0.<span class=\"ov\">9</span> = 9/10<br>(3) 0.1<span class=\"ov\">6</span> = 1/6", "opts": [{"en": "(1) and (3) only", "ta": "(1) மற்றும் (3) மட்டும்"}, {"en": "(1) only", "ta": "(1) மட்டும்"}, {"en": "(2) and (3) only", "ta": "(2) மற்றும் (3) மட்டும்"}, {"en": "(1), (2) and (3)", "ta": "(1), (2) மற்றும் (3)"}], "ans": 0, "exp_en": "0.<span class=\"ov\">36</span> = 36/99 = 4/11 ✔. 0.<span class=\"ov\">9</span> = 9/9 = 1, not 9/10 ✘. 0.1<span class=\"ov\">6</span> = (16 − 1)/90 = 1/6 ✔.", "exp_ta": "0.<span class=\"ov\">36</span> = 36/99 = 4/11 ✔. 0.<span class=\"ov\">9</span> = 9/9 = 1 (9/10 அல்ல) ✘. 0.1<span class=\"ov\">6</span> = (16 − 1)/90 = 1/6 ✔."}, {"topic": "hcf", "en": "The HCF and LCM of 72, 108 and 180 are respectively:", "ta": "72, 108, 180 ஆகியவற்றின் மீ.பொ.வ. மற்றும் மீ.சி.ம. முறையே:", "opts": [{"en": "18, 1080", "ta": "18, 1080"}, {"en": "36, 540", "ta": "36, 540"}, {"en": "12, 1080", "ta": "12, 1080"}, {"en": "36, 1080", "ta": "36, 1080"}], "ans": 3, "exp_en": "72 = 2³ × 3², 108 = 2² × 3³, 180 = 2² × 3² × 5. HCF = 2² × 3² = 36 (lowest powers); LCM = 2³ × 3³ × 5 = 1080 (highest powers).", "exp_ta": "72 = 2³ × 3², 108 = 2² × 3³, 180 = 2² × 3² × 5. மீ.பொ.வ. = 2² × 3² = 36 (குறைந்த அடுக்குகள்); மீ.சி.ம. = 2³ × 3³ × 5 = 1080 (அதிக அடுக்குகள்)."}, {"topic": "hcf", "en": "The largest four-digit number exactly divisible by 12, 16, 24 and 36 is:", "ta": "12, 16, 24, 36 ஆகியவற்றால் மீதியின்றி வகுபடும் மிகப்பெரிய நான்கு இலக்க எண்:", "opts": [{"en": "9936", "ta": "9936"}, {"en": "9792", "ta": "9792"}, {"en": "9864", "ta": "9864"}, {"en": "9990", "ta": "9990"}], "ans": 0, "exp_en": "LCM(12, 16, 24, 36) = 144. 9999 ÷ 144 leaves remainder 63, so the required number = 9999 − 63 = 9936.", "exp_ta": "மீ.சி.ம.(12, 16, 24, 36) = 144. 9999-ஐ 144 ஆல் வகுக்க மீதி 63; எனவே தேவையான எண் = 9999 − 63 = 9936."}, {"topic": "hcf", "en": "The LCM of two numbers is 10 times their HCF. The sum of the LCM and HCF is 880. If one of the numbers is 160, the other number is:", "ta": "இரு எண்களின் மீ.சி.ம., அவற்றின் மீ.பொ.வ.-வின் 10 மடங்கு. மீ.சி.ம. மற்றும் மீ.பொ.வ.-வின் கூடுதல் 880. ஒரு எண் 160 எனில், மற்றொரு எண்:", "opts": [{"en": "200", "ta": "200"}, {"en": "320", "ta": "320"}, {"en": "400", "ta": "400"}, {"en": "800", "ta": "800"}], "ans": 2, "exp_en": "HCF + 10 × HCF = 880 ⇒ HCF = 80 and LCM = 800. Other number = (HCF × LCM) ÷ 160 = (80 × 800) ÷ 160 = 400.", "exp_ta": "மீ.பொ.வ. + 10 × மீ.பொ.வ. = 880 ⇒ மீ.பொ.வ. = 80, மீ.சி.ம. = 800. மற்றொரு எண் = (மீ.பொ.வ. × மீ.சி.ம.) ÷ 160 = (80 × 800) ÷ 160 = 400."}, {"topic": "hcf", "en": "The greatest number which divides 285 and 1379 leaving remainders 5 and 7 respectively is:", "ta": "285 மற்றும் 1379-ஐ வகுக்கும்போது முறையே 5 மற்றும் 7 மீதி தரும் மிகப்பெரிய எண்:", "opts": [{"en": "14", "ta": "14"}, {"en": "28", "ta": "28"}, {"en": "7", "ta": "7"}, {"en": "4", "ta": "4"}], "ans": 1, "exp_en": "Subtract the remainders: 285 − 5 = 280 and 1379 − 7 = 1372. Required number = HCF(280, 1372) = 28 (1372 = 4 × 280 + 252; 280 = 252 + 28; 252 = 9 × 28).", "exp_ta": "மீதிகளைக் கழிக்க: 285 − 5 = 280; 1379 − 7 = 1372. தேவையான எண் = மீ.பொ.வ.(280, 1372) = 28 (1372 = 4 × 280 + 252; 280 = 252 + 28; 252 = 9 × 28)."}, {"topic": "hcf", "en": "Which of the following statements is/are correct?<br>(1) The HCF of two co-prime numbers is 1.<br>(2) The HCF of two numbers always divides their LCM.<br>(3) The LCM of two numbers is always greater than each of the numbers.", "ta": "பின்வரும் கூற்றுகளில் எது/எவை சரியானது/சரியானவை?<br>(1) இரு சார்பகா எண்களின் மீ.பொ.வ. 1 ஆகும்.<br>(2) இரு எண்களின் மீ.பொ.வ., அவற்றின் மீ.சி.ம.-ஐ எப்போதும் மீதியின்றி வகுக்கும்.<br>(3) இரு எண்களின் மீ.சி.ம., அவ்விரு எண்களையும் விட எப்போதும் பெரியது.", "opts": [{"en": "(1) and (3) only", "ta": "(1) மற்றும் (3) மட்டும்"}, {"en": "(2) and (3) only", "ta": "(2) மற்றும் (3) மட்டும்"}, {"en": "(1) only", "ta": "(1) மட்டும்"}, {"en": "(1) and (2) only", "ta": "(1) மற்றும் (2) மட்டும்"}], "ans": 3, "exp_en": "(1) and (2) are true: the HCF divides both numbers and hence their LCM. (3) is false: LCM(4, 8) = 8, which is not greater than 8.", "exp_ta": "(1), (2) சரி: மீ.பொ.வ. இரு எண்களையும், எனவே மீ.சி.ம.-ஐயும் வகுக்கும். (3) தவறு: மீ.சி.ம.(4, 8) = 8; இது 8-ஐ விடப் பெரியது அல்ல."}, {"topic": "hcf", "en": "Three bells toll at intervals of 10, 15 and 20 seconds. If they start tolling together, how many times will they toll together in 30 minutes (including the start)?", "ta": "மூன்று மணிகள் முறையே 10, 15, 20 விநாடிகளுக்கு ஒருமுறை ஒலிக்கின்றன. அவை ஒரே நேரத்தில் ஒலிக்கத் தொடங்கினால், 30 நிமிடங்களில் (தொடக்கத்தையும் சேர்த்து) எத்தனை முறை ஒன்றாக ஒலிக்கும்?", "opts": [{"en": "31", "ta": "31"}, {"en": "30", "ta": "30"}, {"en": "15", "ta": "15"}, {"en": "16", "ta": "16"}], "ans": 0, "exp_en": "LCM(10, 15, 20) = 60 s. In 30 minutes = 1800 s they toll together 1800 ÷ 60 = 30 more times, plus the start: 31.", "exp_ta": "மீ.சி.ம.(10, 15, 20) = 60 வி. 30 நிமிடம் = 1800 வி; 1800 ÷ 60 = 30 முறை, தொடக்கத்தையும் சேர்த்து 31."}, {"topic": "ratio", "en": "If x : y = 2 : 5, then (5x + 3y) : (2x + y) is:", "ta": "x : y = 2 : 5 எனில், (5x + 3y) : (2x + y) =", "opts": [{"en": "25 : 11", "ta": "25 : 11"}, {"en": "5 : 3", "ta": "5 : 3"}, {"en": "25 : 9", "ta": "25 : 9"}, {"en": "9 : 25", "ta": "9 : 25"}], "ans": 2, "exp_en": "Put x = 2k and y = 5k: (10k + 15k) : (4k + 5k) = 25k : 9k = 25 : 9.", "exp_ta": "x = 2k, y = 5k என்க: (10k + 15k) : (4k + 5k) = 25k : 9k = 25 : 9."}, {"topic": "ratio", "en": "Which is the smallest ratio among 4 : 7, 5 : 9, 7 : 12 and 9 : 16?", "ta": "4 : 7, 5 : 9, 7 : 12, 9 : 16 ஆகியவற்றுள் மிகச்சிறிய விகிதம் எது?", "opts": [{"en": "4 : 7", "ta": "4 : 7"}, {"en": "5 : 9", "ta": "5 : 9"}, {"en": "7 : 12", "ta": "7 : 12"}, {"en": "9 : 16", "ta": "9 : 16"}], "ans": 1, "exp_en": "Convert to decimals: 4/7 = 0.571, 5/9 = 0.556, 7/12 = 0.583, 9/16 = 0.5625. The smallest is 5 : 9.", "exp_ta": "தசம மதிப்பாக மாற்றினால்: 4/7 = 0.571, 5/9 = 0.556, 7/12 = 0.583, 9/16 = 0.5625. மிகச்சிறியது 5 : 9."}, {"topic": "ratio", "en": "A 60-litre mixture contains milk and water in the ratio 2 : 1. How much water must be added to make the ratio of milk to water 1 : 2?", "ta": "60 லிட்டர் கலவையில் பால் : தண்ணீர் = 2 : 1. பால் : தண்ணீர் = 1 : 2 ஆக மாற்ற எவ்வளவு தண்ணீர் சேர்க்க வேண்டும்?", "opts": [{"en": "30 litres", "ta": "30 லிட்டர்"}, {"en": "40 litres", "ta": "40 லிட்டர்"}, {"en": "80 litres", "ta": "80 லிட்டர்"}, {"en": "60 litres", "ta": "60 லிட்டர்"}], "ans": 3, "exp_en": "Milk = 40 L, water = 20 L. For ratio 1 : 2 the water must be 2 × 40 = 80 L, so add 80 − 20 = 60 L.", "exp_ta": "பால் = 40 லி, தண்ணீர் = 20 லி. 1 : 2 ஆக மாற, தண்ணீர் = 2 × 40 = 80 லி; எனவே சேர்க்க வேண்டியது 80 − 20 = 60 லி."}, {"topic": "ratio", "en": "₹1,300 is divided among A, B and C in the ratio 1/2 : 1/3 : 1/4. B's share is:", "ta": "₹1,300-ஐ A, B, C ஆகிய மூவருக்கு 1/2 : 1/3 : 1/4 என்ற விகிதத்தில் பிரித்தால், B-யின் பங்கு:", "opts": [{"en": "₹400", "ta": "₹400"}, {"en": "₹300", "ta": "₹300"}, {"en": "₹450", "ta": "₹450"}, {"en": "₹600", "ta": "₹600"}], "ans": 0, "exp_en": "Multiply by LCM 12: 1/2 : 1/3 : 1/4 = 6 : 4 : 3 (total 13 parts). B's share = 4/13 × 1300 = ₹400.", "exp_ta": "மீ.சி.ம. 12 ஆல் பெருக்க: 1/2 : 1/3 : 1/4 = 6 : 4 : 3 (மொத்தம் 13 பங்குகள்). B-யின் பங்கு = 4/13 × 1300 = ₹400."}, {"topic": "ratio", "en": "Which of the following statements is/are correct?<br>(1) The mean proportional between 4 and 16 is 8.<br>(2) The third proportional to 6 and 12 is 18.<br>(3) The fourth proportional to 3, 5 and 9 is 15.", "ta": "பின்வரும் கூற்றுகளில் எது/எவை சரியானது/சரியானவை?<br>(1) 4 மற்றும் 16-க்கு இடை விகிதசமம் 8.<br>(2) 6 மற்றும் 12-க்கு மூன்றாம் விகிதசமம் 18.<br>(3) 3, 5, 9-க்கு நான்காம் விகிதசமம் 15.", "opts": [{"en": "(1) and (2) only", "ta": "(1) மற்றும் (2) மட்டும்"}, {"en": "(2) and (3) only", "ta": "(2) மற்றும் (3) மட்டும்"}, {"en": "(1) and (3) only", "ta": "(1) மற்றும் (3) மட்டும்"}, {"en": "(1), (2) and (3)", "ta": "(1), (2) மற்றும் (3)"}], "ans": 2, "exp_en": "(1) √(4 × 16) = 8 ✔. (2) Third proportional = 12² ÷ 6 = 24, not 18 ✘. (3) Fourth proportional = (5 × 9) ÷ 3 = 15 ✔.", "exp_ta": "(1) √(4 × 16) = 8 ✔. (2) மூன்றாம் விகிதசமம் = 12² ÷ 6 = 24 (18 அல்ல) ✘. (3) நான்காம் விகிதசமம் = (5 × 9) ÷ 3 = 15 ✔."}, {"topic": "ratio", "en": "Match List I with List II and select the correct answer:<br><b>List I</b><br>(a) Duplicate ratio of 2 : 3<br>(b) Sub-duplicate ratio of 16 : 25<br>(c) Triplicate ratio of 2 : 3<br>(d) Compounded ratio of 2 : 3 and 4 : 5<br><b>List II</b><br>(1) 8 : 27 &nbsp; (2) 4 : 5 &nbsp; (3) 4 : 9 &nbsp; (4) 8 : 15", "ta": "பட்டியல் I-ஐ பட்டியல் II-உடன் பொருத்தி, சரியான விடையைத் தேர்ந்தெடுக்க:<br><b>பட்டியல் I</b><br>(a) 2 : 3-இன் இருமடி விகிதம்<br>(b) 16 : 25-இன் இருமடிமூல விகிதம்<br>(c) 2 : 3-இன் மும்மடி விகிதம்<br>(d) 2 : 3 மற்றும் 4 : 5-இன் கூட்டு விகிதம்<br><b>பட்டியல் II</b><br>(1) 8 : 27 &nbsp; (2) 4 : 5 &nbsp; (3) 4 : 9 &nbsp; (4) 8 : 15", "opts": [{"en": "(a)-3, (b)-1, (c)-2, (d)-4", "ta": "(a)-3, (b)-1, (c)-2, (d)-4"}, {"en": "(a)-3, (b)-2, (c)-1, (d)-4", "ta": "(a)-3, (b)-2, (c)-1, (d)-4"}, {"en": "(a)-1, (b)-2, (c)-3, (d)-4", "ta": "(a)-1, (b)-2, (c)-3, (d)-4"}, {"en": "(a)-4, (b)-2, (c)-1, (d)-3", "ta": "(a)-4, (b)-2, (c)-1, (d)-3"}], "ans": 1, "exp_en": "Duplicate = squares: 4 : 9. Sub-duplicate = square roots: 4 : 5. Triplicate = cubes: 8 : 27. Compounded = product of the ratios: (2 × 4) : (3 × 5) = 8 : 15.", "exp_ta": "இருமடி = வர்க்கங்கள்: 4 : 9. இருமடிமூலம் = வர்க்கமூலங்கள்: 4 : 5. மும்மடி = கன மதிப்புகள்: 8 : 27. கூட்டு விகிதம் = விகிதங்களின் பெருக்கல்: (2 × 4) : (3 × 5) = 8 : 15."}, {"topic": "pct", "en": "The number which is 18% less than 350 is:", "ta": "350-ஐ விட 18% குறைவான எண்:", "opts": [{"en": "63", "ta": "63"}, {"en": "282", "ta": "282"}, {"en": "332", "ta": "332"}, {"en": "287", "ta": "287"}], "ans": 3, "exp_en": "350 × (100 − 18)/100 = 350 × 0.82 = 287. (63 is 18% of 350 itself.)", "exp_ta": "350 × (100 − 18)/100 = 350 × 0.82 = 287. (63 என்பது 350-இன் 18% மட்டுமே.)"}, {"topic": "pct", "en": "In a village of 7,200 people, 45% are literate. The number of illiterate people is:", "ta": "7,200 மக்கள் வாழும் ஒரு கிராமத்தில் 45% பேர் கல்வியறிவு பெற்றவர்கள் எனில், கல்வியறிவு அற்றவர்களின் எண்ணிக்கை:", "opts": [{"en": "3,960", "ta": "3,960"}, {"en": "3,240", "ta": "3,240"}, {"en": "4,320", "ta": "4,320"}, {"en": "3,600", "ta": "3,600"}], "ans": 0, "exp_en": "Illiterate = 100% − 45% = 55% of 7,200 = 3,960. (3,240 is the number of literate people.)", "exp_ta": "கல்வியறிவு அற்றவர் = 100% − 45% = 55%; 7,200-இன் 55% = 3,960. (3,240 என்பது கல்வியறிவு பெற்றவர்களின் எண்ணிக்கை.)"}, {"topic": "pct", "en": "If 60% of (x − y) = 40% of (x + y), then y is what percentage of x?", "ta": "(x − y)-இன் 60% = (x + y)-இன் 40% எனில், y என்பது x-இன் எத்தனை சதவீதம்?", "opts": [{"en": "10%", "ta": "10%"}, {"en": "15%", "ta": "15%"}, {"en": "20%", "ta": "20%"}, {"en": "25%", "ta": "25%"}], "ans": 2, "exp_en": "0.6x − 0.6y = 0.4x + 0.4y ⇒ 0.2x = y. So y = 20% of x.", "exp_ta": "0.6x − 0.6y = 0.4x + 0.4y ⇒ 0.2x = y. எனவே y = x-இன் 20%."}, {"topic": "pct", "en": "In an examination 1,200 boys and 800 girls appeared. 45% of the boys and 30% of the girls passed. What percentage of the total students did not pass?", "ta": "ஒரு தேர்வை 1,200 மாணவர்களும் 800 மாணவிகளும் எழுதினர். மாணவர்களில் 45% பேரும், மாணவிகளில் 30% பேரும் தேர்ச்சி பெற்றனர். மொத்த மாணவர்களில் தேர்ச்சி பெறாதவர்கள் எத்தனை சதவீதம்?", "opts": [{"en": "58%", "ta": "58%"}, {"en": "61%", "ta": "61%"}, {"en": "39%", "ta": "39%"}, {"en": "64%", "ta": "64%"}], "ans": 1, "exp_en": "Passed = 45% of 1200 + 30% of 800 = 540 + 240 = 780 out of 2000 (39%). Not passed = 1220 ÷ 2000 × 100 = 61%.", "exp_ta": "தேர்ச்சி பெற்றவர் = 1200-இன் 45% + 800-இன் 30% = 540 + 240 = 780 / 2000 (39%). தேர்ச்சி பெறாதவர் = 1220 ÷ 2000 × 100 = 61%."}, {"topic": "pct", "en": "Which of the following statements is/are correct?<br>(1) If A is 25% more than B, then B is 25% less than A.<br>(2) If A is 20% less than B, then B is 25% more than A.<br>(3) x% of y is equal to y% of x.", "ta": "பின்வரும் கூற்றுகளில் எது/எவை சரியானது/சரியானவை?<br>(1) A, B-ஐ விட 25% அதிகம் எனில், B, A-ஐ விட 25% குறைவு.<br>(2) A, B-ஐ விட 20% குறைவு எனில், B, A-ஐ விட 25% அதிகம்.<br>(3) y-இன் x% = x-இன் y%.", "opts": [{"en": "(1) and (2) only", "ta": "(1) மற்றும் (2) மட்டும்"}, {"en": "(1) and (3) only", "ta": "(1) மற்றும் (3) மட்டும்"}, {"en": "(1), (2) and (3)", "ta": "(1), (2) மற்றும் (3)"}, {"en": "(2) and (3) only", "ta": "(2) மற்றும் (3) மட்டும்"}], "ans": 3, "exp_en": "(1) B = 100, A = 125; B is 25/125 = 20% less than A, not 25% ✘. (2) B = 100, A = 80; B is 20/80 = 25% more than A ✔. (3) Both equal xy/100 ✔.", "exp_ta": "(1) B = 100, A = 125; B, A-ஐ விட 25/125 = 20% குறைவு (25% அல்ல) ✘. (2) B = 100, A = 80; B, A-ஐ விட 20/80 = 25% அதிகம் ✔. (3) இரண்டும் xy/100-க்குச் சமம் ✔."}, {"topic": "pct", "en": "If the price of sugar rises by 25%, by what percentage must a family reduce its consumption so that the expenditure remains unchanged?", "ta": "சர்க்கரையின் விலை 25% உயர்ந்தால், செலவு மாறாமல் இருக்க ஒரு குடும்பம் தனது பயன்பாட்டை எத்தனை சதவீதம் குறைக்க வேண்டும்?", "opts": [{"en": "20%", "ta": "20%"}, {"en": "25%", "ta": "25%"}, {"en": "16 2/3%", "ta": "16 2/3%"}, {"en": "12.5%", "ta": "12.5%"}], "ans": 0, "exp_en": "Reduction % = r ÷ (100 + r) × 100 = 25 ÷ 125 × 100 = 20%.", "exp_ta": "குறைக்க வேண்டிய % = r ÷ (100 + r) × 100 = 25 ÷ 125 × 100 = 20%."}];
+const TOTAL_SEC = 40 * 60;          // full test = 40 minutes
+const SEC_PER_Q = TOTAL_SEC / QS.length;   // retake of a subset gets the same per-question share
+const LS_ATT = TEST_ID + ":attempts";
+const LS_ACT = TEST_ID + ":active";
+const LS_USER = TEST_ID + ":user";
+const KEYS = ["A","B","C","D"];
+const $ = id => document.getElementById(id);
+
+function lsGet(k, d){ try{ const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; }catch(e){ return d; } }
+function lsSet(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+function lsDel(k){ try{ localStorage.removeItem(k); }catch(e){} }
+function fmt(s){ s = Math.max(0, Math.round(s)); const m = Math.floor(s/60), r = s%60; return m + ":" + String(r).padStart(2,"0"); }
+function fmtT(s){ s = Math.max(0, Math.round(s)); const m = Math.floor(s/60), r = s%60; return String(m).padStart(2,"0") + ":" + String(r).padStart(2,"0"); }
+function esc(s){ return String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+
+let S = null;        // active attempt state
+let ticker = null;
+
+/* ---------- rendering helpers ---------- */
+function optHtml(o){
+  if (o.ta === o.en) return '<div class="ta">' + o.en + '</div>';
+  return '<div class="ta">' + o.ta + '</div><div class="en">' + o.en + '</div>';
+}
+function show(id){ ["home","test","result"].forEach(x => $(x).hidden = (x !== id)); window.scrollTo(0,0); }
+
+/* ---------- home ---------- */
+function initHome(){
+  $("topicChips").innerHTML = TOPICS.map(t => {
+    const n = QS.filter(q => q.topic === t.id).length;
+    return '<span class="chip">' + t.ta + ' / ' + t.en + ' (' + n + ')</span>';
+  }).join("");
+  $("rules").innerHTML = QS.length + " கேள்விகள் • மொத்த நேரம் 40 நிமிடம் • நேரம் முடிந்ததும் தானாகச் சமர்ப்பிக்கப்படும்<br>" +
+    QS.length + " questions • total time 40 minutes • auto-submits when time is up";
+  const u = lsGet(LS_USER, {});
+  $("nm").value = u.name || ""; $("mb").value = u.mobile || "";
+  renderResume(); renderSaved();
+}
+function renderResume(){
+  const a = lsGet(LS_ACT, null);
+  if (a && !a.submitted){
+    $("resumeBox").innerHTML = '<div class="banner"><div>முடிக்காத தேர்வு உள்ளது (' + esc(a.name) + ') / You have an unfinished test.</div><div><button class="btn sm" id="resumeBtn">தொடர் / Resume</button> <button class="btn sm dng" id="discardBtn">நீக்கு / Discard</button></div></div>';
+    $("resumeBtn").onclick = () => { S = a; startTicker(); show("test"); renderQ(); };
+    $("discardBtn").onclick = () => { lsDel(LS_ACT); renderResume(); };
+  } else $("resumeBox").innerHTML = "";
+}
+function renderSaved(){
+  const list = lsGet(LS_ATT, []);
+  $("savedBox").hidden = !list.length;
+  $("savedList").innerHTML = list.slice().reverse().map(a => {
+    const r = summarize(a);
+    const d = new Date(a.finished).toLocaleString();
+    return '<div class="row"><div><b>' + esc(a.name) + '</b> • ' + (a.mode === "wu" ? "தவறியவை / Wrong+Unanswered" : "முழு தேர்வு / Full test") +
+      '<div class="mut">' + d + ' • மதிப்பெண் / Score <b>' + r.right + '/' + a.qIdx.length + '</b></div></div><div>' +
+      '<button class="btn sm sec" data-v="' + a.id + '">பார்க்க / View</button> ' +
+      '<button class="btn sm sec" data-a="' + a.id + '">முழு தேர்வு / Retake</button> ' +
+      ((r.wrong + r.un) ? '<button class="btn sm sec" data-w="' + a.id + '">தவறியவை / Wrong+Unans.</button> ' : '') +
+      '<button class="btn sm dng" data-x="' + a.id + '">✕</button></div></div>';
+  }).join("");
+  $("savedList").querySelectorAll("button").forEach(b => b.onclick = () => {
+    const id = b.dataset.v || b.dataset.a || b.dataset.w || b.dataset.x;
+    const list = lsGet(LS_ATT, []); const a = list.find(x => x.id === id); if (!a) return;
+    if (b.dataset.v){ S = a; showResult(); }
+    else if (b.dataset.a){ begin(a.name, a.mobile, "full"); }
+    else if (b.dataset.w){ beginWU(a); }
+    else if (b.dataset.x){ if (confirm("இந்த முயற்சியை நீக்கவா? / Delete this attempt?")){ lsSet(LS_ATT, list.filter(x => x.id !== id)); renderSaved(); } }
+  });
+}
+$("startBtn").onclick = () => {
+  const name = $("nm").value.trim(), mobile = $("mb").value.trim();
+  if (name.length < 2){ $("hErr").textContent = "பெயரை உள்ளிடவும் / Enter your name"; return; }
+  if (!/^[6-9]\d{9}$/.test(mobile)){ $("hErr").textContent = "சரியான 10 இலக்க கைபேசி எண்ணை உள்ளிடவும் / Enter a valid 10-digit mobile number"; return; }
+  $("hErr").textContent = "";
+  lsSet(LS_USER, {name, mobile});
+  begin(name, mobile, "full");
+};
+
+/* ---------- attempt lifecycle ---------- */
+function begin(name, mobile, mode, idxList){
+  const qIdx = idxList || QS.map((_, i) => i);
+  const now = Date.now();
+  S = { id: "a" + now, name, mobile, mode, qIdx, answers: {}, times: {}, visited: {0:true},
+        cur: 0, lastTick: now, end: now + qIdx.length * SEC_PER_Q * 1000, started: now, submitted: false };
+  lsSet(LS_USER, {name, mobile});
+  saveActive(); startTicker(); show("test"); renderQ();
+}
+function beginWU(a){
+  const r = summarize(a);
+  const idx = a.qIdx.filter(q => { const x = r.status[q]; return x !== "right"; });
+  if (!idx.length){ alert("தவறான / விடையளிக்காத கேள்விகள் இல்லை / No wrong or unanswered questions."); return; }
+  begin(a.name, a.mobile, "wu", idx);
+}
+function saveActive(){ lsSet(LS_ACT, S); }
+function startTicker(){
+  if (ticker) clearInterval(ticker);
+  S.lastTick = Date.now();
+  ticker = setInterval(tick, 500);
+  tick();
+}
+function accrue(){
+  const now = Date.now();
+  const q = S.qIdx[S.cur];
+  const dt = Math.min(5, (now - S.lastTick) / 1000);   // guard against sleep/background gaps
+  S.times[q] = (S.times[q] || 0) + dt;
+  S.lastTick = now;
+  return now;
+}
+function tick(){
+  if (!S || S.submitted) return;
+  const now = accrue();
+  const q = S.qIdx[S.cur];
+  const left = Math.max(0, (S.end - now) / 1000);
+  $("tLeft").textContent = fmtT(left);
+  $("tLeft").classList.toggle("low", left <= 300);
+  $("qTime").textContent = fmt(S.times[q]);
+  updatePalTime();
+  if (Math.round(now/1000) % 5 === 0) saveActive();
+  if (left <= 0) submit(true);
+}
+
+/* ---------- question view ---------- */
+function renderQ(){
+  const p = S.cur, qi = S.qIdx[p], q = QS[qi], t = TOPICS.find(x => x.id === q.topic);
+  S.visited[p] = true;
+  $("qNo").textContent = "Q " + (p + 1);
+  $("qTotal").textContent = "/ " + S.qIdx.length;
+  const sel = S.answers[qi];
+  $("qCard").innerHTML = '<div class="topic">' + t.ta + ' • ' + t.en + '</div>' +
+    '<div class="ta">' + q.ta + '</div><div class="en">' + q.en + '</div>' +
+    q.opts.map((o, i) => '<div class="opt' + (sel === i ? ' sel' : '') + '" data-i="' + i + '"><div class="k">' + KEYS[i] + '</div><div>' + optHtml(o) + '</div></div>').join("");
+  $("qCard").querySelectorAll(".opt").forEach(el => el.onclick = () => { S.answers[qi] = +el.dataset.i; saveActive(); renderQ(); });
+  $("prevBtn").disabled = p === 0;
+  $("nextBtn").disabled = p === S.qIdx.length - 1;
+  renderPal();
+}
+function renderPal(){
+  $("pal").innerHTML = S.qIdx.map((qi, p) => {
+    let c = "pb";
+    if (S.answers[qi] !== undefined) c += " ans"; else if (S.visited[p]) c += " vis";
+    if (p === S.cur) c += " cur";
+    return '<button class="' + c + '" data-p="' + p + '"><b>' + (p + 1) + '</b><small id="pt' + p + '">' + fmt(S.times[qi] || 0) + '</small></button>';
+  }).join("");
+  $("pal").querySelectorAll(".pb").forEach(b => b.onclick = () => { S.cur = +b.dataset.p; S.lastTick = Date.now(); renderQ(); });
+}
+function updatePalTime(){
+  S.qIdx.forEach((qi, p) => { const el = $("pt" + p); if (el) el.textContent = fmt(S.times[qi] || 0); });
+}
+$("prevBtn").onclick = () => { if (S.cur > 0){ S.cur--; renderQ(); } };
+$("nextBtn").onclick = () => { if (S.cur < S.qIdx.length - 1){ S.cur++; renderQ(); } };
+$("clrBtn").onclick = () => { delete S.answers[S.qIdx[S.cur]]; saveActive(); renderQ(); };
+$("subBtn").onclick = () => {
+  const un = S.qIdx.filter(q => S.answers[q] === undefined).length;
+  if (confirm("சமர்ப்பிக்கவா? விடையளிக்காதவை: " + un + "\nSubmit the test? Unanswered: " + un)) submit(false);
+};
+
+/* ---------- submit & result ---------- */
+function summarize(a){
+  const status = {}; let right = 0, wrong = 0, un = 0;
+  a.qIdx.forEach(q => {
+    const x = a.answers[q];
+    if (x === undefined){ status[q] = "un"; un++; }
+    else if (x === QS[q].ans){ status[q] = "right"; right++; }
+    else { status[q] = "wrong"; wrong++; }
+  });
+  return { status, right, wrong, un };
+}
+function submit(auto){
+  if (!S || S.submitted) return;
+  accrue();
+  S.submitted = true; S.finished = Date.now(); S.auto = !!auto;
+  if (ticker) clearInterval(ticker);
+  const list = lsGet(LS_ATT, []); list.push(S); lsSet(LS_ATT, list);
+  lsDel(LS_ACT);
+  if (auto) alert("நேரம் முடிந்தது! தேர்வு தானாகச் சமர்ப்பிக்கப்பட்டது.\nTime is up! Your test was submitted automatically.");
+  showResult();
+}
+let tabNow = "all";
+function showResult(){
+  const r = summarize(S);
+  show("result");
+  $("who").textContent = S.name + " • " + S.mobile + " • " + new Date(S.finished || Date.now()).toLocaleString() + (S.mode === "wu" ? " • தவறியவை மறுதேர்வு / Wrong+Unanswered retest" : "");
+  const total = S.qIdx.length;
+  const used = S.qIdx.reduce((s, q) => s + (S.times[q] || 0), 0);
+  $("scoreBox").innerHTML =
+    '<div class="sbox"><div class="n">' + r.right + ' / ' + total + '</div>மதிப்பெண் / Score</div>' +
+    '<div class="sbox ok"><div class="n">' + r.right + '</div>சரி / Right</div>' +
+    '<div class="sbox bad"><div class="n">' + r.wrong + '</div>தவறு / Wrong</div>' +
+    '<div class="sbox un"><div class="n">' + r.un + '</div>விடையில்லை / Unanswered</div>';
+  $("timeInfo").textContent = "எடுத்த மொத்த நேரம் / Total time taken: " + fmt(used) + " (அனுமதி / allowed " + fmt(total * SEC_PER_Q) + ")" + (S.auto ? " • தானாகச் சமர்ப்பிக்கப்பட்டது / auto-submitted" : "");
+  $("retakeWU").hidden = (r.wrong + r.un) === 0;
+  tabNow = "all"; renderTabs(r);
+}
+function renderTabs(r){
+  const defs = [["all","அனைத்தும் / All", S.qIdx.length],["right","சரி / Right", r.right],["wrong","தவறு / Wrong", r.wrong],["un","விடையில்லை / Unanswered", r.un]];
+  $("tabs").innerHTML = defs.map(d => '<button class="tab' + (tabNow === d[0] ? " on" : "") + '" data-t="' + d[0] + '">' + d[1] + ' (' + d[2] + ')</button>').join("");
+  $("tabs").querySelectorAll(".tab").forEach(b => b.onclick = () => { tabNow = b.dataset.t; renderTabs(r); });
+  const items = S.qIdx.map((q, p) => ({q, p})).filter(x => tabNow === "all" || r.status[x.q] === tabNow);
+  $("reviewList").innerHTML = items.length ? items.map(x => reviewHtml(x.q, x.p + 1, r.status[x.q])).join("") : '<div class="card mut">இந்தப் பிரிவில் கேள்விகள் இல்லை / No questions in this category.</div>';
+}
+function reviewHtml(qi, no, st){
+  const q = QS[qi], sel = S.answers[qi];
+  const t = TOPICS.find(x => x.id === q.topic);
+  const stTxt = st === "right" ? "✔ சரி / Right" : st === "wrong" ? "✘ தவறு / Wrong" : "– விடையில்லை / Unanswered";
+  const opts = q.opts.map((o, i) => {
+    let c = "ro", tag = "";
+    if (i === q.ans){ c += " c"; tag = "✔ சரியான விடை / Correct"; }
+    if (i === sel && i !== q.ans){ c += " w"; tag = "✘ உங்கள் விடை / Your answer"; }
+    else if (i === sel && i === q.ans){ tag = "✔ உங்கள் விடை / Your answer"; }
+    return '<div class="' + c + '"><div class="k">' + KEYS[i] + '</div><div>' + optHtml(o) + '</div><div class="tag">' + tag + '</div></div>';
+  }).join("");
+  return '<div class="rv ' + st + '"><div class="hd"><span><b>Q' + no + '</b> • ' + t.ta + ' / ' + t.en + '</span><span><span class="st ' + st + '">' + stTxt + '</span> • ⏱ ' + fmt(S.times[qi] || 0) + '</span></div>' +
+    '<div class="q"><div class="ta" style="font-weight:600">' + q.ta + '</div><div class="en" style="color:#334155;margin-bottom:6px">' + q.en + '</div></div>' + opts +
+    '<div class="exp"><div class="ta"><b>விளக்கம்:</b> ' + q.exp_ta + '</div><div class="en"><b>Explanation:</b> ' + q.exp_en + '</div></div></div>';
+}
+
+/* ---------- result buttons ---------- */
+$("retakeAll").onclick = () => begin(S.name, S.mobile, "full");
+$("retakeWU").onclick = () => beginWU(S);
+$("homeBtn").onclick = () => { S = null; initHome(); show("home"); };
+$("pdfBtn").onclick = () => {
+  const r = summarize(S), total = S.qIdx.length;
+  $("printArea").innerHTML =
+    '<h1 style="font-size:16pt;margin:0 0 4px">கணிதம் – மாதிரித் தேர்வு 1 / Maths – Model Test 1</h1>' +
+    '<div style="margin-bottom:8px;font-size:11pt"><b>' + esc(S.name) + '</b> • ' + esc(S.mobile) + ' • ' + new Date(S.finished || Date.now()).toLocaleString() + '<br>' +
+    'மதிப்பெண் / Score: <b>' + r.right + ' / ' + total + '</b> • சரி / Right: ' + r.right + ' • தவறு / Wrong: ' + r.wrong + ' • விடையில்லை / Unanswered: ' + r.un + '</div>' +
+    S.qIdx.map((q, p) => reviewHtml(q, p + 1, r.status[q])).join("");
+  document.body.classList.add("printing");
+  window.print();
+};
+window.addEventListener("afterprint", () => document.body.classList.remove("printing"));
+document.addEventListener("visibilitychange", () => { if (S && !S.submitted && !document.hidden) S.lastTick = Date.now(); });
+
+initHome();
+</script>
+</body>
+</html>
